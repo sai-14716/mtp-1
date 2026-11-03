@@ -1,0 +1,48 @@
+#-----------------------------------------------------------
+# xsim v2026.1 (64-bit)
+# SW Build 6511674 on Tue Jun 16 11:02:23 MDT 2026
+# IP Build 6504888 on Tue Jun 09 09:05:25 MDT 2026
+# SharedData Build 6501428 on Mon Jun 08 17:34:18 MDT 2026
+# Start of session at: Mon Aug 24 15:55:56 2026
+# Process ID         : 33332
+# Current directory  : C:/Users/srika/Documents/MTP-1/tinygpu_simulation/tinygpu_simulation.sim/sim_1/behav/xsim
+# Command line       : xsim.exe -mode tcl -source {xsim.dir/xil_defaultlib.tb_gpu/xsim_script.tcl}
+# Log file           : C:/Users/srika/Documents/MTP-1/tinygpu_simulation/tinygpu_simulation.sim/sim_1/behav/xsim/xsim.log
+# Journal file       : C:/Users/srika/Documents/MTP-1/tinygpu_simulation/tinygpu_simulation.sim/sim_1/behav/xsim\xsim.jou
+# Running On         : SRINIVAS
+# Platform           : Windows 11
+# Operating System   : 26200
+# Processor Detail   : 13th Gen Intel(R) Core(TM) i5-1335U
+# CPU Frequency      : 2496 MHz
+# CPU Physical cores : 10
+# CPU Logical cores  : 12
+# Host memory        : 16803 MB
+# Swap memory        : 18547 MB
+# Total Virtual      : 35351 MB
+# Available Virtual  : 9801 MB
+#-----------------------------------------------------------
+source xsim.dir/xil_defaultlib.tb_gpu/xsim_script.tcl
+# xsim {xil_defaultlib.tb_gpu} -autoloadwcfg -runall
+Time resolution is 1 ns
+run -all
+=== Results ===
+data_memory[16] = 0
+data_memory[17] = 2
+data_memory[18] = 4
+data_memory[19] = 6
+data_memory[20] = 8
+data_memory[21] = 10
+data_memory[22] = 12
+data_memory[23] = 14
+=== Expected ===
+data_memory[16] = 0
+data_memory[17] = 2
+data_memory[18] = 4
+data_memory[19] = 6
+data_memory[20] = 8
+data_memory[21] = 10
+data_memory[22] = 12
+data_memory[23] = 14
+$finish called at time : 1905 ns : File "C:/Users/srika/Documents/MTP-1/tinygpu_simulation/tinygpu_simulation.sim/sim_1/behav/xsim/tb_gpu.sv" Line 225
+exit
+INFO: [Common 17-206] Exiting xsim at Mon Aug 24 15:55:58 2026...

@@ -1,0 +1,3 @@
+Retry open file channel in 250 ms for file: C:/AMDDesignTools/2026.1/Vivado/tps/tcl/tcllib2.0/doctools2base/pkgIndex.tcl
+Retry open file channel in 250 ms for file: C:/AMDDesignTools/2026.1/Vivado/tps/tcl/tcllib2.0/crc/pkgIndex.tcl
+Retry open file channel in 250 ms for file: C:/AMDDesignTools/2026.1/Vivado/tps/tcl/tcllib2.0/doctools2toc/pkgIndex.tcl

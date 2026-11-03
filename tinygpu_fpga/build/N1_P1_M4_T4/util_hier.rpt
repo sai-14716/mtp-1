@@ -1,0 +1,54 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
+| Date         : Wed Oct 21 13:32:16 2026
+| Host         : SRINIVAS running 64-bit major release  (build 9200)
+| Command      : report_utilization -hierarchical -hierarchical_depth 3 -file C:/Users/srika/Documents/MTP-1/tinygpu_fpga/build/N1_P1_M4_T4/util_hier.rpt
+| Design       : gpu_soc_top
+| Device       : xc7a100tcsg324-1
+| Speed File   : -1
+| Design State : Routed
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Utilization Design Information
+
+Table of Contents
+-----------------
+1. Utilization by Hierarchy
+
+1. Utilization by Hierarchy
+---------------------------
+
++------------------------------------+----------------------------+------------+------------+---------+------+------+--------+--------+------------+
+|              Instance              |           Module           | Total LUTs | Logic LUTs | LUTRAMs | SRLs |  FFs | RAMB36 | RAMB18 | DSP Blocks |
++------------------------------------+----------------------------+------------+------------+---------+------+------+--------+--------+------------+
+| gpu_soc_top                        |                      (top) |       1877 |       1877 |       0 |    0 | 1520 |      0 |      7 |          0 |
+|   (gpu_soc_top)                    |                      (top) |        296 |        296 |       0 |    0 |  391 |      0 |      7 |          0 |
+|   u_gpu                            |                        gpu |       1557 |       1557 |       0 |    0 | 1100 |      0 |      0 |          0 |
+|     (u_gpu)                        |                        gpu |          0 |          0 |       0 |    0 |  144 |      0 |      0 |          0 |
+|     cores[0].core_instance         |                       core |        953 |        953 |       0 |    0 |  736 |      0 |      0 |          0 |
+|       decoder_instance             |                    decoder |        144 |        144 |       0 |    0 |   21 |      0 |      0 |          0 |
+|       fetcher_instance             |                    fetcher |          3 |          3 |       0 |    0 |   28 |      0 |      0 |          0 |
+|       scheduler_instance           |                  scheduler |         19 |         19 |       0 |    0 |   12 |      0 |      0 |          0 |
+|       threads[0].alu_instance      |                        alu |          5 |          5 |       0 |    0 |    8 |      0 |      0 |          0 |
+|       threads[0].lsu_instance      |                        lsu |          6 |          6 |       0 |    0 |   36 |      0 |      0 |          0 |
+|       threads[0].register_instance |                  registers |        210 |        210 |       0 |    0 |  128 |      0 |      0 |          0 |
+|       threads[1].alu_instance      |                      alu_0 |          5 |          5 |       0 |    0 |    8 |      0 |      0 |          0 |
+|       threads[1].lsu_instance      |                      lsu_1 |          7 |          7 |       0 |    0 |   36 |      0 |      0 |          0 |
+|       threads[1].register_instance |  registers__parameterized0 |        178 |        178 |       0 |    0 |  120 |      0 |      0 |          0 |
+|       threads[2].alu_instance      |                      alu_2 |          4 |          4 |       0 |    0 |    8 |      0 |      0 |          0 |
+|       threads[2].lsu_instance      |                      lsu_3 |          7 |          7 |       0 |    0 |   36 |      0 |      0 |          0 |
+|       threads[2].register_instance |  registers__parameterized1 |        179 |        179 |       0 |    0 |  120 |      0 |      0 |          0 |
+|       threads[3].alu_instance      |                      alu_4 |          7 |          7 |       0 |    0 |    8 |      0 |      0 |          0 |
+|       threads[3].lsu_instance      |                      lsu_5 |          8 |          8 |       0 |    0 |   36 |      0 |      0 |          0 |
+|       threads[3].pc_instance       |                         pc |          1 |          1 |       0 |    0 |   11 |      0 |      0 |          0 |
+|       threads[3].register_instance |  registers__parameterized2 |        179 |        179 |       0 |    0 |  120 |      0 |      0 |          0 |
+|     data_memory_controller         |                 controller |        509 |        509 |       0 |    0 |  176 |      0 |      0 |          0 |
+|     dcr_instance                   |                        dcr |         11 |         11 |       0 |    0 |    2 |      0 |      0 |          0 |
+|     dispatch_instance              |                   dispatch |         79 |         79 |       0 |    0 |   29 |      0 |      0 |          0 |
+|     program_memory_controller      | controller__parameterized0 |          6 |          6 |       0 |    0 |   13 |      0 |      0 |          0 |
+|   u_uart                           |                    uart_tx |         25 |         25 |       0 |    0 |   29 |      0 |      0 |          0 |
++------------------------------------+----------------------------+------------+------------+---------+------+------+--------+--------+------------+
+* Note: The sum of lower-level cells may be larger than their parent cells total, due to cross-hierarchy LUT combining
+
+

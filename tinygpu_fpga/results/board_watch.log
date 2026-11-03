@@ -1,0 +1,86 @@
+N8_P8_M4_T4_rr: vecadd=801 err=0  matmul=2648 err=0  compute=3976 err=0
+-> C:\Users\srika\Documents\MTP-1\tinygpu_fpga\results\board_runs.csv
+N16_P1_M4_T4_rr: vecadd=1479 err=0  matmul=8537 err=0  compute=14196 err=0
+-> C:\Users\srika\Documents\MTP-1\tinygpu_fpga\results\board_runs.csv
+N4_P4_M4_T4_rr: vecadd=1032 err=0  matmul=5056 err=0  compute=7872 err=0
+-> C:\Users\srika\Documents\MTP-1\tinygpu_fpga\results\board_runs.csv
+Traceback (most recent call last):
+  File "C:\Users\srika\Documents\MTP-1\tinygpu_fpga\scripts\run_board.py", line 85, in <module>
+    main()
+    ~~~~^^
+  File "C:\Users\srika\Documents\MTP-1\tinygpu_fpga\scripts\run_board.py", line 73, in main
+    rows = old + [r for t in tags for r in run(t)]
+                                           ~~~^^^
+  File "C:\Users\srika\Documents\MTP-1\tinygpu_fpga\scripts\run_board.py", line 51, in run
+    assert (int(g.group(2)), int(g.group(4)), int(g.group(5))) == (n, p, m), f"bitstream/config mismatch {l}"
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: bitstream/config mismatch K2 N02 T4 P02 M04 C00003D5A E0000 R00
+N16_P16_M4_T4_rr: vecadd=769 err=0  matmul=2512 err=0  compute=2070 err=0
+-> C:\Users\srika\Documents\MTP-1\tinygpu_fpga\results\board_runs.csv
+N8_P8_M8_T4_rr: vecadd=548 err=0  matmul=2550 err=0  compute=3961 err=0
+-> C:\Users\srika\Documents\MTP-1\tinygpu_fpga\results\board_runs.csv
+N16_P1_M4_T4_rr_f40: vecadd=1479 err=0  matmul=8537 err=0  compute=14196 err=0
+-> C:\Users\srika\Documents\MTP-1\tinygpu_fpga\results\board_runs.csv
+N32_P1_M4_T4_rr: incomplete capture
+
+Traceback (most recent call last):
+  File "C:\Users\srika\Documents\MTP-1\tinygpu_fpga\..\scripts\uart_capture.py", line 82, in <module>
+    main()
+    ~~~~^^
+  File "C:\Users\srika\Documents\MTP-1\tinygpu_fpga\..\scripts\uart_capture.py", line 36, in main
+    ser = serial.Serial(port, args.baud, timeout=0.1)
+  File "C:\Users\srika\AppData\Roaming\Python\Python314\site-packages\serial\serialwin32.py", line 33, in __init__
+    super(Serial, self).__init__(*args, **kwargs)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\srika\AppData\Roaming\Python\Python314\site-packages\serial\serialutil.py", line 244, in __init__
+    self.open()
+    ~~~~~~~~~^^
+  File "C:\Users\srika\AppData\Roaming\Python\Python314\site-packages\serial\serialwin32.py", line 64, in open
+    raise SerialException("could not open port {!r}: {!r}".format(self.portstr, ctypes.WinError()))
+serial.serialutil.SerialException: could not open port 'COM8': PermissionError(13, 'Access is denied.', None, 5)
+
+-> C:\Users\srika\Documents\MTP-1\tinygpu_fpga\results\board_runs.csv
+N16_P16_M4_T4_rr_f40: vecadd=769 err=0  matmul=2512 err=0  compute=2070 err=0
+-> C:\Users\srika\Documents\MTP-1\tinygpu_fpga\results\board_runs.csv
+pture.py", line 82, in <module>
+    main()
+    ~~~~^^
+  File "C:\Users\srika\Documents\MTP-1\tinygpu_fpga\..\scripts\uart_capture.py", line 36, in main
+    ser = serial.Serial(port, args.baud, timeout=0.1)
+  File "C:\Users\srika\AppData\Roaming\Python\Python314\site-packages\serial\serialwin32.py", line 33, in __init__
+    super(Serial, self).__init__(*args, **kwargs)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\srika\AppData\Roaming\Python\Python314\site-packages\serial\serialutil.py", line 244, in __init__
+    self.open()
+    ~~~~~~~~~^^
+  File "C:\Users\srika\AppData\Roaming\Python\Python314\site-packages\serial\serialwin32.py", line 64, in open
+    raise SerialException("could not open port {!r}: {!r}".format(self.portstr, ctypes.WinError()))
+serial.serialutil.SerialException: could not open port 'COM8': PermissionError(13, 'Access is denied.', None, 5)
+
+-> C:\Users\srika\Documents\MTP-1\tinygpu_fpga\results\board_runs.csv
+N32_P1_M4_T4_rr_f25: vecadd=1495 err=0  matmul=8537 err=0  compute=14192 err=0
+-> C:\Users\srika\Documents\MTP-1\tinygpu_fpga\results\board_runs.csv
+a\Documents\MTP-1\tinygpu_fpga\..\scripts\uart_capture.py", line 82, in <module>
+    main()
+    ~~~~^^
+  File "C:\Users\srika\Documents\MTP-1\tinygpu_fpga\..\scripts\uart_capture.py", line 36, in main
+    ser = serial.Serial(port, args.baud, timeout=0.1)
+  File "C:\Users\srika\AppData\Roaming\Python\Python314\site-packages\serial\serialwin32.py", line 33, in __init__
+    super(Serial, self).__init__(*args, **kwargs)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\srika\AppData\Roaming\Python\Python314\site-packages\serial\serialutil.py", line 244, in __init__
+    self.open()
+    ~~~~~~~~~^^
+  File "C:\Users\srika\AppData\Roaming\Python\Python314\site-packages\serial\serialwin32.py", line 64, in open
+    raise SerialException("could not open port {!r}: {!r}".format(self.portstr, ctypes.WinError()))
+serial.serialutil.SerialException: could not open port 'COM8': PermissionError(13, 'Access is denied.', None, 5)
+
+-> C:\Users\srika\Documents\MTP-1\tinygpu_fpga\results\board_runs.csv
+N8_P8_M8_T4_rr_f40: vecadd=548 err=0  matmul=2550 err=0  compute=3961 err=0
+-> C:\Users\srika\Documents\MTP-1\tinygpu_fpga\results\board_runs.csv
+      0 [main] sh 1294 dofork: child -1 - forked process 9304 died unexpectedly, retry 0, exit code 0xC000026B, errno 11
+scripts/board_watch.sh: fork: retry: Resource temporarily unavailable
+1095204 [main] sh 1294 dofork: child -1 - forked process 9900 died unexpectedly, retry 0, exit code 0xC000026B, errno 11
+scripts/board_watch.sh: fork: retry: Resource temporarily unavailable
+3125548 [main] sh 1294 dofork: child -1 - forked process 32388 died unexpectedly, retry 0, exit code 0xC000026B, errno 11
+scripts/board_watch.sh: fork: retry: Resource temporarily unavailable

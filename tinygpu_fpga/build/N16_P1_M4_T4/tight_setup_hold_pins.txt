@@ -1,0 +1,51 @@
++====================+===================+=================================================================+
+| Launch Setup Clock | Launch Hold Clock | Pin                                                             |
++====================+===================+=================================================================+
+| g_mmcm.clk50_raw   | g_mmcm.clk50_raw  | u_gpu/data_memory_controller/mem_read_address_reg[2][0]/D       |
+| g_mmcm.clk50_raw   | g_mmcm.clk50_raw  | u_gpu/data_memory_controller/mem_write_address_reg[1][3]/D      |
+| g_mmcm.clk50_raw   | g_mmcm.clk50_raw  | u_gpu/data_memory_controller/mem_read_address_reg[3][7]/D       |
+| g_mmcm.clk50_raw   | g_mmcm.clk50_raw  | u_gpu/data_memory_controller/mem_read_address_reg[2][3]/D       |
+| g_mmcm.clk50_raw   | g_mmcm.clk50_raw  | u_gpu/data_memory_controller/mem_read_address_reg[2][5]/D       |
+| g_mmcm.clk50_raw   | g_mmcm.clk50_raw  | u_gpu/data_memory_controller/mem_write_address_reg[1][4]/D      |
+| g_mmcm.clk50_raw   | g_mmcm.clk50_raw  | u_gpu/data_memory_controller/mem_write_data_reg[2][3]/D         |
+| g_mmcm.clk50_raw   | g_mmcm.clk50_raw  | u_gpu/data_memory_controller/mem_write_address_reg[2][4]/D      |
+| g_mmcm.clk50_raw   | g_mmcm.clk50_raw  | u_gpu/data_memory_controller/mem_write_data_reg[1][5]/D         |
+| g_mmcm.clk50_raw   | g_mmcm.clk50_raw  | u_gpu/data_memory_controller/mem_write_address_reg[1][7]/D      |
+| g_mmcm.clk50_raw   | g_mmcm.clk50_raw  | u_gpu/data_memory_controller/mem_write_valid_reg[1]/D           |
+| g_mmcm.clk50_raw   | g_mmcm.clk50_raw  | u_gpu/data_memory_controller/mem_write_address_reg[0][4]/D      |
+| g_mmcm.clk50_raw   | g_mmcm.clk50_raw  | u_gpu/data_memory_controller/mem_write_valid_reg[2]/D           |
+| g_mmcm.clk50_raw   | g_mmcm.clk50_raw  | u_gpu/data_memory_controller/mem_write_address_reg[0][6]/D      |
+| g_mmcm.clk50_raw   | g_mmcm.clk50_raw  | u_gpu/data_memory_controller/mem_write_data_reg[0][1]/D         |
+| g_mmcm.clk50_raw   | g_mmcm.clk50_raw  | u_gpu/data_memory_controller/mem_write_data_reg[0][2]/D         |
+| g_mmcm.clk50_raw   | g_mmcm.clk50_raw  | u_gpu/data_memory_controller/mem_write_address_reg[0][7]/D      |
+| g_mmcm.clk50_raw   | g_mmcm.clk50_raw  | u_gpu/data_memory_controller/mem_read_address_reg[0][7]/D       |
+| g_mmcm.clk50_raw   | g_mmcm.clk50_raw  | u_gpu/data_memory_controller/mem_read_address_reg[0][1]/D       |
+| g_mmcm.clk50_raw   | g_mmcm.clk50_raw  | u_gpu/dispatch_instance/core_start_reg[14]/D                    |
+| g_mmcm.clk50_raw   | g_mmcm.clk50_raw  | u_gpu/data_memory_controller/controller_state_reg[3][1]_rep/D   |
+| g_mmcm.clk50_raw   | g_mmcm.clk50_raw  | u_gpu/data_memory_controller/mem_read_valid_reg[3]/D            |
+| g_mmcm.clk50_raw   | g_mmcm.clk50_raw  | u_gpu/data_memory_controller/mem_read_address_reg[0][6]/D       |
+| g_mmcm.clk50_raw   | g_mmcm.clk50_raw  | u_gpu/data_memory_controller/mem_write_address_reg[0][5]/D      |
+| g_mmcm.clk50_raw   | g_mmcm.clk50_raw  | u_gpu/data_memory_controller/mem_write_address_reg[0][2]/D      |
+| g_mmcm.clk50_raw   | g_mmcm.clk50_raw  | u_gpu/data_memory_controller/mem_write_address_reg[0][0]/D      |
+| g_mmcm.clk50_raw   | g_mmcm.clk50_raw  | u_gpu/data_memory_controller/mem_write_data_reg[0][3]/D         |
+| g_mmcm.clk50_raw   | g_mmcm.clk50_raw  | u_gpu/data_memory_controller/mem_write_data_reg[0][5]/D         |
+| g_mmcm.clk50_raw   | g_mmcm.clk50_raw  | u_gpu/data_memory_controller/mem_read_valid_reg[0]/D            |
+| g_mmcm.clk50_raw   | g_mmcm.clk50_raw  | u_gpu/dispatch_instance/core_thread_count_reg[13][2]/D          |
+| g_mmcm.clk50_raw   | g_mmcm.clk50_raw  | u_gpu/data_memory_controller/controller_state_reg[0][2]/D       |
+| g_mmcm.clk50_raw   | g_mmcm.clk50_raw  | u_gpu/dispatch_instance/core_start_reg[13]/D                    |
+| g_mmcm.clk50_raw   | g_mmcm.clk50_raw  | u_gpu/data_memory_controller/mem_write_data_reg[0][4]/D         |
+| g_mmcm.clk50_raw   | g_mmcm.clk50_raw  | u_gpu/data_memory_controller/channel_serving_consumer_reg[57]/D |
+| g_mmcm.clk50_raw   | g_mmcm.clk50_raw  | u_gpu/data_memory_controller/mem_read_valid_reg[1]/D            |
+| g_mmcm.clk50_raw   | g_mmcm.clk50_raw  | u_gpu/dispatch_instance/core_thread_count_reg[12][2]/D          |
+| g_mmcm.clk50_raw   | g_mmcm.clk50_raw  | u_gpu/data_memory_controller/channel_serving_consumer_reg[55]/D |
+| g_mmcm.clk50_raw   | g_mmcm.clk50_raw  | u_gpu/data_memory_controller/channel_serving_consumer_reg[54]/D |
+| g_mmcm.clk50_raw   | g_mmcm.clk50_raw  | u_gpu/data_memory_controller/channel_serving_consumer_reg[53]/D |
+| g_mmcm.clk50_raw   | g_mmcm.clk50_raw  | u_gpu/dispatch_instance/core_thread_count_reg[10][2]/D          |
+| g_mmcm.clk50_raw   | g_mmcm.clk50_raw  | u_gpu/data_memory_controller/channel_serving_consumer_reg[42]/D |
+| g_mmcm.clk50_raw   | g_mmcm.clk50_raw  | u_gpu/dispatch_instance/core_start_reg[9]/D                     |
+| g_mmcm.clk50_raw   | g_mmcm.clk50_raw  | u_gpu/dispatch_instance/core_thread_count_reg[8][2]/D           |
+| g_mmcm.clk50_raw   | g_mmcm.clk50_raw  | u_gpu/data_memory_controller/channel_serving_consumer_reg[36]/D |
+| g_mmcm.clk50_raw   | g_mmcm.clk50_raw  | u_gpu/dispatch_instance/core_start_reg[7]/D                     |
+| g_mmcm.clk50_raw   | g_mmcm.clk50_raw  | u_gpu/dispatch_instance/core_thread_count_reg[6][2]/D           |
+| g_mmcm.clk50_raw   | g_mmcm.clk50_raw  | u_gpu/dispatch_instance/core_start_reg[6]/D                     |
++--------------------+-------------------+-----------------------------------------------------------------+

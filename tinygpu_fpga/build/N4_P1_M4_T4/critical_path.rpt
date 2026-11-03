@@ -1,0 +1,156 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
+| Date         : Wed Oct 21 13:44:22 2026
+| Host         : SRINIVAS running 64-bit major release  (build 9200)
+| Command      : report_timing -max_paths 1 -nworst 1 -file C:/Users/srika/Documents/MTP-1/tinygpu_fpga/build/N4_P1_M4_T4/critical_path.rpt
+| Design       : gpu_soc_top
+| Device       : 7a100t-csg324
+| Speed File   : -1  PRODUCTION 1.23 2018-06-13
+| Design State : Routed
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Report
+
+Slack (MET) :             1.535ns  (required time - arrival time)
+  Source:                 u_gpu/cores[3].core_instance/threads[1].register_instance/rt_reg[4]/C
+                            (rising edge-triggered cell FDRE clocked by g_mmcm.clk50_raw  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            u_gpu/cores[3].core_instance/threads[1].alu_instance/alu_out_reg_reg[0]/D
+                            (rising edge-triggered cell FDRE clocked by g_mmcm.clk50_raw  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             g_mmcm.clk50_raw
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            20.000ns  (g_mmcm.clk50_raw rise@20.000ns - g_mmcm.clk50_raw rise@0.000ns)
+  Data Path Delay:        18.405ns  (logic 9.353ns (50.818%)  route 9.052ns (49.182%))
+  Logic Levels:           30  (CARRY4=19 LUT2=2 LUT3=6 LUT4=1 LUT6=2)
+  Clock Path Skew:        -0.053ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    -1.513ns = ( 18.487 - 20.000 ) 
+    Source Clock Delay      (SCD):    -0.901ns
+    Clock Pessimism Removal (CPR):    0.559ns
+  Clock Uncertainty:      0.082ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.147ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock g_mmcm.clk50_raw rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         1.482     1.482 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.233     2.715    clk_IBUF
+    MMCME2_ADV_X1Y2      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -7.070    -4.355 r  g_mmcm.u_mmcm/CLKOUT0
+                         net (fo=1, routed)           1.719    -2.636    g_mmcm.clk50_raw
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.096    -2.540 r  g_mmcm.u_c/O
+                         net (fo=4413, routed)        1.639    -0.901    u_gpu/cores[3].core_instance/threads[1].register_instance/sysclk
+    SLICE_X34Y58         FDRE                                         r  u_gpu/cores[3].core_instance/threads[1].register_instance/rt_reg[4]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X34Y58         FDRE (Prop_fdre_C_Q)         0.518    -0.383 f  u_gpu/cores[3].core_instance/threads[1].register_instance/rt_reg[4]/Q
+                         net (fo=23, routed)          1.514     1.131    u_gpu/cores[3].core_instance/threads[1].register_instance/Q[4]
+    SLICE_X37Y73         LUT6 (Prop_lut6_I0_O)        0.124     1.255 f  u_gpu/cores[3].core_instance/threads[1].register_instance/alu_out_reg0__7_carry_i_9__12/O
+                         net (fo=5, routed)           0.991     2.246    u_gpu/cores[3].core_instance/threads[1].register_instance/alu_out_reg0__7_carry_i_9__12_n_0
+    SLICE_X37Y77         LUT4 (Prop_lut4_I2_O)        0.124     2.370 r  u_gpu/cores[3].core_instance/threads[1].register_instance/alu_out_reg0__7_carry_i_1__12/O
+                         net (fo=13, routed)          0.735     3.105    u_gpu/cores[3].core_instance/threads[1].register_instance/rt_reg[7]_1
+    SLICE_X37Y77         LUT2 (Prop_lut2_I1_O)        0.152     3.257 r  u_gpu/cores[3].core_instance/threads[1].register_instance/alu_out_reg0__7_carry__0_i_3__12/O
+                         net (fo=1, routed)           0.524     3.781    u_gpu/cores[3].core_instance/threads[1].alu_instance/alu_out_reg[5]_i_9__12[1]
+    SLICE_X36Y76         CARRY4 (Prop_carry4_DI[1]_CO[3])
+                                                      0.715     4.496 r  u_gpu/cores[3].core_instance/threads[1].alu_instance/alu_out_reg0__7_carry__0/CO[3]
+                         net (fo=1, routed)           0.000     4.496    u_gpu/cores[3].core_instance/threads[1].alu_instance/alu_out_reg0__7_carry__0_n_0
+    SLICE_X36Y77         CARRY4 (Prop_carry4_CI_CO[0])
+                                                      0.271     4.767 r  u_gpu/cores[3].core_instance/threads[1].alu_instance/alu_out_reg0__7_carry__1/CO[0]
+                         net (fo=12, routed)          0.795     5.562    u_gpu/cores[3].core_instance/threads[1].register_instance/CO[0]
+    SLICE_X37Y74         LUT3 (Prop_lut3_I0_O)        0.373     5.935 r  u_gpu/cores[3].core_instance/threads[1].register_instance/alu_out_reg[5]_i_14__12/O
+                         net (fo=1, routed)           0.000     5.935    u_gpu/cores[3].core_instance/threads[1].register_instance/alu_out_reg[5]_i_14__12_n_0
+    SLICE_X37Y74         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     6.485 r  u_gpu/cores[3].core_instance/threads[1].register_instance/alu_out_reg_reg[5]_i_7__12/CO[3]
+                         net (fo=1, routed)           0.009     6.494    u_gpu/cores[3].core_instance/threads[1].register_instance/alu_out_reg_reg[5]_i_7__12_n_0
+    SLICE_X37Y75         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     6.608 r  u_gpu/cores[3].core_instance/threads[1].register_instance/alu_out_reg_reg[5]_i_4__12/CO[3]
+                         net (fo=1, routed)           0.000     6.608    u_gpu/cores[3].core_instance/threads[1].register_instance/alu_out_reg_reg[5]_i_4__12_n_0
+    SLICE_X37Y76         CARRY4 (Prop_carry4_CI_CO[1])
+                                                      0.157     6.765 r  u_gpu/cores[3].core_instance/threads[1].register_instance/alu_out_reg_reg[5]_i_3__12/CO[1]
+                         net (fo=12, routed)          0.783     7.548    u_gpu/cores[3].core_instance/threads[1].register_instance/threads[1].alu_instance/alu_out_reg0[5]
+    SLICE_X39Y73         LUT3 (Prop_lut3_I0_O)        0.329     7.877 r  u_gpu/cores[3].core_instance/threads[1].register_instance/alu_out_reg0__211_carry_i_36__12/O
+                         net (fo=1, routed)           0.000     7.877    u_gpu/cores[3].core_instance/threads[1].register_instance/alu_out_reg0__211_carry_i_36__12_n_0
+    SLICE_X39Y73         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     8.427 r  u_gpu/cores[3].core_instance/threads[1].register_instance/alu_out_reg0__211_carry_i_26__12/CO[3]
+                         net (fo=1, routed)           0.000     8.427    u_gpu/cores[3].core_instance/threads[1].register_instance/alu_out_reg0__211_carry_i_26__12_n_0
+    SLICE_X39Y74         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     8.541 r  u_gpu/cores[3].core_instance/threads[1].register_instance/alu_out_reg_reg[4]_i_4__12/CO[3]
+                         net (fo=1, routed)           0.009     8.550    u_gpu/cores[3].core_instance/threads[1].register_instance/alu_out_reg_reg[4]_i_4__12_n_0
+    SLICE_X39Y75         CARRY4 (Prop_carry4_CI_CO[1])
+                                                      0.157     8.707 r  u_gpu/cores[3].core_instance/threads[1].register_instance/alu_out_reg_reg[4]_i_3__12/CO[1]
+                         net (fo=12, routed)          0.799     9.506    u_gpu/cores[3].core_instance/threads[1].register_instance/threads[1].alu_instance/alu_out_reg0[4]
+    SLICE_X41Y73         LUT3 (Prop_lut3_I0_O)        0.329     9.835 r  u_gpu/cores[3].core_instance/threads[1].register_instance/alu_out_reg0__211_carry_i_30__12/O
+                         net (fo=1, routed)           0.000     9.835    u_gpu/cores[3].core_instance/threads[1].register_instance/alu_out_reg0__211_carry_i_30__12_n_0
+    SLICE_X41Y73         CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.532    10.367 r  u_gpu/cores[3].core_instance/threads[1].register_instance/alu_out_reg0__211_carry_i_15__12/CO[3]
+                         net (fo=1, routed)           0.000    10.367    u_gpu/cores[3].core_instance/threads[1].register_instance/alu_out_reg0__211_carry_i_15__12_n_0
+    SLICE_X41Y74         CARRY4 (Prop_carry4_CI_CO[1])
+                                                      0.157    10.524 r  u_gpu/cores[3].core_instance/threads[1].register_instance/alu_out_reg_reg[3]_i_3__12/CO[1]
+                         net (fo=12, routed)          0.718    11.242    u_gpu/cores[3].core_instance/threads[1].register_instance/rt_reg[7]_3[2]
+    SLICE_X43Y69         LUT3 (Prop_lut3_I0_O)        0.329    11.571 r  u_gpu/cores[3].core_instance/threads[1].register_instance/alu_out_reg0__211_carry_i_25__12/O
+                         net (fo=1, routed)           0.000    11.571    u_gpu/cores[3].core_instance/threads[1].register_instance/alu_out_reg0__211_carry_i_25__12_n_0
+    SLICE_X43Y69         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550    12.121 r  u_gpu/cores[3].core_instance/threads[1].register_instance/alu_out_reg0__211_carry_i_11__12/CO[3]
+                         net (fo=1, routed)           0.000    12.121    u_gpu/cores[3].core_instance/threads[1].register_instance/alu_out_reg0__211_carry_i_11__12_n_0
+    SLICE_X43Y70         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    12.235 r  u_gpu/cores[3].core_instance/threads[1].register_instance/alu_out_reg0__211_carry_i_8__12/CO[3]
+                         net (fo=1, routed)           0.000    12.235    u_gpu/cores[3].core_instance/threads[1].register_instance/alu_out_reg0__211_carry_i_8__12_n_0
+    SLICE_X43Y71         CARRY4 (Prop_carry4_CI_CO[1])
+                                                      0.157    12.392 r  u_gpu/cores[3].core_instance/threads[1].register_instance/alu_out_reg0__211_carry_i_7__12/CO[1]
+                         net (fo=12, routed)          0.648    13.040    u_gpu/cores[3].core_instance/threads[1].register_instance/rt_reg[7]_3[1]
+    SLICE_X44Y68         LUT3 (Prop_lut3_I0_O)        0.329    13.369 r  u_gpu/cores[3].core_instance/threads[1].register_instance/alu_out_reg0__211_carry_i_14__12/O
+                         net (fo=1, routed)           0.000    13.369    u_gpu/cores[3].core_instance/threads[1].register_instance/alu_out_reg0__211_carry_i_14__12_n_0
+    SLICE_X44Y68         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550    13.919 r  u_gpu/cores[3].core_instance/threads[1].register_instance/alu_out_reg0__211_carry_i_2__12/CO[3]
+                         net (fo=1, routed)           0.000    13.919    u_gpu/cores[3].core_instance/threads[1].register_instance/alu_out_reg0__211_carry_i_2__12_n_0
+    SLICE_X44Y69         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    14.033 r  u_gpu/cores[3].core_instance/threads[1].register_instance/alu_out_reg0__211_carry__0_i_1__12/CO[3]
+                         net (fo=1, routed)           0.000    14.033    u_gpu/cores[3].core_instance/threads[1].register_instance/alu_out_reg0__211_carry__0_i_1__12_n_0
+    SLICE_X44Y70         CARRY4 (Prop_carry4_CI_CO[1])
+                                                      0.157    14.190 r  u_gpu/cores[3].core_instance/threads[1].register_instance/alu_out_reg0__211_carry_i_1__12/CO[1]
+                         net (fo=12, routed)          0.644    14.834    u_gpu/cores[3].core_instance/threads[1].register_instance/rt_reg[7]_3[0]
+    SLICE_X45Y68         LUT3 (Prop_lut3_I0_O)        0.329    15.163 r  u_gpu/cores[3].core_instance/threads[1].register_instance/alu_out_reg0__211_carry_i_5__12/O
+                         net (fo=1, routed)           0.000    15.163    u_gpu/cores[3].core_instance/threads[1].alu_instance/alu_out_reg0__211_carry__0_1[1]
+    SLICE_X45Y68         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550    15.713 r  u_gpu/cores[3].core_instance/threads[1].alu_instance/alu_out_reg0__211_carry/CO[3]
+                         net (fo=1, routed)           0.000    15.713    u_gpu/cores[3].core_instance/threads[1].alu_instance/alu_out_reg0__211_carry_n_0
+    SLICE_X45Y69         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    15.827 r  u_gpu/cores[3].core_instance/threads[1].alu_instance/alu_out_reg0__211_carry__0/CO[3]
+                         net (fo=1, routed)           0.000    15.827    u_gpu/cores[3].core_instance/threads[1].alu_instance/alu_out_reg0__211_carry__0_n_0
+    SLICE_X45Y70         CARRY4 (Prop_carry4_CI_CO[0])
+                                                      0.271    16.098 r  u_gpu/cores[3].core_instance/threads[1].alu_instance/alu_out_reg0__211_carry__1/CO[0]
+                         net (fo=1, routed)           0.451    16.548    u_gpu/cores[3].core_instance/threads[1].alu_instance/alu_out_reg0[0]
+    SLICE_X41Y69         LUT6 (Prop_lut6_I1_O)        0.373    16.921 f  u_gpu/cores[3].core_instance/threads[1].alu_instance/alu_out_reg[0]_i_2__13/O
+                         net (fo=1, routed)           0.433    17.354    u_gpu/cores[3].core_instance/decoder_instance/alu_out_reg_reg[0]_1
+    SLICE_X41Y69         LUT2 (Prop_lut2_I1_O)        0.150    17.504 r  u_gpu/cores[3].core_instance/decoder_instance/alu_out_reg[0]_i_1__13/O
+                         net (fo=1, routed)           0.000    17.504    u_gpu/cores[3].core_instance/threads[1].alu_instance/D[0]
+    SLICE_X41Y69         FDRE                                         r  u_gpu/cores[3].core_instance/threads[1].alu_instance/alu_out_reg_reg[0]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock g_mmcm.clk50_raw rise edge)
+                                                     20.000    20.000 r  
+    E3                                                0.000    20.000 r  clk (IN)
+                         net (fo=0)                   0.000    20.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         1.411    21.411 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.162    22.573    clk_IBUF
+    MMCME2_ADV_X1Y2      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -7.324    15.249 r  g_mmcm.u_mmcm/CLKOUT0
+                         net (fo=1, routed)           1.639    16.888    g_mmcm.clk50_raw
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    16.979 r  g_mmcm.u_c/O
+                         net (fo=4413, routed)        1.507    18.487    u_gpu/cores[3].core_instance/threads[1].alu_instance/sysclk
+    SLICE_X41Y69         FDRE                                         r  u_gpu/cores[3].core_instance/threads[1].alu_instance/alu_out_reg_reg[0]/C
+                         clock pessimism              0.559    19.046    
+                         clock uncertainty           -0.082    18.965    
+    SLICE_X41Y69         FDRE (Setup_fdre_C_D)        0.075    19.040    u_gpu/cores[3].core_instance/threads[1].alu_instance/alu_out_reg_reg[0]
+  -------------------------------------------------------------------
+                         required time                         19.040    
+                         arrival time                         -17.504    
+  -------------------------------------------------------------------
+                         slack                                  1.535    
+
+
+
+

@@ -1,0 +1,32 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
+| Date         : Wed Oct 21 13:22:22 2026
+| Host         : SRINIVAS running 64-bit major release  (build 9200)
+| Command      : report_utilization -hierarchical -file C:/Users/srika/Documents/MTP-1/cnn_fpga/build/util_hier.rpt
+| Design       : cnn_top
+| Device       : xc7a100tcsg324-1
+| Speed File   : -1
+| Design State : Routed
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Utilization Design Information
+
+Table of Contents
+-----------------
+1. Utilization by Hierarchy
+
+1. Utilization by Hierarchy
+---------------------------
+
++-------------+----------+------------+------------+---------+------+------+--------+--------+------------+
+|   Instance  |  Module  | Total LUTs | Logic LUTs | LUTRAMs | SRLs |  FFs | RAMB36 | RAMB18 | DSP Blocks |
++-------------+----------+------------+------------+---------+------+------+--------+--------+------------+
+| cnn_top     |    (top) |       2435 |       2277 |     158 |    0 | 1164 |      8 |      1 |          4 |
+|   (cnn_top) |    (top) |        129 |        129 |       0 |    0 |  225 |      0 |      0 |          0 |
+|   u_core    | cnn_core |       2271 |       2113 |     158 |    0 |  910 |      8 |      1 |          4 |
+|   u_uart    |  uart_tx |         36 |         36 |       0 |    0 |   29 |      0 |      0 |          0 |
++-------------+----------+------------+------------+---------+------+------+--------+--------+------------+
+* Note: The sum of lower-level cells may be larger than their parent cells total, due to cross-hierarchy LUT combining
+
+

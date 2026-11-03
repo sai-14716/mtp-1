@@ -1,0 +1,21 @@
+N32_P1_M4_T4_rr_f25: OK in 4182s
+N8_P8_M8_T4_rr_f40: OK in 740s
+2/2 builds produced a bitstream
+cores=16, prog_ch=1, data_ch=4, tpb=4, dispatch=rr, core_MHz=50.0, status=ok, LUT=26458.0, LUT_pct=41.73, LUTRAM=0.0, FF=15869.0, FF_pct=12.51, BRAM=3.5, DSP=0.0, WNS_ns=-2.241, WHS_ns=0.019, timing_met=False, Fmax_MHz=45.0, logic_levels=24
+cores=16, prog_ch=1, data_ch=4, tpb=4, dispatch=rr, core_MHz=40.0, status=ok, LUT=25448.0, LUT_pct=40.14, LUTRAM=0.0, FF=15869.0, FF_pct=12.51, BRAM=3.5, DSP=0.0, WNS_ns=0.772, WHS_ns=0.022, timing_met=True, Fmax_MHz=41.3, logic_levels=23
+cores=32, prog_ch=1, data_ch=4, tpb=4, dispatch=rr, core_MHz=50.0, status=ok, LUT=53133.0, LUT_pct=83.81, LUTRAM=0.0, FF=31201.0, FF_pct=24.61, BRAM=3.5, DSP=0.0, WNS_ns=-13.595, WHS_ns=0.016, timing_met=False, Fmax_MHz=29.8, logic_levels=37
+cores=32, prog_ch=1, data_ch=4, tpb=4, dispatch=rr, core_MHz=25.0, status=ok, LUT=51851.0, LUT_pct=81.78, LUTRAM=0.0, FF=31202.0, FF_pct=24.61, BRAM=3.5, DSP=0.0, WNS_ns=0.604, WHS_ns=0.006, timing_met=True, Fmax_MHz=25.4, logic_levels=36
+cores=2, prog_ch=2, data_ch=4, tpb=4, dispatch=rr, core_MHz=50.0, status=ok, LUT=3300.0, LUT_pct=5.21, LUTRAM=0.0, FF=2503.0, FF_pct=1.97, BRAM=4.0, DSP=0.0, WNS_ns=1.269, WHS_ns=0.028, timing_met=True, Fmax_MHz=53.4, logic_levels=31
+cores=4, prog_ch=4, data_ch=4, tpb=4, dispatch=rr, core_MHz=50.0, status=ok, LUT=6463.0, LUT_pct=10.19, LUTRAM=0.0, FF=4458.0, FF_pct=3.52, BRAM=5.0, DSP=0.0, WNS_ns=1.226, WHS_ns=0.02, timing_met=True, Fmax_MHz=53.3, logic_levels=30
+cores=8, prog_ch=8, data_ch=4, tpb=4, dispatch=rr, core_MHz=50.0, status=ok, LUT=13709.0, LUT_pct=21.62, LUTRAM=0.0, FF=8344.0, FF_pct=6.58, BRAM=7.0, DSP=0.0, WNS_ns=0.531, WHS_ns=0.02, timing_met=True, Fmax_MHz=51.4, logic_levels=17
+cores=16, prog_ch=16, data_ch=4, tpb=4, dispatch=rr, core_MHz=50.0, status=ok, LUT=49938.0, LUT_pct=78.77, LUTRAM=0.0, FF=21075.0, FF_pct=16.62, BRAM=3.0, DSP=0.0, WNS_ns=-2.814, WHS_ns=0.031, timing_met=False, Fmax_MHz=43.8, logic_levels=23
+cores=16, prog_ch=16, data_ch=4, tpb=4, dispatch=rr, core_MHz=40.0, status=ok, LUT=49005.0, LUT_pct=77.29, LUTRAM=0.0, FF=21075.0, FF_pct=16.62, BRAM=3.0, DSP=0.0, WNS_ns=0.165, WHS_ns=0.005, timing_met=True, Fmax_MHz=40.3, logic_levels=25
+cores=8, prog_ch=8, data_ch=8, tpb=4, dispatch=rr, core_MHz=50.0, status=ok, LUT=18253.0, LUT_pct=28.79, LUTRAM=0.0, FF=8501.0, FF_pct=6.7, BRAM=9.0, DSP=0.0, WNS_ns=-0.998, WHS_ns=0.026, timing_met=False, Fmax_MHz=47.6, logic_levels=23
+cores=8, prog_ch=8, data_ch=8, tpb=4, dispatch=rr, core_MHz=40.0, status=ok, LUT=17654.0, LUT_pct=27.85, LUTRAM=0.0, FF=8501.0, FF_pct=6.7, BRAM=9.0, DSP=0.0, WNS_ns=0.492, WHS_ns=0.019, timing_met=True, Fmax_MHz=40.8, logic_levels=22
+cores=16, prog_ch=16, data_ch=16, tpb=4, dispatch=rr, status=no util.rpt (build failed / running)
+cores=1, prog_ch=1, data_ch=4, tpb=4, dispatch=stock, core_MHz=50.0, status=ok, LUT=1877.0, LUT_pct=2.96, LUTRAM=0.0, FF=1520.0, FF_pct=1.2, BRAM=3.5, DSP=0.0, WNS_ns=1.089, WHS_ns=0.048, timing_met=True, Fmax_MHz=52.9, logic_levels=29
+cores=2, prog_ch=1, data_ch=4, tpb=4, dispatch=stock, core_MHz=50.0, status=ok, LUT=3259.0, LUT_pct=5.14, LUTRAM=0.0, FF=2489.0, FF_pct=1.96, BRAM=3.5, DSP=0.0, WNS_ns=1.394, WHS_ns=0.067, timing_met=True, Fmax_MHz=53.7, logic_levels=31
+cores=4, prog_ch=1, data_ch=4, tpb=4, dispatch=stock, core_MHz=50.0, status=ok, LUT=6253.0, LUT_pct=9.86, LUTRAM=0.0, FF=4400.0, FF_pct=3.47, BRAM=3.5, DSP=0.0, WNS_ns=1.535, WHS_ns=0.018, timing_met=True, Fmax_MHz=54.2, logic_levels=30
+cores=8, prog_ch=1, data_ch=4, tpb=4, dispatch=stock, core_MHz=50.0, status=ok, LUT=12904.0, LUT_pct=20.35, LUTRAM=0.0, FF=8226.0, FF_pct=6.49, BRAM=3.5, DSP=0.0, WNS_ns=0.127, WHS_ns=0.02, timing_met=True, Fmax_MHz=50.3, logic_levels=30
+cores=16, prog_ch=1, data_ch=4, tpb=4, dispatch=stock, core_MHz=50.0, status=ok, LUT=29416.0, LUT_pct=46.4, LUTRAM=0.0, FF=15883.0, FF_pct=12.53, BRAM=3.5, DSP=0.0, WNS_ns=-28.094, WHS_ns=0.015, timing_met=False, Fmax_MHz=20.8, logic_levels=75
+-> C:\Users\srika\Documents\MTP-1\tinygpu_fpga\results\fpga_sweep.csv

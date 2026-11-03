@@ -1,0 +1,33 @@
+#-----------------------------------------------------------
+# xsim v2024.2 (64-bit)
+# SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024
+# IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+# SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+# Start of session at: Wed Oct 21 14:55:54 2026
+# Process ID         : 26248
+# Current directory  : C:/Users/srika/Documents/MTP-1/tinygpu_fpga/sim/work_N2_P1_M4_T4
+# Command line       : xsim.exe -mode tcl -source {xsim.dir/soc_sim/xsim_script.tcl}
+# Log file           : C:/Users/srika/Documents/MTP-1/tinygpu_fpga/sim/work_N2_P1_M4_T4/xsim.log
+# Journal file       : C:/Users/srika/Documents/MTP-1/tinygpu_fpga/sim/work_N2_P1_M4_T4\xsim.jou
+# Running On         : SRINIVAS
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 26300
+# Processor Detail   : 13th Gen Intel(R) Core(TM) i5-1335U
+# CPU Frequency      : 2496 MHz
+# CPU Physical cores : 10
+# CPU Logical cores  : 12
+# Host memory        : 16803 MB
+# Swap memory        : 12884 MB
+# Total Virtual      : 29688 MB
+# Available Virtual  : 3849 MB
+#-----------------------------------------------------------
+source xsim.dir/soc_sim/xsim_script.tcl
+# xsim {soc_sim} -autoloadwcfg -runall
+Time resolution is 1 ns
+run -all
+K0 N02 T4 P01 M04 C00000819 E0000 R00
+K1 N02 T4 P01 M04 C000027E1 E0000 R00
+K2 N02 T4 P01 M04 C00003D69 E0000 R00
+$finish called at time : 328865 ns : File "C:/Users/srika/Documents/MTP-1/tinygpu_fpga/sim/work_N2_P1_M4_T4/tb_soc.sv" Line 23
+exit
+INFO: [Common 17-206] Exiting xsim at Wed Oct 21 14:55:57 2026...

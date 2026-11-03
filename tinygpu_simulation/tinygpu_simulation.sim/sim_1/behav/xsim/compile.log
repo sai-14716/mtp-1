@@ -1,0 +1,25 @@
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/srika/Documents/MTP-1/tiny-gpu/src/alu.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/srika/Documents/MTP-1/tiny-gpu/src/controller.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module controller
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/srika/Documents/MTP-1/tiny-gpu/src/core.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module core
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/srika/Documents/MTP-1/tiny-gpu/src/dcr.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dcr
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/srika/Documents/MTP-1/tiny-gpu/src/decoder.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module decoder
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/srika/Documents/MTP-1/tiny-gpu/src/dispatch.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dispatch
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/srika/Documents/MTP-1/tiny-gpu/src/fetcher.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fetcher
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/srika/Documents/MTP-1/tiny-gpu/src/lsu.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module lsu
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/srika/Documents/MTP-1/tiny-gpu/src/pc.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pc
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/srika/Documents/MTP-1/tiny-gpu/src/registers.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module registers
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/srika/Documents/MTP-1/tiny-gpu/src/scheduler.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module scheduler
+WARNING: [VRFC 10-3824] variable 'any_lsu_waiting' must explicitly be declared as automatic or static [C:/Users/srika/Documents/MTP-1/tiny-gpu/src/scheduler.sv:79]
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/srika/Documents/MTP-1/tiny-gpu/src/gpu.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module gpu

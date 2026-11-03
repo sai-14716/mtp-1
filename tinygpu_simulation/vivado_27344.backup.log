@@ -1,0 +1,27 @@
+INFO: [Common 17-3922] A valid Vivado Design Suite BASIC license has been detected. Your current license is active and will expire on 21-aug-2027.
+#-----------------------------------------------------------
+# Vivado v2026.1 (64-bit)
+# SW Build 6511674 on Tue Jun 16 11:02:23 MDT 2026
+# IP Build 6504888 on Tue Jun 09 09:05:25 MDT 2026
+# SharedData Build 6501428 on Mon Jun 08 17:34:18 MDT 2026
+# Start of session at: Mon Aug 24 10:32:49 2026
+# Process ID         : 27344
+# Current directory  : C:/Users/srika/Documents/MTP-1/tinygpu_simulation
+# Command line       : vivado.exe -mode batch -source compile.tcl
+# Log file           : C:/Users/srika/Documents/MTP-1/tinygpu_simulation/vivado.log
+# Journal file       : C:/Users/srika/Documents/MTP-1/tinygpu_simulation\vivado.jou
+# Running On         : SRINIVAS
+# Platform           : Windows 11
+# Operating System   : 26200
+# Processor Detail   : 13th Gen Intel(R) Core(TM) i5-1335U
+# CPU Frequency      : 2496 MHz
+# CPU Physical cores : 10
+# CPU Logical cores  : 12
+# Host memory        : 16803 MB
+# Swap memory        : 18547 MB
+# Total Virtual      : 35351 MB
+# Available Virtual  : 13241 MB
+#-----------------------------------------------------------
+source compile.tcl
+couldn't read file "compile.tcl": no such file or directory
+INFO: [Common 17-206] Exiting Vivado at Mon Aug 24 10:33:03 2026...

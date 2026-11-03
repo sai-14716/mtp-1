@@ -1,0 +1,123 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+----------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
+| Date         : Wed Oct 21 15:47:21 2026
+| Host         : SRINIVAS running 64-bit major release  (build 9200)
+| Command      : report_timing -max_paths 1 -nworst 1 -file C:/Users/srika/Documents/MTP-1/tinygpu_fpga/build/N16_P1_M4_T4_rr_f40/critical_path.rpt
+| Design       : gpu_soc_top
+| Device       : 7a100t-csg324
+| Speed File   : -1  PRODUCTION 1.23 2018-06-13
+| Design State : Routed
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Report
+
+Slack (MET) :             0.772ns  (required time - arrival time)
+  Source:                 u_gpu/data_memory_controller/current_consumer_reg[1][5]/C
+                            (rising edge-triggered cell FDRE clocked by g_mmcm.clk50_raw  {rise@0.000ns fall@12.500ns period=25.000ns})
+  Destination:            u_gpu/data_memory_controller/mem_write_data_reg[3][3]/D
+                            (rising edge-triggered cell FDRE clocked by g_mmcm.clk50_raw  {rise@0.000ns fall@12.500ns period=25.000ns})
+  Path Group:             g_mmcm.clk50_raw
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            25.000ns  (g_mmcm.clk50_raw rise@25.000ns - g_mmcm.clk50_raw rise@0.000ns)
+  Data Path Delay:        24.246ns  (logic 4.244ns (17.504%)  route 20.002ns (82.496%))
+  Logic Levels:           23  (LUT3=3 LUT5=4 LUT6=16)
+  Clock Path Skew:        0.074ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    -1.336ns = ( 23.664 - 25.000 ) 
+    Source Clock Delay      (SCD):    -0.922ns
+    Clock Pessimism Removal (CPR):    0.487ns
+  Clock Uncertainty:      0.085ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.154ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock g_mmcm.clk50_raw rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         1.482     1.482 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.233     2.715    clk_IBUF
+    MMCME2_ADV_X1Y2      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -7.070    -4.355 r  g_mmcm.u_mmcm/CLKOUT0
+                         net (fo=1, routed)           1.719    -2.636    g_mmcm.clk50_raw
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.096    -2.540 r  g_mmcm.u_c/O
+                         net (fo=15882, routed)       1.618    -0.922    u_gpu/data_memory_controller/sysclk
+    SLICE_X52Y65         FDRE                                         r  u_gpu/data_memory_controller/current_consumer_reg[1][5]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X52Y65         FDRE (Prop_fdre_C_Q)         0.456    -0.466 f  u_gpu/data_memory_controller/current_consumer_reg[1][5]/Q
+                         net (fo=185, routed)         1.950     1.484    u_gpu/data_memory_controller/current_consumer_reg_n_0_[1][5]
+    SLICE_X52Y68         LUT3 (Prop_lut3_I1_O)        0.150     1.634 f  u_gpu/data_memory_controller/consumer_write_ready[21]_i_10/O
+                         net (fo=12, routed)          0.828     2.462    u_gpu/data_memory_controller/consumer_write_ready[21]_i_10_n_0
+    SLICE_X53Y65         LUT6 (Prop_lut6_I2_O)        0.326     2.788 r  u_gpu/data_memory_controller/controller_state[1][2]_i_16/O
+                         net (fo=2, routed)           0.574     3.362    u_gpu/data_memory_controller/controller_state[1][2]_i_16_n_0
+    SLICE_X54Y65         LUT5 (Prop_lut5_I0_O)        0.124     3.486 r  u_gpu/data_memory_controller/current_consumer[2][5]_i_69/O
+                         net (fo=1, routed)           0.670     4.156    u_gpu/data_memory_controller/current_consumer[2][5]_i_69_n_0
+    SLICE_X54Y65         LUT6 (Prop_lut6_I4_O)        0.124     4.280 f  u_gpu/data_memory_controller/current_consumer[2][5]_i_60/O
+                         net (fo=17, routed)          0.473     4.752    u_gpu/data_memory_controller/current_consumer[2][5]_i_60_n_0
+    SLICE_X57Y65         LUT6 (Prop_lut6_I5_O)        0.124     4.876 r  u_gpu/data_memory_controller/channel_serving_consumer[2]_i_9/O
+                         net (fo=4, routed)           0.706     5.583    u_gpu/data_memory_controller/channel_serving_consumer[2]_i_9_n_0
+    SLICE_X58Y65         LUT6 (Prop_lut6_I3_O)        0.124     5.707 f  u_gpu/data_memory_controller/channel_serving_consumer[2]_i_6/O
+                         net (fo=9, routed)           0.819     6.526    u_gpu/data_memory_controller/channel_serving_consumer[2]_i_6_n_0
+    SLICE_X58Y67         LUT5 (Prop_lut5_I1_O)        0.124     6.650 f  u_gpu/data_memory_controller/channel_serving_consumer[5]_i_6/O
+                         net (fo=13, routed)          1.036     7.686    u_gpu/data_memory_controller/channel_serving_consumer[5]_i_6_n_0
+    SLICE_X57Y68         LUT5 (Prop_lut5_I2_O)        0.124     7.810 f  u_gpu/data_memory_controller/channel_serving_consumer[9]_i_6/O
+                         net (fo=17, routed)          0.716     8.526    u_gpu/data_memory_controller/channel_serving_consumer[9]_i_6_n_0
+    SLICE_X56Y70         LUT6 (Prop_lut6_I2_O)        0.124     8.650 f  u_gpu/data_memory_controller/channel_serving_consumer[14]_i_6/O
+                         net (fo=5, routed)           0.597     9.247    u_gpu/data_memory_controller/channel_serving_consumer[14]_i_6_n_0
+    SLICE_X56Y72         LUT6 (Prop_lut6_I2_O)        0.124     9.371 r  u_gpu/data_memory_controller/channel_serving_consumer[14]_i_3/O
+                         net (fo=52, routed)          0.703    10.074    u_gpu/data_memory_controller/channel_serving_consumer[14]_i_3_n_0
+    SLICE_X54Y73         LUT3 (Prop_lut3_I1_O)        0.150    10.224 f  u_gpu/data_memory_controller/channel_serving_consumer[16]_i_10/O
+                         net (fo=49, routed)          1.106    11.331    u_gpu/data_memory_controller/channel_serving_consumer[16]_i_10_n_0
+    SLICE_X51Y74         LUT6 (Prop_lut6_I2_O)        0.348    11.679 f  u_gpu/data_memory_controller/channel_serving_consumer[20]_i_6/O
+                         net (fo=86, routed)          1.246    12.925    u_gpu/data_memory_controller/channel_serving_consumer[20]_i_6_n_0
+    SLICE_X45Y72         LUT6 (Prop_lut6_I3_O)        0.124    13.049 f  u_gpu/data_memory_controller/channel_serving_consumer[24]_i_5/O
+                         net (fo=85, routed)          0.732    13.780    u_gpu/data_memory_controller/channel_serving_consumer[24]_i_5_n_0
+    SLICE_X44Y67         LUT6 (Prop_lut6_I3_O)        0.124    13.904 f  u_gpu/data_memory_controller/channel_serving_consumer[32]_i_11/O
+                         net (fo=85, routed)          0.711    14.616    u_gpu/data_memory_controller/channel_serving_consumer[32]_i_11_n_0
+    SLICE_X44Y63         LUT6 (Prop_lut6_I2_O)        0.124    14.740 r  u_gpu/data_memory_controller/channel_serving_consumer[32]_i_4/O
+                         net (fo=32, routed)          1.086    15.826    u_gpu/data_memory_controller/channel_serving_consumer[32]_i_4_n_0
+    SLICE_X43Y60         LUT5 (Prop_lut5_I0_O)        0.152    15.978 f  u_gpu/data_memory_controller/mem_write_valid[3]_i_90/O
+                         net (fo=17, routed)          1.007    16.985    u_gpu/data_memory_controller/mem_write_valid[3]_i_90_n_0
+    SLICE_X38Y58         LUT3 (Prop_lut3_I1_O)        0.350    17.335 r  u_gpu/data_memory_controller/mem_write_data[3][3]_i_33/O
+                         net (fo=1, routed)           1.144    18.479    u_gpu/data_memory_controller/mem_write_data[3][3]_i_33_n_0
+    SLICE_X38Y58         LUT6 (Prop_lut6_I1_O)        0.328    18.807 r  u_gpu/data_memory_controller/mem_write_data[3][3]_i_28/O
+                         net (fo=1, routed)           0.844    19.651    u_gpu/data_memory_controller/mem_write_data[3][3]_i_28_n_0
+    SLICE_X39Y51         LUT6 (Prop_lut6_I2_O)        0.124    19.775 r  u_gpu/data_memory_controller/mem_write_data[3][3]_i_22/O
+                         net (fo=1, routed)           0.767    20.542    u_gpu/data_memory_controller/mem_write_data[3][3]_i_22_n_0
+    SLICE_X43Y48         LUT6 (Prop_lut6_I2_O)        0.124    20.666 r  u_gpu/data_memory_controller/mem_write_data[3][3]_i_16/O
+                         net (fo=1, routed)           0.736    21.403    u_gpu/data_memory_controller/mem_write_data[3][3]_i_16_n_0
+    SLICE_X44Y45         LUT6 (Prop_lut6_I2_O)        0.124    21.527 r  u_gpu/data_memory_controller/mem_write_data[3][3]_i_10/O
+                         net (fo=1, routed)           0.955    22.482    u_gpu/data_memory_controller/mem_write_data[3][3]_i_10_n_0
+    SLICE_X38Y45         LUT6 (Prop_lut6_I2_O)        0.124    22.606 r  u_gpu/data_memory_controller/mem_write_data[3][3]_i_4/O
+                         net (fo=1, routed)           0.595    23.201    u_gpu/data_memory_controller/mem_write_data[3][3]_i_4_n_0
+    SLICE_X36Y45         LUT6 (Prop_lut6_I2_O)        0.124    23.325 r  u_gpu/data_memory_controller/mem_write_data[3][3]_i_1/O
+                         net (fo=1, routed)           0.000    23.325    u_gpu/data_memory_controller/mem_write_data[3][3]_i_1_n_0
+    SLICE_X36Y45         FDRE                                         r  u_gpu/data_memory_controller/mem_write_data_reg[3][3]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock g_mmcm.clk50_raw rise edge)
+                                                     25.000    25.000 r  
+    E3                                                0.000    25.000 r  clk (IN)
+                         net (fo=0)                   0.000    25.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         1.411    26.411 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.162    27.573    clk_IBUF
+    MMCME2_ADV_X1Y2      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -7.324    20.249 r  g_mmcm.u_mmcm/CLKOUT0
+                         net (fo=1, routed)           1.639    21.888    g_mmcm.clk50_raw
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    21.979 r  g_mmcm.u_c/O
+                         net (fo=15882, routed)       1.685    23.664    u_gpu/data_memory_controller/sysclk
+    SLICE_X36Y45         FDRE                                         r  u_gpu/data_memory_controller/mem_write_data_reg[3][3]/C
+                         clock pessimism              0.487    24.152    
+                         clock uncertainty           -0.085    24.067    
+    SLICE_X36Y45         FDRE (Setup_fdre_C_D)        0.029    24.096    u_gpu/data_memory_controller/mem_write_data_reg[3][3]
+  -------------------------------------------------------------------
+                         required time                         24.096    
+                         arrival time                         -23.325    
+  -------------------------------------------------------------------
+                         slack                                  0.772    
+
+
+
+

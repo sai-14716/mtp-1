@@ -1,0 +1,477 @@
+#-----------------------------------------------------------
+# Vivado v2024.2 (64-bit)
+# SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024
+# IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+# SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+# Start of session at: Tue Oct 13 15:45:40 2026
+# Process ID         : 5188
+# Current directory  : C:/Users/srika/Documents/MTP-1/CNN/CNN.runs/synth_1
+# Command line       : vivado.exe -log cnn_top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source cnn_top.tcl
+# Log file           : C:/Users/srika/Documents/MTP-1/CNN/CNN.runs/synth_1/cnn_top.vds
+# Journal file       : C:/Users/srika/Documents/MTP-1/CNN/CNN.runs/synth_1\vivado.jou
+# Running On         : SRINIVAS
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 26300
+# Processor Detail   : 13th Gen Intel(R) Core(TM) i5-1335U
+# CPU Frequency      : 2496 MHz
+# CPU Physical cores : 10
+# CPU Logical cores  : 12
+# Host memory        : 16803 MB
+# Swap memory        : 16106 MB
+# Total Virtual      : 32909 MB
+# Available Virtual  : 14990 MB
+#-----------------------------------------------------------
+source cnn_top.tcl -notrace
+Command: read_checkpoint -auto_incremental -incremental C:/Users/srika/Documents/MTP-1/CNN/CNN.srcs/utils_1/imports/synth_1/tb_core.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from C:/Users/srika/Documents/MTP-1/CNN/CNN.srcs/utils_1/imports/synth_1/tb_core.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top cnn_top -part xc7a100tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 4728
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1011.277 ; gain = 469.555
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'cnn_top' [C:/Users/srika/Documents/MTP-1/cnn_fpga/cnn_top.v:15]
+INFO: [Synth 8-6157] synthesizing module 'MMCME2_BASE' [C:/Xilinx/Vivado/2024.2/scripts/rt/data/unisim_comp.v:84708]
+	Parameter BANDWIDTH bound to: OPTIMIZED - type: string 
+	Parameter CLKFBOUT_MULT_F bound to: 10.000000 - type: double 
+	Parameter CLKIN1_PERIOD bound to: 10.000000 - type: double 
+	Parameter CLKOUT0_DIVIDE_F bound to: 20.000000 - type: double 
+	Parameter DIVCLK_DIVIDE bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'MMCME2_BASE' (0#1) [C:/Xilinx/Vivado/2024.2/scripts/rt/data/unisim_comp.v:84708]
+WARNING: [Synth 8-7071] port 'CLKFBOUTB' of module 'MMCME2_BASE' is unconnected for instance 'u_mmcm' [C:/Users/srika/Documents/MTP-1/cnn_fpga/cnn_top.v:36]
+WARNING: [Synth 8-7071] port 'CLKOUT0B' of module 'MMCME2_BASE' is unconnected for instance 'u_mmcm' [C:/Users/srika/Documents/MTP-1/cnn_fpga/cnn_top.v:36]
+WARNING: [Synth 8-7071] port 'CLKOUT1' of module 'MMCME2_BASE' is unconnected for instance 'u_mmcm' [C:/Users/srika/Documents/MTP-1/cnn_fpga/cnn_top.v:36]
+WARNING: [Synth 8-7071] port 'CLKOUT1B' of module 'MMCME2_BASE' is unconnected for instance 'u_mmcm' [C:/Users/srika/Documents/MTP-1/cnn_fpga/cnn_top.v:36]
+WARNING: [Synth 8-7071] port 'CLKOUT2' of module 'MMCME2_BASE' is unconnected for instance 'u_mmcm' [C:/Users/srika/Documents/MTP-1/cnn_fpga/cnn_top.v:36]
+WARNING: [Synth 8-7071] port 'CLKOUT2B' of module 'MMCME2_BASE' is unconnected for instance 'u_mmcm' [C:/Users/srika/Documents/MTP-1/cnn_fpga/cnn_top.v:36]
+WARNING: [Synth 8-7071] port 'CLKOUT3' of module 'MMCME2_BASE' is unconnected for instance 'u_mmcm' [C:/Users/srika/Documents/MTP-1/cnn_fpga/cnn_top.v:36]
+WARNING: [Synth 8-7071] port 'CLKOUT3B' of module 'MMCME2_BASE' is unconnected for instance 'u_mmcm' [C:/Users/srika/Documents/MTP-1/cnn_fpga/cnn_top.v:36]
+WARNING: [Synth 8-7071] port 'CLKOUT4' of module 'MMCME2_BASE' is unconnected for instance 'u_mmcm' [C:/Users/srika/Documents/MTP-1/cnn_fpga/cnn_top.v:36]
+WARNING: [Synth 8-7071] port 'CLKOUT5' of module 'MMCME2_BASE' is unconnected for instance 'u_mmcm' [C:/Users/srika/Documents/MTP-1/cnn_fpga/cnn_top.v:36]
+WARNING: [Synth 8-7071] port 'CLKOUT6' of module 'MMCME2_BASE' is unconnected for instance 'u_mmcm' [C:/Users/srika/Documents/MTP-1/cnn_fpga/cnn_top.v:36]
+WARNING: [Synth 8-7023] instance 'u_mmcm' of module 'MMCME2_BASE' has 18 connections declared, but only 7 given [C:/Users/srika/Documents/MTP-1/cnn_fpga/cnn_top.v:36]
+INFO: [Synth 8-6157] synthesizing module 'BUFG' [C:/Xilinx/Vivado/2024.2/scripts/rt/data/unisim_comp.v:2676]
+INFO: [Synth 8-6155] done synthesizing module 'BUFG' (0#1) [C:/Xilinx/Vivado/2024.2/scripts/rt/data/unisim_comp.v:2676]
+INFO: [Synth 8-6157] synthesizing module 'cnn_core' [C:/Users/srika/Documents/MTP-1/cnn_fpga/cnn_core.v:12]
+	Parameter INIT_FILE bound to: C:/Users/srika/Documents/MTP-1/golden_model/init_weights.hex - type: string 
+	Parameter DATA_FILE bound to: C:/Users/srika/Documents/MTP-1/golden_model/data.hex - type: string 
+	Parameter LABEL_FILE bound to: C:/Users/srika/Documents/MTP-1/golden_modellabels.hex - type: string 
+	Parameter LUT_FILE bound to: C:/Users/srika/Documents/MTP-1/golden_model/sigmoid_lut.hex - type: string 
+INFO: [Synth 8-3876] $readmem data file 'C:/Users/srika/Documents/MTP-1/golden_model/data.hex' is read successfully [C:/Users/srika/Documents/MTP-1/cnn_fpga/cnn_core.v:93]
+CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file 'C:/Users/srika/Documents/MTP-1/golden_modellabels.hex'; please make sure the file is added to project and has read permission, ignoring [C:/Users/srika/Documents/MTP-1/cnn_fpga/cnn_core.v:94]
+INFO: [Synth 8-3876] $readmem data file 'C:/Users/srika/Documents/MTP-1/golden_model/sigmoid_lut.hex' is read successfully [C:/Users/srika/Documents/MTP-1/cnn_fpga/cnn_core.v:95]
+INFO: [Synth 8-6155] done synthesizing module 'cnn_core' (0#1) [C:/Users/srika/Documents/MTP-1/cnn_fpga/cnn_core.v:12]
+INFO: [Synth 8-6157] synthesizing module 'uart_tx' [C:/Users/srika/Documents/MTP-1/cnn_fpga/cnn_top.v:158]
+	Parameter CLKS_PER_BIT bound to: 434 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'uart_tx' (0#1) [C:/Users/srika/Documents/MTP-1/cnn_fpga/cnn_top.v:158]
+INFO: [Synth 8-6155] done synthesizing module 'cnn_top' (0#1) [C:/Users/srika/Documents/MTP-1/cnn_fpga/cnn_top.v:15]
+WARNING: [Synth 8-3848] Net label_rom in module/entity cnn_core does not have driver. [C:/Users/srika/Documents/MTP-1/cnn_fpga/cnn_core.v:51]
+WARNING: [Synth 8-3917] design cnn_top has port led[13] driven by constant 0
+WARNING: [Synth 8-3917] design cnn_top has port led[12] driven by constant 0
+WARNING: [Synth 8-3917] design cnn_top has port led[11] driven by constant 0
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1151.582 ; gain = 609.859
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1151.582 ; gain = 609.859
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1151.582 ; gain = 609.859
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.020 . Memory (MB): peak = 1151.582 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/srika/Downloads/cnn_nexys4ddr.xdc]
+Finished Parsing XDC File [C:/Users/srika/Downloads/cnn_nexys4ddr.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/srika/Downloads/cnn_nexys4ddr.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/cnn_top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/cnn_top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Timing 38-2] Deriving generated clocks
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1243.832 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 1 instances were transformed.
+  MMCME2_BASE => MMCME2_ADV: 1 instance 
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 1243.832 ; gain = 0.000
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1243.832 ; gain = 702.109
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1243.832 ; gain = 702.109
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1243.832 ; gain = 702.109
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'ph_reg' in module 'cnn_core'
+INFO: [Synth 8-802] inferred FSM for state register 'cst_reg' in module 'cnn_top'
+INFO: [Synth 8-802] inferred FSM for state register 'ust_reg' in module 'cnn_top'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                   PH_C1 |                              000 |                              000
+                   PH_C2 |                              001 |                              001
+                  PH_DW1 |                              010 |                              100
+                  iSTATE |                              011 |                              101
+                  PH_DA1 |                              100 |                              010
+                  PH_DW2 |                              101 |                              011
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'ph_reg' using encoding 'sequential' in module 'cnn_core'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 C_LOADP |                          0000001 |                              000
+                 C_LOADW |                          0000010 |                              001
+                 C_START |                          0000100 |                              010
+                  C_WAIT |                          0001000 |                              011
+                  C_NEXT |                          0010000 |                              100
+                C_EVDONE |                          0100000 |                              101
+                   C_FIN |                          1000000 |                              110
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'cst_reg' using encoding 'one-hot' in module 'cnn_top'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  U_IDLE |                               00 |                               00
+                  U_PUSH |                               01 |                               01
+                   U_ACK |                               10 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'ust_reg' using encoding 'sequential' in module 'cnn_top'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 1243.832 ; gain = 702.109
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   40 Bit       Adders := 6     
+	   3 Input   40 Bit       Adders := 3     
+	   2 Input   32 Bit       Adders := 4     
+	   3 Input   32 Bit       Adders := 2     
+	   3 Input   17 Bit       Adders := 2     
+	   2 Input   16 Bit       Adders := 1     
+	   2 Input    8 Bit       Adders := 2     
+	   2 Input    7 Bit       Adders := 4     
+	   2 Input    6 Bit       Adders := 3     
+	   2 Input    4 Bit       Adders := 7     
+	   2 Input    3 Bit       Adders := 7     
++---Registers : 
+	               40 Bit    Registers := 3     
+	               32 Bit    Registers := 2     
+	               17 Bit    Registers := 2     
+	               16 Bit    Registers := 49    
+	               14 Bit    Registers := 1     
+	               10 Bit    Registers := 1     
+	                9 Bit    Registers := 1     
+	                8 Bit    Registers := 6     
+	                7 Bit    Registers := 1     
+	                6 Bit    Registers := 1     
+	                5 Bit    Registers := 1     
+	                4 Bit    Registers := 4     
+	                3 Bit    Registers := 24    
+	                1 Bit    Registers := 17    
++---Multipliers : 
+	               9x32  Multipliers := 1     
+	               9x40  Multipliers := 1     
++---RAMs : 
+	               1K Bit	(72 X 16 bit)          RAMs := 2     
+	             1024 Bit	(64 X 16 bit)          RAMs := 1     
++---ROMs : 
+	                    ROMs := 2     
++---Muxes : 
+	   2 Input   40 Bit        Muxes := 1     
+	   2 Input   32 Bit        Muxes := 2     
+	   6 Input   32 Bit        Muxes := 2     
+	   6 Input   31 Bit        Muxes := 1     
+	   2 Input   16 Bit        Muxes := 21    
+	   6 Input   16 Bit        Muxes := 2     
+	   7 Input    8 Bit        Muxes := 2     
+	   7 Input    7 Bit        Muxes := 1     
+	   2 Input    7 Bit        Muxes := 3     
+	  20 Input    6 Bit        Muxes := 2     
+	   3 Input    6 Bit        Muxes := 1     
+	   6 Input    5 Bit        Muxes := 1     
+	   2 Input    5 Bit        Muxes := 2     
+	   2 Input    4 Bit        Muxes := 1     
+	   7 Input    4 Bit        Muxes := 1     
+	   2 Input    3 Bit        Muxes := 8     
+	  20 Input    3 Bit        Muxes := 6     
+	   6 Input    3 Bit        Muxes := 4     
+	  25 Input    3 Bit        Muxes := 1     
+	   3 Input    3 Bit        Muxes := 1     
+	   2 Input    2 Bit        Muxes := 2     
+	   3 Input    2 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 138   
+	   4 Input    1 Bit        Muxes := 42    
+	  20 Input    1 Bit        Muxes := 25    
+	   6 Input    1 Bit        Muxes := 5     
+	   3 Input    1 Bit        Muxes := 6     
+	   7 Input    1 Bit        Muxes := 5     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+DSP Debug: swapped A/B pins for adder 000001A1246929E0
+DSP Debug: swapped A/B pins for adder 000001A11CE8B990
+DSP Report: Generating DSP pr10, operation Mode is: A2*(B:0xa4).
+DSP Report: register dlog1_reg is absorbed into DSP pr10.
+DSP Report: operator pr10 is absorbed into DSP pr10.
+DSP Report: Generating DSP p_0_out, operation Mode is: (C:0x4)+A2*(B:0x19).
+DSP Report: register dz2_0_reg is absorbed into DSP p_0_out.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: operator db2_0 is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: (C:0x4)+A2*(B:0x19).
+DSP Report: register dz2_1_reg is absorbed into DSP p_0_out.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: operator db2_1 is absorbed into DSP p_0_out.
+DSP Report: Generating DSP acc0, operation Mode is: C+A2*B2.
+DSP Report: register opb_reg is absorbed into DSP acc0.
+DSP Report: register opa_reg is absorbed into DSP acc0.
+DSP Report: operator acc0 is absorbed into DSP acc0.
+DSP Report: operator acc1 is absorbed into DSP acc0.
+WARNING: [Synth 8-3917] design cnn_top has port led[13] driven by constant 0
+WARNING: [Synth 8-3917] design cnn_top has port led[12] driven by constant 0
+WARNING: [Synth 8-3917] design cnn_top has port led[11] driven by constant 0
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:25 . Memory (MB): peak = 1423.707 ; gain = 881.984
+---------------------------------------------------------------------------------
+ Sort Area is  acc0_5 : 0 0 : 2097 2097 : Used 1 time 0
+ Sort Area is  pr10_0 : 0 0 : 488 488 : Used 1 time 0
+ Sort Area is  p_0_out_2 : 0 0 : 349 349 : Used 1 time 0
+ Sort Area is  p_0_out_4 : 0 0 : 349 349 : Used 1 time 0
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+ROM: Preliminary Mapping Report
++------------+---------------+---------------+----------------+
+|Module Name | RTL Object    | Depth x Width | Implemented As | 
++------------+---------------+---------------+----------------+
+|cnn_core    | init_rom      | 64x13         | LUT            | 
+|cnn_core    | p_0_out       | 64x13         | LUT            | 
+|cnn_core    | lut_idx_reg   | 512x16        | Block RAM      | 
+|cnn_core    | data_addr_reg | 16384x16      | Block RAM      | 
++------------+---------------+---------------+----------------+
+
+
+Distributed RAM: Preliminary Mapping Report (see note below)
++------------+------------+-----------+----------------------+------------------------------------------+
+|Module Name | RTL Object | Inference | Size (Depth x Width) | Primitives                               | 
++------------+------------+-----------+----------------------+------------------------------------------+
+|u_core      | xmem_reg   | Implied   | 64 x 16              | RAM64M x 6                               | 
+|u_core      | z1mem_reg  | Implied   | 128 x 16             | RAM16X1D x 16 RAM64X1D x 16 RAM64M x 12  | 
+|u_core      | dz1mem_reg | Implied   | 128 x 16             | RAM64M x 12                              | 
++------------+------------+-----------+----------------------+------------------------------------------+
+
+Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
+
+DSP: Preliminary Mapping Report (see note below. The ' indicates corresponding REG is set)
++------------+---------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping         | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+---------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|cnn_core    | A2*(B:0xa4)         | 17     | 9      | -      | -      | 26     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|cnn_core    | (C:0x4)+A2*(B:0x19) | 16     | 6      | 4      | -      | 21     | 1    | 0    | 0    | -    | -     | 0    | 0    | 
+|cnn_core    | (C:0x4)+A2*(B:0x19) | 16     | 6      | 4      | -      | 21     | 1    | 0    | 0    | -    | -     | 0    | 0    | 
+|cnn_core    | C+A2*B2             | 16     | 16     | 40     | -      | 40     | 1    | 1    | 0    | -    | -     | 0    | 0    | 
++------------+---------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:28 ; elapsed = 00:00:31 . Memory (MB): peak = 1423.707 ; gain = 881.984
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:34 ; elapsed = 00:00:37 . Memory (MB): peak = 1675.348 ; gain = 1133.625
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Final Mapping Report
++------------+------------+-----------+----------------------+------------------------------------------+
+|Module Name | RTL Object | Inference | Size (Depth x Width) | Primitives                               | 
++------------+------------+-----------+----------------------+------------------------------------------+
+|u_core      | xmem_reg   | Implied   | 64 x 16              | RAM64M x 6                               | 
+|u_core      | z1mem_reg  | Implied   | 128 x 16             | RAM16X1D x 16 RAM64X1D x 16 RAM64M x 12  | 
+|u_core      | dz1mem_reg | Implied   | 128 x 16             | RAM64M x 12                              | 
++------------+------------+-----------+----------------------+------------------------------------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:35 ; elapsed = 00:00:39 . Memory (MB): peak = 1693.410 ; gain = 1151.688
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:39 ; elapsed = 00:00:42 . Memory (MB): peak = 1693.410 ; gain = 1151.688
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:39 ; elapsed = 00:00:42 . Memory (MB): peak = 1693.410 ; gain = 1151.688
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:39 ; elapsed = 00:00:42 . Memory (MB): peak = 1693.410 ; gain = 1151.688
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:39 ; elapsed = 00:00:42 . Memory (MB): peak = 1693.410 ; gain = 1151.688
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:39 ; elapsed = 00:00:42 . Memory (MB): peak = 1693.410 ; gain = 1151.688
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:39 ; elapsed = 00:00:42 . Memory (MB): peak = 1693.410 ; gain = 1151.688
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+DSP Final Report (the ' indicates corresponding REG is set)
++------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|cnn_core    | A'*B        | 30     | 8      | -      | -      | 26     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|cnn_core    | C+A'*B      | 30     | 5      | 3      | -      | 21     | 1    | 0    | 0    | -    | -     | 0    | 0    | 
+|cnn_core    | C+A'*B      | 30     | 5      | 3      | -      | 21     | 1    | 0    | 0    | -    | -     | 0    | 0    | 
+|cnn_core    | C'+A'*B'    | 30     | 18     | 48     | -      | 40     | 1    | 1    | 1    | -    | -     | 0    | 0    | 
++------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+------------+------+
+|      |Cell        |Count |
++------+------------+------+
+|1     |BUFG        |     2|
+|2     |CARRY4      |   215|
+|3     |DSP48E1     |     4|
+|6     |LUT1        |   155|
+|7     |LUT2        |   323|
+|8     |LUT3        |   355|
+|9     |LUT4        |   173|
+|10    |LUT5        |   439|
+|11    |LUT6        |  1087|
+|12    |MMCME2_BASE |     1|
+|13    |MUXF7       |    16|
+|14    |RAM16X1D    |    16|
+|15    |RAM64M      |    25|
+|16    |RAM64X1D    |    21|
+|17    |RAMB18E1    |     1|
+|18    |RAMB36E1    |     8|
+|22    |FDRE        |   979|
+|23    |FDSE        |    40|
+|24    |IBUF        |     2|
+|25    |OBUF        |    17|
++------+------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:39 ; elapsed = 00:00:42 . Memory (MB): peak = 1693.410 ; gain = 1151.688
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 4 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:33 ; elapsed = 00:00:41 . Memory (MB): peak = 1693.410 ; gain = 1059.438
+Synthesis Optimization Complete : Time (s): cpu = 00:00:39 ; elapsed = 00:00:43 . Memory (MB): peak = 1693.410 ; gain = 1151.688
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.019 . Memory (MB): peak = 1693.410 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 307 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+WARNING: [Netlist 29-101] Netlist 'cnn_top' is not ideal for floorplanning, since the cellview 'cnn_core' contains a large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1697.160 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 63 instances were transformed.
+  MMCME2_BASE => MMCME2_ADV: 1 instance 
+  RAM16X1D => RAM32X1D (RAMD32(x2)): 16 instances
+  RAM64M => RAM64M (RAMD64E(x4)): 25 instances
+  RAM64X1D => RAM64X1D (RAMD64E(x2)): 21 instances
+
+Synth Design complete | Checksum: 96fcef3c
+INFO: [Common 17-83] Releasing license: Synthesis
+42 Infos, 21 Warnings, 1 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:42 ; elapsed = 00:00:47 . Memory (MB): peak = 1697.160 ; gain = 1360.836
+INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1697.160 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/srika/Documents/MTP-1/CNN/CNN.runs/synth_1/cnn_top.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file cnn_top_utilization_synth.rpt -pb cnn_top_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Tue Oct 13 15:46:31 2026...

@@ -1,0 +1,1217 @@
+
+****** Vivado v2024.2 (64-bit)
+  **** SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024
+  **** IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+  **** SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+  **** Start of session at: Wed Oct 21 15:27:15 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source {C:\Users\srika\Documents\MTP-1\tinygpu_fpga\scripts\build_gpu.tcl}
+# set root [file normalize [file join [file dirname [info script]] ..]]
+# lassign $argv N P M T V F
+# if {$T eq ""} { set T 4 }
+# if {$V eq ""} { set V stock }
+# set tag  N${N}_P${P}_M${M}_T${T}
+# set disp dispatch
+# if {$V eq "rr"} { append tag _rr; set disp dispatch_rr }
+# if {$F eq ""} { set F 50 }
+# if {$F != 50} { append tag _f$F }
+# set out  [file join $root build $tag]
+# file mkdir $out
+# set rtl [list alu controller core dcr decoder $disp fetcher lsu pc registers scheduler gpu]
+# foreach f $rtl { read_verilog -sv $root/rtl/$f.sv }
+# read_verilog -sv $root/soc/gpu_soc_top.sv
+# read_xdc $root/soc/nexys4ddr.xdc
+# synth_design -top gpu_soc_top -part xc7a100tcsg324-1 \
+#     -generic NUM_CORES=$N -generic PROG_CH=$P -generic DATA_CH=$M -generic THREADS_PER_BLOCK=$T -generic CORE_MHZ=$F
+Command: synth_design -top gpu_soc_top -part xc7a100tcsg324-1 -generic NUM_CORES=16 -generic PROG_CH=1 -generic DATA_CH=4 -generic THREADS_PER_BLOCK=4 -generic CORE_MHZ=40
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 5100
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1007.969 ; gain = 467.906
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'gpu_soc_top' [C:/Users/srika/Documents/MTP-1/tinygpu_fpga/soc/gpu_soc_top.sv:20]
+	Parameter NUM_CORES bound to: 16 - type: integer 
+	Parameter THREADS_PER_BLOCK bound to: 4 - type: integer 
+	Parameter PROG_CH bound to: 1 - type: integer 
+	Parameter DATA_CH bound to: 4 - type: integer 
+	Parameter CORE_MHZ bound to: 40 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'MMCME2_BASE' [C:/Xilinx/Vivado/2024.2/scripts/rt/data/unisim_comp.v:84708]
+	Parameter BANDWIDTH bound to: OPTIMIZED - type: string 
+	Parameter CLKFBOUT_MULT_F bound to: 10.000000 - type: double 
+	Parameter CLKIN1_PERIOD bound to: 10.000000 - type: double 
+	Parameter CLKOUT0_DIVIDE_F bound to: 25.000000 - type: double 
+	Parameter DIVCLK_DIVIDE bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'MMCME2_BASE' (0#1) [C:/Xilinx/Vivado/2024.2/scripts/rt/data/unisim_comp.v:84708]
+WARNING: [Synth 8-7071] port 'CLKFBOUTB' of module 'MMCME2_BASE' is unconnected for instance 'u_mmcm' [C:/Users/srika/Documents/MTP-1/tinygpu_fpga/soc/gpu_soc_top.sv:46]
+WARNING: [Synth 8-7071] port 'CLKOUT0B' of module 'MMCME2_BASE' is unconnected for instance 'u_mmcm' [C:/Users/srika/Documents/MTP-1/tinygpu_fpga/soc/gpu_soc_top.sv:46]
+WARNING: [Synth 8-7071] port 'CLKOUT1' of module 'MMCME2_BASE' is unconnected for instance 'u_mmcm' [C:/Users/srika/Documents/MTP-1/tinygpu_fpga/soc/gpu_soc_top.sv:46]
+WARNING: [Synth 8-7071] port 'CLKOUT1B' of module 'MMCME2_BASE' is unconnected for instance 'u_mmcm' [C:/Users/srika/Documents/MTP-1/tinygpu_fpga/soc/gpu_soc_top.sv:46]
+WARNING: [Synth 8-7071] port 'CLKOUT2' of module 'MMCME2_BASE' is unconnected for instance 'u_mmcm' [C:/Users/srika/Documents/MTP-1/tinygpu_fpga/soc/gpu_soc_top.sv:46]
+WARNING: [Synth 8-7071] port 'CLKOUT2B' of module 'MMCME2_BASE' is unconnected for instance 'u_mmcm' [C:/Users/srika/Documents/MTP-1/tinygpu_fpga/soc/gpu_soc_top.sv:46]
+WARNING: [Synth 8-7071] port 'CLKOUT3' of module 'MMCME2_BASE' is unconnected for instance 'u_mmcm' [C:/Users/srika/Documents/MTP-1/tinygpu_fpga/soc/gpu_soc_top.sv:46]
+WARNING: [Synth 8-7071] port 'CLKOUT3B' of module 'MMCME2_BASE' is unconnected for instance 'u_mmcm' [C:/Users/srika/Documents/MTP-1/tinygpu_fpga/soc/gpu_soc_top.sv:46]
+WARNING: [Synth 8-7071] port 'CLKOUT4' of module 'MMCME2_BASE' is unconnected for instance 'u_mmcm' [C:/Users/srika/Documents/MTP-1/tinygpu_fpga/soc/gpu_soc_top.sv:46]
+WARNING: [Synth 8-7071] port 'CLKOUT5' of module 'MMCME2_BASE' is unconnected for instance 'u_mmcm' [C:/Users/srika/Documents/MTP-1/tinygpu_fpga/soc/gpu_soc_top.sv:46]
+WARNING: [Synth 8-7071] port 'CLKOUT6' of module 'MMCME2_BASE' is unconnected for instance 'u_mmcm' [C:/Users/srika/Documents/MTP-1/tinygpu_fpga/soc/gpu_soc_top.sv:46]
+WARNING: [Synth 8-7023] instance 'u_mmcm' of module 'MMCME2_BASE' has 18 connections declared, but only 7 given [C:/Users/srika/Documents/MTP-1/tinygpu_fpga/soc/gpu_soc_top.sv:46]
+INFO: [Synth 8-6157] synthesizing module 'BUFG' [C:/Xilinx/Vivado/2024.2/scripts/rt/data/unisim_comp.v:2676]
+INFO: [Synth 8-6155] done synthesizing module 'BUFG' (0#1) [C:/Xilinx/Vivado/2024.2/scripts/rt/data/unisim_comp.v:2676]
+INFO: [Synth 8-3876] $readmem data file 'C:/Users/srika/Documents/MTP-1/tinygpu_fpga/mem/prog.hex' is read successfully [C:/Users/srika/Documents/MTP-1/tinygpu_fpga/soc/gpu_soc_top.sv:72]
+INFO: [Synth 8-3876] $readmem data file 'C:/Users/srika/Documents/MTP-1/tinygpu_fpga/mem/init.hex' is read successfully [C:/Users/srika/Documents/MTP-1/tinygpu_fpga/soc/gpu_soc_top.sv:73]
+INFO: [Synth 8-3876] $readmem data file 'C:/Users/srika/Documents/MTP-1/tinygpu_fpga/mem/expect.hex' is read successfully [C:/Users/srika/Documents/MTP-1/tinygpu_fpga/soc/gpu_soc_top.sv:74]
+INFO: [Synth 8-3876] $readmem data file 'C:/Users/srika/Documents/MTP-1/tinygpu_fpga/mem/kinfo.hex' is read successfully [C:/Users/srika/Documents/MTP-1/tinygpu_fpga/soc/gpu_soc_top.sv:75]
+INFO: [Synth 8-6157] synthesizing module 'gpu' [C:/Users/srika/Documents/MTP-1/tinygpu_fpga/rtl/gpu.sv:10]
+	Parameter DATA_MEM_ADDR_BITS bound to: 8 - type: integer 
+	Parameter DATA_MEM_DATA_BITS bound to: 8 - type: integer 
+	Parameter DATA_MEM_NUM_CHANNELS bound to: 4 - type: integer 
+	Parameter PROGRAM_MEM_ADDR_BITS bound to: 8 - type: integer 
+	Parameter PROGRAM_MEM_DATA_BITS bound to: 16 - type: integer 
+	Parameter PROGRAM_MEM_NUM_CHANNELS bound to: 1 - type: integer 
+	Parameter NUM_CORES bound to: 16 - type: integer 
+	Parameter THREADS_PER_BLOCK bound to: 4 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'core' [C:/Users/srika/Documents/MTP-1/tinygpu_fpga/rtl/core.sv:8]
+	Parameter DATA_MEM_ADDR_BITS bound to: 8 - type: integer 
+	Parameter DATA_MEM_DATA_BITS bound to: 8 - type: integer 
+	Parameter PROGRAM_MEM_ADDR_BITS bound to: 8 - type: integer 
+	Parameter PROGRAM_MEM_DATA_BITS bound to: 16 - type: integer 
+	Parameter THREADS_PER_BLOCK bound to: 4 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'alu' [C:/Users/srika/Documents/MTP-1/tinygpu_fpga/rtl/alu.sv:9]
+INFO: [Synth 8-6155] done synthesizing module 'alu' (0#1) [C:/Users/srika/Documents/MTP-1/tinygpu_fpga/rtl/alu.sv:9]
+INFO: [Synth 8-6157] synthesizing module 'lsu' [C:/Users/srika/Documents/MTP-1/tinygpu_fpga/rtl/lsu.sv:8]
+INFO: [Synth 8-6155] done synthesizing module 'lsu' (0#1) [C:/Users/srika/Documents/MTP-1/tinygpu_fpga/rtl/lsu.sv:8]
+INFO: [Synth 8-6157] synthesizing module 'registers' [C:/Users/srika/Documents/MTP-1/tinygpu_fpga/rtl/registers.sv:7]
+	Parameter THREADS_PER_BLOCK bound to: 4 - type: integer 
+	Parameter THREAD_ID bound to: 0 - type: integer 
+	Parameter DATA_BITS bound to: 8 - type: integer 
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/srika/Documents/MTP-1/tinygpu_fpga/rtl/registers.sv:84]
+INFO: [Synth 8-6155] done synthesizing module 'registers' (0#1) [C:/Users/srika/Documents/MTP-1/tinygpu_fpga/rtl/registers.sv:7]
+INFO: [Synth 8-6157] synthesizing module 'pc' [C:/Users/srika/Documents/MTP-1/tinygpu_fpga/rtl/pc.sv:10]
+	Parameter DATA_MEM_DATA_BITS bound to: 8 - type: integer 
+	Parameter PROGRAM_MEM_ADDR_BITS bound to: 8 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'pc' (0#1) [C:/Users/srika/Documents/MTP-1/tinygpu_fpga/rtl/pc.sv:10]
+INFO: [Synth 8-6157] synthesizing module 'registers__parameterized0' [C:/Users/srika/Documents/MTP-1/tinygpu_fpga/rtl/registers.sv:7]
+	Parameter THREADS_PER_BLOCK bound to: 4 - type: integer 
+	Parameter THREAD_ID bound to: 1 - type: integer 
+	Parameter DATA_BITS bound to: 8 - type: integer 
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/srika/Documents/MTP-1/tinygpu_fpga/rtl/registers.sv:84]
+INFO: [Synth 8-6155] done synthesizing module 'registers__parameterized0' (0#1) [C:/Users/srika/Documents/MTP-1/tinygpu_fpga/rtl/registers.sv:7]
+INFO: [Synth 8-6157] synthesizing module 'registers__parameterized1' [C:/Users/srika/Documents/MTP-1/tinygpu_fpga/rtl/registers.sv:7]
+	Parameter THREADS_PER_BLOCK bound to: 4 - type: integer 
+	Parameter THREAD_ID bound to: 2 - type: integer 
+	Parameter DATA_BITS bound to: 8 - type: integer 
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/srika/Documents/MTP-1/tinygpu_fpga/rtl/registers.sv:84]
+INFO: [Synth 8-6155] done synthesizing module 'registers__parameterized1' (0#1) [C:/Users/srika/Documents/MTP-1/tinygpu_fpga/rtl/registers.sv:7]
+INFO: [Synth 8-6157] synthesizing module 'registers__parameterized2' [C:/Users/srika/Documents/MTP-1/tinygpu_fpga/rtl/registers.sv:7]
+	Parameter THREADS_PER_BLOCK bound to: 4 - type: integer 
+	Parameter THREAD_ID bound to: 3 - type: integer 
+	Parameter DATA_BITS bound to: 8 - type: integer 
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/srika/Documents/MTP-1/tinygpu_fpga/rtl/registers.sv:84]
+INFO: [Synth 8-6155] done synthesizing module 'registers__parameterized2' (0#1) [C:/Users/srika/Documents/MTP-1/tinygpu_fpga/rtl/registers.sv:7]
+INFO: [Synth 8-6157] synthesizing module 'fetcher' [C:/Users/srika/Documents/MTP-1/tinygpu_fpga/rtl/fetcher.sv:7]
+	Parameter PROGRAM_MEM_ADDR_BITS bound to: 8 - type: integer 
+	Parameter PROGRAM_MEM_DATA_BITS bound to: 16 - type: integer 
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/srika/Documents/MTP-1/tinygpu_fpga/rtl/fetcher.sv:39]
+INFO: [Synth 8-6155] done synthesizing module 'fetcher' (0#1) [C:/Users/srika/Documents/MTP-1/tinygpu_fpga/rtl/fetcher.sv:7]
+INFO: [Synth 8-6157] synthesizing module 'decoder' [C:/Users/srika/Documents/MTP-1/tinygpu_fpga/rtl/decoder.sv:7]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/srika/Documents/MTP-1/tinygpu_fpga/rtl/decoder.sv:84]
+INFO: [Synth 8-6155] done synthesizing module 'decoder' (0#1) [C:/Users/srika/Documents/MTP-1/tinygpu_fpga/rtl/decoder.sv:7]
+INFO: [Synth 8-6157] synthesizing module 'scheduler' [C:/Users/srika/Documents/MTP-1/tinygpu_fpga/rtl/scheduler.sv:16]
+	Parameter THREADS_PER_BLOCK bound to: 4 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'scheduler' (0#1) [C:/Users/srika/Documents/MTP-1/tinygpu_fpga/rtl/scheduler.sv:16]
+INFO: [Synth 8-6155] done synthesizing module 'core' (0#1) [C:/Users/srika/Documents/MTP-1/tinygpu_fpga/rtl/core.sv:8]
+INFO: [Synth 8-6157] synthesizing module 'dcr' [C:/Users/srika/Documents/MTP-1/tinygpu_fpga/rtl/dcr.sv:7]
+INFO: [Synth 8-6155] done synthesizing module 'dcr' (0#1) [C:/Users/srika/Documents/MTP-1/tinygpu_fpga/rtl/dcr.sv:7]
+INFO: [Synth 8-6157] synthesizing module 'controller' [C:/Users/srika/Documents/MTP-1/tinygpu_fpga/rtl/controller.sv:8]
+	Parameter ADDR_BITS bound to: 8 - type: integer 
+	Parameter DATA_BITS bound to: 8 - type: integer 
+	Parameter NUM_CONSUMERS bound to: 64 - type: integer 
+	Parameter NUM_CHANNELS bound to: 4 - type: integer 
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/srika/Documents/MTP-1/tinygpu_fpga/rtl/controller.sv:70]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/srika/Documents/MTP-1/tinygpu_fpga/rtl/controller.sv:70]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/srika/Documents/MTP-1/tinygpu_fpga/rtl/controller.sv:70]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/srika/Documents/MTP-1/tinygpu_fpga/rtl/controller.sv:70]
+INFO: [Synth 8-6155] done synthesizing module 'controller' (0#1) [C:/Users/srika/Documents/MTP-1/tinygpu_fpga/rtl/controller.sv:8]
+INFO: [Synth 8-6157] synthesizing module 'controller__parameterized0' [C:/Users/srika/Documents/MTP-1/tinygpu_fpga/rtl/controller.sv:8]
+	Parameter ADDR_BITS bound to: 8 - type: integer 
+	Parameter DATA_BITS bound to: 16 - type: integer 
+	Parameter NUM_CONSUMERS bound to: 16 - type: integer 
+	Parameter NUM_CHANNELS bound to: 1 - type: integer 
+	Parameter WRITE_ENABLE bound to: 0 - type: integer 
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/srika/Documents/MTP-1/tinygpu_fpga/rtl/controller.sv:70]
+INFO: [Synth 8-6155] done synthesizing module 'controller__parameterized0' (0#1) [C:/Users/srika/Documents/MTP-1/tinygpu_fpga/rtl/controller.sv:8]
+INFO: [Synth 8-6157] synthesizing module 'dispatch' [C:/Users/srika/Documents/MTP-1/tinygpu_fpga/rtl/dispatch_rr.sv:13]
+	Parameter NUM_CORES bound to: 16 - type: integer 
+	Parameter THREADS_PER_BLOCK bound to: 4 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'dispatch' (0#1) [C:/Users/srika/Documents/MTP-1/tinygpu_fpga/rtl/dispatch_rr.sv:13]
+INFO: [Synth 8-6155] done synthesizing module 'gpu' (0#1) [C:/Users/srika/Documents/MTP-1/tinygpu_fpga/rtl/gpu.sv:10]
+INFO: [Synth 8-6157] synthesizing module 'uart_tx' [C:/Users/srika/Documents/MTP-1/tinygpu_fpga/soc/gpu_soc_top.sv:309]
+	Parameter CLKS_PER_BIT bound to: 347 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'uart_tx' (0#1) [C:/Users/srika/Documents/MTP-1/tinygpu_fpga/soc/gpu_soc_top.sv:309]
+INFO: [Synth 8-6155] done synthesizing module 'gpu_soc_top' (0#1) [C:/Users/srika/Documents/MTP-1/tinygpu_fpga/soc/gpu_soc_top.sv:20]
+WARNING: [Synth 8-6014] Unused sequential element any_lsu_waiting_reg was removed.  [C:/Users/srika/Documents/MTP-1/tinygpu_fpga/rtl/scheduler.sv:80]
+WARNING: [Synth 8-6014] Unused sequential element ld_we_reg was removed.  [C:/Users/srika/Documents/MTP-1/tinygpu_fpga/soc/gpu_soc_top.sv:191]
+WARNING: [Synth 8-3917] design gpu_soc_top has port led[13] driven by constant 0
+WARNING: [Synth 8-3917] design gpu_soc_top has port led[12] driven by constant 0
+WARNING: [Synth 8-3917] design gpu_soc_top has port led[11] driven by constant 0
+WARNING: [Synth 8-3917] design gpu_soc_top has port led[10] driven by constant 0
+WARNING: [Synth 8-3917] design gpu_soc_top has port led[9] driven by constant 0
+WARNING: [Synth 8-3917] design gpu_soc_top has port led[8] driven by constant 0
+WARNING: [Synth 8-3917] design gpu_soc_top has port led[7] driven by constant 0
+WARNING: [Synth 8-3917] design gpu_soc_top has port led[6] driven by constant 0
+WARNING: [Synth 8-3917] design gpu_soc_top has port led[5] driven by constant 0
+WARNING: [Synth 8-3917] design gpu_soc_top has port led[4] driven by constant 0
+WARNING: [Synth 8-3917] design gpu_soc_top has port led[3] driven by constant 0
+WARNING: [Synth 8-7129] Port decoded_mem_read_enable in module scheduler is either unconnected or has no load
+WARNING: [Synth 8-7129] Port decoded_mem_write_enable in module scheduler is either unconnected or has no load
+WARNING: [Synth 8-7129] Port next_pc[2][7] in module scheduler is either unconnected or has no load
+WARNING: [Synth 8-7129] Port next_pc[2][6] in module scheduler is either unconnected or has no load
+WARNING: [Synth 8-7129] Port next_pc[2][5] in module scheduler is either unconnected or has no load
+WARNING: [Synth 8-7129] Port next_pc[2][4] in module scheduler is either unconnected or has no load
+WARNING: [Synth 8-7129] Port next_pc[2][3] in module scheduler is either unconnected or has no load
+WARNING: [Synth 8-7129] Port next_pc[2][2] in module scheduler is either unconnected or has no load
+WARNING: [Synth 8-7129] Port next_pc[2][1] in module scheduler is either unconnected or has no load
+WARNING: [Synth 8-7129] Port next_pc[2][0] in module scheduler is either unconnected or has no load
+WARNING: [Synth 8-7129] Port next_pc[1][7] in module scheduler is either unconnected or has no load
+WARNING: [Synth 8-7129] Port next_pc[1][6] in module scheduler is either unconnected or has no load
+WARNING: [Synth 8-7129] Port next_pc[1][5] in module scheduler is either unconnected or has no load
+WARNING: [Synth 8-7129] Port next_pc[1][4] in module scheduler is either unconnected or has no load
+WARNING: [Synth 8-7129] Port next_pc[1][3] in module scheduler is either unconnected or has no load
+WARNING: [Synth 8-7129] Port next_pc[1][2] in module scheduler is either unconnected or has no load
+WARNING: [Synth 8-7129] Port next_pc[1][1] in module scheduler is either unconnected or has no load
+WARNING: [Synth 8-7129] Port next_pc[1][0] in module scheduler is either unconnected or has no load
+WARNING: [Synth 8-7129] Port next_pc[0][7] in module scheduler is either unconnected or has no load
+WARNING: [Synth 8-7129] Port next_pc[0][6] in module scheduler is either unconnected or has no load
+WARNING: [Synth 8-7129] Port next_pc[0][5] in module scheduler is either unconnected or has no load
+WARNING: [Synth 8-7129] Port next_pc[0][4] in module scheduler is either unconnected or has no load
+WARNING: [Synth 8-7129] Port next_pc[0][3] in module scheduler is either unconnected or has no load
+WARNING: [Synth 8-7129] Port next_pc[0][2] in module scheduler is either unconnected or has no load
+WARNING: [Synth 8-7129] Port next_pc[0][1] in module scheduler is either unconnected or has no load
+WARNING: [Synth 8-7129] Port next_pc[0][0] in module scheduler is either unconnected or has no load
+WARNING: [Synth 8-7129] Port alu_out[7] in module pc is either unconnected or has no load
+WARNING: [Synth 8-7129] Port alu_out[6] in module pc is either unconnected or has no load
+WARNING: [Synth 8-7129] Port alu_out[5] in module pc is either unconnected or has no load
+WARNING: [Synth 8-7129] Port alu_out[4] in module pc is either unconnected or has no load
+WARNING: [Synth 8-7129] Port alu_out[3] in module pc is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 1578.941 ; gain = 1038.879
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:27 ; elapsed = 00:00:29 . Memory (MB): peak = 1578.941 ; gain = 1038.879
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:27 ; elapsed = 00:00:29 . Memory (MB): peak = 1578.941 ; gain = 1038.879
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.894 . Memory (MB): peak = 1578.941 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/srika/Documents/MTP-1/tinygpu_fpga/soc/nexys4ddr.xdc]
+Finished Parsing XDC File [C:/Users/srika/Documents/MTP-1/tinygpu_fpga/soc/nexys4ddr.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/srika/Documents/MTP-1/tinygpu_fpga/soc/nexys4ddr.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/gpu_soc_top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/gpu_soc_top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Timing 38-2] Deriving generated clocks
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.012 . Memory (MB): peak = 1664.777 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 1 instances were transformed.
+  MMCME2_BASE => MMCME2_ADV: 1 instance 
+
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:53 ; elapsed = 00:00:55 . Memory (MB): peak = 1664.777 ; gain = 1124.715
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:53 ; elapsed = 00:00:55 . Memory (MB): peak = 1664.777 ; gain = 1124.715
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:53 ; elapsed = 00:00:55 . Memory (MB): peak = 1664.777 ; gain = 1124.715
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'fetcher_state_reg' in module 'fetcher'
+INFO: [Synth 8-802] inferred FSM for state register 'core_state_reg' in module 'scheduler'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    IDLE |                              001 |                              000
+                FETCHING |                              010 |                              001
+                 FETCHED |                              100 |                              010
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'fetcher_state_reg' using encoding 'one-hot' in module 'fetcher'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    IDLE |                              000 |                              000
+                   FETCH |                              001 |                              001
+                  DECODE |                              010 |                              010
+                 REQUEST |                              011 |                              011
+                    WAIT |                              100 |                              100
+                 EXECUTE |                              101 |                              101
+                  UPDATE |                              110 |                              110
+                    DONE |                              111 |                              111
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'core_state_reg' using encoding 'sequential' in module 'scheduler'
+INFO: [Synth 8-3971] The signal "gpu_soc_top/dmem_reg" was recognized as a true dual port RAM template.
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:02:51 ; elapsed = 00:02:58 . Memory (MB): peak = 1668.375 ; gain = 1128.312
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   32 Bit       Adders := 3     
+	   2 Input   16 Bit       Adders := 2     
+	   3 Input    9 Bit       Adders := 64    
+	   2 Input    9 Bit       Adders := 2     
+	   3 Input    8 Bit       Adders := 64    
+	   2 Input    8 Bit       Adders := 134   
+	   2 Input    7 Bit       Adders := 14    
+	   2 Input    6 Bit       Adders := 1     
+	   2 Input    4 Bit       Adders := 4     
+	   3 Input    3 Bit       Adders := 1     
+	   2 Input    2 Bit       Adders := 1     
++---Registers : 
+	               64 Bit    Registers := 3     
+	               32 Bit    Registers := 3     
+	               16 Bit    Registers := 43    
+	               10 Bit    Registers := 1     
+	                9 Bit    Registers := 1     
+	                8 Bit    Registers := 1978  
+	                7 Bit    Registers := 2     
+	                6 Bit    Registers := 2     
+	                4 Bit    Registers := 56    
+	                3 Bit    Registers := 100   
+	                2 Bit    Registers := 97    
+	                1 Bit    Registers := 532   
++---RAMs : 
+	               4K Bit	(256 X 16 bit)          RAMs := 1     
+	               2K Bit	(256 X 8 bit)          RAMs := 1     
++---ROMs : 
+	                    ROMs := 1     
++---Muxes : 
+	   2 Input   64 Bit        Muxes := 36    
+	   6 Input   64 Bit        Muxes := 16    
+	  12 Input   32 Bit        Muxes := 2     
+	   2 Input   32 Bit        Muxes := 2     
+	   6 Input   16 Bit        Muxes := 6     
+	   2 Input   16 Bit        Muxes := 59    
+	  12 Input   16 Bit        Muxes := 1     
+	 769 Input   16 Bit        Muxes := 1     
+	  12 Input    9 Bit        Muxes := 1     
+	   5 Input    8 Bit        Muxes := 65    
+	   4 Input    8 Bit        Muxes := 130   
+	   2 Input    8 Bit        Muxes := 2477  
+	   6 Input    8 Bit        Muxes := 192   
+	 769 Input    8 Bit        Muxes := 1     
+	  12 Input    8 Bit        Muxes := 1     
+	   2 Input    7 Bit        Muxes := 1     
+	   2 Input    6 Bit        Muxes := 757   
+	   6 Input    4 Bit        Muxes := 16    
+	   2 Input    4 Bit        Muxes := 43    
+	  12 Input    4 Bit        Muxes := 1     
+	   8 Input    3 Bit        Muxes := 16    
+	   2 Input    3 Bit        Muxes := 34    
+	   6 Input    3 Bit        Muxes := 5     
+	  12 Input    3 Bit        Muxes := 1     
+	   2 Input    2 Bit        Muxes := 1001  
+	   4 Input    2 Bit        Muxes := 128   
+	  12 Input    2 Bit        Muxes := 32    
+	   2 Input    1 Bit        Muxes := 10041 
+	   4 Input    1 Bit        Muxes := 1216  
+	   3 Input    1 Bit        Muxes := 65    
+	  12 Input    1 Bit        Muxes := 114   
+	   8 Input    1 Bit        Muxes := 48    
+	   6 Input    1 Bit        Muxes := 291   
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-3917] design gpu_soc_top has port led[13] driven by constant 0
+WARNING: [Synth 8-3917] design gpu_soc_top has port led[12] driven by constant 0
+WARNING: [Synth 8-3917] design gpu_soc_top has port led[11] driven by constant 0
+WARNING: [Synth 8-3917] design gpu_soc_top has port led[10] driven by constant 0
+WARNING: [Synth 8-3917] design gpu_soc_top has port led[9] driven by constant 0
+WARNING: [Synth 8-3917] design gpu_soc_top has port led[8] driven by constant 0
+WARNING: [Synth 8-3917] design gpu_soc_top has port led[7] driven by constant 0
+WARNING: [Synth 8-3917] design gpu_soc_top has port led[6] driven by constant 0
+WARNING: [Synth 8-3917] design gpu_soc_top has port led[5] driven by constant 0
+WARNING: [Synth 8-3917] design gpu_soc_top has port led[4] driven by constant 0
+WARNING: [Synth 8-3917] design gpu_soc_top has port led[3] driven by constant 0
+INFO: [Synth 8-3971] The signal "gpu_soc_top/dmem_reg" was recognized as a true dual port RAM template.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:05:07 ; elapsed = 00:05:44 . Memory (MB): peak = 2481.562 ; gain = 1941.500
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+ROM: Preliminary Mapping Report
++------------+------------+---------------+----------------+
+|Module Name | RTL Object | Depth x Width | Implemented As | 
++------------+------------+---------------+----------------+
+|gpu_soc_top | exp_q_reg  | 1024x8        | Block RAM      | 
++------------+------------+---------------+----------------+
+
+
+Block RAM: Preliminary Mapping Report (see note below)
++------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name | RTL Object | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|gpu_soc_top | pmem_reg   | 256 x 16(READ_FIRST)   | W |   | 256 x 16(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
++------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+Note: The table above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:05:26 ; elapsed = 00:06:10 . Memory (MB): peak = 2481.562 ; gain = 1941.500
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:09:39 ; elapsed = 00:11:24 . Memory (MB): peak = 2834.719 ; gain = 2294.656
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Final Mapping Report
++------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name | RTL Object | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|gpu_soc_top | pmem_reg   | 256 x 16(READ_FIRST)   | W |   | 256 x 16(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
++------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-7052] The timing for the instance dmem_reg_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance dmem_reg_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance dmem_reg_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance dmem_reg_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance dmem_reg_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance pmem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance exp_q_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:10:03 ; elapsed = 00:11:49 . Memory (MB): peak = 2884.953 ; gain = 2344.891
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:10:11 ; elapsed = 00:11:58 . Memory (MB): peak = 2884.953 ; gain = 2344.891
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:10:11 ; elapsed = 00:11:58 . Memory (MB): peak = 2884.953 ; gain = 2344.891
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:10:17 ; elapsed = 00:12:05 . Memory (MB): peak = 2884.953 ; gain = 2344.891
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:10:17 ; elapsed = 00:12:05 . Memory (MB): peak = 2884.953 ; gain = 2344.891
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:10:20 ; elapsed = 00:12:07 . Memory (MB): peak = 2884.953 ; gain = 2344.891
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:10:20 ; elapsed = 00:12:08 . Memory (MB): peak = 2884.953 ; gain = 2344.891
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+------------+------+
+|      |Cell        |Count |
++------+------------+------+
+|1     |BUFG        |     2|
+|2     |CARRY4      |  2211|
+|3     |LUT1        |     9|
+|4     |LUT2        |  4139|
+|5     |LUT3        |  7376|
+|6     |LUT4        |  2146|
+|7     |LUT5        |  3059|
+|8     |LUT6        | 12861|
+|9     |MMCME2_BASE |     1|
+|10    |MUXF7       |    82|
+|11    |MUXF8       |    14|
+|12    |RAMB18E1    |     7|
+|14    |FDRE        | 15813|
+|15    |FDSE        |    53|
+|16    |IBUF        |     2|
+|17    |OBUF        |    17|
++------+------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:10:20 ; elapsed = 00:12:08 . Memory (MB): peak = 2884.953 ; gain = 2344.891
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 12 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:09:40 ; elapsed = 00:11:56 . Memory (MB): peak = 2884.953 ; gain = 2259.055
+Synthesis Optimization Complete : Time (s): cpu = 00:10:21 ; elapsed = 00:12:09 . Memory (MB): peak = 2884.953 ; gain = 2344.891
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.886 . Memory (MB): peak = 2884.953 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 2315 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [C:/Users/srika/Documents/MTP-1/tinygpu_fpga/soc/nexys4ddr.xdc]
+Finished Parsing XDC File [C:/Users/srika/Documents/MTP-1/tinygpu_fpga/soc/nexys4ddr.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.018 . Memory (MB): peak = 2884.953 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 1 instances were transformed.
+  MMCME2_BASE => MMCME2_ADV: 1 instance 
+
+Synth Design complete | Checksum: 3e4adc9
+INFO: [Common 17-83] Releasing license: Synthesis
+86 Infos, 68 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:10:41 ; elapsed = 00:12:34 . Memory (MB): peak = 2884.953 ; gain = 2552.008
+# report_utilization -file $out/util_synth.rpt
+# opt_design
+Command: opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a100t'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Project 1-461] DRC finished with 0 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 2884.953 ; gain = 0.000
+
+Starting Cache Timing Information Task
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-2] Deriving generated clocks
+Ending Cache Timing Information Task | Checksum: 1ce7c243f
+
+Time (s): cpu = 00:00:16 ; elapsed = 00:00:15 . Memory (MB): peak = 2884.953 ; gain = 0.000
+
+Starting Logic Optimization Task
+
+Phase 1 Initialization
+
+Phase 1.1 Core Generation And Design Setup
+Phase 1.1 Core Generation And Design Setup | Checksum: 1ce7c243f
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.044 . Memory (MB): peak = 2884.953 ; gain = 0.000
+
+Phase 1.2 Setup Constraints And Sort Netlist
+Phase 1.2 Setup Constraints And Sort Netlist | Checksum: 1ce7c243f
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.107 . Memory (MB): peak = 2884.953 ; gain = 0.000
+Phase 1 Initialization | Checksum: 1ce7c243f
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.116 . Memory (MB): peak = 2884.953 ; gain = 0.000
+
+Phase 2 Timer Update And Timing Data Collection
+
+Phase 2.1 Timer Update
+Phase 2.1 Timer Update | Checksum: 1ce7c243f
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 2884.953 ; gain = 0.000
+
+Phase 2.2 Timing Data Collection
+Phase 2.2 Timing Data Collection | Checksum: 1ce7c243f
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 2884.953 ; gain = 0.000
+Phase 2 Timer Update And Timing Data Collection | Checksum: 1ce7c243f
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 2884.953 ; gain = 0.000
+
+Phase 3 Retarget
+INFO: [Opt 31-1851] Number of loadless carry chains removed were: 0
+INFO: [Opt 31-1834] Total Chains To Be Transformed Were: 0 AND Number of Transformed insts Created are: 0
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Opt 31-49] Retargeted 0 cell(s).
+Phase 3 Retarget | Checksum: 1ce7c243f
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 2884.953 ; gain = 0.000
+Retarget | Checksum: 1ce7c243f
+INFO: [Opt 31-389] Phase Retarget created 0 cells and removed 0 cells
+INFO: [Opt 31-1021] In phase Retarget, 1 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+
+Phase 4 Constant propagation
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Phase 4 Constant propagation | Checksum: 252396923
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2884.953 ; gain = 0.000
+Constant propagation | Checksum: 252396923
+INFO: [Opt 31-389] Phase Constant propagation created 0 cells and removed 0 cells
+
+Phase 5 Sweep
+INFO: [Constraints 18-11670] Building netlist checker database with flags, 0x8
+Done building netlist checker database: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.011 . Memory (MB): peak = 2884.953 ; gain = 0.000
+Phase 5 Sweep | Checksum: 2bd65d86b
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 2884.953 ; gain = 0.000
+Sweep | Checksum: 2bd65d86b
+INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 0 cells
+
+Phase 6 BUFG optimization
+Phase 6 BUFG optimization | Checksum: 2bd65d86b
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:04 . Memory (MB): peak = 2884.953 ; gain = 0.000
+BUFG optimization | Checksum: 2bd65d86b
+INFO: [Opt 31-662] Phase BUFG optimization created 0 cells of which 0 are BUFGs and removed 0 cells.
+
+Phase 7 Shift Register Optimization
+INFO: [Opt 31-1064] SRL Remap converted 0 SRLs to 0 registers and converted 0 registers of register chains to 0 SRLs
+Phase 7 Shift Register Optimization | Checksum: 2bd65d86b
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:04 . Memory (MB): peak = 2884.953 ; gain = 0.000
+Shift Register Optimization | Checksum: 2bd65d86b
+INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
+
+Phase 8 Post Processing Netlist
+Phase 8 Post Processing Netlist | Checksum: 2bd65d86b
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:04 . Memory (MB): peak = 2884.953 ; gain = 0.000
+Post Processing Netlist | Checksum: 2bd65d86b
+INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
+
+Phase 9 Finalization
+
+Phase 9.1 Finalizing Design Cores and Updating Shapes
+Phase 9.1 Finalizing Design Cores and Updating Shapes | Checksum: 18c94311f
+
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:05 . Memory (MB): peak = 2884.953 ; gain = 0.000
+
+Phase 9.2 Verifying Netlist Connectivity
+
+Starting Connectivity Check Task
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.193 . Memory (MB): peak = 2884.953 ; gain = 0.000
+Phase 9.2 Verifying Netlist Connectivity | Checksum: 18c94311f
+
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 2884.953 ; gain = 0.000
+Phase 9 Finalization | Checksum: 18c94311f
+
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 2884.953 ; gain = 0.000
+Opt_design Change Summary
+=========================
+
+
+-------------------------------------------------------------------------------------------------------------------------
+|  Phase                        |  #Cells created  |  #Cells Removed  |  #Constrained objects preventing optimizations  |
+-------------------------------------------------------------------------------------------------------------------------
+|  Retarget                     |               0  |               0  |                                              1  |
+|  Constant propagation         |               0  |               0  |                                              0  |
+|  Sweep                        |               0  |               0  |                                              0  |
+|  BUFG optimization            |               0  |               0  |                                              0  |
+|  Shift Register Optimization  |               0  |               0  |                                              0  |
+|  Post Processing Netlist      |               0  |               0  |                                              0  |
+-------------------------------------------------------------------------------------------------------------------------
+
+
+Ending Logic Optimization Task | Checksum: 18c94311f
+
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 2884.953 ; gain = 0.000
+
+Starting Power Optimization Task
+INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
+INFO: [Pwropt 34-9] Applying IDT optimizations ...
+INFO: [Pwropt 34-10] Applying ODC optimizations ...
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+
+
+Starting PowerOpt Patch Enables Task
+INFO: [Pwropt 34-162] WRITE_MODE attribute of 0 BRAM(s) out of a total of 7 has been updated to save power. Run report_power_opt to get a complete listing of the BRAMs updated.
+INFO: [Pwropt 34-201] Structural ODC has moved 0 WE to EN ports
+Number of BRAM Ports augmented: 0 newly gated: 2 Total Ports: 14
+Number of Flops added for Enable Generation: 3
+
+Ending PowerOpt Patch Enables Task | Checksum: 208b5da82
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.270 . Memory (MB): peak = 2884.953 ; gain = 0.000
+Ending Power Optimization Task | Checksum: 208b5da82
+
+Time (s): cpu = 00:00:17 ; elapsed = 00:00:09 . Memory (MB): peak = 2884.953 ; gain = 0.000
+
+Starting Final Cleanup Task
+
+Starting Logic Optimization Task
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Ending Logic Optimization Task | Checksum: 1e8569fb8
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:04 . Memory (MB): peak = 2884.953 ; gain = 0.000
+Ending Final Cleanup Task | Checksum: 1e8569fb8
+
+Time (s): cpu = 00:00:13 ; elapsed = 00:00:11 . Memory (MB): peak = 2884.953 ; gain = 0.000
+
+Starting Netlist Obfuscation Task
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.017 . Memory (MB): peak = 2884.953 ; gain = 0.000
+Ending Netlist Obfuscation Task | Checksum: 1e8569fb8
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.021 . Memory (MB): peak = 2884.953 ; gain = 0.000
+INFO: [Common 17-83] Releasing license: Implementation
+28 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+opt_design completed successfully
+opt_design: Time (s): cpu = 00:01:06 ; elapsed = 00:00:52 . Memory (MB): peak = 2884.953 ; gain = 0.000
+# place_design
+Command: place_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a100t'
+INFO: [Common 17-83] Releasing license: Implementation
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+Running DRC as a precondition to command place_design
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 2 CPUs
+
+Starting Placer Task
+
+Phase 1 Placer Initialization
+
+Phase 1.1 Placer Initialization Netlist Sorting
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.037 . Memory (MB): peak = 2884.953 ; gain = 0.000
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: 166edec3a
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.046 . Memory (MB): peak = 2884.953 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.039 . Memory (MB): peak = 2884.953 ; gain = 0.000
+
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 16c02189c
+
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:05 . Memory (MB): peak = 2884.953 ; gain = 0.000
+
+Phase 1.3 Build Placer Netlist Model
+Phase 1.3 Build Placer Netlist Model | Checksum: 244a63dd5
+
+Time (s): cpu = 00:00:23 ; elapsed = 00:00:15 . Memory (MB): peak = 2884.953 ; gain = 0.000
+
+Phase 1.4 Constrain Clocks/Macros
+Phase 1.4 Constrain Clocks/Macros | Checksum: 244a63dd5
+
+Time (s): cpu = 00:00:23 ; elapsed = 00:00:15 . Memory (MB): peak = 2884.953 ; gain = 0.000
+Phase 1 Placer Initialization | Checksum: 244a63dd5
+
+Time (s): cpu = 00:00:23 ; elapsed = 00:00:15 . Memory (MB): peak = 2884.953 ; gain = 0.000
+
+Phase 2 Global Placement
+
+Phase 2.1 Floorplanning
+Phase 2.1 Floorplanning | Checksum: 16cc76f99
+
+Time (s): cpu = 00:00:32 ; elapsed = 00:00:21 . Memory (MB): peak = 2884.953 ; gain = 0.000
+
+Phase 2.2 Update Timing before SLR Path Opt
+Phase 2.2 Update Timing before SLR Path Opt | Checksum: 222a74665
+
+Time (s): cpu = 00:00:45 ; elapsed = 00:00:29 . Memory (MB): peak = 2884.953 ; gain = 0.000
+
+Phase 2.3 Post-Processing in Floorplanning
+Phase 2.3 Post-Processing in Floorplanning | Checksum: 222a74665
+
+Time (s): cpu = 00:00:45 ; elapsed = 00:00:29 . Memory (MB): peak = 2884.953 ; gain = 0.000
+
+Phase 2.4 Global Place Phase1
+Phase 2.4 Global Place Phase1 | Checksum: 1a0db886f
+
+Time (s): cpu = 00:01:41 ; elapsed = 00:01:05 . Memory (MB): peak = 2884.953 ; gain = 0.000
+
+Phase 2.5 Global Place Phase2
+
+Phase 2.5.1 UpdateTiming Before Physical Synthesis
+Phase 2.5.1 UpdateTiming Before Physical Synthesis | Checksum: 1a0db886f
+
+Time (s): cpu = 00:01:48 ; elapsed = 00:01:09 . Memory (MB): peak = 2884.953 ; gain = 0.000
+
+Phase 2.5.2 Physical Synthesis In Placer
+INFO: [Physopt 32-1035] Found 0 LUTNM shape to break, 1108 LUT instances to create LUTNM shape
+INFO: [Physopt 32-1044] Break lutnm for timing: one critical 0, two critical 0, total 0, new lutff created 0
+INFO: [Physopt 32-1138] End 1 Pass. Optimized 525 nets or LUTs. Breaked 0 LUT, combined 525 existing LUTs and moved 0 existing LUT
+INFO: [Physopt 32-65] No nets found for high-fanout optimization.
+INFO: [Physopt 32-232] Optimized 0 net. Created 0 new instance.
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-670] No setup violation found.  DSP Register Optimization was not performed.
+INFO: [Physopt 32-670] No setup violation found.  Shift Register to Pipeline Optimization was not performed.
+INFO: [Physopt 32-670] No setup violation found.  Shift Register Optimization was not performed.
+INFO: [Physopt 32-670] No setup violation found.  BRAM Register Optimization was not performed.
+INFO: [Physopt 32-670] No setup violation found.  URAM Register Optimization was not performed.
+INFO: [Physopt 32-949] No candidate nets found for dynamic/static region interface net replication
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.016 . Memory (MB): peak = 2884.953 ; gain = 0.000
+
+Summary of Physical Synthesis Optimizations
+============================================
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+|  Optimization                                     |  Added Cells  |  Removed Cells  |  Optimized Cells/Nets  |  Dont Touch  |  Iterations  |  Elapsed   |
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+|  LUT Combining                                    |            0  |            525  |                   525  |           0  |           1  |  00:00:02  |
+|  Retime                                           |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Very High Fanout                                 |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  DSP Register                                     |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
+|  Shift Register to Pipeline                       |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
+|  Shift Register                                   |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
+|  BRAM Register                                    |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
+|  URAM Register                                    |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
+|  Dynamic/Static Region Interface Net Replication  |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Total                                            |            0  |            525  |                   525  |           0  |           4  |  00:00:02  |
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Phase 2.5.2 Physical Synthesis In Placer | Checksum: 26098b40a
+
+Time (s): cpu = 00:01:57 ; elapsed = 00:01:15 . Memory (MB): peak = 2884.953 ; gain = 0.000
+Phase 2.5 Global Place Phase2 | Checksum: 24f6d534e
+
+Time (s): cpu = 00:01:59 ; elapsed = 00:01:17 . Memory (MB): peak = 2884.953 ; gain = 0.000
+Phase 2 Global Placement | Checksum: 24f6d534e
+
+Time (s): cpu = 00:01:59 ; elapsed = 00:01:17 . Memory (MB): peak = 2884.953 ; gain = 0.000
+
+Phase 3 Detail Placement
+
+Phase 3.1 Commit Multi Column Macros
+Phase 3.1 Commit Multi Column Macros | Checksum: 24266ab34
+
+Time (s): cpu = 00:02:07 ; elapsed = 00:01:21 . Memory (MB): peak = 2884.953 ; gain = 0.000
+
+Phase 3.2 Commit Most Macros & LUTRAMs
+Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 272e377a7
+
+Time (s): cpu = 00:02:22 ; elapsed = 00:01:31 . Memory (MB): peak = 2884.953 ; gain = 0.000
+
+Phase 3.3 Area Swap Optimization
+Phase 3.3 Area Swap Optimization | Checksum: 2261966e9
+
+Time (s): cpu = 00:02:24 ; elapsed = 00:01:32 . Memory (MB): peak = 2884.953 ; gain = 0.000
+
+Phase 3.4 Pipeline Register Optimization
+Phase 3.4 Pipeline Register Optimization | Checksum: 1df644afd
+
+Time (s): cpu = 00:02:24 ; elapsed = 00:01:32 . Memory (MB): peak = 2884.953 ; gain = 0.000
+
+Phase 3.5 Fast Optimization
+Phase 3.5 Fast Optimization | Checksum: 20efb1350
+
+Time (s): cpu = 00:02:43 ; elapsed = 00:01:44 . Memory (MB): peak = 2884.953 ; gain = 0.000
+
+Phase 3.6 Small Shape Detail Placement
+Phase 3.6 Small Shape Detail Placement | Checksum: 1e7922193
+
+Time (s): cpu = 00:03:05 ; elapsed = 00:02:08 . Memory (MB): peak = 2884.953 ; gain = 0.000
+
+Phase 3.7 Re-assign LUT pins
+Phase 3.7 Re-assign LUT pins | Checksum: 1ebb09b67
+
+Time (s): cpu = 00:03:08 ; elapsed = 00:02:11 . Memory (MB): peak = 2884.953 ; gain = 0.000
+
+Phase 3.8 Pipeline Register Optimization
+Phase 3.8 Pipeline Register Optimization | Checksum: 2d785d25a
+
+Time (s): cpu = 00:03:08 ; elapsed = 00:02:11 . Memory (MB): peak = 2884.953 ; gain = 0.000
+Phase 3 Detail Placement | Checksum: 2d785d25a
+
+Time (s): cpu = 00:03:09 ; elapsed = 00:02:12 . Memory (MB): peak = 2884.953 ; gain = 0.000
+
+Phase 4 Post Placement Optimization and Clean-Up
+
+Phase 4.1 Post Commit Optimization
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+
+Phase 4.1.1 Post Placement Optimization
+Post Placement Optimization Initialization | Checksum: 2d52b9e21
+
+Phase 4.1.1.1 BUFG Insertion
+
+Starting Physical Synthesis Task
+
+Phase 1 Physical Synthesis Initialization
+INFO: [Physopt 32-721] Multithreading enabled for phys_opt_design using a maximum of 2 CPUs
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.073 | TNS=-0.145 |
+Phase 1 Physical Synthesis Initialization | Checksum: 1df256234
+
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:03 . Memory (MB): peak = 2884.953 ; gain = 0.000
+INFO: [Place 46-33] Processed net gpu_reset, BUFG insertion was skipped due to placement/routing conflicts.
+INFO: [Place 46-56] BUFG insertion identified 1 candidate nets. Inserted BUFG: 0, Replicated BUFG Driver: 0, Skipped due to Placement/Routing Conflicts: 1, Skipped due to Timing Degradation: 0, Skipped due to netlist editing failed: 0.
+Ending Physical Synthesis Task | Checksum: 2c4089868
+
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:04 . Memory (MB): peak = 2884.953 ; gain = 0.000
+Phase 4.1.1.1 BUFG Insertion | Checksum: 2d52b9e21
+
+Time (s): cpu = 00:03:38 ; elapsed = 00:02:30 . Memory (MB): peak = 2884.953 ; gain = 0.000
+
+Phase 4.1.1.2 Post Placement Timing Optimization
+INFO: [Place 30-746] Post Placement Timing Summary WNS=0.553. For the most accurate timing information please run report_timing.
+Phase 4.1.1.2 Post Placement Timing Optimization | Checksum: 283a28bdc
+
+Time (s): cpu = 00:03:41 ; elapsed = 00:02:32 . Memory (MB): peak = 2884.953 ; gain = 0.000
+
+Time (s): cpu = 00:03:41 ; elapsed = 00:02:33 . Memory (MB): peak = 2884.953 ; gain = 0.000
+Phase 4.1 Post Commit Optimization | Checksum: 283a28bdc
+
+Time (s): cpu = 00:03:42 ; elapsed = 00:02:33 . Memory (MB): peak = 2884.953 ; gain = 0.000
+
+Phase 4.2 Post Placement Cleanup
+Phase 4.2 Post Placement Cleanup | Checksum: 283a28bdc
+
+Time (s): cpu = 00:03:42 ; elapsed = 00:02:33 . Memory (MB): peak = 2884.953 ; gain = 0.000
+
+Phase 4.3 Placer Reporting
+
+Phase 4.3.1 Print Estimated Congestion
+INFO: [Place 30-612] Post-Placement Estimated Congestion 
+ ____________________________________________________
+|           | Global Congestion | Short Congestion  |
+| Direction | Region Size       | Region Size       |
+|___________|___________________|___________________|
+|      North|                2x2|                4x4|
+|___________|___________________|___________________|
+|      South|                1x1|                8x8|
+|___________|___________________|___________________|
+|       East|                1x1|                2x2|
+|___________|___________________|___________________|
+|       West|                1x1|                2x2|
+|___________|___________________|___________________|
+
+Phase 4.3.1 Print Estimated Congestion | Checksum: 283a28bdc
+
+Time (s): cpu = 00:03:43 ; elapsed = 00:02:33 . Memory (MB): peak = 2884.953 ; gain = 0.000
+Phase 4.3 Placer Reporting | Checksum: 283a28bdc
+
+Time (s): cpu = 00:03:43 ; elapsed = 00:02:34 . Memory (MB): peak = 2884.953 ; gain = 0.000
+
+Phase 4.4 Final Placement Cleanup
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.018 . Memory (MB): peak = 2884.953 ; gain = 0.000
+
+Time (s): cpu = 00:03:43 ; elapsed = 00:02:34 . Memory (MB): peak = 2884.953 ; gain = 0.000
+Phase 4 Post Placement Optimization and Clean-Up | Checksum: 232421716
+
+Time (s): cpu = 00:03:43 ; elapsed = 00:02:34 . Memory (MB): peak = 2884.953 ; gain = 0.000
+Ending Placer Task | Checksum: 1f6915e14
+
+Time (s): cpu = 00:03:44 ; elapsed = 00:02:34 . Memory (MB): peak = 2884.953 ; gain = 0.000
+30 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+place_design completed successfully
+place_design: Time (s): cpu = 00:03:50 ; elapsed = 00:02:38 . Memory (MB): peak = 2884.953 ; gain = 0.000
+# phys_opt_design
+Command: phys_opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a100t'
+
+Starting Initial Update Timing Task
+
+Time (s): cpu = 00:00:18 ; elapsed = 00:00:11 . Memory (MB): peak = 2884.953 ; gain = 0.000
+INFO: [Vivado_Tcl 4-2279] Estimated Timing Summary | WNS= 0.553 | TNS= 0.000 | 
+INFO: [Vivado_Tcl 4-383] Design worst setup slack (WNS) is greater than or equal to 0.000 ns. All physical synthesis setup optimizations will be skipped.
+INFO: [Vivado_Tcl 4-232] No setup violation found. The netlist was not modified.
+INFO: [Common 17-83] Releasing license: Implementation
+5 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+phys_opt_design completed successfully
+phys_opt_design: Time (s): cpu = 00:00:18 ; elapsed = 00:00:11 . Memory (MB): peak = 2884.953 ; gain = 0.000
+# route_design
+Command: route_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a100t'
+
+
+Starting Routing Task
+INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 2 CPUs
+
+Phase 1 Build RT Design
+Checksum: PlaceDB: caee7dc5 ConstDB: 0 ShapeSum: 79d080b9 RouteDB: b1d25f96
+Post Restoration Checksum: NetGraph: b61d6a8c | NumContArr: d9540549 | Constraints: c2a8fa9d | Timing: c2a8fa9d
+Phase 1 Build RT Design | Checksum: 314c3650f
+
+Time (s): cpu = 00:01:07 ; elapsed = 00:00:53 . Memory (MB): peak = 2884.953 ; gain = 0.000
+
+Phase 2 Router Initialization
+
+Phase 2.1 Fix Topology Constraints
+Phase 2.1 Fix Topology Constraints | Checksum: 314c3650f
+
+Time (s): cpu = 00:01:07 ; elapsed = 00:00:54 . Memory (MB): peak = 2884.953 ; gain = 0.000
+
+Phase 2.2 Pre Route Cleanup
+Phase 2.2 Pre Route Cleanup | Checksum: 314c3650f
+
+Time (s): cpu = 00:01:07 ; elapsed = 00:00:54 . Memory (MB): peak = 2884.953 ; gain = 0.000
+ Number of Nodes with overlaps = 0
+
+Phase 2.3 Update Timing
+Phase 2.3 Update Timing | Checksum: 25603b124
+
+Time (s): cpu = 00:01:33 ; elapsed = 00:01:10 . Memory (MB): peak = 2918.551 ; gain = 33.598
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=1.139  | TNS=0.000  | WHS=-0.161 | THS=-122.879|
+
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 0 %
+  Global Horizontal Routing Utilization  = 0 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 42406
+    (Failed Nets is the sum of unrouted and partially routed nets)
+  Number of Unrouted Nets             = 42406
+  Number of Partially Routed Nets     = 0
+  Number of Node Overlaps             = 0
+
+Phase 2 Router Initialization | Checksum: 1a8dedfc5
+
+Time (s): cpu = 00:01:42 ; elapsed = 00:01:15 . Memory (MB): peak = 2918.551 ; gain = 33.598
+
+Phase 3 Global Routing
+Phase 3 Global Routing | Checksum: 1a8dedfc5
+
+Time (s): cpu = 00:01:42 ; elapsed = 00:01:15 . Memory (MB): peak = 2918.551 ; gain = 33.598
+
+Phase 4 Initial Routing
+
+Phase 4.1 Initial Net Routing Pass
+Phase 4.1 Initial Net Routing Pass | Checksum: 20dc69516
+
+Time (s): cpu = 00:01:54 ; elapsed = 00:01:22 . Memory (MB): peak = 2918.551 ; gain = 33.598
+Phase 4 Initial Routing | Checksum: 20dc69516
+
+Time (s): cpu = 00:01:54 ; elapsed = 00:01:22 . Memory (MB): peak = 2918.551 ; gain = 33.598
+
+Phase 5 Rip-up And Reroute
+
+Phase 5.1 Global Iteration 0
+ Number of Nodes with overlaps = 11304
+ Number of Nodes with overlaps = 3438
+ Number of Nodes with overlaps = 1319
+ Number of Nodes with overlaps = 453
+ Number of Nodes with overlaps = 183
+ Number of Nodes with overlaps = 54
+ Number of Nodes with overlaps = 10
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-0.225 | TNS=-1.849 | WHS=N/A    | THS=N/A    |
+
+Phase 5.1 Global Iteration 0 | Checksum: 26bee14f2
+
+Time (s): cpu = 00:03:44 ; elapsed = 00:02:42 . Memory (MB): peak = 2947.719 ; gain = 62.766
+
+Phase 5.2 Global Iteration 1
+ Number of Nodes with overlaps = 3786
+ Number of Nodes with overlaps = 1427
+ Number of Nodes with overlaps = 376
+ Number of Nodes with overlaps = 153
+ Number of Nodes with overlaps = 46
+ Number of Nodes with overlaps = 16
+ Number of Nodes with overlaps = 2
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.768  | TNS=0.000  | WHS=N/A    | THS=N/A    |
+
+Phase 5.2 Global Iteration 1 | Checksum: 28a0e9122
+
+Time (s): cpu = 00:04:39 ; elapsed = 00:03:18 . Memory (MB): peak = 2947.719 ; gain = 62.766
+Phase 5 Rip-up And Reroute | Checksum: 28a0e9122
+
+Time (s): cpu = 00:04:40 ; elapsed = 00:03:18 . Memory (MB): peak = 2947.719 ; gain = 62.766
+
+Phase 6 Delay and Skew Optimization
+
+Phase 6.1 Delay CleanUp
+Phase 6.1 Delay CleanUp | Checksum: 28a0e9122
+
+Time (s): cpu = 00:04:40 ; elapsed = 00:03:18 . Memory (MB): peak = 2947.719 ; gain = 62.766
+
+Phase 6.2 Clock Skew Optimization
+Phase 6.2 Clock Skew Optimization | Checksum: 28a0e9122
+
+Time (s): cpu = 00:04:40 ; elapsed = 00:03:18 . Memory (MB): peak = 2947.719 ; gain = 62.766
+Phase 6 Delay and Skew Optimization | Checksum: 28a0e9122
+
+Time (s): cpu = 00:04:40 ; elapsed = 00:03:18 . Memory (MB): peak = 2947.719 ; gain = 62.766
+
+Phase 7 Post Hold Fix
+
+Phase 7.1 Hold Fix Iter
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.775  | TNS=0.000  | WHS=0.021  | THS=0.000  |
+
+Phase 7.1 Hold Fix Iter | Checksum: 1e2464d98
+
+Time (s): cpu = 00:04:45 ; elapsed = 00:03:21 . Memory (MB): peak = 2947.719 ; gain = 62.766
+Phase 7 Post Hold Fix | Checksum: 1e2464d98
+
+Time (s): cpu = 00:04:45 ; elapsed = 00:03:21 . Memory (MB): peak = 2947.719 ; gain = 62.766
+
+Phase 8 Route finalize
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 9.65979 %
+  Global Horizontal Routing Utilization  = 10.9192 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 0
+    (Failed Nets is the sum of unrouted and partially routed nets)
+  Number of Unrouted Nets             = 0
+  Number of Partially Routed Nets     = 0
+  Number of Node Overlaps             = 0
+
+Phase 8 Route finalize | Checksum: 1e2464d98
+
+Time (s): cpu = 00:04:46 ; elapsed = 00:03:21 . Memory (MB): peak = 2947.719 ; gain = 62.766
+
+Phase 9 Verifying routed nets
+
+ Verification completed successfully
+Phase 9 Verifying routed nets | Checksum: 1e2464d98
+
+Time (s): cpu = 00:04:46 ; elapsed = 00:03:21 . Memory (MB): peak = 2947.719 ; gain = 62.766
+
+Phase 10 Depositing Routes
+Phase 10 Depositing Routes | Checksum: 193bfebf1
+
+Time (s): cpu = 00:04:51 ; elapsed = 00:03:26 . Memory (MB): peak = 2947.719 ; gain = 62.766
+
+Phase 11 Post Process Routing
+Phase 11 Post Process Routing | Checksum: 193bfebf1
+
+Time (s): cpu = 00:04:52 ; elapsed = 00:03:26 . Memory (MB): peak = 2947.719 ; gain = 62.766
+
+Phase 12 Post Router Timing
+INFO: [Route 35-57] Estimated Timing Summary | WNS=0.775  | TNS=0.000  | WHS=0.021  | THS=0.000  |
+
+INFO: [Route 35-327] The final timing numbers are based on the router estimated timing analysis. For a complete and accurate timing signoff, please run report_timing_summary.
+Phase 12 Post Router Timing | Checksum: 193bfebf1
+
+Time (s): cpu = 00:04:52 ; elapsed = 00:03:26 . Memory (MB): peak = 2947.719 ; gain = 62.766
+Total Elapsed time in route_design: 206.083 secs
+
+Phase 13 Post-Route Event Processing
+Phase 13 Post-Route Event Processing | Checksum: 13a83baa7
+
+Time (s): cpu = 00:04:52 ; elapsed = 00:03:26 . Memory (MB): peak = 2947.719 ; gain = 62.766
+INFO: [Route 35-16] Router Completed Successfully
+Ending Routing Task | Checksum: 13a83baa7
+
+Time (s): cpu = 00:04:53 ; elapsed = 00:03:27 . Memory (MB): peak = 2947.719 ; gain = 62.766
+
+Routing Is Done.
+INFO: [Common 17-83] Releasing license: Implementation
+10 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+route_design completed successfully
+route_design: Time (s): cpu = 00:04:53 ; elapsed = 00:03:27 . Memory (MB): peak = 2947.719 ; gain = 62.766
+# report_utilization                -file $out/util.rpt
+# report_utilization -hierarchical -hierarchical_depth 3 -file $out/util_hier.rpt
+# report_timing_summary -max_paths 10 -file $out/timing.rpt
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+report_timing_summary: Time (s): cpu = 00:00:25 ; elapsed = 00:00:15 . Memory (MB): peak = 2947.719 ; gain = 0.000
+# report_timing -max_paths 1 -nworst 1 -file $out/critical_path.rpt
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+INFO: [Timing 38-78] ReportTimingParams: -max_paths 1 -nworst 1 -delay_type max -sort_by slack.
+# report_power                      -file $out/power.rpt
+Command: report_power -file C:/Users/srika/Documents/MTP-1/tinygpu_fpga/build/N16_P1_M4_T4_rr_f40/power.rpt
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+WARNING: [Power 33-332] Found switching activity that implies high-fanout reset nets being asserted for excessive periods of time which may result in inaccurate power analysis.
+Resolution: To review and fix problems, please run Power Constraints Advisor in the GUI from Tools > Power Constraints Advisor or run report_power with the -advisory option to generate a text report.
+0 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+report_power completed successfully
+report_power: Time (s): cpu = 00:00:27 ; elapsed = 00:00:15 . Memory (MB): peak = 2947.719 ; gain = 0.000
+# write_bitstream -force $out/gpu_soc.bit
+Command: write_bitstream -force C:/Users/srika/Documents/MTP-1/tinygpu_fpga/build/N16_P1_M4_T4_rr_f40/gpu_soc.bit
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a100t'
+Running DRC as a precondition to command write_bitstream
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2024.2/data/ip'.
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado 12-3199] DRC finished with 0 Errors
+INFO: [Vivado 12-3200] Please refer to the DRC report (report_drc) for more information.
+INFO: [Designutils 20-2272] Running write_bitstream with 2 threads.
+Loading data files...
+Loading site data...
+Loading route data...
+Processing options...
+Creating bitmap...
+Creating bitstream...
+Writing bitstream C:/Users/srika/Documents/MTP-1/tinygpu_fpga/build/N16_P1_M4_T4_rr_f40/gpu_soc.bit...
+INFO: [Vivado 12-1842] Bitgen Completed Successfully.
+INFO: [Common 17-83] Releasing license: Implementation
+10 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+write_bitstream completed successfully
+write_bitstream: Time (s): cpu = 00:00:54 ; elapsed = 00:00:35 . Memory (MB): peak = 3461.316 ; gain = 513.598
+# puts "BUILD_DONE $tag"
+BUILD_DONE N16_P1_M4_T4_rr_f40
+INFO: [Common 17-206] Exiting Vivado at Wed Oct 21 15:48:11 2026...

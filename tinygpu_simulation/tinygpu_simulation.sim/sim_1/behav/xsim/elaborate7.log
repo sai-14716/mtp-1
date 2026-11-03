@@ -1,0 +1,32 @@
+Vivado Simulator v2026.1
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2026 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/AMDDesignTools/2026.1/Vivado/bin/unwrapped/win64.o/xelab.exe --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot gpu_behav xil_defaultlib.gpu xil_defaultlib.glbl work.tb_gpu -log elaborate7.log 
+INFO: [XSIM 43-3493] Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.dcr
+Compiling module xil_defaultlib.controller(DATA_BITS=8,NUM_CONSU...
+Compiling module xil_defaultlib.controller(NUM_CONSUMERS=2,WRITE...
+Compiling module xil_defaultlib.dispatch
+Compiling module xil_defaultlib.fetcher
+Compiling module xil_defaultlib.decoder
+Compiling module xil_defaultlib.scheduler
+Compiling module xil_defaultlib.alu
+Compiling module xil_defaultlib.lsu
+Compiling module xil_defaultlib.registers
+Compiling module xil_defaultlib.pc
+Compiling module xil_defaultlib.registers(THREAD_ID=1)
+Compiling module xil_defaultlib.registers(THREAD_ID=2)
+Compiling module xil_defaultlib.registers(THREAD_ID=3)
+Compiling module xil_defaultlib.core_default
+Compiling module xil_defaultlib.gpu
+Compiling module xil_defaultlib.glbl
+Compiling module xil_defaultlib.core
+Compiling module xil_defaultlib.gpu_default
+Compiling module work.tb_gpu
+Built simulation snapshot gpu_behav

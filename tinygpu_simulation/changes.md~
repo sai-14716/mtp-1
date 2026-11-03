@@ -1,0 +1,124 @@
+# Tiny GPU Behavioral Simulation Fixes
+
+## Summary
+Fixed behavioral simulation errors in the tiny GPU design to run successfully on Vivado 2026.1. The simulation now completes without timeout and produces correct results for the matrix addition test kernel.
+
+---
+
+## Root Cause
+The main logic bug was in **`dispatch.sv`** where the dispatch state machine was incorrectly gated by the momentary `start` pulse instead of running continuously after execution was triggered. This prevented cores from progressing through their instruction pipeline.
+
+---
+
+## Changes Made
+
+### 1. Main Logic Fix: `src/dispatch.sv` — Dispatch State Machine
+
+**Problem**: The dispatch unit's main loop only ran on the single clock cycle when the `start` signal pulsed high. Once that pulse ended, the dispatch logic stopped executing, leaving cores stuck in their initial state.
+
+**Solution**: Introduced a persistent `start_execution` flag that latches high on the rising edge of `start`. The dispatch logic now runs continuously while this flag is asserted, allowing it to:
+- Detect when cores finish their assigned blocks (via `core_done`)
+- Reset finished cores and assign them new blocks
+- Track total blocks dispatched and completed
+- Assert the global `done` signal when all blocks finish
+
+Also corrected the assignment style for the block counters (`blocks_dispatched` and `blocks_done`) to use consistent blocking assignments within the combinational-style sequential block.
+
+---
+
+### 2. Syntax Fixes for Vivado 2026.1 — Trailing Commas in Association Lists
+
+Vivado 2026.1's SystemVerilog compiler (VRFC) rejects trailing commas in both parameter and port association lists, which were previously accepted by older tool versions.
+
+**Files corrected**: `core.sv`, `dcr.sv`, `fetcher.sv`, `scheduler.sv`, `gpu.sv`
+
+Each trailing comma after the last parameter/port mapping was removed to satisfy the stricter parser.
+
+---
+
+### 3. Packed/Unpacked Array Mismatches: `src/controller.sv`
+
+**Problem**: The controller module attempted to assign packed array literals (e.g., `'0`) to unpacked array signals, causing type mismatch errors (VRFC 10-395).
+
+**Solution**: Replaced bulk array assignments with explicit per-element initialization loops that assign individual bits, ensuring type compatibility between packed literals and unpacked signal declarations.
+
+---
+
+### 4. Missing Modules in Project File: `gpu_vlog.prj`
+
+**Problem**: Three modules (`dcr`, `fetcher`, `scheduler`) were referenced in the design but not included in the compilation project file, causing "module not found" errors during elaboration.
+
+**Solution**: Added the three missing SystemVerilog source files to the `gpu_vlog.prj` project file so they are compiled into the `xil_defaultlib` library.
+
+---
+
+### 5. Testbench Memory Interface Alignment: `tb_gpu.sv`
+
+**Problem**: The testbench declared memory interface signals with array types that didn't match the DUT's port declarations — specifically mixing packed and unpacked array styles for multi-channel interfaces.
+
+**Solution**: Realigned all testbench signal declarations to exactly match the DUT's interface:
+- Program memory (single channel): kept as packed arrays
+- Data memory (four channels): changed to unpacked arrays of address/data/valid/ready signals
+
+Also updated the memory model processes to index correctly into these arrays.
+
+---
+
+### 6. Debug Instrumentation Removal
+
+**Action**: Stripped out all temporary `$display` debug statements that were added during diagnosis from:
+- `src/dispatch.sv`
+- `src/core.sv`
+- `src/fetcher.sv`
+- `src/scheduler.sv`
+- `tb_gpu.sv`
+
+The design now runs cleanly without simulation-time printout overhead.
+
+---
+
+## Verification Results
+
+### Simulation Output
+The simulation completes at 1905 ns with the `done` signal asserted. Results match the expected matrix addition output:
+
+```
+Results (data_memory[16] through data_memory[23]):  0, 2, 4, 6, 8, 10, 12, 14
+Expected (A[i] + B[i] where A=B=0..7):             0, 2, 4, 6, 8, 10, 12, 14
+```
+
+### Pipeline Execution Trace (from debug run)
+The full GPU pipeline was verified working:
+- **Dispatch** correctly distributed 2 blocks across 2 cores (4 threads per block)
+- **Scheduler** in each core stepped through: IDLE → FETCH → DECODE → REQUEST → WAIT → EXECUTE → UPDATE → (back to FETCH or DONE)
+- **Fetcher** fetched instructions from program memory: IDLE → FETCHING → FETCHED → IDLE
+- **Core 0** reached RET instruction first (block 0), then **Core 1** (block 1)
+- **Dispatch** observed both core completions and asserted global `done`
+
+---
+
+## Test Configuration
+- **GPU Configuration**: 2 cores, 4 threads per block, 8 total threads
+- **Test Kernel**: Matrix element-wise addition (C[i] = A[i] + B[i])
+- **Memory**: Program memory (256 × 16-bit), Data memory (256 × 8-bit)
+- **Clock**: 100 MHz (10 ns period)
+- **Tool Flow**: Vivado 2026.1 — xvlog (compile) → xelab (elaborate) → xsim (simulate)
+
+---
+
+## Reproduction Commands
+```bash
+cd tinygpu_simulation/tinygpu_simulation.sim/sim_1/behav/xsim
+
+# Compile design sources into xil_defaultlib
+xvlog --incr --relax -L uvm -prj gpu_vlog.prj
+
+# Compile testbench into same library
+xvlog --incr --relax -L uvm -sv tb_gpu.sv -work xil_defaultlib
+
+# Elaborate the testbench snapshot
+xelab xil_defaultlib.tb_gpu -debug typical
+
+# Run simulation to completion
+xsim --R xil_defaultlib.tb_gpu
+```

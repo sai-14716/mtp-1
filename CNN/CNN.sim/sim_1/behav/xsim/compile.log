@@ -1,0 +1,6 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/srika/Documents/MTP-1/cnn_fpga/cnn_core.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cnn_core
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/srika/Documents/MTP-1/cnn_fpga/tb_core.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_core
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/srika/Documents/MTP-1/CNN/CNN.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl

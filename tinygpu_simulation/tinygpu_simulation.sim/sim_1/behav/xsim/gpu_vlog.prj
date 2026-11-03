@@ -1,0 +1,20 @@
+# compile verilog/system verilog design source files
+sv xil_defaultlib  --include "../../../../../../../../../AMDDesignTools/2026.1/Vivado/data/rsb/busdef" \
+"../../../../../tiny-gpu/src/alu.sv" \
+"../../../../../tiny-gpu/src/controller.sv" \
+"../../../../../tiny-gpu/src/core.sv" \
+"../../../../../tiny-gpu/src/dcr.sv" \
+"../../../../../tiny-gpu/src/decoder.sv" \
+"../../../../../tiny-gpu/src/dispatch.sv" \
+"../../../../../tiny-gpu/src/fetcher.sv" \
+"../../../../../tiny-gpu/src/lsu.sv" \
+"../../../../../tiny-gpu/src/pc.sv" \
+"../../../../../tiny-gpu/src/registers.sv" \
+"../../../../../tiny-gpu/src/scheduler.sv" \
+"../../../../../tiny-gpu/src/gpu.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

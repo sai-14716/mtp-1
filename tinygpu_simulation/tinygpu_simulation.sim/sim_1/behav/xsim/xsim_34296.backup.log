@@ -1,0 +1,1344 @@
+#-----------------------------------------------------------
+# xsim v2026.1 (64-bit)
+# SW Build 6511674 on Tue Jun 16 11:02:23 MDT 2026
+# IP Build 6504888 on Tue Jun 09 09:05:25 MDT 2026
+# SharedData Build 6501428 on Mon Jun 08 17:34:18 MDT 2026
+# Start of session at: Mon Aug 24 15:44:21 2026
+# Process ID         : 34296
+# Current directory  : C:/Users/srika/Documents/MTP-1/tinygpu_simulation/tinygpu_simulation.sim/sim_1/behav/xsim
+# Command line       : xsim.exe -mode tcl -source {xsim.dir/xil_defaultlib.tb_gpu/xsim_script.tcl}
+# Log file           : C:/Users/srika/Documents/MTP-1/tinygpu_simulation/tinygpu_simulation.sim/sim_1/behav/xsim/xsim.log
+# Journal file       : C:/Users/srika/Documents/MTP-1/tinygpu_simulation/tinygpu_simulation.sim/sim_1/behav/xsim\xsim.jou
+# Running On         : SRINIVAS
+# Platform           : Windows 11
+# Operating System   : 26200
+# Processor Detail   : 13th Gen Intel(R) Core(TM) i5-1335U
+# CPU Frequency      : 2496 MHz
+# CPU Physical cores : 10
+# CPU Logical cores  : 12
+# Host memory        : 16803 MB
+# Swap memory        : 18547 MB
+# Total Virtual      : 35351 MB
+# Available Virtual  : 9827 MB
+#-----------------------------------------------------------
+source xsim.dir/xil_defaultlib.tb_gpu/xsim_script.tcl
+# xsim {xil_defaultlib.tb_gpu} -autoloadwcfg -runall
+Time resolution is 1 ns
+run -all
+Starting simulation with debug monitoring
+Time 45: DISPATCH core[0] start=0 reset=1 done=0 block_id=0 thread_cnt=4
+Time 45: DISPATCH core[1] start=0 reset=1 done=0 block_id=0 thread_cnt=4
+Time 55: DISPATCH core[0] start=0 reset=1 done=0 block_id=0 thread_cnt=4
+Time 55: DISPATCH core[1] start=0 reset=1 done=0 block_id=0 thread_cnt=4
+Time 65: DISPATCH core[0] start=0 reset=1 done=0 block_id=0 thread_cnt=4
+Time 65: DISPATCH core[1] start=0 reset=1 done=0 block_id=0 thread_cnt=4
+Time 75: DISPATCH core[0] start=0 reset=1 done=0 block_id=0 thread_cnt=4
+Time 75: DISPATCH core[1] start=0 reset=1 done=0 block_id=0 thread_cnt=4
+Time 85: DISPATCH core[0] start=0 reset=1 done=0 block_id=0 thread_cnt=4
+Time 85: DISPATCH core[1] start=0 reset=1 done=0 block_id=0 thread_cnt=4
+Time 95: core_start = 11
+Time 95: DISPATCH blocks_dispatched=2 blocks_done=0 total_blocks=2 start_execution=1
+Time 95: DISPATCH core[0] start=1 reset=0 done=0 block_id=0 thread_cnt=4
+Time 95: DISPATCH core[1] start=1 reset=0 done=0 block_id=1 thread_cnt=4
+Time 95: SCHED IDLE->FETCH start=1
+Time 95: Core 0 start=1 core_state=000
+Time 95: SCHED IDLE->FETCH start=1
+Time 95: Core 1 start=1 core_state=000
+Time 105: core_start = 11
+Time 105: DISPATCH blocks_dispatched=2 blocks_done=0 total_blocks=2 start_execution=1
+Time 105: DISPATCH core[0] start=1 reset=0 done=0 block_id=0 thread_cnt=4
+Time 105: DISPATCH core[1] start=1 reset=0 done=0 block_id=1 thread_cnt=4
+Time 105: FETCHER IDLE->FETCHING pc=0
+Time 105: Core 0 start=1 core_state=001
+Time 105: FETCHER IDLE->FETCHING pc=0
+Time 105: Core 1 start=1 core_state=001
+Time 115: core_start = 11
+Time 115: DISPATCH blocks_dispatched=2 blocks_done=0 total_blocks=2 start_execution=1
+Time 115: DISPATCH core[0] start=1 reset=0 done=0 block_id=0 thread_cnt=4
+Time 115: DISPATCH core[1] start=1 reset=0 done=0 block_id=1 thread_cnt=4
+Time 115: Core 0 start=1 core_state=001
+Time 115: Core 1 start=1 core_state=001
+Time 125: core_start = 11
+Time 125: DISPATCH blocks_dispatched=2 blocks_done=0 total_blocks=2 start_execution=1
+Time 125: DISPATCH core[0] start=1 reset=0 done=0 block_id=0 thread_cnt=4
+Time 125: DISPATCH core[1] start=1 reset=0 done=0 block_id=1 thread_cnt=4
+Time 125: Core 0 start=1 core_state=001
+Time 125: Core 1 start=1 core_state=001
+Time 135: core_start = 11
+Time 135: DISPATCH blocks_dispatched=2 blocks_done=0 total_blocks=2 start_execution=1
+Time 135: DISPATCH core[0] start=1 reset=0 done=0 block_id=0 thread_cnt=4
+Time 135: DISPATCH core[1] start=1 reset=0 done=0 block_id=1 thread_cnt=4
+Time 135: Core 0 start=1 core_state=001
+Time 135: Core 1 start=1 core_state=001
+Time 145: core_start = 11
+Time 145: DISPATCH blocks_dispatched=2 blocks_done=0 total_blocks=2 start_execution=1
+Time 145: DISPATCH core[0] start=1 reset=0 done=0 block_id=0 thread_cnt=4
+Time 145: DISPATCH core[1] start=1 reset=0 done=0 block_id=1 thread_cnt=4
+Time 145: FETCHER FETCHING->FETCHED instr=50de
+Time 145: Core 0 start=1 core_state=001
+Time 145: Core 1 start=1 core_state=001
+Time 155: core_start = 11
+Time 155: DISPATCH blocks_dispatched=2 blocks_done=0 total_blocks=2 start_execution=1
+Time 155: DISPATCH core[0] start=1 reset=0 done=0 block_id=0 thread_cnt=4
+Time 155: DISPATCH core[1] start=1 reset=0 done=0 block_id=1 thread_cnt=4
+Time 155: SCHED FETCH->DECODE fetcher_state=010 current_pc=0
+Time 155: Core 0 start=1 core_state=001
+Time 155: Core 1 start=1 core_state=001
+Time 165: core_start = 11
+Time 165: DISPATCH blocks_dispatched=2 blocks_done=0 total_blocks=2 start_execution=1
+Time 165: DISPATCH core[0] start=1 reset=0 done=0 block_id=0 thread_cnt=4
+Time 165: DISPATCH core[1] start=1 reset=0 done=0 block_id=1 thread_cnt=4
+Time 165: FETCHER FETCHED->IDLE
+Time 165: SCHED DECODE->REQUEST
+Time 165: Core 0 start=1 core_state=010
+Time 165: Core 1 start=1 core_state=001
+Time 175: core_start = 11
+Time 175: DISPATCH blocks_dispatched=2 blocks_done=0 total_blocks=2 start_execution=1
+Time 175: DISPATCH core[0] start=1 reset=0 done=0 block_id=0 thread_cnt=4
+Time 175: DISPATCH core[1] start=1 reset=0 done=0 block_id=1 thread_cnt=4
+Time 175: SCHED REQUEST->WAIT mem_rd=0 mem_wr=0
+Time 175: Core 0 start=1 core_state=011
+Time 175: Core 1 start=1 core_state=001
+Time 185: core_start = 11
+Time 185: DISPATCH blocks_dispatched=2 blocks_done=0 total_blocks=2 start_execution=1
+Time 185: DISPATCH core[0] start=1 reset=0 done=0 block_id=0 thread_cnt=4
+Time 185: DISPATCH core[1] start=1 reset=0 done=0 block_id=1 thread_cnt=4
+Time 185: SCHED WAIT->EXECUTE
+Time 185: Core 0 start=1 core_state=100
+Time 185: Core 1 start=1 core_state=001
+Time 195: core_start = 11
+Time 195: DISPATCH blocks_dispatched=2 blocks_done=0 total_blocks=2 start_execution=1
+Time 195: DISPATCH core[0] start=1 reset=0 done=0 block_id=0 thread_cnt=4
+Time 195: DISPATCH core[1] start=1 reset=0 done=0 block_id=1 thread_cnt=4
+Time 195: SCHED EXECUTE->UPDATE
+Time 195: Core 0 start=1 core_state=101
+Time 195: FETCHER FETCHING->FETCHED instr=50de
+Time 195: Core 1 start=1 core_state=001
+Time 205: core_start = 11
+Time 205: DISPATCH blocks_dispatched=2 blocks_done=0 total_blocks=2 start_execution=1
+Time 205: DISPATCH core[0] start=1 reset=0 done=0 block_id=0 thread_cnt=4
+Time 205: DISPATCH core[1] start=1 reset=0 done=0 block_id=1 thread_cnt=4
+Time 205: SCHED UPDATE->FETCH current_pc=1
+Time 205: Core 0 start=1 core_state=110
+Time 205: SCHED FETCH->DECODE fetcher_state=010 current_pc=0
+Time 205: Core 1 start=1 core_state=001
+Time 215: core_start = 11
+Time 215: DISPATCH blocks_dispatched=2 blocks_done=0 total_blocks=2 start_execution=1
+Time 215: DISPATCH core[0] start=1 reset=0 done=0 block_id=0 thread_cnt=4
+Time 215: DISPATCH core[1] start=1 reset=0 done=0 block_id=1 thread_cnt=4
+Time 215: FETCHER IDLE->FETCHING pc=1
+Time 215: Core 0 start=1 core_state=001
+Time 215: FETCHER FETCHED->IDLE
+Time 215: SCHED DECODE->REQUEST
+Time 215: Core 1 start=1 core_state=010
+Time 225: core_start = 11
+Time 225: DISPATCH blocks_dispatched=2 blocks_done=0 total_blocks=2 start_execution=1
+Time 225: DISPATCH core[0] start=1 reset=0 done=0 block_id=0 thread_cnt=4
+Time 225: DISPATCH core[1] start=1 reset=0 done=0 block_id=1 thread_cnt=4
+Time 225: Core 0 start=1 core_state=001
+Time 225: SCHED REQUEST->WAIT mem_rd=0 mem_wr=0
+Time 225: Core 1 start=1 core_state=011
+Time 235: core_start = 11
+Time 235: DISPATCH blocks_dispatched=2 blocks_done=0 total_blocks=2 start_execution=1
+Time 235: DISPATCH core[0] start=1 reset=0 done=0 block_id=0 thread_cnt=4
+Time 235: DISPATCH core[1] start=1 reset=0 done=0 block_id=1 thread_cnt=4
+Time 235: Core 0 start=1 core_state=001
+Time 235: SCHED WAIT->EXECUTE
+Time 235: Core 1 start=1 core_state=100
+Time 245: core_start = 11
+Time 245: DISPATCH blocks_dispatched=2 blocks_done=0 total_blocks=2 start_execution=1
+Time 245: DISPATCH core[0] start=1 reset=0 done=0 block_id=0 thread_cnt=4
+Time 245: DISPATCH core[1] start=1 reset=0 done=0 block_id=1 thread_cnt=4
+Time 245: Core 0 start=1 core_state=001
+Time 245: SCHED EXECUTE->UPDATE
+Time 245: Core 1 start=1 core_state=101
+Time 255: core_start = 11
+Time 255: DISPATCH blocks_dispatched=2 blocks_done=0 total_blocks=2 start_execution=1
+Time 255: DISPATCH core[0] start=1 reset=0 done=0 block_id=0 thread_cnt=4
+Time 255: DISPATCH core[1] start=1 reset=0 done=0 block_id=1 thread_cnt=4
+Time 255: FETCHER FETCHING->FETCHED instr=300f
+Time 255: Core 0 start=1 core_state=001
+Time 255: SCHED UPDATE->FETCH current_pc=1
+Time 255: Core 1 start=1 core_state=110
+Time 265: core_start = 11
+Time 265: DISPATCH blocks_dispatched=2 blocks_done=0 total_blocks=2 start_execution=1
+Time 265: DISPATCH core[0] start=1 reset=0 done=0 block_id=0 thread_cnt=4
+Time 265: DISPATCH core[1] start=1 reset=0 done=0 block_id=1 thread_cnt=4
+Time 265: SCHED FETCH->DECODE fetcher_state=010 current_pc=1
+Time 265: Core 0 start=1 core_state=001
+Time 265: FETCHER IDLE->FETCHING pc=1
+Time 265: Core 1 start=1 core_state=001
+Time 275: core_start = 11
+Time 275: DISPATCH blocks_dispatched=2 blocks_done=0 total_blocks=2 start_execution=1
+Time 275: DISPATCH core[0] start=1 reset=0 done=0 block_id=0 thread_cnt=4
+Time 275: DISPATCH core[1] start=1 reset=0 done=0 block_id=1 thread_cnt=4
+Time 275: FETCHER FETCHED->IDLE
+Time 275: SCHED DECODE->REQUEST
+Time 275: Core 0 start=1 core_state=010
+Time 275: Core 1 start=1 core_state=001
+Time 285: core_start = 11
+Time 285: DISPATCH blocks_dispatched=2 blocks_done=0 total_blocks=2 start_execution=1
+Time 285: DISPATCH core[0] start=1 reset=0 done=0 block_id=0 thread_cnt=4
+Time 285: DISPATCH core[1] start=1 reset=0 done=0 block_id=1 thread_cnt=4
+Time 285: SCHED REQUEST->WAIT mem_rd=0 mem_wr=0
+Time 285: Core 0 start=1 core_state=011
+Time 285: Core 1 start=1 core_state=001
+Time 295: core_start = 11
+Time 295: DISPATCH blocks_dispatched=2 blocks_done=0 total_blocks=2 start_execution=1
+Time 295: DISPATCH core[0] start=1 reset=0 done=0 block_id=0 thread_cnt=4
+Time 295: DISPATCH core[1] start=1 reset=0 done=0 block_id=1 thread_cnt=4
+Time 295: SCHED WAIT->EXECUTE
+Time 295: Core 0 start=1 core_state=100
+Time 295: Core 1 start=1 core_state=001
+Time 305: core_start = 11
+Time 305: DISPATCH blocks_dispatched=2 blocks_done=0 total_blocks=2 start_execution=1
+Time 305: DISPATCH core[0] start=1 reset=0 done=0 block_id=0 thread_cnt=4
+Time 305: DISPATCH core[1] start=1 reset=0 done=0 block_id=1 thread_cnt=4
+Time 305: SCHED EXECUTE->UPDATE
+Time 305: Core 0 start=1 core_state=101
+Time 305: FETCHER FETCHING->FETCHED instr=300f
+Time 305: Core 1 start=1 core_state=001
+Time 315: core_start = 11
+Time 315: DISPATCH blocks_dispatched=2 blocks_done=0 total_blocks=2 start_execution=1
+Time 315: DISPATCH core[0] start=1 reset=0 done=0 block_id=0 thread_cnt=4
+Time 315: DISPATCH core[1] start=1 reset=0 done=0 block_id=1 thread_cnt=4
+Time 315: SCHED UPDATE->FETCH current_pc=2
+Time 315: Core 0 start=1 core_state=110
+Time 315: SCHED FETCH->DECODE fetcher_state=010 current_pc=1
+Time 315: Core 1 start=1 core_state=001
+Time 325: core_start = 11
+Time 325: DISPATCH blocks_dispatched=2 blocks_done=0 total_blocks=2 start_execution=1
+Time 325: DISPATCH core[0] start=1 reset=0 done=0 block_id=0 thread_cnt=4
+Time 325: DISPATCH core[1] start=1 reset=0 done=0 block_id=1 thread_cnt=4
+Time 325: FETCHER IDLE->FETCHING pc=2
+Time 325: Core 0 start=1 core_state=001
+Time 325: FETCHER FETCHED->IDLE
+Time 325: SCHED DECODE->REQUEST
+Time 325: Core 1 start=1 core_state=010
+Time 335: core_start = 11
+Time 335: DISPATCH blocks_dispatched=2 blocks_done=0 total_blocks=2 start_execution=1
+Time 335: DISPATCH core[0] start=1 reset=0 done=0 block_id=0 thread_cnt=4
+Time 335: DISPATCH core[1] start=1 reset=0 done=0 block_id=1 thread_cnt=4
+Time 335: Core 0 start=1 core_state=001
+Time 335: SCHED REQUEST->WAIT mem_rd=0 mem_wr=0
+Time 335: Core 1 start=1 core_state=011
+Time 345: core_start = 11
+Time 345: DISPATCH blocks_dispatched=2 blocks_done=0 total_blocks=2 start_execution=1
+Time 345: DISPATCH core[0] start=1 reset=0 done=0 block_id=0 thread_cnt=4
+Time 345: DISPATCH core[1] start=1 reset=0 done=0 block_id=1 thread_cnt=4
+Time 345: Core 0 start=1 core_state=001
+Time 345: SCHED WAIT->EXECUTE
+Time 345: Core 1 start=1 core_state=100
+Time 355: core_start = 11
+Time 355: DISPATCH blocks_dispatched=2 blocks_done=0 total_blocks=2 start_execution=1
+Time 355: DISPATCH core[0] start=1 reset=0 done=0 block_id=0 thread_cnt=4
+Time 355: DISPATCH core[1] start=1 reset=0 done=0 block_id=1 thread_cnt=4
+Time 355: Core 0 start=1 core_state=001
+Time 355: SCHED EXECUTE->UPDATE
+Time 355: Core 1 start=1 core_state=101
+Time 365: core_start = 11
+Time 365: DISPATCH blocks_dispatched=2 blocks_done=0 total_blocks=2 start_execution=1
+Time 365: DISPATCH core[0] start=1 reset=0 done=0 block_id=0 thread_cnt=4
+Time 365: DISPATCH core[1] start=1 reset=0 done=0 block_id=1 thread_cnt=4
+Time 365: FETCHER FETCHING->FETCHED instr=9100
+Time 365: Core 0 start=1 core_state=001
+Time 365: SCHED UPDATE->FETCH current_pc=2
+Time 365: Core 1 start=1 core_state=110
+Time 375: core_start = 11
+Time 375: DISPATCH blocks_dispatched=2 blocks_done=0 total_blocks=2 start_execution=1
+Time 375: DISPATCH core[0] start=1 reset=0 done=0 block_id=0 thread_cnt=4
+Time 375: DISPATCH core[1] start=1 reset=0 done=0 block_id=1 thread_cnt=4
+Time 375: SCHED FETCH->DECODE fetcher_state=010 current_pc=2
+Time 375: Core 0 start=1 core_state=001
+Time 375: FETCHER IDLE->FETCHING pc=2
+Time 375: Core 1 start=1 core_state=001
+Time 385: core_start = 11
+Time 385: DISPATCH blocks_dispatched=2 blocks_done=0 total_blocks=2 start_execution=1
+Time 385: DISPATCH core[0] start=1 reset=0 done=0 block_id=0 thread_cnt=4
+Time 385: DISPATCH core[1] start=1 reset=0 done=0 block_id=1 thread_cnt=4
+Time 385: FETCHER FETCHED->IDLE
+Time 385: SCHED DECODE->REQUEST
+Time 385: Core 0 start=1 core_state=010
+Time 385: Core 1 start=1 core_state=001
+Time 395: core_start = 11
+Time 395: DISPATCH blocks_dispatched=2 blocks_done=0 total_blocks=2 start_execution=1
+Time 395: DISPATCH core[0] start=1 reset=0 done=0 block_id=0 thread_cnt=4
+Time 395: DISPATCH core[1] start=1 reset=0 done=0 block_id=1 thread_cnt=4
+Time 395: SCHED REQUEST->WAIT mem_rd=0 mem_wr=0
+Time 395: Core 0 start=1 core_state=011
+Time 395: Core 1 start=1 core_state=001
+Time 405: core_start = 11
+Time 405: DISPATCH blocks_dispatched=2 blocks_done=0 total_blocks=2 start_execution=1
+Time 405: DISPATCH core[0] start=1 reset=0 done=0 block_id=0 thread_cnt=4
+Time 405: DISPATCH core[1] start=1 reset=0 done=0 block_id=1 thread_cnt=4
+Time 405: SCHED WAIT->EXECUTE
+Time 405: Core 0 start=1 core_state=100
+Time 405: Core 1 start=1 core_state=001
+Time 415: core_start = 11
+Time 415: DISPATCH blocks_dispatched=2 blocks_done=0 total_blocks=2 start_execution=1
+Time 415: DISPATCH core[0] start=1 reset=0 done=0 block_id=0 thread_cnt=4
+Time 415: DISPATCH core[1] start=1 reset=0 done=0 block_id=1 thread_cnt=4
+Time 415: SCHED EXECUTE->UPDATE
+Time 415: Core 0 start=1 core_state=101
+Time 415: FETCHER FETCHING->FETCHED instr=9100
+Time 415: Core 1 start=1 core_state=001
+Time 425: core_start = 11
+Time 425: DISPATCH blocks_dispatched=2 blocks_done=0 total_blocks=2 start_execution=1
+Time 425: DISPATCH core[0] start=1 reset=0 done=0 block_id=0 thread_cnt=4
+Time 425: DISPATCH core[1] start=1 reset=0 done=0 block_id=1 thread_cnt=4
+Time 425: SCHED UPDATE->FETCH current_pc=3
+Time 425: Core 0 start=1 core_state=110
+Time 425: SCHED FETCH->DECODE fetcher_state=010 current_pc=2
+Time 425: Core 1 start=1 core_state=001
+Time 435: core_start = 11
+Time 435: DISPATCH blocks_dispatched=2 blocks_done=0 total_blocks=2 start_execution=1
+Time 435: DISPATCH core[0] start=1 reset=0 done=0 block_id=0 thread_cnt=4
+Time 435: DISPATCH core[1] start=1 reset=0 done=0 block_id=1 thread_cnt=4
+Time 435: FETCHER IDLE->FETCHING pc=3
+Time 435: Core 0 start=1 core_state=001
+Time 435: FETCHER FETCHED->IDLE
+Time 435: SCHED DECODE->REQUEST
+Time 435: Core 1 start=1 core_state=010
+Time 445: core_start = 11
+Time 445: DISPATCH blocks_dispatched=2 blocks_done=0 total_blocks=2 start_execution=1
+Time 445: DISPATCH core[0] start=1 reset=0 done=0 block_id=0 thread_cnt=4
+Time 445: DISPATCH core[1] start=1 reset=0 done=0 block_id=1 thread_cnt=4
+Time 445: Core 0 start=1 core_state=001
+Time 445: SCHED REQUEST->WAIT mem_rd=0 mem_wr=0
+Time 445: Core 1 start=1 core_state=011
+Time 455: core_start = 11
+Time 455: DISPATCH blocks_dispatched=2 blocks_done=0 total_blocks=2 start_execution=1
+Time 455: DISPATCH core[0] start=1 reset=0 done=0 block_id=0 thread_cnt=4
+Time 455: DISPATCH core[1] start=1 reset=0 done=0 block_id=1 thread_cnt=4
+Time 455: Core 0 start=1 core_state=001
+Time 455: SCHED WAIT->EXECUTE
+Time 455: Core 1 start=1 core_state=100
+Time 465: core_start = 11
+Time 465: DISPATCH blocks_dispatched=2 blocks_done=0 total_blocks=2 start_execution=1
+Time 465: DISPATCH core[0] start=1 reset=0 done=0 block_id=0 thread_cnt=4
+Time 465: DISPATCH core[1] start=1 reset=0 done=0 block_id=1 thread_cnt=4
+Time 465: Core 0 start=1 core_state=001
+Time 465: SCHED EXECUTE->UPDATE
+Time 465: Core 1 start=1 core_state=101
+Time 475: core_start = 11
+Time 475: DISPATCH blocks_dispatched=2 blocks_done=0 total_blocks=2 start_execution=1
+Time 475: DISPATCH core[0] start=1 reset=0 done=0 block_id=0 thread_cnt=4
+Time 475: DISPATCH core[1] start=1 reset=0 done=0 block_id=1 thread_cnt=4
+Time 475: FETCHER FETCHING->FETCHED instr=9208
+Time 475: Core 0 start=1 core_state=001
+Time 475: SCHED UPDATE->FETCH current_pc=3
+Time 475: Core 1 start=1 core_state=110
+Time 485: core_start = 11
+Time 485: DISPATCH blocks_dispatched=2 blocks_done=0 total_blocks=2 start_execution=1
+Time 485: DISPATCH core[0] start=1 reset=0 done=0 block_id=0 thread_cnt=4
+Time 485: DISPATCH core[1] start=1 reset=0 done=0 block_id=1 thread_cnt=4
+Time 485: SCHED FETCH->DECODE fetcher_state=010 current_pc=3
+Time 485: Core 0 start=1 core_state=001
+Time 485: FETCHER IDLE->FETCHING pc=3
+Time 485: Core 1 start=1 core_state=001
+Time 495: core_start = 11
+Time 495: DISPATCH blocks_dispatched=2 blocks_done=0 total_blocks=2 start_execution=1
+Time 495: DISPATCH core[0] start=1 reset=0 done=0 block_id=0 thread_cnt=4
+Time 495: DISPATCH core[1] start=1 reset=0 done=0 block_id=1 thread_cnt=4
+Time 495: FETCHER FETCHED->IDLE
+Time 495: SCHED DECODE->REQUEST
+Time 495: Core 0 start=1 core_state=010
+Time 495: Core 1 start=1 core_state=001
+Time 505: core_start = 11
+Time 505: DISPATCH blocks_dispatched=2 blocks_done=0 total_blocks=2 start_execution=1
+Time 505: DISPATCH core[0] start=1 reset=0 done=0 block_id=0 thread_cnt=4
+Time 505: DISPATCH core[1] start=1 reset=0 done=0 block_id=1 thread_cnt=4
+Time 505: SCHED REQUEST->WAIT mem_rd=0 mem_wr=0
+Time 505: Core 0 start=1 core_state=011
+Time 505: Core 1 start=1 core_state=001
+Time 515: core_start = 11
+Time 515: DISPATCH blocks_dispatched=2 blocks_done=0 total_blocks=2 start_execution=1
+Time 515: DISPATCH core[0] start=1 reset=0 done=0 block_id=0 thread_cnt=4
+Time 515: DISPATCH core[1] start=1 reset=0 done=0 block_id=1 thread_cnt=4
+Time 515: SCHED WAIT->EXECUTE
+Time 515: Core 0 start=1 core_state=100
+Time 515: Core 1 start=1 core_state=001
+Time 525: core_start = 11
+Time 525: DISPATCH blocks_dispatched=2 blocks_done=0 total_blocks=2 start_execution=1
+Time 525: DISPATCH core[0] start=1 reset=0 done=0 block_id=0 thread_cnt=4
+Time 525: DISPATCH core[1] start=1 reset=0 done=0 block_id=1 thread_cnt=4
+Time 525: SCHED EXECUTE->UPDATE
+Time 525: Core 0 start=1 core_state=101
+Time 525: FETCHER FETCHING->FETCHED instr=9208
+Time 525: Core 1 start=1 core_state=001
+Time 535: core_start = 11
+Time 535: DISPATCH blocks_dispatched=2 blocks_done=0 total_blocks=2 start_execution=1
+Time 535: DISPATCH core[0] start=1 reset=0 done=0 block_id=0 thread_cnt=4
+Time 535: DISPATCH core[1] start=1 reset=0 done=0 block_id=1 thread_cnt=4
+Time 535: SCHED UPDATE->FETCH current_pc=4
+Time 535: Core 0 start=1 core_state=110
+Time 535: SCHED FETCH->DECODE fetcher_state=010 current_pc=3
+Time 535: Core 1 start=1 core_state=001
+Time 545: core_start = 11
+Time 545: DISPATCH blocks_dispatched=2 blocks_done=0 total_blocks=2 start_execution=1
+Time 545: DISPATCH core[0] start=1 reset=0 done=0 block_id=0 thread_cnt=4
+Time 545: DISPATCH core[1] start=1 reset=0 done=0 block_id=1 thread_cnt=4
+Time 545: FETCHER IDLE->FETCHING pc=4
+Time 545: Core 0 start=1 core_state=001
+Time 545: FETCHER FETCHED->IDLE
+Time 545: SCHED DECODE->REQUEST
+Time 545: Core 1 start=1 core_state=010
+Time 555: core_start = 11
+Time 555: DISPATCH blocks_dispatched=2 blocks_done=0 total_blocks=2 start_execution=1
+Time 555: DISPATCH core[0] start=1 reset=0 done=0 block_id=0 thread_cnt=4
+Time 555: DISPATCH core[1] start=1 reset=0 done=0 block_id=1 thread_cnt=4
+Time 555: Core 0 start=1 core_state=001
+Time 555: SCHED REQUEST->WAIT mem_rd=0 mem_wr=0
+Time 555: Core 1 start=1 core_state=011
+Time 565: core_start = 11
+Time 565: DISPATCH blocks_dispatched=2 blocks_done=0 total_blocks=2 start_execution=1
+Time 565: DISPATCH core[0] start=1 reset=0 done=0 block_id=0 thread_cnt=4
+Time 565: DISPATCH core[1] start=1 reset=0 done=0 block_id=1 thread_cnt=4
+Time 565: Core 0 start=1 core_state=001
+Time 565: SCHED WAIT->EXECUTE
+Time 565: Core 1 start=1 core_state=100
+Time 575: core_start = 11
+Time 575: DISPATCH blocks_dispatched=2 blocks_done=0 total_blocks=2 start_execution=1
+Time 575: DISPATCH core[0] start=1 reset=0 done=0 block_id=0 thread_cnt=4
+Time 575: DISPATCH core[1] start=1 reset=0 done=0 block_id=1 thread_cnt=4
+Time 575: Core 0 start=1 core_state=001
+Time 575: SCHED EXECUTE->UPDATE
+Time 575: Core 1 start=1 core_state=101
+Time 585: core_start = 11
+Time 585: DISPATCH blocks_dispatched=2 blocks_done=0 total_blocks=2 start_execution=1
+Time 585: DISPATCH core[0] start=1 reset=0 done=0 block_id=0 thread_cnt=4
+Time 585: DISPATCH core[1] start=1 reset=0 done=0 block_id=1 thread_cnt=4
+Time 585: FETCHER FETCHING->FETCHED instr=9310
+Time 585: Core 0 start=1 core_state=001
+Time 585: SCHED UPDATE->FETCH current_pc=4
+Time 585: Core 1 start=1 core_state=110
+Time 595: core_start = 11
+Time 595: DISPATCH blocks_dispatched=2 blocks_done=0 total_blocks=2 start_execution=1
+Time 595: DISPATCH core[0] start=1 reset=0 done=0 block_id=0 thread_cnt=4
+Time 595: DISPATCH core[1] start=1 reset=0 done=0 block_id=1 thread_cnt=4
+Time 595: SCHED FETCH->DECODE fetcher_state=010 current_pc=4
+Time 595: Core 0 start=1 core_state=001
+Time 595: FETCHER IDLE->FETCHING pc=4
+Time 595: Core 1 start=1 core_state=001
+Time 605: core_start = 11
+Time 605: DISPATCH blocks_dispatched=2 blocks_done=0 total_blocks=2 start_execution=1
+Time 605: DISPATCH core[0] start=1 reset=0 done=0 block_id=0 thread_cnt=4
+Time 605: DISPATCH core[1] start=1 reset=0 done=0 block_id=1 thread_cnt=4
+Time 605: FETCHER FETCHED->IDLE
+Time 605: SCHED DECODE->REQUEST
+Time 605: Core 0 start=1 core_state=010
+Time 605: Core 1 start=1 core_state=001
+Time 615: core_start = 11
+Time 615: DISPATCH blocks_dispatched=2 blocks_done=0 total_blocks=2 start_execution=1
+Time 615: DISPATCH core[0] start=1 reset=0 done=0 block_id=0 thread_cnt=4
+Time 615: DISPATCH core[1] start=1 reset=0 done=0 block_id=1 thread_cnt=4
+Time 615: SCHED REQUEST->WAIT mem_rd=0 mem_wr=0
+Time 615: Core 0 start=1 core_state=011
+Time 615: Core 1 start=1 core_state=001
+Time 625: core_start = 11
+Time 625: DISPATCH blocks_dispatched=2 blocks_done=0 total_blocks=2 start_execution=1
+Time 625: DISPATCH core[0] start=1 reset=0 done=0 block_id=0 thread_cnt=4
+Time 625: DISPATCH core[1] start=1 reset=0 done=0 block_id=1 thread_cnt=4
+Time 625: SCHED WAIT->EXECUTE
+Time 625: Core 0 start=1 core_state=100
+Time 625: Core 1 start=1 core_state=001
+Time 635: core_start = 11
+Time 635: DISPATCH blocks_dispatched=2 blocks_done=0 total_blocks=2 start_execution=1
+Time 635: DISPATCH core[0] start=1 reset=0 done=0 block_id=0 thread_cnt=4
+Time 635: DISPATCH core[1] start=1 reset=0 done=0 block_id=1 thread_cnt=4
+Time 635: SCHED EXECUTE->UPDATE
+Time 635: Core 0 start=1 core_state=101
+Time 635: FETCHER FETCHING->FETCHED instr=9310
+Time 635: Core 1 start=1 core_state=001
+Time 645: core_start = 11
+Time 645: DISPATCH blocks_dispatched=2 blocks_done=0 total_blocks=2 start_execution=1
+Time 645: DISPATCH core[0] start=1 reset=0 done=0 block_id=0 thread_cnt=4
+Time 645: DISPATCH core[1] start=1 reset=0 done=0 block_id=1 thread_cnt=4
+Time 645: SCHED UPDATE->FETCH current_pc=5
+Time 645: Core 0 start=1 core_state=110
+Time 645: SCHED FETCH->DECODE fetcher_state=010 current_pc=4
+Time 645: Core 1 start=1 core_state=001
+Time 655: core_start = 11
+Time 655: DISPATCH blocks_dispatched=2 blocks_done=0 total_blocks=2 start_execution=1
+Time 655: DISPATCH core[0] start=1 reset=0 done=0 block_id=0 thread_cnt=4
+Time 655: DISPATCH core[1] start=1 reset=0 done=0 block_id=1 thread_cnt=4
+Time 655: FETCHER IDLE->FETCHING pc=5
+Time 655: Core 0 start=1 core_state=001
+Time 655: FETCHER FETCHED->IDLE
+Time 655: SCHED DECODE->REQUEST
+Time 655: Core 1 start=1 core_state=010
+Time 665: core_start = 11
+Time 665: DISPATCH blocks_dispatched=2 blocks_done=0 total_blocks=2 start_execution=1
+Time 665: DISPATCH core[0] start=1 reset=0 done=0 block_id=0 thread_cnt=4
+Time 665: DISPATCH core[1] start=1 reset=0 done=0 block_id=1 thread_cnt=4
+Time 665: Core 0 start=1 core_state=001
+Time 665: SCHED REQUEST->WAIT mem_rd=0 mem_wr=0
+Time 665: Core 1 start=1 core_state=011
+Time 675: core_start = 11
+Time 675: DISPATCH blocks_dispatched=2 blocks_done=0 total_blocks=2 start_execution=1
+Time 675: DISPATCH core[0] start=1 reset=0 done=0 block_id=0 thread_cnt=4
+Time 675: DISPATCH core[1] start=1 reset=0 done=0 block_id=1 thread_cnt=4
+Time 675: Core 0 start=1 core_state=001
+Time 675: SCHED WAIT->EXECUTE
+Time 675: Core 1 start=1 core_state=100
+Time 685: core_start = 11
+Time 685: DISPATCH blocks_dispatched=2 blocks_done=0 total_blocks=2 start_execution=1
+Time 685: DISPATCH core[0] start=1 reset=0 done=0 block_id=0 thread_cnt=4
+Time 685: DISPATCH core[1] start=1 reset=0 done=0 block_id=1 thread_cnt=4
+Time 685: Core 0 start=1 core_state=001
+Time 685: SCHED EXECUTE->UPDATE
+Time 685: Core 1 start=1 core_state=101
+Time 695: core_start = 11
+Time 695: DISPATCH blocks_dispatched=2 blocks_done=0 total_blocks=2 start_execution=1
+Time 695: DISPATCH core[0] start=1 reset=0 done=0 block_id=0 thread_cnt=4
+Time 695: DISPATCH core[1] start=1 reset=0 done=0 block_id=1 thread_cnt=4
+Time 695: FETCHER FETCHING->FETCHED instr=3410
+Time 695: Core 0 start=1 core_state=001
+Time 695: SCHED UPDATE->FETCH current_pc=5
+Time 695: Core 1 start=1 core_state=110
+Time 705: core_start = 11
+Time 705: DISPATCH blocks_dispatched=2 blocks_done=0 total_blocks=2 start_execution=1
+Time 705: DISPATCH core[0] start=1 reset=0 done=0 block_id=0 thread_cnt=4
+Time 705: DISPATCH core[1] start=1 reset=0 done=0 block_id=1 thread_cnt=4
+Time 705: SCHED FETCH->DECODE fetcher_state=010 current_pc=5
+Time 705: Core 0 start=1 core_state=001
+Time 705: FETCHER IDLE->FETCHING pc=5
+Time 705: Core 1 start=1 core_state=001
+Time 715: core_start = 11
+Time 715: DISPATCH blocks_dispatched=2 blocks_done=0 total_blocks=2 start_execution=1
+Time 715: DISPATCH core[0] start=1 reset=0 done=0 block_id=0 thread_cnt=4
+Time 715: DISPATCH core[1] start=1 reset=0 done=0 block_id=1 thread_cnt=4
+Time 715: FETCHER FETCHED->IDLE
+Time 715: SCHED DECODE->REQUEST
+Time 715: Core 0 start=1 core_state=010
+Time 715: Core 1 start=1 core_state=001
+Time 725: core_start = 11
+Time 725: DISPATCH blocks_dispatched=2 blocks_done=0 total_blocks=2 start_execution=1
+Time 725: DISPATCH core[0] start=1 reset=0 done=0 block_id=0 thread_cnt=4
+Time 725: DISPATCH core[1] start=1 reset=0 done=0 block_id=1 thread_cnt=4
+Time 725: SCHED REQUEST->WAIT mem_rd=0 mem_wr=0
+Time 725: Core 0 start=1 core_state=011
+Time 725: Core 1 start=1 core_state=001
+Time 735: core_start = 11
+Time 735: DISPATCH blocks_dispatched=2 blocks_done=0 total_blocks=2 start_execution=1
+Time 735: DISPATCH core[0] start=1 reset=0 done=0 block_id=0 thread_cnt=4
+Time 735: DISPATCH core[1] start=1 reset=0 done=0 block_id=1 thread_cnt=4
+Time 735: SCHED WAIT->EXECUTE
+Time 735: Core 0 start=1 core_state=100
+Time 735: Core 1 start=1 core_state=001
+Time 745: core_start = 11
+Time 745: DISPATCH blocks_dispatched=2 blocks_done=0 total_blocks=2 start_execution=1
+Time 745: DISPATCH core[0] start=1 reset=0 done=0 block_id=0 thread_cnt=4
+Time 745: DISPATCH core[1] start=1 reset=0 done=0 block_id=1 thread_cnt=4
+Time 745: SCHED EXECUTE->UPDATE
+Time 745: Core 0 start=1 core_state=101
+Time 745: FETCHER FETCHING->FETCHED instr=3410
+Time 745: Core 1 start=1 core_state=001
+Time 755: core_start = 11
+Time 755: DISPATCH blocks_dispatched=2 blocks_done=0 total_blocks=2 start_execution=1
+Time 755: DISPATCH core[0] start=1 reset=0 done=0 block_id=0 thread_cnt=4
+Time 755: DISPATCH core[1] start=1 reset=0 done=0 block_id=1 thread_cnt=4
+Time 755: SCHED UPDATE->FETCH current_pc=6
+Time 755: Core 0 start=1 core_state=110
+Time 755: SCHED FETCH->DECODE fetcher_state=010 current_pc=5
+Time 755: Core 1 start=1 core_state=001
+Time 765: core_start = 11
+Time 765: DISPATCH blocks_dispatched=2 blocks_done=0 total_blocks=2 start_execution=1
+Time 765: DISPATCH core[0] start=1 reset=0 done=0 block_id=0 thread_cnt=4
+Time 765: DISPATCH core[1] start=1 reset=0 done=0 block_id=1 thread_cnt=4
+Time 765: FETCHER IDLE->FETCHING pc=6
+Time 765: Core 0 start=1 core_state=001
+Time 765: FETCHER FETCHED->IDLE
+Time 765: SCHED DECODE->REQUEST
+Time 765: Core 1 start=1 core_state=010
+Time 775: core_start = 11
+Time 775: DISPATCH blocks_dispatched=2 blocks_done=0 total_blocks=2 start_execution=1
+Time 775: DISPATCH core[0] start=1 reset=0 done=0 block_id=0 thread_cnt=4
+Time 775: DISPATCH core[1] start=1 reset=0 done=0 block_id=1 thread_cnt=4
+Time 775: Core 0 start=1 core_state=001
+Time 775: SCHED REQUEST->WAIT mem_rd=0 mem_wr=0
+Time 775: Core 1 start=1 core_state=011
+Time 785: core_start = 11
+Time 785: DISPATCH blocks_dispatched=2 blocks_done=0 total_blocks=2 start_execution=1
+Time 785: DISPATCH core[0] start=1 reset=0 done=0 block_id=0 thread_cnt=4
+Time 785: DISPATCH core[1] start=1 reset=0 done=0 block_id=1 thread_cnt=4
+Time 785: Core 0 start=1 core_state=001
+Time 785: SCHED WAIT->EXECUTE
+Time 785: Core 1 start=1 core_state=100
+Time 795: core_start = 11
+Time 795: DISPATCH blocks_dispatched=2 blocks_done=0 total_blocks=2 start_execution=1
+Time 795: DISPATCH core[0] start=1 reset=0 done=0 block_id=0 thread_cnt=4
+Time 795: DISPATCH core[1] start=1 reset=0 done=0 block_id=1 thread_cnt=4
+Time 795: Core 0 start=1 core_state=001
+Time 795: SCHED EXECUTE->UPDATE
+Time 795: Core 1 start=1 core_state=101
+Time 805: core_start = 11
+Time 805: DISPATCH blocks_dispatched=2 blocks_done=0 total_blocks=2 start_execution=1
+Time 805: DISPATCH core[0] start=1 reset=0 done=0 block_id=0 thread_cnt=4
+Time 805: DISPATCH core[1] start=1 reset=0 done=0 block_id=1 thread_cnt=4
+Time 805: FETCHER FETCHING->FETCHED instr=7440
+Time 805: Core 0 start=1 core_state=001
+Time 805: SCHED UPDATE->FETCH current_pc=6
+Time 805: Core 1 start=1 core_state=110
+Time 815: core_start = 11
+Time 815: DISPATCH blocks_dispatched=2 blocks_done=0 total_blocks=2 start_execution=1
+Time 815: DISPATCH core[0] start=1 reset=0 done=0 block_id=0 thread_cnt=4
+Time 815: DISPATCH core[1] start=1 reset=0 done=0 block_id=1 thread_cnt=4
+Time 815: SCHED FETCH->DECODE fetcher_state=010 current_pc=6
+Time 815: Core 0 start=1 core_state=001
+Time 815: FETCHER IDLE->FETCHING pc=6
+Time 815: Core 1 start=1 core_state=001
+Time 825: core_start = 11
+Time 825: DISPATCH blocks_dispatched=2 blocks_done=0 total_blocks=2 start_execution=1
+Time 825: DISPATCH core[0] start=1 reset=0 done=0 block_id=0 thread_cnt=4
+Time 825: DISPATCH core[1] start=1 reset=0 done=0 block_id=1 thread_cnt=4
+Time 825: FETCHER FETCHED->IDLE
+Time 825: SCHED DECODE->REQUEST
+Time 825: Core 0 start=1 core_state=010
+Time 825: Core 1 start=1 core_state=001
+Time 835: core_start = 11
+Time 835: DISPATCH blocks_dispatched=2 blocks_done=0 total_blocks=2 start_execution=1
+Time 835: DISPATCH core[0] start=1 reset=0 done=0 block_id=0 thread_cnt=4
+Time 835: DISPATCH core[1] start=1 reset=0 done=0 block_id=1 thread_cnt=4
+Time 835: SCHED REQUEST->WAIT mem_rd=1 mem_wr=0
+Time 835: Core 0 start=1 core_state=011
+Time 835: Core 1 start=1 core_state=001
+Time 845: core_start = 11
+Time 845: DISPATCH blocks_dispatched=2 blocks_done=0 total_blocks=2 start_execution=1
+Time 845: DISPATCH core[0] start=1 reset=0 done=0 block_id=0 thread_cnt=4
+Time 845: DISPATCH core[1] start=1 reset=0 done=0 block_id=1 thread_cnt=4
+Time 845: Core 0 start=1 core_state=100
+Time 845: Core 1 start=1 core_state=001
+Time 855: core_start = 11
+Time 855: DISPATCH blocks_dispatched=2 blocks_done=0 total_blocks=2 start_execution=1
+Time 855: DISPATCH core[0] start=1 reset=0 done=0 block_id=0 thread_cnt=4
+Time 855: DISPATCH core[1] start=1 reset=0 done=0 block_id=1 thread_cnt=4
+Time 855: Core 0 start=1 core_state=100
+Time 855: FETCHER FETCHING->FETCHED instr=7440
+Time 855: Core 1 start=1 core_state=001
+Time 865: core_start = 11
+Time 865: DISPATCH blocks_dispatched=2 blocks_done=0 total_blocks=2 start_execution=1
+Time 865: DISPATCH core[0] start=1 reset=0 done=0 block_id=0 thread_cnt=4
+Time 865: DISPATCH core[1] start=1 reset=0 done=0 block_id=1 thread_cnt=4
+Time 865: Core 0 start=1 core_state=100
+Time 865: SCHED FETCH->DECODE fetcher_state=010 current_pc=6
+Time 865: Core 1 start=1 core_state=001
+Time 875: core_start = 11
+Time 875: DISPATCH blocks_dispatched=2 blocks_done=0 total_blocks=2 start_execution=1
+Time 875: DISPATCH core[0] start=1 reset=0 done=0 block_id=0 thread_cnt=4
+Time 875: DISPATCH core[1] start=1 reset=0 done=0 block_id=1 thread_cnt=4
+Time 875: Core 0 start=1 core_state=100
+Time 875: FETCHER FETCHED->IDLE
+Time 875: SCHED DECODE->REQUEST
+Time 875: Core 1 start=1 core_state=010
+Time 885: core_start = 11
+Time 885: DISPATCH blocks_dispatched=2 blocks_done=0 total_blocks=2 start_execution=1
+Time 885: DISPATCH core[0] start=1 reset=0 done=0 block_id=0 thread_cnt=4
+Time 885: DISPATCH core[1] start=1 reset=0 done=0 block_id=1 thread_cnt=4
+Time 885: Core 0 start=1 core_state=100
+Time 885: SCHED REQUEST->WAIT mem_rd=1 mem_wr=0
+Time 885: Core 1 start=1 core_state=011
+Time 895: core_start = 11
+Time 895: DISPATCH blocks_dispatched=2 blocks_done=0 total_blocks=2 start_execution=1
+Time 895: DISPATCH core[0] start=1 reset=0 done=0 block_id=0 thread_cnt=4
+Time 895: DISPATCH core[1] start=1 reset=0 done=0 block_id=1 thread_cnt=4
+Time 895: Core 0 start=1 core_state=100
+Time 895: Core 1 start=1 core_state=100
+Time 905: core_start = 11
+Time 905: DISPATCH blocks_dispatched=2 blocks_done=0 total_blocks=2 start_execution=1
+Time 905: DISPATCH core[0] start=1 reset=0 done=0 block_id=0 thread_cnt=4
+Time 905: DISPATCH core[1] start=1 reset=0 done=0 block_id=1 thread_cnt=4
+Time 905: Core 0 start=1 core_state=100
+Time 905: Core 1 start=1 core_state=100
+Time 915: core_start = 11
+Time 915: DISPATCH blocks_dispatched=2 blocks_done=0 total_blocks=2 start_execution=1
+Time 915: DISPATCH core[0] start=1 reset=0 done=0 block_id=0 thread_cnt=4
+Time 915: DISPATCH core[1] start=1 reset=0 done=0 block_id=1 thread_cnt=4
+Time 915: SCHED WAIT->EXECUTE
+Time 915: Core 0 start=1 core_state=100
+Time 915: Core 1 start=1 core_state=100
+Time 925: core_start = 11
+Time 925: DISPATCH blocks_dispatched=2 blocks_done=0 total_blocks=2 start_execution=1
+Time 925: DISPATCH core[0] start=1 reset=0 done=0 block_id=0 thread_cnt=4
+Time 925: DISPATCH core[1] start=1 reset=0 done=0 block_id=1 thread_cnt=4
+Time 925: SCHED EXECUTE->UPDATE
+Time 925: Core 0 start=1 core_state=101
+Time 925: Core 1 start=1 core_state=100
+Time 935: core_start = 11
+Time 935: DISPATCH blocks_dispatched=2 blocks_done=0 total_blocks=2 start_execution=1
+Time 935: DISPATCH core[0] start=1 reset=0 done=0 block_id=0 thread_cnt=4
+Time 935: DISPATCH core[1] start=1 reset=0 done=0 block_id=1 thread_cnt=4
+Time 935: SCHED UPDATE->FETCH current_pc=7
+Time 935: Core 0 start=1 core_state=110
+Time 935: Core 1 start=1 core_state=100
+Time 945: core_start = 11
+Time 945: DISPATCH blocks_dispatched=2 blocks_done=0 total_blocks=2 start_execution=1
+Time 945: DISPATCH core[0] start=1 reset=0 done=0 block_id=0 thread_cnt=4
+Time 945: DISPATCH core[1] start=1 reset=0 done=0 block_id=1 thread_cnt=4
+Time 945: FETCHER IDLE->FETCHING pc=7
+Time 945: Core 0 start=1 core_state=001
+Time 945: Core 1 start=1 core_state=100
+Time 955: core_start = 11
+Time 955: DISPATCH blocks_dispatched=2 blocks_done=0 total_blocks=2 start_execution=1
+Time 955: DISPATCH core[0] start=1 reset=0 done=0 block_id=0 thread_cnt=4
+Time 955: DISPATCH core[1] start=1 reset=0 done=0 block_id=1 thread_cnt=4
+Time 955: Core 0 start=1 core_state=001
+Time 955: Core 1 start=1 core_state=100
+Time 965: core_start = 11
+Time 965: DISPATCH blocks_dispatched=2 blocks_done=0 total_blocks=2 start_execution=1
+Time 965: DISPATCH core[0] start=1 reset=0 done=0 block_id=0 thread_cnt=4
+Time 965: DISPATCH core[1] start=1 reset=0 done=0 block_id=1 thread_cnt=4
+Time 965: Core 0 start=1 core_state=001
+Time 965: Core 1 start=1 core_state=100
+Time 975: core_start = 11
+Time 975: DISPATCH blocks_dispatched=2 blocks_done=0 total_blocks=2 start_execution=1
+Time 975: DISPATCH core[0] start=1 reset=0 done=0 block_id=0 thread_cnt=4
+Time 975: DISPATCH core[1] start=1 reset=0 done=0 block_id=1 thread_cnt=4
+Time 975: Core 0 start=1 core_state=001
+Time 975: Core 1 start=1 core_state=100
+Time 985: core_start = 11
+Time 985: DISPATCH blocks_dispatched=2 blocks_done=0 total_blocks=2 start_execution=1
+Time 985: DISPATCH core[0] start=1 reset=0 done=0 block_id=0 thread_cnt=4
+Time 985: DISPATCH core[1] start=1 reset=0 done=0 block_id=1 thread_cnt=4
+Time 985: FETCHER FETCHING->FETCHED instr=3520
+Time 985: Core 0 start=1 core_state=001
+Time 985: SCHED WAIT->EXECUTE
+Time 985: Core 1 start=1 core_state=100
+Time 995: core_start = 11
+Time 995: DISPATCH blocks_dispatched=2 blocks_done=0 total_blocks=2 start_execution=1
+Time 995: DISPATCH core[0] start=1 reset=0 done=0 block_id=0 thread_cnt=4
+Time 995: DISPATCH core[1] start=1 reset=0 done=0 block_id=1 thread_cnt=4
+Time 995: SCHED FETCH->DECODE fetcher_state=010 current_pc=7
+Time 995: Core 0 start=1 core_state=001
+Time 995: SCHED EXECUTE->UPDATE
+Time 995: Core 1 start=1 core_state=101
+Time 1005: core_start = 11
+Time 1005: DISPATCH blocks_dispatched=2 blocks_done=0 total_blocks=2 start_execution=1
+Time 1005: DISPATCH core[0] start=1 reset=0 done=0 block_id=0 thread_cnt=4
+Time 1005: DISPATCH core[1] start=1 reset=0 done=0 block_id=1 thread_cnt=4
+Time 1005: FETCHER FETCHED->IDLE
+Time 1005: SCHED DECODE->REQUEST
+Time 1005: Core 0 start=1 core_state=010
+Time 1005: SCHED UPDATE->FETCH current_pc=7
+Time 1005: Core 1 start=1 core_state=110
+Time 1015: core_start = 11
+Time 1015: DISPATCH blocks_dispatched=2 blocks_done=0 total_blocks=2 start_execution=1
+Time 1015: DISPATCH core[0] start=1 reset=0 done=0 block_id=0 thread_cnt=4
+Time 1015: DISPATCH core[1] start=1 reset=0 done=0 block_id=1 thread_cnt=4
+Time 1015: SCHED REQUEST->WAIT mem_rd=0 mem_wr=0
+Time 1015: Core 0 start=1 core_state=011
+Time 1015: FETCHER IDLE->FETCHING pc=7
+Time 1015: Core 1 start=1 core_state=001
+Time 1025: core_start = 11
+Time 1025: DISPATCH blocks_dispatched=2 blocks_done=0 total_blocks=2 start_execution=1
+Time 1025: DISPATCH core[0] start=1 reset=0 done=0 block_id=0 thread_cnt=4
+Time 1025: DISPATCH core[1] start=1 reset=0 done=0 block_id=1 thread_cnt=4
+Time 1025: SCHED WAIT->EXECUTE
+Time 1025: Core 0 start=1 core_state=100
+Time 1025: Core 1 start=1 core_state=001
+Time 1035: core_start = 11
+Time 1035: DISPATCH blocks_dispatched=2 blocks_done=0 total_blocks=2 start_execution=1
+Time 1035: DISPATCH core[0] start=1 reset=0 done=0 block_id=0 thread_cnt=4
+Time 1035: DISPATCH core[1] start=1 reset=0 done=0 block_id=1 thread_cnt=4
+Time 1035: SCHED EXECUTE->UPDATE
+Time 1035: Core 0 start=1 core_state=101
+Time 1035: Core 1 start=1 core_state=001
+Time 1045: core_start = 11
+Time 1045: DISPATCH blocks_dispatched=2 blocks_done=0 total_blocks=2 start_execution=1
+Time 1045: DISPATCH core[0] start=1 reset=0 done=0 block_id=0 thread_cnt=4
+Time 1045: DISPATCH core[1] start=1 reset=0 done=0 block_id=1 thread_cnt=4
+Time 1045: SCHED UPDATE->FETCH current_pc=8
+Time 1045: Core 0 start=1 core_state=110
+Time 1045: Core 1 start=1 core_state=001
+Time 1055: core_start = 11
+Time 1055: DISPATCH blocks_dispatched=2 blocks_done=0 total_blocks=2 start_execution=1
+Time 1055: DISPATCH core[0] start=1 reset=0 done=0 block_id=0 thread_cnt=4
+Time 1055: DISPATCH core[1] start=1 reset=0 done=0 block_id=1 thread_cnt=4
+Time 1055: FETCHER IDLE->FETCHING pc=8
+Time 1055: Core 0 start=1 core_state=001
+Time 1055: FETCHER FETCHING->FETCHED instr=3520
+Time 1055: Core 1 start=1 core_state=001
+Time 1065: core_start = 11
+Time 1065: DISPATCH blocks_dispatched=2 blocks_done=0 total_blocks=2 start_execution=1
+Time 1065: DISPATCH core[0] start=1 reset=0 done=0 block_id=0 thread_cnt=4
+Time 1065: DISPATCH core[1] start=1 reset=0 done=0 block_id=1 thread_cnt=4
+Time 1065: Core 0 start=1 core_state=001
+Time 1065: SCHED FETCH->DECODE fetcher_state=010 current_pc=7
+Time 1065: Core 1 start=1 core_state=001
+Time 1075: core_start = 11
+Time 1075: DISPATCH blocks_dispatched=2 blocks_done=0 total_blocks=2 start_execution=1
+Time 1075: DISPATCH core[0] start=1 reset=0 done=0 block_id=0 thread_cnt=4
+Time 1075: DISPATCH core[1] start=1 reset=0 done=0 block_id=1 thread_cnt=4
+Time 1075: Core 0 start=1 core_state=001
+Time 1075: FETCHER FETCHED->IDLE
+Time 1075: SCHED DECODE->REQUEST
+Time 1075: Core 1 start=1 core_state=010
+Time 1085: core_start = 11
+Time 1085: DISPATCH blocks_dispatched=2 blocks_done=0 total_blocks=2 start_execution=1
+Time 1085: DISPATCH core[0] start=1 reset=0 done=0 block_id=0 thread_cnt=4
+Time 1085: DISPATCH core[1] start=1 reset=0 done=0 block_id=1 thread_cnt=4
+Time 1085: Core 0 start=1 core_state=001
+Time 1085: SCHED REQUEST->WAIT mem_rd=0 mem_wr=0
+Time 1085: Core 1 start=1 core_state=011
+Time 1095: core_start = 11
+Time 1095: DISPATCH blocks_dispatched=2 blocks_done=0 total_blocks=2 start_execution=1
+Time 1095: DISPATCH core[0] start=1 reset=0 done=0 block_id=0 thread_cnt=4
+Time 1095: DISPATCH core[1] start=1 reset=0 done=0 block_id=1 thread_cnt=4
+Time 1095: Core 0 start=1 core_state=001
+Time 1095: SCHED WAIT->EXECUTE
+Time 1095: Core 1 start=1 core_state=100
+Time 1105: core_start = 11
+Time 1105: DISPATCH blocks_dispatched=2 blocks_done=0 total_blocks=2 start_execution=1
+Time 1105: DISPATCH core[0] start=1 reset=0 done=0 block_id=0 thread_cnt=4
+Time 1105: DISPATCH core[1] start=1 reset=0 done=0 block_id=1 thread_cnt=4
+Time 1105: FETCHER FETCHING->FETCHED instr=7550
+Time 1105: Core 0 start=1 core_state=001
+Time 1105: SCHED EXECUTE->UPDATE
+Time 1105: Core 1 start=1 core_state=101
+Time 1115: core_start = 11
+Time 1115: DISPATCH blocks_dispatched=2 blocks_done=0 total_blocks=2 start_execution=1
+Time 1115: DISPATCH core[0] start=1 reset=0 done=0 block_id=0 thread_cnt=4
+Time 1115: DISPATCH core[1] start=1 reset=0 done=0 block_id=1 thread_cnt=4
+Time 1115: SCHED FETCH->DECODE fetcher_state=010 current_pc=8
+Time 1115: Core 0 start=1 core_state=001
+Time 1115: SCHED UPDATE->FETCH current_pc=8
+Time 1115: Core 1 start=1 core_state=110
+Time 1125: core_start = 11
+Time 1125: DISPATCH blocks_dispatched=2 blocks_done=0 total_blocks=2 start_execution=1
+Time 1125: DISPATCH core[0] start=1 reset=0 done=0 block_id=0 thread_cnt=4
+Time 1125: DISPATCH core[1] start=1 reset=0 done=0 block_id=1 thread_cnt=4
+Time 1125: FETCHER FETCHED->IDLE
+Time 1125: SCHED DECODE->REQUEST
+Time 1125: Core 0 start=1 core_state=010
+Time 1125: FETCHER IDLE->FETCHING pc=8
+Time 1125: Core 1 start=1 core_state=001
+Time 1135: core_start = 11
+Time 1135: DISPATCH blocks_dispatched=2 blocks_done=0 total_blocks=2 start_execution=1
+Time 1135: DISPATCH core[0] start=1 reset=0 done=0 block_id=0 thread_cnt=4
+Time 1135: DISPATCH core[1] start=1 reset=0 done=0 block_id=1 thread_cnt=4
+Time 1135: SCHED REQUEST->WAIT mem_rd=1 mem_wr=0
+Time 1135: Core 0 start=1 core_state=011
+Time 1135: Core 1 start=1 core_state=001
+Time 1145: core_start = 11
+Time 1145: DISPATCH blocks_dispatched=2 blocks_done=0 total_blocks=2 start_execution=1
+Time 1145: DISPATCH core[0] start=1 reset=0 done=0 block_id=0 thread_cnt=4
+Time 1145: DISPATCH core[1] start=1 reset=0 done=0 block_id=1 thread_cnt=4
+Time 1145: Core 0 start=1 core_state=100
+Time 1145: Core 1 start=1 core_state=001
+Time 1155: core_start = 11
+Time 1155: DISPATCH blocks_dispatched=2 blocks_done=0 total_blocks=2 start_execution=1
+Time 1155: DISPATCH core[0] start=1 reset=0 done=0 block_id=0 thread_cnt=4
+Time 1155: DISPATCH core[1] start=1 reset=0 done=0 block_id=1 thread_cnt=4
+Time 1155: Core 0 start=1 core_state=100
+Time 1155: Core 1 start=1 core_state=001
+Time 1165: core_start = 11
+Time 1165: DISPATCH blocks_dispatched=2 blocks_done=0 total_blocks=2 start_execution=1
+Time 1165: DISPATCH core[0] start=1 reset=0 done=0 block_id=0 thread_cnt=4
+Time 1165: DISPATCH core[1] start=1 reset=0 done=0 block_id=1 thread_cnt=4
+Time 1165: Core 0 start=1 core_state=100
+Time 1165: FETCHER FETCHING->FETCHED instr=7550
+Time 1165: Core 1 start=1 core_state=001
+Time 1175: core_start = 11
+Time 1175: DISPATCH blocks_dispatched=2 blocks_done=0 total_blocks=2 start_execution=1
+Time 1175: DISPATCH core[0] start=1 reset=0 done=0 block_id=0 thread_cnt=4
+Time 1175: DISPATCH core[1] start=1 reset=0 done=0 block_id=1 thread_cnt=4
+Time 1175: Core 0 start=1 core_state=100
+Time 1175: SCHED FETCH->DECODE fetcher_state=010 current_pc=8
+Time 1175: Core 1 start=1 core_state=001
+Time 1185: core_start = 11
+Time 1185: DISPATCH blocks_dispatched=2 blocks_done=0 total_blocks=2 start_execution=1
+Time 1185: DISPATCH core[0] start=1 reset=0 done=0 block_id=0 thread_cnt=4
+Time 1185: DISPATCH core[1] start=1 reset=0 done=0 block_id=1 thread_cnt=4
+Time 1185: Core 0 start=1 core_state=100
+Time 1185: FETCHER FETCHED->IDLE
+Time 1185: SCHED DECODE->REQUEST
+Time 1185: Core 1 start=1 core_state=010
+Time 1195: core_start = 11
+Time 1195: DISPATCH blocks_dispatched=2 blocks_done=0 total_blocks=2 start_execution=1
+Time 1195: DISPATCH core[0] start=1 reset=0 done=0 block_id=0 thread_cnt=4
+Time 1195: DISPATCH core[1] start=1 reset=0 done=0 block_id=1 thread_cnt=4
+Time 1195: Core 0 start=1 core_state=100
+Time 1195: SCHED REQUEST->WAIT mem_rd=1 mem_wr=0
+Time 1195: Core 1 start=1 core_state=011
+Time 1205: core_start = 11
+Time 1205: DISPATCH blocks_dispatched=2 blocks_done=0 total_blocks=2 start_execution=1
+Time 1205: DISPATCH core[0] start=1 reset=0 done=0 block_id=0 thread_cnt=4
+Time 1205: DISPATCH core[1] start=1 reset=0 done=0 block_id=1 thread_cnt=4
+Time 1205: Core 0 start=1 core_state=100
+Time 1205: Core 1 start=1 core_state=100
+Time 1215: core_start = 11
+Time 1215: DISPATCH blocks_dispatched=2 blocks_done=0 total_blocks=2 start_execution=1
+Time 1215: DISPATCH core[0] start=1 reset=0 done=0 block_id=0 thread_cnt=4
+Time 1215: DISPATCH core[1] start=1 reset=0 done=0 block_id=1 thread_cnt=4
+Time 1215: SCHED WAIT->EXECUTE
+Time 1215: Core 0 start=1 core_state=100
+Time 1215: Core 1 start=1 core_state=100
+Time 1225: core_start = 11
+Time 1225: DISPATCH blocks_dispatched=2 blocks_done=0 total_blocks=2 start_execution=1
+Time 1225: DISPATCH core[0] start=1 reset=0 done=0 block_id=0 thread_cnt=4
+Time 1225: DISPATCH core[1] start=1 reset=0 done=0 block_id=1 thread_cnt=4
+Time 1225: SCHED EXECUTE->UPDATE
+Time 1225: Core 0 start=1 core_state=101
+Time 1225: Core 1 start=1 core_state=100
+Time 1235: core_start = 11
+Time 1235: DISPATCH blocks_dispatched=2 blocks_done=0 total_blocks=2 start_execution=1
+Time 1235: DISPATCH core[0] start=1 reset=0 done=0 block_id=0 thread_cnt=4
+Time 1235: DISPATCH core[1] start=1 reset=0 done=0 block_id=1 thread_cnt=4
+Time 1235: SCHED UPDATE->FETCH current_pc=9
+Time 1235: Core 0 start=1 core_state=110
+Time 1235: Core 1 start=1 core_state=100
+Time 1245: core_start = 11
+Time 1245: DISPATCH blocks_dispatched=2 blocks_done=0 total_blocks=2 start_execution=1
+Time 1245: DISPATCH core[0] start=1 reset=0 done=0 block_id=0 thread_cnt=4
+Time 1245: DISPATCH core[1] start=1 reset=0 done=0 block_id=1 thread_cnt=4
+Time 1245: FETCHER IDLE->FETCHING pc=9
+Time 1245: Core 0 start=1 core_state=001
+Time 1245: Core 1 start=1 core_state=100
+Time 1255: core_start = 11
+Time 1255: DISPATCH blocks_dispatched=2 blocks_done=0 total_blocks=2 start_execution=1
+Time 1255: DISPATCH core[0] start=1 reset=0 done=0 block_id=0 thread_cnt=4
+Time 1255: DISPATCH core[1] start=1 reset=0 done=0 block_id=1 thread_cnt=4
+Time 1255: Core 0 start=1 core_state=001
+Time 1255: Core 1 start=1 core_state=100
+Time 1265: core_start = 11
+Time 1265: DISPATCH blocks_dispatched=2 blocks_done=0 total_blocks=2 start_execution=1
+Time 1265: DISPATCH core[0] start=1 reset=0 done=0 block_id=0 thread_cnt=4
+Time 1265: DISPATCH core[1] start=1 reset=0 done=0 block_id=1 thread_cnt=4
+Time 1265: Core 0 start=1 core_state=001
+Time 1265: Core 1 start=1 core_state=100
+Time 1275: core_start = 11
+Time 1275: DISPATCH blocks_dispatched=2 blocks_done=0 total_blocks=2 start_execution=1
+Time 1275: DISPATCH core[0] start=1 reset=0 done=0 block_id=0 thread_cnt=4
+Time 1275: DISPATCH core[1] start=1 reset=0 done=0 block_id=1 thread_cnt=4
+Time 1275: Core 0 start=1 core_state=001
+Time 1275: Core 1 start=1 core_state=100
+Time 1285: core_start = 11
+Time 1285: DISPATCH blocks_dispatched=2 blocks_done=0 total_blocks=2 start_execution=1
+Time 1285: DISPATCH core[0] start=1 reset=0 done=0 block_id=0 thread_cnt=4
+Time 1285: DISPATCH core[1] start=1 reset=0 done=0 block_id=1 thread_cnt=4
+Time 1285: FETCHER FETCHING->FETCHED instr=3645
+Time 1285: Core 0 start=1 core_state=001
+Time 1285: SCHED WAIT->EXECUTE
+Time 1285: Core 1 start=1 core_state=100
+Time 1295: core_start = 11
+Time 1295: DISPATCH blocks_dispatched=2 blocks_done=0 total_blocks=2 start_execution=1
+Time 1295: DISPATCH core[0] start=1 reset=0 done=0 block_id=0 thread_cnt=4
+Time 1295: DISPATCH core[1] start=1 reset=0 done=0 block_id=1 thread_cnt=4
+Time 1295: SCHED FETCH->DECODE fetcher_state=010 current_pc=9
+Time 1295: Core 0 start=1 core_state=001
+Time 1295: SCHED EXECUTE->UPDATE
+Time 1295: Core 1 start=1 core_state=101
+Time 1305: core_start = 11
+Time 1305: DISPATCH blocks_dispatched=2 blocks_done=0 total_blocks=2 start_execution=1
+Time 1305: DISPATCH core[0] start=1 reset=0 done=0 block_id=0 thread_cnt=4
+Time 1305: DISPATCH core[1] start=1 reset=0 done=0 block_id=1 thread_cnt=4
+Time 1305: FETCHER FETCHED->IDLE
+Time 1305: SCHED DECODE->REQUEST
+Time 1305: Core 0 start=1 core_state=010
+Time 1305: SCHED UPDATE->FETCH current_pc=9
+Time 1305: Core 1 start=1 core_state=110
+Time 1315: core_start = 11
+Time 1315: DISPATCH blocks_dispatched=2 blocks_done=0 total_blocks=2 start_execution=1
+Time 1315: DISPATCH core[0] start=1 reset=0 done=0 block_id=0 thread_cnt=4
+Time 1315: DISPATCH core[1] start=1 reset=0 done=0 block_id=1 thread_cnt=4
+Time 1315: SCHED REQUEST->WAIT mem_rd=0 mem_wr=0
+Time 1315: Core 0 start=1 core_state=011
+Time 1315: FETCHER IDLE->FETCHING pc=9
+Time 1315: Core 1 start=1 core_state=001
+Time 1325: core_start = 11
+Time 1325: DISPATCH blocks_dispatched=2 blocks_done=0 total_blocks=2 start_execution=1
+Time 1325: DISPATCH core[0] start=1 reset=0 done=0 block_id=0 thread_cnt=4
+Time 1325: DISPATCH core[1] start=1 reset=0 done=0 block_id=1 thread_cnt=4
+Time 1325: SCHED WAIT->EXECUTE
+Time 1325: Core 0 start=1 core_state=100
+Time 1325: Core 1 start=1 core_state=001
+Time 1335: core_start = 11
+Time 1335: DISPATCH blocks_dispatched=2 blocks_done=0 total_blocks=2 start_execution=1
+Time 1335: DISPATCH core[0] start=1 reset=0 done=0 block_id=0 thread_cnt=4
+Time 1335: DISPATCH core[1] start=1 reset=0 done=0 block_id=1 thread_cnt=4
+Time 1335: SCHED EXECUTE->UPDATE
+Time 1335: Core 0 start=1 core_state=101
+Time 1335: Core 1 start=1 core_state=001
+Time 1345: core_start = 11
+Time 1345: DISPATCH blocks_dispatched=2 blocks_done=0 total_blocks=2 start_execution=1
+Time 1345: DISPATCH core[0] start=1 reset=0 done=0 block_id=0 thread_cnt=4
+Time 1345: DISPATCH core[1] start=1 reset=0 done=0 block_id=1 thread_cnt=4
+Time 1345: SCHED UPDATE->FETCH current_pc=10
+Time 1345: Core 0 start=1 core_state=110
+Time 1345: Core 1 start=1 core_state=001
+Time 1355: core_start = 11
+Time 1355: DISPATCH blocks_dispatched=2 blocks_done=0 total_blocks=2 start_execution=1
+Time 1355: DISPATCH core[0] start=1 reset=0 done=0 block_id=0 thread_cnt=4
+Time 1355: DISPATCH core[1] start=1 reset=0 done=0 block_id=1 thread_cnt=4
+Time 1355: FETCHER IDLE->FETCHING pc=10
+Time 1355: Core 0 start=1 core_state=001
+Time 1355: FETCHER FETCHING->FETCHED instr=3645
+Time 1355: Core 1 start=1 core_state=001
+Time 1365: core_start = 11
+Time 1365: DISPATCH blocks_dispatched=2 blocks_done=0 total_blocks=2 start_execution=1
+Time 1365: DISPATCH core[0] start=1 reset=0 done=0 block_id=0 thread_cnt=4
+Time 1365: DISPATCH core[1] start=1 reset=0 done=0 block_id=1 thread_cnt=4
+Time 1365: Core 0 start=1 core_state=001
+Time 1365: SCHED FETCH->DECODE fetcher_state=010 current_pc=9
+Time 1365: Core 1 start=1 core_state=001
+Time 1375: core_start = 11
+Time 1375: DISPATCH blocks_dispatched=2 blocks_done=0 total_blocks=2 start_execution=1
+Time 1375: DISPATCH core[0] start=1 reset=0 done=0 block_id=0 thread_cnt=4
+Time 1375: DISPATCH core[1] start=1 reset=0 done=0 block_id=1 thread_cnt=4
+Time 1375: Core 0 start=1 core_state=001
+Time 1375: FETCHER FETCHED->IDLE
+Time 1375: SCHED DECODE->REQUEST
+Time 1375: Core 1 start=1 core_state=010
+Time 1385: core_start = 11
+Time 1385: DISPATCH blocks_dispatched=2 blocks_done=0 total_blocks=2 start_execution=1
+Time 1385: DISPATCH core[0] start=1 reset=0 done=0 block_id=0 thread_cnt=4
+Time 1385: DISPATCH core[1] start=1 reset=0 done=0 block_id=1 thread_cnt=4
+Time 1385: Core 0 start=1 core_state=001
+Time 1385: SCHED REQUEST->WAIT mem_rd=0 mem_wr=0
+Time 1385: Core 1 start=1 core_state=011
+Time 1395: core_start = 11
+Time 1395: DISPATCH blocks_dispatched=2 blocks_done=0 total_blocks=2 start_execution=1
+Time 1395: DISPATCH core[0] start=1 reset=0 done=0 block_id=0 thread_cnt=4
+Time 1395: DISPATCH core[1] start=1 reset=0 done=0 block_id=1 thread_cnt=4
+Time 1395: Core 0 start=1 core_state=001
+Time 1395: SCHED WAIT->EXECUTE
+Time 1395: Core 1 start=1 core_state=100
+Time 1405: core_start = 11
+Time 1405: DISPATCH blocks_dispatched=2 blocks_done=0 total_blocks=2 start_execution=1
+Time 1405: DISPATCH core[0] start=1 reset=0 done=0 block_id=0 thread_cnt=4
+Time 1405: DISPATCH core[1] start=1 reset=0 done=0 block_id=1 thread_cnt=4
+Time 1405: FETCHER FETCHING->FETCHED instr=3730
+Time 1405: Core 0 start=1 core_state=001
+Time 1405: SCHED EXECUTE->UPDATE
+Time 1405: Core 1 start=1 core_state=101
+Time 1415: core_start = 11
+Time 1415: DISPATCH blocks_dispatched=2 blocks_done=0 total_blocks=2 start_execution=1
+Time 1415: DISPATCH core[0] start=1 reset=0 done=0 block_id=0 thread_cnt=4
+Time 1415: DISPATCH core[1] start=1 reset=0 done=0 block_id=1 thread_cnt=4
+Time 1415: SCHED FETCH->DECODE fetcher_state=010 current_pc=10
+Time 1415: Core 0 start=1 core_state=001
+Time 1415: SCHED UPDATE->FETCH current_pc=10
+Time 1415: Core 1 start=1 core_state=110
+Time 1425: core_start = 11
+Time 1425: DISPATCH blocks_dispatched=2 blocks_done=0 total_blocks=2 start_execution=1
+Time 1425: DISPATCH core[0] start=1 reset=0 done=0 block_id=0 thread_cnt=4
+Time 1425: DISPATCH core[1] start=1 reset=0 done=0 block_id=1 thread_cnt=4
+Time 1425: FETCHER FETCHED->IDLE
+Time 1425: SCHED DECODE->REQUEST
+Time 1425: Core 0 start=1 core_state=010
+Time 1425: FETCHER IDLE->FETCHING pc=10
+Time 1425: Core 1 start=1 core_state=001
+Time 1435: core_start = 11
+Time 1435: DISPATCH blocks_dispatched=2 blocks_done=0 total_blocks=2 start_execution=1
+Time 1435: DISPATCH core[0] start=1 reset=0 done=0 block_id=0 thread_cnt=4
+Time 1435: DISPATCH core[1] start=1 reset=0 done=0 block_id=1 thread_cnt=4
+Time 1435: SCHED REQUEST->WAIT mem_rd=0 mem_wr=0
+Time 1435: Core 0 start=1 core_state=011
+Time 1435: Core 1 start=1 core_state=001
+Time 1445: core_start = 11
+Time 1445: DISPATCH blocks_dispatched=2 blocks_done=0 total_blocks=2 start_execution=1
+Time 1445: DISPATCH core[0] start=1 reset=0 done=0 block_id=0 thread_cnt=4
+Time 1445: DISPATCH core[1] start=1 reset=0 done=0 block_id=1 thread_cnt=4
+Time 1445: SCHED WAIT->EXECUTE
+Time 1445: Core 0 start=1 core_state=100
+Time 1445: Core 1 start=1 core_state=001
+Time 1455: core_start = 11
+Time 1455: DISPATCH blocks_dispatched=2 blocks_done=0 total_blocks=2 start_execution=1
+Time 1455: DISPATCH core[0] start=1 reset=0 done=0 block_id=0 thread_cnt=4
+Time 1455: DISPATCH core[1] start=1 reset=0 done=0 block_id=1 thread_cnt=4
+Time 1455: SCHED EXECUTE->UPDATE
+Time 1455: Core 0 start=1 core_state=101
+Time 1455: Core 1 start=1 core_state=001
+Time 1465: core_start = 11
+Time 1465: DISPATCH blocks_dispatched=2 blocks_done=0 total_blocks=2 start_execution=1
+Time 1465: DISPATCH core[0] start=1 reset=0 done=0 block_id=0 thread_cnt=4
+Time 1465: DISPATCH core[1] start=1 reset=0 done=0 block_id=1 thread_cnt=4
+Time 1465: SCHED UPDATE->FETCH current_pc=11
+Time 1465: Core 0 start=1 core_state=110
+Time 1465: FETCHER FETCHING->FETCHED instr=3730
+Time 1465: Core 1 start=1 core_state=001
+Time 1475: core_start = 11
+Time 1475: DISPATCH blocks_dispatched=2 blocks_done=0 total_blocks=2 start_execution=1
+Time 1475: DISPATCH core[0] start=1 reset=0 done=0 block_id=0 thread_cnt=4
+Time 1475: DISPATCH core[1] start=1 reset=0 done=0 block_id=1 thread_cnt=4
+Time 1475: FETCHER IDLE->FETCHING pc=11
+Time 1475: Core 0 start=1 core_state=001
+Time 1475: SCHED FETCH->DECODE fetcher_state=010 current_pc=10
+Time 1475: Core 1 start=1 core_state=001
+Time 1485: core_start = 11
+Time 1485: DISPATCH blocks_dispatched=2 blocks_done=0 total_blocks=2 start_execution=1
+Time 1485: DISPATCH core[0] start=1 reset=0 done=0 block_id=0 thread_cnt=4
+Time 1485: DISPATCH core[1] start=1 reset=0 done=0 block_id=1 thread_cnt=4
+Time 1485: Core 0 start=1 core_state=001
+Time 1485: FETCHER FETCHED->IDLE
+Time 1485: SCHED DECODE->REQUEST
+Time 1485: Core 1 start=1 core_state=010
+Time 1495: core_start = 11
+Time 1495: DISPATCH blocks_dispatched=2 blocks_done=0 total_blocks=2 start_execution=1
+Time 1495: DISPATCH core[0] start=1 reset=0 done=0 block_id=0 thread_cnt=4
+Time 1495: DISPATCH core[1] start=1 reset=0 done=0 block_id=1 thread_cnt=4
+Time 1495: Core 0 start=1 core_state=001
+Time 1495: SCHED REQUEST->WAIT mem_rd=0 mem_wr=0
+Time 1495: Core 1 start=1 core_state=011
+Time 1505: core_start = 11
+Time 1505: DISPATCH blocks_dispatched=2 blocks_done=0 total_blocks=2 start_execution=1
+Time 1505: DISPATCH core[0] start=1 reset=0 done=0 block_id=0 thread_cnt=4
+Time 1505: DISPATCH core[1] start=1 reset=0 done=0 block_id=1 thread_cnt=4
+Time 1505: Core 0 start=1 core_state=001
+Time 1505: SCHED WAIT->EXECUTE
+Time 1505: Core 1 start=1 core_state=100
+Time 1515: core_start = 11
+Time 1515: DISPATCH blocks_dispatched=2 blocks_done=0 total_blocks=2 start_execution=1
+Time 1515: DISPATCH core[0] start=1 reset=0 done=0 block_id=0 thread_cnt=4
+Time 1515: DISPATCH core[1] start=1 reset=0 done=0 block_id=1 thread_cnt=4
+Time 1515: FETCHER FETCHING->FETCHED instr=8076
+Time 1515: Core 0 start=1 core_state=001
+Time 1515: SCHED EXECUTE->UPDATE
+Time 1515: Core 1 start=1 core_state=101
+Time 1525: core_start = 11
+Time 1525: DISPATCH blocks_dispatched=2 blocks_done=0 total_blocks=2 start_execution=1
+Time 1525: DISPATCH core[0] start=1 reset=0 done=0 block_id=0 thread_cnt=4
+Time 1525: DISPATCH core[1] start=1 reset=0 done=0 block_id=1 thread_cnt=4
+Time 1525: SCHED FETCH->DECODE fetcher_state=010 current_pc=11
+Time 1525: Core 0 start=1 core_state=001
+Time 1525: SCHED UPDATE->FETCH current_pc=11
+Time 1525: Core 1 start=1 core_state=110
+Time 1535: core_start = 11
+Time 1535: DISPATCH blocks_dispatched=2 blocks_done=0 total_blocks=2 start_execution=1
+Time 1535: DISPATCH core[0] start=1 reset=0 done=0 block_id=0 thread_cnt=4
+Time 1535: DISPATCH core[1] start=1 reset=0 done=0 block_id=1 thread_cnt=4
+Time 1535: FETCHER FETCHED->IDLE
+Time 1535: SCHED DECODE->REQUEST
+Time 1535: Core 0 start=1 core_state=010
+Time 1535: FETCHER IDLE->FETCHING pc=11
+Time 1535: Core 1 start=1 core_state=001
+Time 1545: core_start = 11
+Time 1545: DISPATCH blocks_dispatched=2 blocks_done=0 total_blocks=2 start_execution=1
+Time 1545: DISPATCH core[0] start=1 reset=0 done=0 block_id=0 thread_cnt=4
+Time 1545: DISPATCH core[1] start=1 reset=0 done=0 block_id=1 thread_cnt=4
+Time 1545: SCHED REQUEST->WAIT mem_rd=0 mem_wr=1
+Time 1545: Core 0 start=1 core_state=011
+Time 1545: Core 1 start=1 core_state=001
+Time 1555: core_start = 11
+Time 1555: DISPATCH blocks_dispatched=2 blocks_done=0 total_blocks=2 start_execution=1
+Time 1555: DISPATCH core[0] start=1 reset=0 done=0 block_id=0 thread_cnt=4
+Time 1555: DISPATCH core[1] start=1 reset=0 done=0 block_id=1 thread_cnt=4
+Time 1555: Core 0 start=1 core_state=100
+Time 1555: Core 1 start=1 core_state=001
+Time 1565: core_start = 11
+Time 1565: DISPATCH blocks_dispatched=2 blocks_done=0 total_blocks=2 start_execution=1
+Time 1565: DISPATCH core[0] start=1 reset=0 done=0 block_id=0 thread_cnt=4
+Time 1565: DISPATCH core[1] start=1 reset=0 done=0 block_id=1 thread_cnt=4
+Time 1565: Core 0 start=1 core_state=100
+Time 1565: Core 1 start=1 core_state=001
+Time 1575: core_start = 11
+Time 1575: DISPATCH blocks_dispatched=2 blocks_done=0 total_blocks=2 start_execution=1
+Time 1575: DISPATCH core[0] start=1 reset=0 done=0 block_id=0 thread_cnt=4
+Time 1575: DISPATCH core[1] start=1 reset=0 done=0 block_id=1 thread_cnt=4
+Time 1575: Core 0 start=1 core_state=100
+Time 1575: FETCHER FETCHING->FETCHED instr=8076
+Time 1575: Core 1 start=1 core_state=001
+Time 1585: core_start = 11
+Time 1585: DISPATCH blocks_dispatched=2 blocks_done=0 total_blocks=2 start_execution=1
+Time 1585: DISPATCH core[0] start=1 reset=0 done=0 block_id=0 thread_cnt=4
+Time 1585: DISPATCH core[1] start=1 reset=0 done=0 block_id=1 thread_cnt=4
+Time 1585: Core 0 start=1 core_state=100
+Time 1585: SCHED FETCH->DECODE fetcher_state=010 current_pc=11
+Time 1585: Core 1 start=1 core_state=001
+Time 1595: core_start = 11
+Time 1595: DISPATCH blocks_dispatched=2 blocks_done=0 total_blocks=2 start_execution=1
+Time 1595: DISPATCH core[0] start=1 reset=0 done=0 block_id=0 thread_cnt=4
+Time 1595: DISPATCH core[1] start=1 reset=0 done=0 block_id=1 thread_cnt=4
+Time 1595: Core 0 start=1 core_state=100
+Time 1595: FETCHER FETCHED->IDLE
+Time 1595: SCHED DECODE->REQUEST
+Time 1595: Core 1 start=1 core_state=010
+Time 1605: core_start = 11
+Time 1605: DISPATCH blocks_dispatched=2 blocks_done=0 total_blocks=2 start_execution=1
+Time 1605: DISPATCH core[0] start=1 reset=0 done=0 block_id=0 thread_cnt=4
+Time 1605: DISPATCH core[1] start=1 reset=0 done=0 block_id=1 thread_cnt=4
+Time 1605: Core 0 start=1 core_state=100
+Time 1605: SCHED REQUEST->WAIT mem_rd=0 mem_wr=1
+Time 1605: Core 1 start=1 core_state=011
+Time 1615: core_start = 11
+Time 1615: DISPATCH blocks_dispatched=2 blocks_done=0 total_blocks=2 start_execution=1
+Time 1615: DISPATCH core[0] start=1 reset=0 done=0 block_id=0 thread_cnt=4
+Time 1615: DISPATCH core[1] start=1 reset=0 done=0 block_id=1 thread_cnt=4
+Time 1615: Core 0 start=1 core_state=100
+Time 1615: Core 1 start=1 core_state=100
+Time 1625: core_start = 11
+Time 1625: DISPATCH blocks_dispatched=2 blocks_done=0 total_blocks=2 start_execution=1
+Time 1625: DISPATCH core[0] start=1 reset=0 done=0 block_id=0 thread_cnt=4
+Time 1625: DISPATCH core[1] start=1 reset=0 done=0 block_id=1 thread_cnt=4
+Time 1625: SCHED WAIT->EXECUTE
+Time 1625: Core 0 start=1 core_state=100
+Time 1625: Core 1 start=1 core_state=100
+Time 1635: core_start = 11
+Time 1635: DISPATCH blocks_dispatched=2 blocks_done=0 total_blocks=2 start_execution=1
+Time 1635: DISPATCH core[0] start=1 reset=0 done=0 block_id=0 thread_cnt=4
+Time 1635: DISPATCH core[1] start=1 reset=0 done=0 block_id=1 thread_cnt=4
+Time 1635: SCHED EXECUTE->UPDATE
+Time 1635: Core 0 start=1 core_state=101
+Time 1635: Core 1 start=1 core_state=100
+Time 1645: core_start = 11
+Time 1645: DISPATCH blocks_dispatched=2 blocks_done=0 total_blocks=2 start_execution=1
+Time 1645: DISPATCH core[0] start=1 reset=0 done=0 block_id=0 thread_cnt=4
+Time 1645: DISPATCH core[1] start=1 reset=0 done=0 block_id=1 thread_cnt=4
+Time 1645: SCHED UPDATE->FETCH current_pc=12
+Time 1645: Core 0 start=1 core_state=110
+Time 1645: Core 1 start=1 core_state=100
+Time 1655: core_start = 11
+Time 1655: DISPATCH blocks_dispatched=2 blocks_done=0 total_blocks=2 start_execution=1
+Time 1655: DISPATCH core[0] start=1 reset=0 done=0 block_id=0 thread_cnt=4
+Time 1655: DISPATCH core[1] start=1 reset=0 done=0 block_id=1 thread_cnt=4
+Time 1655: FETCHER IDLE->FETCHING pc=12
+Time 1655: Core 0 start=1 core_state=001
+Time 1655: Core 1 start=1 core_state=100
+Time 1665: core_start = 11
+Time 1665: DISPATCH blocks_dispatched=2 blocks_done=0 total_blocks=2 start_execution=1
+Time 1665: DISPATCH core[0] start=1 reset=0 done=0 block_id=0 thread_cnt=4
+Time 1665: DISPATCH core[1] start=1 reset=0 done=0 block_id=1 thread_cnt=4
+Time 1665: Core 0 start=1 core_state=001
+Time 1665: Core 1 start=1 core_state=100
+Time 1675: core_start = 11
+Time 1675: DISPATCH blocks_dispatched=2 blocks_done=0 total_blocks=2 start_execution=1
+Time 1675: DISPATCH core[0] start=1 reset=0 done=0 block_id=0 thread_cnt=4
+Time 1675: DISPATCH core[1] start=1 reset=0 done=0 block_id=1 thread_cnt=4
+Time 1675: Core 0 start=1 core_state=001
+Time 1675: Core 1 start=1 core_state=100
+Time 1685: core_start = 11
+Time 1685: DISPATCH blocks_dispatched=2 blocks_done=0 total_blocks=2 start_execution=1
+Time 1685: DISPATCH core[0] start=1 reset=0 done=0 block_id=0 thread_cnt=4
+Time 1685: DISPATCH core[1] start=1 reset=0 done=0 block_id=1 thread_cnt=4
+Time 1685: Core 0 start=1 core_state=001
+Time 1685: Core 1 start=1 core_state=100
+Time 1695: core_start = 11
+Time 1695: DISPATCH blocks_dispatched=2 blocks_done=0 total_blocks=2 start_execution=1
+Time 1695: DISPATCH core[0] start=1 reset=0 done=0 block_id=0 thread_cnt=4
+Time 1695: DISPATCH core[1] start=1 reset=0 done=0 block_id=1 thread_cnt=4
+Time 1695: FETCHER FETCHING->FETCHED instr=f000
+Time 1695: Core 0 start=1 core_state=001
+Time 1695: SCHED WAIT->EXECUTE
+Time 1695: Core 1 start=1 core_state=100
+Time 1705: core_start = 11
+Time 1705: DISPATCH blocks_dispatched=2 blocks_done=0 total_blocks=2 start_execution=1
+Time 1705: DISPATCH core[0] start=1 reset=0 done=0 block_id=0 thread_cnt=4
+Time 1705: DISPATCH core[1] start=1 reset=0 done=0 block_id=1 thread_cnt=4
+Time 1705: SCHED FETCH->DECODE fetcher_state=010 current_pc=12
+Time 1705: Core 0 start=1 core_state=001
+Time 1705: SCHED EXECUTE->UPDATE
+Time 1705: Core 1 start=1 core_state=101
+Time 1715: core_start = 11
+Time 1715: DISPATCH blocks_dispatched=2 blocks_done=0 total_blocks=2 start_execution=1
+Time 1715: DISPATCH core[0] start=1 reset=0 done=0 block_id=0 thread_cnt=4
+Time 1715: DISPATCH core[1] start=1 reset=0 done=0 block_id=1 thread_cnt=4
+Time 1715: FETCHER FETCHED->IDLE
+Time 1715: SCHED DECODE->REQUEST
+Time 1715: Core 0 start=1 core_state=010
+Time 1715: SCHED UPDATE->FETCH current_pc=12
+Time 1715: Core 1 start=1 core_state=110
+Time 1725: core_start = 11
+Time 1725: DISPATCH blocks_dispatched=2 blocks_done=0 total_blocks=2 start_execution=1
+Time 1725: DISPATCH core[0] start=1 reset=0 done=0 block_id=0 thread_cnt=4
+Time 1725: DISPATCH core[1] start=1 reset=0 done=0 block_id=1 thread_cnt=4
+Time 1725: SCHED REQUEST->WAIT mem_rd=0 mem_wr=0
+Time 1725: Core 0 start=1 core_state=011
+Time 1725: FETCHER IDLE->FETCHING pc=12
+Time 1725: Core 1 start=1 core_state=001
+Time 1735: core_start = 11
+Time 1735: DISPATCH blocks_dispatched=2 blocks_done=0 total_blocks=2 start_execution=1
+Time 1735: DISPATCH core[0] start=1 reset=0 done=0 block_id=0 thread_cnt=4
+Time 1735: DISPATCH core[1] start=1 reset=0 done=0 block_id=1 thread_cnt=4
+Time 1735: SCHED WAIT->EXECUTE
+Time 1735: Core 0 start=1 core_state=100
+Time 1735: Core 1 start=1 core_state=001
+Time 1745: core_start = 11
+Time 1745: DISPATCH blocks_dispatched=2 blocks_done=0 total_blocks=2 start_execution=1
+Time 1745: DISPATCH core[0] start=1 reset=0 done=0 block_id=0 thread_cnt=4
+Time 1745: DISPATCH core[1] start=1 reset=0 done=0 block_id=1 thread_cnt=4
+Time 1745: SCHED EXECUTE->UPDATE
+Time 1745: Core 0 start=1 core_state=101
+Time 1745: Core 1 start=1 core_state=001
+Time 1755: core_start = 11
+Time 1755: DISPATCH blocks_dispatched=2 blocks_done=0 total_blocks=2 start_execution=1
+Time 1755: DISPATCH core[0] start=1 reset=0 done=0 block_id=0 thread_cnt=4
+Time 1755: DISPATCH core[1] start=1 reset=0 done=0 block_id=1 thread_cnt=4
+Time 1755: SCHED UPDATE->DONE (RET)
+Time 1755: Core 0 start=1 core_state=110
+Time 1755: Core 1 start=1 core_state=001
+Time 1765: core_start = 11
+Time 1765: core_done = 01
+Time 1765: DISPATCH blocks_dispatched=2 blocks_done=0 total_blocks=2 start_execution=1
+Time 1765: DISPATCH core[0] start=1 reset=0 done=1 block_id=0 thread_cnt=4
+Time 1765: DISPATCH core[1] start=1 reset=0 done=0 block_id=1 thread_cnt=4
+Time 1765: Core 0 start=1 core_state=111
+Time 1765: FETCHER FETCHING->FETCHED instr=f000
+Time 1765: Core 1 start=1 core_state=001
+Time 1775: core_start = 10
+Time 1775: core_done = 01
+Time 1775: DISPATCH blocks_dispatched=2 blocks_done=1 total_blocks=2 start_execution=1
+Time 1775: DISPATCH core[0] start=0 reset=1 done=1 block_id=0 thread_cnt=4
+Time 1775: DISPATCH core[1] start=1 reset=0 done=0 block_id=1 thread_cnt=4
+Time 1775: SCHED FETCH->DECODE fetcher_state=010 current_pc=12
+Time 1775: Core 1 start=1 core_state=001
+Time 1785: core_start = 10
+Time 1785: DISPATCH blocks_dispatched=2 blocks_done=1 total_blocks=2 start_execution=1
+Time 1785: DISPATCH core[1] start=1 reset=0 done=0 block_id=1 thread_cnt=4
+Time 1785: FETCHER FETCHED->IDLE
+Time 1785: SCHED DECODE->REQUEST
+Time 1785: Core 1 start=1 core_state=010
+Time 1795: core_start = 10
+Time 1795: DISPATCH blocks_dispatched=2 blocks_done=1 total_blocks=2 start_execution=1
+Time 1795: DISPATCH core[1] start=1 reset=0 done=0 block_id=1 thread_cnt=4
+Time 1795: SCHED REQUEST->WAIT mem_rd=0 mem_wr=0
+Time 1795: Core 1 start=1 core_state=011
+Time 1805: core_start = 10
+Time 1805: DISPATCH blocks_dispatched=2 blocks_done=1 total_blocks=2 start_execution=1
+Time 1805: DISPATCH core[1] start=1 reset=0 done=0 block_id=1 thread_cnt=4
+Time 1805: SCHED WAIT->EXECUTE
+Time 1805: Core 1 start=1 core_state=100
+Time 1815: core_start = 10
+Time 1815: DISPATCH blocks_dispatched=2 blocks_done=1 total_blocks=2 start_execution=1
+Time 1815: DISPATCH core[1] start=1 reset=0 done=0 block_id=1 thread_cnt=4
+Time 1815: SCHED EXECUTE->UPDATE
+Time 1815: Core 1 start=1 core_state=101
+Time 1825: core_start = 10
+Time 1825: DISPATCH blocks_dispatched=2 blocks_done=1 total_blocks=2 start_execution=1
+Time 1825: DISPATCH core[1] start=1 reset=0 done=0 block_id=1 thread_cnt=4
+Time 1825: SCHED UPDATE->DONE (RET)
+Time 1825: Core 1 start=1 core_state=110
+Time 1835: core_start = 10
+Time 1835: core_done = 10
+Time 1835: DISPATCH blocks_dispatched=2 blocks_done=1 total_blocks=2 start_execution=1
+Time 1835: DISPATCH core[1] start=1 reset=0 done=1 block_id=1 thread_cnt=4
+Time 1835: Core 1 start=1 core_state=111
+Time 1845: core_done = 10
+Time 1845: DISPATCH blocks_dispatched=2 blocks_done=2 total_blocks=2 start_execution=1
+Time 1845: DISPATCH core[1] start=0 reset=1 done=1 block_id=1 thread_cnt=4
+Time 1855: DISPATCH blocks_dispatched=2 blocks_done=2 total_blocks=2 start_execution=1
+Time 1865: DISPATCH blocks_dispatched=2 blocks_done=2 total_blocks=2 start_execution=1
+Time 1875: DISPATCH blocks_dispatched=2 blocks_done=2 total_blocks=2 start_execution=1
+Time 1885: DISPATCH blocks_dispatched=2 blocks_done=2 total_blocks=2 start_execution=1
+Time 1895: DISPATCH blocks_dispatched=2 blocks_done=2 total_blocks=2 start_execution=1
+Time 1905: DISPATCH blocks_dispatched=2 blocks_done=2 total_blocks=2 start_execution=1
+=== Results ===
+data_memory[16] = 0
+data_memory[17] = 2
+data_memory[18] = 4
+data_memory[19] = 6
+data_memory[20] = 8
+data_memory[21] = 10
+data_memory[22] = 12
+data_memory[23] = 14
+=== Expected ===
+data_memory[16] = 0
+data_memory[17] = 2
+data_memory[18] = 4
+data_memory[19] = 6
+data_memory[20] = 8
+data_memory[21] = 10
+data_memory[22] = 12
+data_memory[23] = 14
+$finish called at time : 1905 ns : File "C:/Users/srika/Documents/MTP-1/tinygpu_simulation/tinygpu_simulation.sim/sim_1/behav/xsim/tb_gpu.sv" Line 245
+exit
+INFO: [Common 17-206] Exiting xsim at Mon Aug 24 15:44:26 2026...

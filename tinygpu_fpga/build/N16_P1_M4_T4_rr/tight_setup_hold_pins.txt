@@ -1,0 +1,8 @@
++====================+===================+===========================================================+
+| Launch Setup Clock | Launch Hold Clock | Pin                                                       |
++====================+===================+===========================================================+
+| g_mmcm.clk50_raw   | g_mmcm.clk50_raw  | u_gpu/data_memory_controller/mem_read_valid_reg[3]/D      |
+| g_mmcm.clk50_raw   | g_mmcm.clk50_raw  | u_gpu/data_memory_controller/controller_state_reg[3][0]/D |
+| g_mmcm.clk50_raw   | g_mmcm.clk50_raw  | u_gpu/data_memory_controller/mem_write_valid_reg[2]/D     |
+| g_mmcm.clk50_raw   | g_mmcm.clk50_raw  | u_gpu/data_memory_controller/mem_write_valid_reg[3]/D     |
++--------------------+-------------------+-----------------------------------------------------------+

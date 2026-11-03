@@ -1,0 +1,1 @@
+"tb_soc" -s "soc_sim" -L "unisims_ver" 

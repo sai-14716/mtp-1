@@ -1,0 +1,32 @@
+Vivado Simulator v2024.2.0
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2024.2/bin/unwrapped/win64.o/xelab.exe tb_soc -s soc_sim -L unisims_ver 
+Multi-threading is on. Using 10 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3645] port 'consumer_write_address' remains unconnected for this instance [C:/Users/srika/Documents/MTP-1/tinygpu_fpga/rtl/gpu.sv:115]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ns
+Compiling module work.dcr
+Compiling module work.controller(DATA_BITS=8,NUM_CONSU...
+Compiling module work.controller(NUM_CONSUMERS=2,NUM_C...
+Compiling module work.dispatch_default
+Compiling module work.fetcher
+Compiling module work.decoder
+Compiling module work.scheduler
+Compiling module work.alu
+Compiling module work.lsu
+Compiling module work.registers
+Compiling module work.pc
+Compiling module work.registers(THREAD_ID=1)
+Compiling module work.registers(THREAD_ID=2)
+Compiling module work.registers(THREAD_ID=3)
+Compiling module work.core_default
+Compiling module work.gpu(PROGRAM_MEM_NUM_CHANNELS=2)
+Compiling module work.uart_tx(CLKS_PER_BIT=8)
+Compiling module work.gpu_soc_top(PROG_CH=2,CLKS_PER_B...
+Compiling module work.tb_soc
+Built simulation snapshot soc_sim

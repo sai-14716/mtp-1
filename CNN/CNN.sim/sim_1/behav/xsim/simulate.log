@@ -1,0 +1,7 @@
+Time resolution is 1 ps
+WARNING: File init_weights.hex referenced from process on C:/Users/srika/Documents/MTP-1/cnn_fpga/cnn_core.v at line 53 cannot be opened for reading. Please ensure that this file is available in the current working directory or parent directory of xsim.dir location specified via -xsimdir switch.
+WARNING: File data.hex referenced from process on C:/Users/srika/Documents/MTP-1/cnn_fpga/cnn_core.v at line 53 cannot be opened for reading. Please ensure that this file is available in the current working directory or parent directory of xsim.dir location specified via -xsimdir switch.
+WARNING: File labels.hex referenced from process on C:/Users/srika/Documents/MTP-1/cnn_fpga/cnn_core.v at line 53 cannot be opened for reading. Please ensure that this file is available in the current working directory or parent directory of xsim.dir location specified via -xsimdir switch.
+WARNING: File sigmoid_lut.hex referenced from process on C:/Users/srika/Documents/MTP-1/cnn_fpga/cnn_core.v at line 53 cannot be opened for reading. Please ensure that this file is available in the current working directory or parent directory of xsim.dir location specified via -xsimdir switch.
+WARNING: File params_log.hex referenced from process on C:/Users/srika/Documents/MTP-1/cnn_fpga/tb_core.v at line 29 cannot be opened for reading. Please ensure that this file is available in the current working directory or parent directory of xsim.dir location specified via -xsimdir switch.
+params loaded: W1[0]=x b1[0]=x W2[0]=x b2[1]=x

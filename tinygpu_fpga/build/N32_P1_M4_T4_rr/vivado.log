@@ -1,0 +1,2106 @@
+#-----------------------------------------------------------
+# Vivado v2024.2 (64-bit)
+# SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024
+# IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+# SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+# Start of session at: Wed Oct 21 15:02:41 2026
+# Process ID         : 5260
+# Current directory  : C:/Users/srika/Documents/MTP-1/tinygpu_fpga/build/N32_P1_M4_T4_rr
+# Command line       : vivado.exe -mode batch -nojournal -log C:\Users\srika\Documents\MTP-1\tinygpu_fpga\build\N32_P1_M4_T4_rr\vivado.log -source C:\Users\srika\Documents\MTP-1\tinygpu_fpga\scripts\build_gpu.tcl -tclargs 32 1 4 4 rr
+# Log file           : C:/Users/srika/Documents/MTP-1/tinygpu_fpga/build/N32_P1_M4_T4_rr/vivado.log
+# Journal file       : 
+# Running On         : SRINIVAS
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 26300
+# Processor Detail   : 13th Gen Intel(R) Core(TM) i5-1335U
+# CPU Frequency      : 2496 MHz
+# CPU Physical cores : 10
+# CPU Logical cores  : 12
+# Host memory        : 16803 MB
+# Swap memory        : 12884 MB
+# Total Virtual      : 29688 MB
+# Available Virtual  : 8089 MB
+#-----------------------------------------------------------
+source {C:\Users\srika\Documents\MTP-1\tinygpu_fpga\scripts\build_gpu.tcl}
+# set root [file normalize [file join [file dirname [info script]] ..]]
+# lassign $argv N P M T V F
+# if {$T eq ""} { set T 4 }
+# if {$V eq ""} { set V stock }
+# set tag  N${N}_P${P}_M${M}_T${T}
+# set disp dispatch
+# if {$V eq "rr"} { append tag _rr; set disp dispatch_rr }
+# if {$F eq ""} { set F 50 }
+# if {$F != 50} { append tag _f$F }
+# set out  [file join $root build $tag]
+# file mkdir $out
+# set rtl [list alu controller core dcr decoder $disp fetcher lsu pc registers scheduler gpu]
+# foreach f $rtl { read_verilog -sv $root/rtl/$f.sv }
+# read_verilog -sv $root/soc/gpu_soc_top.sv
+# read_xdc $root/soc/nexys4ddr.xdc
+# synth_design -top gpu_soc_top -part xc7a100tcsg324-1 \
+#     -generic NUM_CORES=$N -generic PROG_CH=$P -generic DATA_CH=$M -generic THREADS_PER_BLOCK=$T -generic CORE_MHZ=$F
+Command: synth_design -top gpu_soc_top -part xc7a100tcsg324-1 -generic NUM_CORES=32 -generic PROG_CH=1 -generic DATA_CH=4 -generic THREADS_PER_BLOCK=4 -generic CORE_MHZ=50
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 27612
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1007.625 ; gain = 467.613
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'gpu_soc_top' [C:/Users/srika/Documents/MTP-1/tinygpu_fpga/soc/gpu_soc_top.sv:20]
+	Parameter NUM_CORES bound to: 32 - type: integer 
+	Parameter THREADS_PER_BLOCK bound to: 4 - type: integer 
+	Parameter PROG_CH bound to: 1 - type: integer 
+	Parameter DATA_CH bound to: 4 - type: integer 
+	Parameter CORE_MHZ bound to: 50 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'MMCME2_BASE' [C:/Xilinx/Vivado/2024.2/scripts/rt/data/unisim_comp.v:84708]
+	Parameter BANDWIDTH bound to: OPTIMIZED - type: string 
+	Parameter CLKFBOUT_MULT_F bound to: 10.000000 - type: double 
+	Parameter CLKIN1_PERIOD bound to: 10.000000 - type: double 
+	Parameter CLKOUT0_DIVIDE_F bound to: 20.000000 - type: double 
+	Parameter DIVCLK_DIVIDE bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'MMCME2_BASE' (0#1) [C:/Xilinx/Vivado/2024.2/scripts/rt/data/unisim_comp.v:84708]
+WARNING: [Synth 8-7071] port 'CLKFBOUTB' of module 'MMCME2_BASE' is unconnected for instance 'u_mmcm' [C:/Users/srika/Documents/MTP-1/tinygpu_fpga/soc/gpu_soc_top.sv:46]
+WARNING: [Synth 8-7071] port 'CLKOUT0B' of module 'MMCME2_BASE' is unconnected for instance 'u_mmcm' [C:/Users/srika/Documents/MTP-1/tinygpu_fpga/soc/gpu_soc_top.sv:46]
+WARNING: [Synth 8-7071] port 'CLKOUT1' of module 'MMCME2_BASE' is unconnected for instance 'u_mmcm' [C:/Users/srika/Documents/MTP-1/tinygpu_fpga/soc/gpu_soc_top.sv:46]
+WARNING: [Synth 8-7071] port 'CLKOUT1B' of module 'MMCME2_BASE' is unconnected for instance 'u_mmcm' [C:/Users/srika/Documents/MTP-1/tinygpu_fpga/soc/gpu_soc_top.sv:46]
+WARNING: [Synth 8-7071] port 'CLKOUT2' of module 'MMCME2_BASE' is unconnected for instance 'u_mmcm' [C:/Users/srika/Documents/MTP-1/tinygpu_fpga/soc/gpu_soc_top.sv:46]
+WARNING: [Synth 8-7071] port 'CLKOUT2B' of module 'MMCME2_BASE' is unconnected for instance 'u_mmcm' [C:/Users/srika/Documents/MTP-1/tinygpu_fpga/soc/gpu_soc_top.sv:46]
+WARNING: [Synth 8-7071] port 'CLKOUT3' of module 'MMCME2_BASE' is unconnected for instance 'u_mmcm' [C:/Users/srika/Documents/MTP-1/tinygpu_fpga/soc/gpu_soc_top.sv:46]
+WARNING: [Synth 8-7071] port 'CLKOUT3B' of module 'MMCME2_BASE' is unconnected for instance 'u_mmcm' [C:/Users/srika/Documents/MTP-1/tinygpu_fpga/soc/gpu_soc_top.sv:46]
+WARNING: [Synth 8-7071] port 'CLKOUT4' of module 'MMCME2_BASE' is unconnected for instance 'u_mmcm' [C:/Users/srika/Documents/MTP-1/tinygpu_fpga/soc/gpu_soc_top.sv:46]
+WARNING: [Synth 8-7071] port 'CLKOUT5' of module 'MMCME2_BASE' is unconnected for instance 'u_mmcm' [C:/Users/srika/Documents/MTP-1/tinygpu_fpga/soc/gpu_soc_top.sv:46]
+WARNING: [Synth 8-7071] port 'CLKOUT6' of module 'MMCME2_BASE' is unconnected for instance 'u_mmcm' [C:/Users/srika/Documents/MTP-1/tinygpu_fpga/soc/gpu_soc_top.sv:46]
+WARNING: [Synth 8-7023] instance 'u_mmcm' of module 'MMCME2_BASE' has 18 connections declared, but only 7 given [C:/Users/srika/Documents/MTP-1/tinygpu_fpga/soc/gpu_soc_top.sv:46]
+INFO: [Synth 8-6157] synthesizing module 'BUFG' [C:/Xilinx/Vivado/2024.2/scripts/rt/data/unisim_comp.v:2676]
+INFO: [Synth 8-6155] done synthesizing module 'BUFG' (0#1) [C:/Xilinx/Vivado/2024.2/scripts/rt/data/unisim_comp.v:2676]
+INFO: [Synth 8-3876] $readmem data file 'C:/Users/srika/Documents/MTP-1/tinygpu_fpga/mem/prog.hex' is read successfully [C:/Users/srika/Documents/MTP-1/tinygpu_fpga/soc/gpu_soc_top.sv:72]
+INFO: [Synth 8-3876] $readmem data file 'C:/Users/srika/Documents/MTP-1/tinygpu_fpga/mem/init.hex' is read successfully [C:/Users/srika/Documents/MTP-1/tinygpu_fpga/soc/gpu_soc_top.sv:73]
+INFO: [Synth 8-3876] $readmem data file 'C:/Users/srika/Documents/MTP-1/tinygpu_fpga/mem/expect.hex' is read successfully [C:/Users/srika/Documents/MTP-1/tinygpu_fpga/soc/gpu_soc_top.sv:74]
+INFO: [Synth 8-3876] $readmem data file 'C:/Users/srika/Documents/MTP-1/tinygpu_fpga/mem/kinfo.hex' is read successfully [C:/Users/srika/Documents/MTP-1/tinygpu_fpga/soc/gpu_soc_top.sv:75]
+INFO: [Synth 8-6157] synthesizing module 'gpu' [C:/Users/srika/Documents/MTP-1/tinygpu_fpga/rtl/gpu.sv:10]
+	Parameter DATA_MEM_ADDR_BITS bound to: 8 - type: integer 
+	Parameter DATA_MEM_DATA_BITS bound to: 8 - type: integer 
+	Parameter DATA_MEM_NUM_CHANNELS bound to: 4 - type: integer 
+	Parameter PROGRAM_MEM_ADDR_BITS bound to: 8 - type: integer 
+	Parameter PROGRAM_MEM_DATA_BITS bound to: 16 - type: integer 
+	Parameter PROGRAM_MEM_NUM_CHANNELS bound to: 1 - type: integer 
+	Parameter NUM_CORES bound to: 32 - type: integer 
+	Parameter THREADS_PER_BLOCK bound to: 4 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'core' [C:/Users/srika/Documents/MTP-1/tinygpu_fpga/rtl/core.sv:8]
+	Parameter DATA_MEM_ADDR_BITS bound to: 8 - type: integer 
+	Parameter DATA_MEM_DATA_BITS bound to: 8 - type: integer 
+	Parameter PROGRAM_MEM_ADDR_BITS bound to: 8 - type: integer 
+	Parameter PROGRAM_MEM_DATA_BITS bound to: 16 - type: integer 
+	Parameter THREADS_PER_BLOCK bound to: 4 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'alu' [C:/Users/srika/Documents/MTP-1/tinygpu_fpga/rtl/alu.sv:9]
+INFO: [Synth 8-6155] done synthesizing module 'alu' (0#1) [C:/Users/srika/Documents/MTP-1/tinygpu_fpga/rtl/alu.sv:9]
+INFO: [Synth 8-6157] synthesizing module 'lsu' [C:/Users/srika/Documents/MTP-1/tinygpu_fpga/rtl/lsu.sv:8]
+INFO: [Synth 8-6155] done synthesizing module 'lsu' (0#1) [C:/Users/srika/Documents/MTP-1/tinygpu_fpga/rtl/lsu.sv:8]
+INFO: [Synth 8-6157] synthesizing module 'registers' [C:/Users/srika/Documents/MTP-1/tinygpu_fpga/rtl/registers.sv:7]
+	Parameter THREADS_PER_BLOCK bound to: 4 - type: integer 
+	Parameter THREAD_ID bound to: 0 - type: integer 
+	Parameter DATA_BITS bound to: 8 - type: integer 
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/srika/Documents/MTP-1/tinygpu_fpga/rtl/registers.sv:84]
+INFO: [Synth 8-6155] done synthesizing module 'registers' (0#1) [C:/Users/srika/Documents/MTP-1/tinygpu_fpga/rtl/registers.sv:7]
+INFO: [Synth 8-6157] synthesizing module 'pc' [C:/Users/srika/Documents/MTP-1/tinygpu_fpga/rtl/pc.sv:10]
+	Parameter DATA_MEM_DATA_BITS bound to: 8 - type: integer 
+	Parameter PROGRAM_MEM_ADDR_BITS bound to: 8 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'pc' (0#1) [C:/Users/srika/Documents/MTP-1/tinygpu_fpga/rtl/pc.sv:10]
+INFO: [Synth 8-6157] synthesizing module 'registers__parameterized0' [C:/Users/srika/Documents/MTP-1/tinygpu_fpga/rtl/registers.sv:7]
+	Parameter THREADS_PER_BLOCK bound to: 4 - type: integer 
+	Parameter THREAD_ID bound to: 1 - type: integer 
+	Parameter DATA_BITS bound to: 8 - type: integer 
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/srika/Documents/MTP-1/tinygpu_fpga/rtl/registers.sv:84]
+INFO: [Synth 8-6155] done synthesizing module 'registers__parameterized0' (0#1) [C:/Users/srika/Documents/MTP-1/tinygpu_fpga/rtl/registers.sv:7]
+INFO: [Synth 8-6157] synthesizing module 'registers__parameterized1' [C:/Users/srika/Documents/MTP-1/tinygpu_fpga/rtl/registers.sv:7]
+	Parameter THREADS_PER_BLOCK bound to: 4 - type: integer 
+	Parameter THREAD_ID bound to: 2 - type: integer 
+	Parameter DATA_BITS bound to: 8 - type: integer 
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/srika/Documents/MTP-1/tinygpu_fpga/rtl/registers.sv:84]
+INFO: [Synth 8-6155] done synthesizing module 'registers__parameterized1' (0#1) [C:/Users/srika/Documents/MTP-1/tinygpu_fpga/rtl/registers.sv:7]
+INFO: [Synth 8-6157] synthesizing module 'registers__parameterized2' [C:/Users/srika/Documents/MTP-1/tinygpu_fpga/rtl/registers.sv:7]
+	Parameter THREADS_PER_BLOCK bound to: 4 - type: integer 
+	Parameter THREAD_ID bound to: 3 - type: integer 
+	Parameter DATA_BITS bound to: 8 - type: integer 
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/srika/Documents/MTP-1/tinygpu_fpga/rtl/registers.sv:84]
+INFO: [Synth 8-6155] done synthesizing module 'registers__parameterized2' (0#1) [C:/Users/srika/Documents/MTP-1/tinygpu_fpga/rtl/registers.sv:7]
+INFO: [Synth 8-6157] synthesizing module 'fetcher' [C:/Users/srika/Documents/MTP-1/tinygpu_fpga/rtl/fetcher.sv:7]
+	Parameter PROGRAM_MEM_ADDR_BITS bound to: 8 - type: integer 
+	Parameter PROGRAM_MEM_DATA_BITS bound to: 16 - type: integer 
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/srika/Documents/MTP-1/tinygpu_fpga/rtl/fetcher.sv:39]
+INFO: [Synth 8-6155] done synthesizing module 'fetcher' (0#1) [C:/Users/srika/Documents/MTP-1/tinygpu_fpga/rtl/fetcher.sv:7]
+INFO: [Synth 8-6157] synthesizing module 'decoder' [C:/Users/srika/Documents/MTP-1/tinygpu_fpga/rtl/decoder.sv:7]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/srika/Documents/MTP-1/tinygpu_fpga/rtl/decoder.sv:84]
+INFO: [Synth 8-6155] done synthesizing module 'decoder' (0#1) [C:/Users/srika/Documents/MTP-1/tinygpu_fpga/rtl/decoder.sv:7]
+INFO: [Synth 8-6157] synthesizing module 'scheduler' [C:/Users/srika/Documents/MTP-1/tinygpu_fpga/rtl/scheduler.sv:16]
+	Parameter THREADS_PER_BLOCK bound to: 4 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'scheduler' (0#1) [C:/Users/srika/Documents/MTP-1/tinygpu_fpga/rtl/scheduler.sv:16]
+INFO: [Synth 8-6155] done synthesizing module 'core' (0#1) [C:/Users/srika/Documents/MTP-1/tinygpu_fpga/rtl/core.sv:8]
+INFO: [Synth 8-6157] synthesizing module 'dcr' [C:/Users/srika/Documents/MTP-1/tinygpu_fpga/rtl/dcr.sv:7]
+INFO: [Synth 8-6155] done synthesizing module 'dcr' (0#1) [C:/Users/srika/Documents/MTP-1/tinygpu_fpga/rtl/dcr.sv:7]
+INFO: [Synth 8-6157] synthesizing module 'controller' [C:/Users/srika/Documents/MTP-1/tinygpu_fpga/rtl/controller.sv:8]
+	Parameter ADDR_BITS bound to: 8 - type: integer 
+	Parameter DATA_BITS bound to: 8 - type: integer 
+	Parameter NUM_CONSUMERS bound to: 128 - type: integer 
+	Parameter NUM_CHANNELS bound to: 4 - type: integer 
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/srika/Documents/MTP-1/tinygpu_fpga/rtl/controller.sv:70]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/srika/Documents/MTP-1/tinygpu_fpga/rtl/controller.sv:70]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/srika/Documents/MTP-1/tinygpu_fpga/rtl/controller.sv:70]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/srika/Documents/MTP-1/tinygpu_fpga/rtl/controller.sv:70]
+INFO: [Synth 8-6155] done synthesizing module 'controller' (0#1) [C:/Users/srika/Documents/MTP-1/tinygpu_fpga/rtl/controller.sv:8]
+INFO: [Synth 8-6157] synthesizing module 'controller__parameterized0' [C:/Users/srika/Documents/MTP-1/tinygpu_fpga/rtl/controller.sv:8]
+	Parameter ADDR_BITS bound to: 8 - type: integer 
+	Parameter DATA_BITS bound to: 16 - type: integer 
+	Parameter NUM_CONSUMERS bound to: 32 - type: integer 
+	Parameter NUM_CHANNELS bound to: 1 - type: integer 
+	Parameter WRITE_ENABLE bound to: 0 - type: integer 
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/srika/Documents/MTP-1/tinygpu_fpga/rtl/controller.sv:70]
+INFO: [Synth 8-6155] done synthesizing module 'controller__parameterized0' (0#1) [C:/Users/srika/Documents/MTP-1/tinygpu_fpga/rtl/controller.sv:8]
+INFO: [Synth 8-6157] synthesizing module 'dispatch' [C:/Users/srika/Documents/MTP-1/tinygpu_fpga/rtl/dispatch_rr.sv:13]
+	Parameter NUM_CORES bound to: 32 - type: integer 
+	Parameter THREADS_PER_BLOCK bound to: 4 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'dispatch' (0#1) [C:/Users/srika/Documents/MTP-1/tinygpu_fpga/rtl/dispatch_rr.sv:13]
+INFO: [Synth 8-6155] done synthesizing module 'gpu' (0#1) [C:/Users/srika/Documents/MTP-1/tinygpu_fpga/rtl/gpu.sv:10]
+INFO: [Synth 8-6157] synthesizing module 'uart_tx' [C:/Users/srika/Documents/MTP-1/tinygpu_fpga/soc/gpu_soc_top.sv:309]
+	Parameter CLKS_PER_BIT bound to: 434 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'uart_tx' (0#1) [C:/Users/srika/Documents/MTP-1/tinygpu_fpga/soc/gpu_soc_top.sv:309]
+INFO: [Synth 8-6155] done synthesizing module 'gpu_soc_top' (0#1) [C:/Users/srika/Documents/MTP-1/tinygpu_fpga/soc/gpu_soc_top.sv:20]
+WARNING: [Synth 8-6014] Unused sequential element any_lsu_waiting_reg was removed.  [C:/Users/srika/Documents/MTP-1/tinygpu_fpga/rtl/scheduler.sv:80]
+WARNING: [Synth 8-6014] Unused sequential element ld_we_reg was removed.  [C:/Users/srika/Documents/MTP-1/tinygpu_fpga/soc/gpu_soc_top.sv:191]
+WARNING: [Synth 8-3917] design gpu_soc_top has port led[13] driven by constant 0
+WARNING: [Synth 8-3917] design gpu_soc_top has port led[12] driven by constant 0
+WARNING: [Synth 8-3917] design gpu_soc_top has port led[11] driven by constant 0
+WARNING: [Synth 8-3917] design gpu_soc_top has port led[10] driven by constant 0
+WARNING: [Synth 8-3917] design gpu_soc_top has port led[9] driven by constant 0
+WARNING: [Synth 8-3917] design gpu_soc_top has port led[8] driven by constant 0
+WARNING: [Synth 8-3917] design gpu_soc_top has port led[7] driven by constant 0
+WARNING: [Synth 8-3917] design gpu_soc_top has port led[6] driven by constant 0
+WARNING: [Synth 8-3917] design gpu_soc_top has port led[5] driven by constant 0
+WARNING: [Synth 8-3917] design gpu_soc_top has port led[4] driven by constant 0
+WARNING: [Synth 8-3917] design gpu_soc_top has port led[3] driven by constant 0
+WARNING: [Synth 8-7129] Port decoded_mem_read_enable in module scheduler is either unconnected or has no load
+WARNING: [Synth 8-7129] Port decoded_mem_write_enable in module scheduler is either unconnected or has no load
+WARNING: [Synth 8-7129] Port next_pc[2][7] in module scheduler is either unconnected or has no load
+WARNING: [Synth 8-7129] Port next_pc[2][6] in module scheduler is either unconnected or has no load
+WARNING: [Synth 8-7129] Port next_pc[2][5] in module scheduler is either unconnected or has no load
+WARNING: [Synth 8-7129] Port next_pc[2][4] in module scheduler is either unconnected or has no load
+WARNING: [Synth 8-7129] Port next_pc[2][3] in module scheduler is either unconnected or has no load
+WARNING: [Synth 8-7129] Port next_pc[2][2] in module scheduler is either unconnected or has no load
+WARNING: [Synth 8-7129] Port next_pc[2][1] in module scheduler is either unconnected or has no load
+WARNING: [Synth 8-7129] Port next_pc[2][0] in module scheduler is either unconnected or has no load
+WARNING: [Synth 8-7129] Port next_pc[1][7] in module scheduler is either unconnected or has no load
+WARNING: [Synth 8-7129] Port next_pc[1][6] in module scheduler is either unconnected or has no load
+WARNING: [Synth 8-7129] Port next_pc[1][5] in module scheduler is either unconnected or has no load
+WARNING: [Synth 8-7129] Port next_pc[1][4] in module scheduler is either unconnected or has no load
+WARNING: [Synth 8-7129] Port next_pc[1][3] in module scheduler is either unconnected or has no load
+WARNING: [Synth 8-7129] Port next_pc[1][2] in module scheduler is either unconnected or has no load
+WARNING: [Synth 8-7129] Port next_pc[1][1] in module scheduler is either unconnected or has no load
+WARNING: [Synth 8-7129] Port next_pc[1][0] in module scheduler is either unconnected or has no load
+WARNING: [Synth 8-7129] Port next_pc[0][7] in module scheduler is either unconnected or has no load
+WARNING: [Synth 8-7129] Port next_pc[0][6] in module scheduler is either unconnected or has no load
+WARNING: [Synth 8-7129] Port next_pc[0][5] in module scheduler is either unconnected or has no load
+WARNING: [Synth 8-7129] Port next_pc[0][4] in module scheduler is either unconnected or has no load
+WARNING: [Synth 8-7129] Port next_pc[0][3] in module scheduler is either unconnected or has no load
+WARNING: [Synth 8-7129] Port next_pc[0][2] in module scheduler is either unconnected or has no load
+WARNING: [Synth 8-7129] Port next_pc[0][1] in module scheduler is either unconnected or has no load
+WARNING: [Synth 8-7129] Port next_pc[0][0] in module scheduler is either unconnected or has no load
+WARNING: [Synth 8-7129] Port alu_out[7] in module pc is either unconnected or has no load
+WARNING: [Synth 8-7129] Port alu_out[6] in module pc is either unconnected or has no load
+WARNING: [Synth 8-7129] Port alu_out[5] in module pc is either unconnected or has no load
+WARNING: [Synth 8-7129] Port alu_out[4] in module pc is either unconnected or has no load
+WARNING: [Synth 8-7129] Port alu_out[3] in module pc is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 2032.809 ; gain = 1492.797
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:32 ; elapsed = 00:00:34 . Memory (MB): peak = 2032.809 ; gain = 1492.797
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:32 ; elapsed = 00:00:34 . Memory (MB): peak = 2032.809 ; gain = 1492.797
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 2032.809 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/srika/Documents/MTP-1/tinygpu_fpga/soc/nexys4ddr.xdc]
+Finished Parsing XDC File [C:/Users/srika/Documents/MTP-1/tinygpu_fpga/soc/nexys4ddr.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/srika/Documents/MTP-1/tinygpu_fpga/soc/nexys4ddr.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/gpu_soc_top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/gpu_soc_top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Timing 38-2] Deriving generated clocks
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.014 . Memory (MB): peak = 2197.207 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 1 instances were transformed.
+  MMCME2_BASE => MMCME2_ADV: 1 instance 
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.307 . Memory (MB): peak = 2197.207 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:01:00 ; elapsed = 00:01:01 . Memory (MB): peak = 2197.207 ; gain = 1657.195
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:01:00 ; elapsed = 00:01:01 . Memory (MB): peak = 2197.207 ; gain = 1657.195
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:01:00 ; elapsed = 00:01:01 . Memory (MB): peak = 2197.207 ; gain = 1657.195
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'fetcher_state_reg' in module 'fetcher'
+INFO: [Synth 8-802] inferred FSM for state register 'core_state_reg' in module 'scheduler'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    IDLE |                              001 |                              000
+                FETCHING |                              010 |                              001
+                 FETCHED |                              100 |                              010
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'fetcher_state_reg' using encoding 'one-hot' in module 'fetcher'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    IDLE |                              000 |                              000
+                   FETCH |                              001 |                              001
+                  DECODE |                              010 |                              010
+                 REQUEST |                              011 |                              011
+                    WAIT |                              100 |                              100
+                 EXECUTE |                              101 |                              101
+                  UPDATE |                              110 |                              110
+                    DONE |                              111 |                              111
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'core_state_reg' using encoding 'sequential' in module 'scheduler'
+INFO: [Synth 8-3971] The signal "gpu_soc_top/dmem_reg" was recognized as a true dual port RAM template.
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:19:45 ; elapsed = 00:20:17 . Memory (MB): peak = 3065.469 ; gain = 2525.457
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   32 Bit       Adders := 3     
+	   2 Input   16 Bit       Adders := 2     
+	   3 Input    9 Bit       Adders := 128   
+	   2 Input    9 Bit       Adders := 2     
+	   3 Input    8 Bit       Adders := 128   
+	   2 Input    8 Bit       Adders := 262   
+	   2 Input    7 Bit       Adders := 14    
+	   2 Input    6 Bit       Adders := 1     
+	   2 Input    4 Bit       Adders := 4     
+	   3 Input    3 Bit       Adders := 1     
+	   2 Input    2 Bit       Adders := 1     
++---Registers : 
+	              128 Bit    Registers := 2     
+	               32 Bit    Registers := 8     
+	               16 Bit    Registers := 70    
+	               10 Bit    Registers := 1     
+	                9 Bit    Registers := 1     
+	                8 Bit    Registers := 3899  
+	                7 Bit    Registers := 2     
+	                6 Bit    Registers := 1     
+	                5 Bit    Registers := 1     
+	                4 Bit    Registers := 103   
+	                3 Bit    Registers := 195   
+	                2 Bit    Registers := 193   
+	                1 Bit    Registers := 1044  
++---RAMs : 
+	               4K Bit	(256 X 16 bit)          RAMs := 1     
+	               2K Bit	(256 X 8 bit)          RAMs := 1     
++---ROMs : 
+	                    ROMs := 1     
++---Muxes : 
+	   2 Input  128 Bit        Muxes := 36    
+	   6 Input  128 Bit        Muxes := 16    
+	   6 Input   32 Bit        Muxes := 6     
+	   2 Input   32 Bit        Muxes := 15    
+	  12 Input   32 Bit        Muxes := 2     
+	   2 Input   16 Bit        Muxes := 94    
+	  12 Input   16 Bit        Muxes := 1     
+	 769 Input   16 Bit        Muxes := 1     
+	  12 Input    9 Bit        Muxes := 1     
+	   5 Input    8 Bit        Muxes := 129   
+	   4 Input    8 Bit        Muxes := 258   
+	   2 Input    8 Bit        Muxes := 4989  
+	   6 Input    8 Bit        Muxes := 384   
+	 769 Input    8 Bit        Muxes := 1     
+	  12 Input    8 Bit        Muxes := 1     
+	   2 Input    7 Bit        Muxes := 1513  
+	   2 Input    6 Bit        Muxes := 13    
+	   2 Input    5 Bit        Muxes := 90    
+	   6 Input    4 Bit        Muxes := 16    
+	  12 Input    4 Bit        Muxes := 1     
+	   2 Input    4 Bit        Muxes := 1     
+	   8 Input    3 Bit        Muxes := 32    
+	   2 Input    3 Bit        Muxes := 66    
+	   6 Input    3 Bit        Muxes := 5     
+	  12 Input    3 Bit        Muxes := 1     
+	   2 Input    2 Bit        Muxes := 2009  
+	   4 Input    2 Bit        Muxes := 256   
+	  12 Input    2 Bit        Muxes := 64    
+	   2 Input    1 Bit        Muxes := 20097 
+	   4 Input    1 Bit        Muxes := 2432  
+	   3 Input    1 Bit        Muxes := 129   
+	  12 Input    1 Bit        Muxes := 210   
+	   8 Input    1 Bit        Muxes := 96    
+	   6 Input    1 Bit        Muxes := 563   
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3917] design gpu_soc_top has port led[13] driven by constant 0
+WARNING: [Synth 8-3917] design gpu_soc_top has port led[12] driven by constant 0
+WARNING: [Synth 8-3917] design gpu_soc_top has port led[11] driven by constant 0
+WARNING: [Synth 8-3917] design gpu_soc_top has port led[10] driven by constant 0
+WARNING: [Synth 8-3917] design gpu_soc_top has port led[9] driven by constant 0
+WARNING: [Synth 8-3917] design gpu_soc_top has port led[8] driven by constant 0
+WARNING: [Synth 8-3917] design gpu_soc_top has port led[7] driven by constant 0
+WARNING: [Synth 8-3917] design gpu_soc_top has port led[6] driven by constant 0
+WARNING: [Synth 8-3917] design gpu_soc_top has port led[5] driven by constant 0
+WARNING: [Synth 8-3917] design gpu_soc_top has port led[4] driven by constant 0
+WARNING: [Synth 8-3917] design gpu_soc_top has port led[3] driven by constant 0
+INFO: [Synth 8-3971] The signal "gpu_soc_top/dmem_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-4471] merging register 'blocks_dispatched_reg[7:0]' into 'blocks_dispatched_reg[7:0]' [C:/Users/srika/Documents/MTP-1/tinygpu_fpga/rtl/dispatch_rr.sv:57]
+INFO: [Synth 8-4471] merging register 'blocks_dispatched_reg[7:0]' into 'blocks_dispatched_reg[7:0]' [C:/Users/srika/Documents/MTP-1/tinygpu_fpga/rtl/dispatch_rr.sv:57]
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\dispatch_instance/total_blocks_reg[7] )
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:21:32 ; elapsed = 00:22:06 . Memory (MB): peak = 3233.496 ; gain = 2693.484
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+ROM: Preliminary Mapping Report
++------------+------------+---------------+----------------+
+|Module Name | RTL Object | Depth x Width | Implemented As | 
++------------+------------+---------------+----------------+
+|gpu_soc_top | exp_q_reg  | 1024x8        | Block RAM      | 
++------------+------------+---------------+----------------+
+
+
+Block RAM: Preliminary Mapping Report (see note below)
++------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name | RTL Object | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|gpu_soc_top | pmem_reg   | 256 x 16(READ_FIRST)   | W |   | 256 x 16(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
++------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+Note: The table above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:21:44 ; elapsed = 00:22:19 . Memory (MB): peak = 3233.496 ; gain = 2693.484
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:31:30 ; elapsed = 00:33:44 . Memory (MB): peak = 4091.648 ; gain = 3551.637
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Final Mapping Report
++------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name | RTL Object | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|gpu_soc_top | pmem_reg   | 256 x 16(READ_FIRST)   | W |   | 256 x 16(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
++------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-7052] The timing for the instance i_0/dmem_reg_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance i_0/dmem_reg_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance i_0/dmem_reg_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance i_0/dmem_reg_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance i_0/dmem_reg_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance i_0/pmem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance i_0/exp_q_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:32:03 ; elapsed = 00:34:59 . Memory (MB): peak = 4091.648 ; gain = 3551.637
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+INFO: [Synth 8-7052] The timing for the instance dmem_reg_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance dmem_reg_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance dmem_reg_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance dmem_reg_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance dmem_reg_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance pmem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance exp_q_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:32:31 ; elapsed = 00:35:31 . Memory (MB): peak = 4091.648 ; gain = 3551.637
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:32:32 ; elapsed = 00:35:32 . Memory (MB): peak = 4091.648 ; gain = 3551.637
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:32:52 ; elapsed = 00:35:53 . Memory (MB): peak = 4091.648 ; gain = 3551.637
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:32:52 ; elapsed = 00:35:53 . Memory (MB): peak = 4091.648 ; gain = 3551.637
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:32:57 ; elapsed = 00:35:58 . Memory (MB): peak = 4091.648 ; gain = 3551.637
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:32:57 ; elapsed = 00:35:58 . Memory (MB): peak = 4091.648 ; gain = 3551.637
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+------------+------+
+|      |Cell        |Count |
++------+------------+------+
+|1     |BUFG        |     2|
+|2     |CARRY4      |  4387|
+|3     |LUT1        |     9|
+|4     |LUT2        |  8706|
+|5     |LUT3        | 13648|
+|6     |LUT4        |  4540|
+|7     |LUT5        |  7839|
+|8     |LUT6        | 25405|
+|9     |MMCME2_BASE |     1|
+|10    |MUXF7       |   130|
+|11    |MUXF8       |    43|
+|12    |RAMB18E1    |     7|
+|14    |FDRE        | 31097|
+|15    |FDSE        |   101|
+|16    |IBUF        |     2|
+|17    |OBUF        |    17|
++------+------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:32:57 ; elapsed = 00:35:58 . Memory (MB): peak = 4091.648 ; gain = 3551.637
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 11 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:32:10 ; elapsed = 00:35:49 . Memory (MB): peak = 4091.648 ; gain = 3387.238
+Synthesis Optimization Complete : Time (s): cpu = 00:32:58 ; elapsed = 00:36:04 . Memory (MB): peak = 4091.648 ; gain = 3551.637
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 4091.648 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 4568 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [C:/Users/srika/Documents/MTP-1/tinygpu_fpga/soc/nexys4ddr.xdc]
+Finished Parsing XDC File [C:/Users/srika/Documents/MTP-1/tinygpu_fpga/soc/nexys4ddr.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.038 . Memory (MB): peak = 4091.648 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 1 instances were transformed.
+  MMCME2_BASE => MMCME2_ADV: 1 instance 
+
+Synth Design complete | Checksum: ee8417b3
+INFO: [Common 17-83] Releasing license: Synthesis
+96 Infos, 67 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:33:27 ; elapsed = 00:36:37 . Memory (MB): peak = 4091.648 ; gain = 3761.113
+# report_utilization -file $out/util_synth.rpt
+# opt_design
+Command: opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a100t'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Project 1-461] DRC finished with 0 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 4091.648 ; gain = 0.000
+
+Starting Cache Timing Information Task
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-2] Deriving generated clocks
+Ending Cache Timing Information Task | Checksum: 24b79cf81
+
+Time (s): cpu = 00:00:19 ; elapsed = 00:00:17 . Memory (MB): peak = 4091.648 ; gain = 0.000
+
+Starting Logic Optimization Task
+
+Phase 1 Initialization
+
+Phase 1.1 Core Generation And Design Setup
+Phase 1.1 Core Generation And Design Setup | Checksum: 24b79cf81
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.098 . Memory (MB): peak = 4091.648 ; gain = 0.000
+
+Phase 1.2 Setup Constraints And Sort Netlist
+Phase 1.2 Setup Constraints And Sort Netlist | Checksum: 24b79cf81
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.173 . Memory (MB): peak = 4091.648 ; gain = 0.000
+Phase 1 Initialization | Checksum: 24b79cf81
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.180 . Memory (MB): peak = 4091.648 ; gain = 0.000
+
+Phase 2 Timer Update And Timing Data Collection
+
+Phase 2.1 Timer Update
+Phase 2.1 Timer Update | Checksum: 24b79cf81
+
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:03 . Memory (MB): peak = 4091.648 ; gain = 0.000
+
+Phase 2.2 Timing Data Collection
+Phase 2.2 Timing Data Collection | Checksum: 24b79cf81
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:04 . Memory (MB): peak = 4091.648 ; gain = 0.000
+Phase 2 Timer Update And Timing Data Collection | Checksum: 24b79cf81
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:04 . Memory (MB): peak = 4091.648 ; gain = 0.000
+
+Phase 3 Retarget
+INFO: [Opt 31-1851] Number of loadless carry chains removed were: 0
+INFO: [Opt 31-1834] Total Chains To Be Transformed Were: 0 AND Number of Transformed insts Created are: 0
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Opt 31-49] Retargeted 0 cell(s).
+Phase 3 Retarget | Checksum: 24b79cf81
+
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:06 . Memory (MB): peak = 4091.648 ; gain = 0.000
+Retarget | Checksum: 24b79cf81
+INFO: [Opt 31-389] Phase Retarget created 0 cells and removed 0 cells
+INFO: [Opt 31-1021] In phase Retarget, 1 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+
+Phase 4 Constant propagation
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Phase 4 Constant propagation | Checksum: 1edcfbacd
+
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:08 . Memory (MB): peak = 4091.648 ; gain = 0.000
+Constant propagation | Checksum: 1edcfbacd
+INFO: [Opt 31-389] Phase Constant propagation created 0 cells and removed 0 cells
+
+Phase 5 Sweep
+INFO: [Constraints 18-11670] Building netlist checker database with flags, 0x8
+Done building netlist checker database: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.086 . Memory (MB): peak = 4091.648 ; gain = 0.000
+Phase 5 Sweep | Checksum: 224f3b665
+
+Time (s): cpu = 00:00:12 ; elapsed = 00:00:10 . Memory (MB): peak = 4091.648 ; gain = 0.000
+Sweep | Checksum: 224f3b665
+INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 0 cells
+
+Phase 6 BUFG optimization
+Phase 6 BUFG optimization | Checksum: 224f3b665
+
+Time (s): cpu = 00:00:14 ; elapsed = 00:00:11 . Memory (MB): peak = 4091.648 ; gain = 0.000
+BUFG optimization | Checksum: 224f3b665
+INFO: [Opt 31-662] Phase BUFG optimization created 0 cells of which 0 are BUFGs and removed 0 cells.
+
+Phase 7 Shift Register Optimization
+INFO: [Opt 31-1064] SRL Remap converted 0 SRLs to 0 registers and converted 0 registers of register chains to 0 SRLs
+Phase 7 Shift Register Optimization | Checksum: 224f3b665
+
+Time (s): cpu = 00:00:15 ; elapsed = 00:00:12 . Memory (MB): peak = 4091.648 ; gain = 0.000
+Shift Register Optimization | Checksum: 224f3b665
+INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
+
+Phase 8 Post Processing Netlist
+Phase 8 Post Processing Netlist | Checksum: 224f3b665
+
+Time (s): cpu = 00:00:15 ; elapsed = 00:00:12 . Memory (MB): peak = 4091.648 ; gain = 0.000
+Post Processing Netlist | Checksum: 224f3b665
+INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
+
+Phase 9 Finalization
+
+Phase 9.1 Finalizing Design Cores and Updating Shapes
+Phase 9.1 Finalizing Design Cores and Updating Shapes | Checksum: 1f29fa606
+
+Time (s): cpu = 00:00:17 ; elapsed = 00:00:14 . Memory (MB): peak = 4091.648 ; gain = 0.000
+
+Phase 9.2 Verifying Netlist Connectivity
+
+Starting Connectivity Check Task
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.336 . Memory (MB): peak = 4091.648 ; gain = 0.000
+Phase 9.2 Verifying Netlist Connectivity | Checksum: 1f29fa606
+
+Time (s): cpu = 00:00:17 ; elapsed = 00:00:14 . Memory (MB): peak = 4091.648 ; gain = 0.000
+Phase 9 Finalization | Checksum: 1f29fa606
+
+Time (s): cpu = 00:00:17 ; elapsed = 00:00:14 . Memory (MB): peak = 4091.648 ; gain = 0.000
+Opt_design Change Summary
+=========================
+
+
+-------------------------------------------------------------------------------------------------------------------------
+|  Phase                        |  #Cells created  |  #Cells Removed  |  #Constrained objects preventing optimizations  |
+-------------------------------------------------------------------------------------------------------------------------
+|  Retarget                     |               0  |               0  |                                              1  |
+|  Constant propagation         |               0  |               0  |                                              0  |
+|  Sweep                        |               0  |               0  |                                              0  |
+|  BUFG optimization            |               0  |               0  |                                              0  |
+|  Shift Register Optimization  |               0  |               0  |                                              0  |
+|  Post Processing Netlist      |               0  |               0  |                                              0  |
+-------------------------------------------------------------------------------------------------------------------------
+
+
+Ending Logic Optimization Task | Checksum: 1f29fa606
+
+Time (s): cpu = 00:00:17 ; elapsed = 00:00:14 . Memory (MB): peak = 4091.648 ; gain = 0.000
+
+Starting Power Optimization Task
+INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
+INFO: [Pwropt 34-9] Applying IDT optimizations ...
+INFO: [Pwropt 34-10] Applying ODC optimizations ...
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+
+
+Starting PowerOpt Patch Enables Task
+INFO: [Pwropt 34-162] WRITE_MODE attribute of 0 BRAM(s) out of a total of 7 has been updated to save power. Run report_power_opt to get a complete listing of the BRAMs updated.
+INFO: [Pwropt 34-201] Structural ODC has moved 0 WE to EN ports
+Number of BRAM Ports augmented: 0 newly gated: 1 Total Ports: 14
+Number of Flops added for Enable Generation: 3
+
+Ending PowerOpt Patch Enables Task | Checksum: 12e7d41d5
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.261 . Memory (MB): peak = 4143.844 ; gain = 0.000
+Ending Power Optimization Task | Checksum: 12e7d41d5
+
+Time (s): cpu = 00:00:32 ; elapsed = 00:00:18 . Memory (MB): peak = 4143.844 ; gain = 52.195
+
+Starting Final Cleanup Task
+
+Starting Logic Optimization Task
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Ending Logic Optimization Task | Checksum: 12419440a
+
+Time (s): cpu = 00:00:14 ; elapsed = 00:00:09 . Memory (MB): peak = 4143.844 ; gain = 0.000
+Ending Final Cleanup Task | Checksum: 12419440a
+
+Time (s): cpu = 00:00:19 ; elapsed = 00:00:14 . Memory (MB): peak = 4143.844 ; gain = 0.000
+
+Starting Netlist Obfuscation Task
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.033 . Memory (MB): peak = 4143.844 ; gain = 0.000
+Ending Netlist Obfuscation Task | Checksum: 12419440a
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.042 . Memory (MB): peak = 4143.844 ; gain = 0.000
+INFO: [Common 17-83] Releasing license: Implementation
+28 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+opt_design completed successfully
+opt_design: Time (s): cpu = 00:01:38 ; elapsed = 00:01:13 . Memory (MB): peak = 4143.844 ; gain = 52.195
+# place_design
+Command: place_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a100t'
+INFO: [Common 17-83] Releasing license: Implementation
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+Running DRC as a precondition to command place_design
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 2 CPUs
+
+Starting Placer Task
+
+Phase 1 Placer Initialization
+
+Phase 1.1 Placer Initialization Netlist Sorting
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.039 . Memory (MB): peak = 4143.844 ; gain = 0.000
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: 11a01c592
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.052 . Memory (MB): peak = 4143.844 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.051 . Memory (MB): peak = 4143.844 ; gain = 0.000
+
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 1a777d2d2
+
+Time (s): cpu = 00:00:12 ; elapsed = 00:00:09 . Memory (MB): peak = 4143.844 ; gain = 0.000
+
+Phase 1.3 Build Placer Netlist Model
+Phase 1.3 Build Placer Netlist Model | Checksum: 1b8bb71d4
+
+Time (s): cpu = 00:00:53 ; elapsed = 00:00:37 . Memory (MB): peak = 4143.844 ; gain = 0.000
+
+Phase 1.4 Constrain Clocks/Macros
+Phase 1.4 Constrain Clocks/Macros | Checksum: 1b8bb71d4
+
+Time (s): cpu = 00:00:53 ; elapsed = 00:00:37 . Memory (MB): peak = 4143.844 ; gain = 0.000
+Phase 1 Placer Initialization | Checksum: 1b8bb71d4
+
+Time (s): cpu = 00:00:53 ; elapsed = 00:00:37 . Memory (MB): peak = 4143.844 ; gain = 0.000
+
+Phase 2 Global Placement
+
+Phase 2.1 Floorplanning
+Phase 2.1 Floorplanning | Checksum: 218ba87a6
+
+Time (s): cpu = 00:01:11 ; elapsed = 00:00:48 . Memory (MB): peak = 4143.844 ; gain = 0.000
+
+Phase 2.2 Update Timing before SLR Path Opt
+Phase 2.2 Update Timing before SLR Path Opt | Checksum: 206f4f488
+
+Time (s): cpu = 00:01:25 ; elapsed = 00:00:57 . Memory (MB): peak = 4143.844 ; gain = 0.000
+
+Phase 2.3 Post-Processing in Floorplanning
+Phase 2.3 Post-Processing in Floorplanning | Checksum: 206f4f488
+
+Time (s): cpu = 00:01:25 ; elapsed = 00:00:57 . Memory (MB): peak = 4143.844 ; gain = 0.000
+
+Phase 2.4 Global Place Phase1
+Phase 2.4 Global Place Phase1 | Checksum: 303d36634
+
+Time (s): cpu = 00:03:54 ; elapsed = 00:02:33 . Memory (MB): peak = 4143.844 ; gain = 0.000
+
+Phase 2.5 Global Place Phase2
+
+Phase 2.5.1 UpdateTiming Before Physical Synthesis
+Phase 2.5.1 UpdateTiming Before Physical Synthesis | Checksum: 2e2018d57
+
+Time (s): cpu = 00:04:11 ; elapsed = 00:02:43 . Memory (MB): peak = 4143.844 ; gain = 0.000
+
+Phase 2.5.2 Physical Synthesis In Placer
+INFO: [Physopt 32-1035] Found 4106 LUTNM shape to break, 1524 LUT instances to create LUTNM shape
+INFO: [Physopt 32-1044] Break lutnm for timing: one critical 103, two critical 4003, total 1000, new lutff created 0
+INFO: [Physopt 32-1138] End 1 Pass. Optimized 1685 nets or LUTs. Breaked 1000 LUTs, combined 685 existing LUTs and moved 0 existing LUT
+INFO: [Physopt 32-65] No nets found for high-fanout optimization.
+INFO: [Physopt 32-232] Optimized 0 net. Created 0 new instance.
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-456] No candidate cells for DSP register optimization found in the design.
+INFO: [Physopt 32-775] End 2 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-1123] No candidate cells found for Shift Register to Pipeline optimization
+INFO: [Physopt 32-775] End 2 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-1401] No candidate cells found for Shift Register optimization.
+INFO: [Physopt 32-677] No candidate cells for Shift Register optimization found in the design
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-526] No candidate cells for BRAM register optimization found in the design
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-846] No candidate cells for URAM register optimization found in the design
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-846] No candidate cells for URAM register optimization found in the design
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-949] No candidate nets found for dynamic/static region interface net replication
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.032 . Memory (MB): peak = 4143.844 ; gain = 0.000
+
+Summary of Physical Synthesis Optimizations
+============================================
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+|  Optimization                                     |  Added Cells  |  Removed Cells  |  Optimized Cells/Nets  |  Dont Touch  |  Iterations  |  Elapsed   |
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+|  LUT Combining                                    |         1000  |            685  |                  1685  |           0  |           1  |  00:00:04  |
+|  Retime                                           |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Very High Fanout                                 |            0  |              0  |                     0  |           0  |           1  |  00:00:01  |
+|  DSP Register                                     |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Shift Register to Pipeline                       |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Shift Register                                   |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  BRAM Register                                    |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  URAM Register                                    |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Dynamic/Static Region Interface Net Replication  |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Total                                            |         1000  |            685  |                  1685  |           0  |           9  |  00:00:05  |
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Phase 2.5.2 Physical Synthesis In Placer | Checksum: 2b6ef82db
+
+Time (s): cpu = 00:04:30 ; elapsed = 00:02:57 . Memory (MB): peak = 4143.844 ; gain = 0.000
+Phase 2.5 Global Place Phase2 | Checksum: 285e5f47e
+
+Time (s): cpu = 00:04:35 ; elapsed = 00:03:00 . Memory (MB): peak = 4143.844 ; gain = 0.000
+Phase 2 Global Placement | Checksum: 285e5f47e
+
+Time (s): cpu = 00:04:35 ; elapsed = 00:03:00 . Memory (MB): peak = 4143.844 ; gain = 0.000
+
+Phase 3 Detail Placement
+
+Phase 3.1 Commit Multi Column Macros
+Phase 3.1 Commit Multi Column Macros | Checksum: 2464bd3f1
+
+Time (s): cpu = 00:04:51 ; elapsed = 00:03:09 . Memory (MB): peak = 4143.844 ; gain = 0.000
+
+Phase 3.2 Commit Most Macros & LUTRAMs
+Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 2ae259cbc
+
+Time (s): cpu = 00:05:23 ; elapsed = 00:03:30 . Memory (MB): peak = 4143.844 ; gain = 0.000
+
+Phase 3.3 Area Swap Optimization
+Phase 3.3 Area Swap Optimization | Checksum: 2bb1b7737
+
+Time (s): cpu = 00:05:25 ; elapsed = 00:03:31 . Memory (MB): peak = 4143.844 ; gain = 0.000
+
+Phase 3.4 Pipeline Register Optimization
+Phase 3.4 Pipeline Register Optimization | Checksum: 292063c31
+
+Time (s): cpu = 00:05:25 ; elapsed = 00:03:31 . Memory (MB): peak = 4143.844 ; gain = 0.000
+
+Phase 3.5 Fast Optimization
+Phase 3.5 Fast Optimization | Checksum: 2e19c3f8c
+
+Time (s): cpu = 00:06:06 ; elapsed = 00:04:02 . Memory (MB): peak = 4143.844 ; gain = 0.000
+
+Phase 3.6 Small Shape Detail Placement
+Phase 3.6 Small Shape Detail Placement | Checksum: 33932ed6e
+
+Time (s): cpu = 00:06:56 ; elapsed = 00:05:02 . Memory (MB): peak = 4143.844 ; gain = 0.000
+
+Phase 3.7 Re-assign LUT pins
+Phase 3.7 Re-assign LUT pins | Checksum: 2bbfae569
+
+Time (s): cpu = 00:07:02 ; elapsed = 00:05:08 . Memory (MB): peak = 4143.844 ; gain = 0.000
+
+Phase 3.8 Pipeline Register Optimization
+Phase 3.8 Pipeline Register Optimization | Checksum: 1f94d5194
+
+Time (s): cpu = 00:07:04 ; elapsed = 00:05:10 . Memory (MB): peak = 4143.844 ; gain = 0.000
+
+Phase 3.9 Fast Optimization
+Phase 3.9 Fast Optimization | Checksum: 2ef67cd66
+
+Time (s): cpu = 00:07:57 ; elapsed = 00:05:46 . Memory (MB): peak = 4143.844 ; gain = 0.000
+Phase 3 Detail Placement | Checksum: 2ef67cd66
+
+Time (s): cpu = 00:07:58 ; elapsed = 00:05:46 . Memory (MB): peak = 4143.844 ; gain = 0.000
+
+Phase 4 Post Placement Optimization and Clean-Up
+
+Phase 4.1 Post Commit Optimization
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+
+Phase 4.1.1 Post Placement Optimization
+Post Placement Optimization Initialization | Checksum: 1bb8f05e6
+
+Phase 4.1.1.1 BUFG Insertion
+
+Starting Physical Synthesis Task
+
+Phase 1 Physical Synthesis Initialization
+INFO: [Physopt 32-721] Multithreading enabled for phys_opt_design using a maximum of 2 CPUs
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-16.831 | TNS=-5696.174 |
+Phase 1 Physical Synthesis Initialization | Checksum: 5bb5445c
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:04 . Memory (MB): peak = 4143.844 ; gain = 0.000
+INFO: [Place 46-33] Processed net gpu_reset, BUFG insertion was skipped due to placement/routing conflicts.
+INFO: [Place 46-56] BUFG insertion identified 1 candidate nets. Inserted BUFG: 0, Replicated BUFG Driver: 0, Skipped due to Placement/Routing Conflicts: 1, Skipped due to Timing Degradation: 0, Skipped due to netlist editing failed: 0.
+Ending Physical Synthesis Task | Checksum: 18322b5e9
+
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:05 . Memory (MB): peak = 4143.844 ; gain = 0.000
+Phase 4.1.1.1 BUFG Insertion | Checksum: 1bb8f05e6
+
+Time (s): cpu = 00:08:46 ; elapsed = 00:06:15 . Memory (MB): peak = 4143.844 ; gain = 0.000
+
+Phase 4.1.1.2 Post Placement Timing Optimization
+INFO: [Place 30-746] Post Placement Timing Summary WNS=-12.832. For the most accurate timing information please run report_timing.
+Phase 4.1.1.2 Post Placement Timing Optimization | Checksum: 1c2aa92dc
+
+Time (s): cpu = 00:09:39 ; elapsed = 00:06:58 . Memory (MB): peak = 4143.844 ; gain = 0.000
+
+Time (s): cpu = 00:09:39 ; elapsed = 00:06:58 . Memory (MB): peak = 4143.844 ; gain = 0.000
+Phase 4.1 Post Commit Optimization | Checksum: 1c2aa92dc
+
+Time (s): cpu = 00:09:40 ; elapsed = 00:06:58 . Memory (MB): peak = 4143.844 ; gain = 0.000
+
+Phase 4.2 Post Placement Cleanup
+Phase 4.2 Post Placement Cleanup | Checksum: 1c2aa92dc
+
+Time (s): cpu = 00:09:41 ; elapsed = 00:06:59 . Memory (MB): peak = 4143.844 ; gain = 0.000
+
+Phase 4.3 Placer Reporting
+
+Phase 4.3.1 Print Estimated Congestion
+INFO: [Place 30-612] Post-Placement Estimated Congestion 
+ ____________________________________________________
+|           | Global Congestion | Short Congestion  |
+| Direction | Region Size       | Region Size       |
+|___________|___________________|___________________|
+|      North|                8x8|              16x16|
+|___________|___________________|___________________|
+|      South|                8x8|                4x4|
+|___________|___________________|___________________|
+|       East|                2x2|                4x4|
+|___________|___________________|___________________|
+|       West|                2x2|                1x1|
+|___________|___________________|___________________|
+
+Phase 4.3.1 Print Estimated Congestion | Checksum: 1c2aa92dc
+
+Time (s): cpu = 00:09:42 ; elapsed = 00:07:00 . Memory (MB): peak = 4143.844 ; gain = 0.000
+Phase 4.3 Placer Reporting | Checksum: 1c2aa92dc
+
+Time (s): cpu = 00:09:43 ; elapsed = 00:07:00 . Memory (MB): peak = 4143.844 ; gain = 0.000
+
+Phase 4.4 Final Placement Cleanup
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.051 . Memory (MB): peak = 4143.844 ; gain = 0.000
+
+Time (s): cpu = 00:09:43 ; elapsed = 00:07:00 . Memory (MB): peak = 4143.844 ; gain = 0.000
+Phase 4 Post Placement Optimization and Clean-Up | Checksum: 22a69faa8
+
+Time (s): cpu = 00:09:44 ; elapsed = 00:07:01 . Memory (MB): peak = 4143.844 ; gain = 0.000
+Ending Placer Task | Checksum: 227fb946b
+
+Time (s): cpu = 00:09:44 ; elapsed = 00:07:01 . Memory (MB): peak = 4143.844 ; gain = 0.000
+38 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+place_design completed successfully
+place_design: Time (s): cpu = 00:09:56 ; elapsed = 00:07:08 . Memory (MB): peak = 4143.844 ; gain = 0.000
+# phys_opt_design
+Command: phys_opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a100t'
+
+Starting Initial Update Timing Task
+
+Time (s): cpu = 00:00:30 ; elapsed = 00:00:17 . Memory (MB): peak = 4143.844 ; gain = 0.000
+INFO: [Vivado_Tcl 4-1435] PhysOpt_Tcl_Interface Runtime Before Starting Physical Synthesis Task | CPU: 31.00s |  WALL: 16.74s
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.034 . Memory (MB): peak = 4143.844 ; gain = 0.000
+
+Starting Physical Synthesis Task
+
+Phase 1 Physical Synthesis Initialization
+INFO: [Physopt 32-721] Multithreading enabled for phys_opt_design using a maximum of 2 CPUs
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-12.832 | TNS=-4774.829 |
+Phase 1 Physical Synthesis Initialization | Checksum: 11d810b51
+
+Time (s): cpu = 00:00:16 ; elapsed = 00:00:07 . Memory (MB): peak = 4143.844 ; gain = 0.000
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-12.832 | TNS=-4774.829 |
+
+Phase 2 DSP Register Optimization
+INFO: [Physopt 32-456] No candidate cells for DSP register optimization found in the design.
+INFO: [Physopt 32-775] End 2 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+Phase 2 DSP Register Optimization | Checksum: 11d810b51
+
+Time (s): cpu = 00:00:16 ; elapsed = 00:00:07 . Memory (MB): peak = 4143.844 ; gain = 0.000
+
+Phase 3 Critical Path Optimization
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-12.832 | TNS=-4774.829 |
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_read_address_reg[3][7]_0[0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net g_mmcm.clk50_raw. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-710] Processed net u_gpu/data_memory_controller/mem_read_address[3][0]_i_1_n_0. Critical path length was reduced through logic transformation on cell u_gpu/data_memory_controller/mem_read_address[3][0]_i_1_comp.
+INFO: [Physopt 32-735] Processed net u_gpu/data_memory_controller/mem_read_address[3][0]_i_3_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-12.822 | TNS=-4774.221 |
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_read_address_reg[3][7]_0[5]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-710] Processed net u_gpu/data_memory_controller/mem_read_address[3][5]_i_1_n_0. Critical path length was reduced through logic transformation on cell u_gpu/data_memory_controller/mem_read_address[3][5]_i_1_comp.
+INFO: [Physopt 32-735] Processed net u_gpu/data_memory_controller/mem_read_address[3][5]_i_3_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-12.800 | TNS=-4773.841 |
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_read_address_reg[3][7]_0[2]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-710] Processed net u_gpu/data_memory_controller/mem_read_address[3][2]_i_1_n_0. Critical path length was reduced through logic transformation on cell u_gpu/data_memory_controller/mem_read_address[3][2]_i_1_comp.
+INFO: [Physopt 32-735] Processed net u_gpu/data_memory_controller/mem_read_address[3][2]_i_3_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-12.797 | TNS=-4773.622 |
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_read_address_reg[3][7]_0[6]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 21 pins.
+INFO: [Physopt 32-735] Processed net u_gpu/data_memory_controller/mem_read_address[3][6]_i_4_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-12.790 | TNS=-4773.482 |
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_read_address_reg[3][7]_0[3]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-710] Processed net u_gpu/data_memory_controller/mem_read_address[3][3]_i_1_n_0. Critical path length was reduced through logic transformation on cell u_gpu/data_memory_controller/mem_read_address[3][3]_i_1_comp.
+INFO: [Physopt 32-735] Processed net u_gpu/data_memory_controller/mem_read_address[3][3]_i_3_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-12.773 | TNS=-4773.240 |
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_read_address_reg[3][7]_0[4]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 14 pins.
+INFO: [Physopt 32-735] Processed net u_gpu/data_memory_controller/mem_read_address[3][4]_i_3_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-12.751 | TNS=-4772.884 |
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_read_address_reg[3][7]_0[7]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 23 pins.
+INFO: [Physopt 32-735] Processed net u_gpu/data_memory_controller/mem_read_address[3][7]_i_8_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-12.721 | TNS=-4772.686 |
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_write_data_reg_n_0_[3][4]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 24 pins.
+INFO: [Physopt 32-735] Processed net u_gpu/data_memory_controller/mem_write_data[3][4]_i_3_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-12.657 | TNS=-4772.081 |
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_read_address[3][6]_i_4_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 20 pins.
+INFO: [Physopt 32-735] Processed net u_gpu/data_memory_controller/mem_read_address[3][6]_i_10_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-12.640 | TNS=-4771.928 |
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_read_address_reg[3][7]_0[1]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 21 pins.
+INFO: [Physopt 32-735] Processed net u_gpu/data_memory_controller/mem_read_address[3][1]_i_3_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-12.589 | TNS=-4771.726 |
+INFO: [Physopt 32-663] Processed net u_gpu/data_memory_controller/current_consumer_reg[3][3]_rep__0_n_0.  Re-placed instance u_gpu/data_memory_controller/current_consumer_reg[3][3]_rep__0
+INFO: [Physopt 32-735] Processed net u_gpu/data_memory_controller/current_consumer_reg[3][3]_rep__0_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-12.581 | TNS=-4771.392 |
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 17 pins.
+INFO: [Physopt 32-735] Processed net u_gpu/data_memory_controller/mem_read_address[3][2]_i_3_n_0_repN. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-12.576 | TNS=-4771.106 |
+INFO: [Physopt 32-663] Processed net u_gpu/data_memory_controller/current_consumer_reg[3][3]_rep__1_n_0.  Re-placed instance u_gpu/data_memory_controller/current_consumer_reg[3][3]_rep__1
+INFO: [Physopt 32-735] Processed net u_gpu/data_memory_controller/current_consumer_reg[3][3]_rep__1_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-12.553 | TNS=-4770.618 |
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_read_address[3][7]_i_8_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 21 pins.
+INFO: [Physopt 32-735] Processed net u_gpu/data_memory_controller/mem_read_address[3][7]_i_21_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-12.548 | TNS=-4770.297 |
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 21 pins.
+INFO: [Physopt 32-735] Processed net u_gpu/data_memory_controller/mem_read_address[3][3]_i_3_n_0_repN. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-12.546 | TNS=-4770.294 |
+INFO: [Physopt 32-663] Processed net u_gpu/data_memory_controller/mem_write_data_reg_n_0_[3][2].  Re-placed instance u_gpu/data_memory_controller/mem_write_data_reg[3][2]
+INFO: [Physopt 32-735] Processed net u_gpu/data_memory_controller/mem_write_data_reg_n_0_[3][2]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-12.546 | TNS=-4770.496 |
+INFO: [Physopt 32-663] Processed net u_gpu/data_memory_controller/mem_write_data_reg_n_0_[3][3].  Re-placed instance u_gpu/data_memory_controller/mem_write_data_reg[3][3]
+INFO: [Physopt 32-735] Processed net u_gpu/data_memory_controller/mem_write_data_reg_n_0_[3][3]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-12.545 | TNS=-4770.689 |
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_read_address[3][3]_i_3_n_0_repN. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_read_address[3][3]_i_5_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-710] Processed net u_gpu/data_memory_controller/mem_read_address[3][3]_i_5_n_0. Critical path length was reduced through logic transformation on cell u_gpu/data_memory_controller/mem_read_address[3][3]_i_5_comp.
+INFO: [Physopt 32-735] Processed net u_gpu/data_memory_controller/current_consumer[3][1]_i_2_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-12.544 | TNS=-4770.596 |
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_write_data_reg_n_0_[3][6]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 22 pins.
+INFO: [Physopt 32-735] Processed net u_gpu/data_memory_controller/mem_write_data[3][6]_i_3_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-12.523 | TNS=-4769.940 |
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_write_address_reg_n_0_[3][3]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-134] Processed net u_gpu/data_memory_controller/mem_write_valid[3]_i_3_n_0. Rewiring did not optimize the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 22 pins.
+INFO: [Physopt 32-735] Processed net u_gpu/data_memory_controller/mem_write_valid[3]_i_3_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-12.503 | TNS=-4767.884 |
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_read_address[3][6]_i_10_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 18 pins.
+INFO: [Physopt 32-735] Processed net u_gpu/data_memory_controller/mem_read_address[3][6]_i_17_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-12.495 | TNS=-4767.727 |
+INFO: [Physopt 32-663] Processed net u_gpu/data_memory_controller/current_consumer_reg[3][3]_rep__2_n_0.  Re-placed instance u_gpu/data_memory_controller/current_consumer_reg[3][3]_rep__2
+INFO: [Physopt 32-735] Processed net u_gpu/data_memory_controller/current_consumer_reg[3][3]_rep__2_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-12.469 | TNS=-4767.247 |
+INFO: [Physopt 32-663] Processed net u_gpu/data_memory_controller/mem_write_data_reg_n_0_[3][3].  Re-placed instance u_gpu/data_memory_controller/mem_write_data_reg[3][3]
+INFO: [Physopt 32-735] Processed net u_gpu/data_memory_controller/mem_write_data_reg_n_0_[3][3]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-12.463 | TNS=-4767.307 |
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_write_data_reg_n_0_[3][3]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 23 pins.
+INFO: [Physopt 32-735] Processed net u_gpu/data_memory_controller/mem_write_data[3][3]_i_3_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-12.441 | TNS=-4766.966 |
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 17 pins.
+INFO: [Physopt 32-735] Processed net u_gpu/data_memory_controller/mem_read_address[3][5]_i_3_n_0_repN. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-12.438 | TNS=-4766.803 |
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_read_address[3][1]_i_3_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 21 pins.
+INFO: [Physopt 32-735] Processed net u_gpu/data_memory_controller/mem_read_address[3][1]_i_8_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-12.417 | TNS=-4766.472 |
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_read_address[3][4]_i_3_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 18 pins.
+INFO: [Physopt 32-735] Processed net u_gpu/data_memory_controller/mem_read_address[3][4]_i_8_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-12.406 | TNS=-4766.461 |
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_read_address[3][4]_i_8_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 18 pins.
+INFO: [Physopt 32-735] Processed net u_gpu/data_memory_controller/mem_read_address[3][4]_i_14_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-12.402 | TNS=-4766.296 |
+INFO: [Physopt 32-710] Processed net u_gpu/data_memory_controller/mem_write_address[3][7]_i_1_n_0. Critical path length was reduced through logic transformation on cell u_gpu/data_memory_controller/mem_write_address[3][7]_i_1_comp.
+INFO: [Physopt 32-735] Processed net u_gpu/data_memory_controller/mem_write_valid[3]_i_3_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-12.398 | TNS=-4765.633 |
+INFO: [Physopt 32-663] Processed net u_gpu/data_memory_controller/current_consumer_reg[3][3]_rep__0_n_0.  Re-placed instance u_gpu/data_memory_controller/current_consumer_reg[3][3]_rep__0
+INFO: [Physopt 32-735] Processed net u_gpu/data_memory_controller/current_consumer_reg[3][3]_rep__0_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-12.387 | TNS=-4765.463 |
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_read_address[3][3]_i_2_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-710] Processed net u_gpu/data_memory_controller/mem_read_address[3][3]_i_2_n_0. Critical path length was reduced through logic transformation on cell u_gpu/data_memory_controller/mem_read_address[3][3]_i_2_comp.
+INFO: [Physopt 32-735] Processed net u_gpu/data_memory_controller/current_consumer[3][1]_i_2_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-12.383 | TNS=-4765.431 |
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_write_data_reg_n_0_[3][5]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 20 pins.
+INFO: [Physopt 32-735] Processed net u_gpu/data_memory_controller/mem_write_data[3][5]_i_3_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-12.376 | TNS=-4765.109 |
+INFO: [Physopt 32-81] Processed net u_gpu/data_memory_controller/current_consumer[3][1]_i_4_n_0. Replicated 1 times.
+INFO: [Physopt 32-735] Processed net u_gpu/data_memory_controller/current_consumer[3][1]_i_4_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-12.361 | TNS=-4765.007 |
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 19 pins.
+INFO: [Physopt 32-735] Processed net u_gpu/data_memory_controller/mem_write_valid[3]_i_3_n_0_repN. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-12.358 | TNS=-4764.064 |
+INFO: [Physopt 32-663] Processed net u_gpu/data_memory_controller/mem_write_data_reg_n_0_[3][2].  Re-placed instance u_gpu/data_memory_controller/mem_write_data_reg[3][2]
+INFO: [Physopt 32-735] Processed net u_gpu/data_memory_controller/mem_write_data_reg_n_0_[3][2]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-12.346 | TNS=-4764.061 |
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_read_address[3][6]_i_17_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net u_gpu/data_memory_controller/mem_read_address[3][6]_i_23_n_0.  Re-placed instance u_gpu/data_memory_controller/mem_read_address[3][6]_i_23
+INFO: [Physopt 32-735] Processed net u_gpu/data_memory_controller/mem_read_address[3][6]_i_23_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-12.340 | TNS=-4764.011 |
+INFO: [Physopt 32-663] Processed net u_gpu/data_memory_controller/current_consumer_reg[3][3]_rep_n_0.  Re-placed instance u_gpu/data_memory_controller/current_consumer_reg[3][3]_rep
+INFO: [Physopt 32-735] Processed net u_gpu/data_memory_controller/current_consumer_reg[3][3]_rep_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-12.302 | TNS=-4763.487 |
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_write_valid[3]_i_3_n_0_repN. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-134] Processed net u_gpu/data_memory_controller/mem_write_valid[3]_i_4_n_0. Rewiring did not optimize the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 21 pins.
+INFO: [Physopt 32-735] Processed net u_gpu/data_memory_controller/mem_write_valid[3]_i_4_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-12.295 | TNS=-4763.092 |
+INFO: [Physopt 32-710] Processed net u_gpu/data_memory_controller/mem_read_address[3][6]_i_1_n_0. Critical path length was reduced through logic transformation on cell u_gpu/data_memory_controller/mem_read_address[3][6]_i_1_comp.
+INFO: [Physopt 32-735] Processed net u_gpu/data_memory_controller/mem_read_address[3][6]_i_2_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-12.294 | TNS=-4763.077 |
+INFO: [Physopt 32-710] Processed net u_gpu/data_memory_controller/mem_read_address[3][2]_i_1_n_0. Critical path length was reduced through logic transformation on cell u_gpu/data_memory_controller/mem_read_address[3][2]_i_1_comp_1.
+INFO: [Physopt 32-735] Processed net u_gpu/data_memory_controller/mem_read_address[3][2]_i_3_n_0_repN. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-12.284 | TNS=-4763.030 |
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_write_valid[3]_i_7_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-710] Processed net u_gpu/data_memory_controller/mem_write_valid[3]_i_7_n_0. Critical path length was reduced through logic transformation on cell u_gpu/data_memory_controller/mem_write_valid[3]_i_7_comp.
+INFO: [Physopt 32-735] Processed net u_gpu/data_memory_controller/mem_write_address[3][7]_i_9_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-12.280 | TNS=-4762.373 |
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 21 pins.
+INFO: [Physopt 32-735] Processed net u_gpu/data_memory_controller/mem_read_address[3][6]_i_23_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-12.276 | TNS=-4762.201 |
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 24 pins.
+INFO: [Physopt 32-735] Processed net u_gpu/data_memory_controller/mem_read_address[3][5]_i_3_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-12.275 | TNS=-4762.196 |
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 14 pins.
+INFO: [Physopt 32-735] Processed net u_gpu/data_memory_controller/mem_read_address[3][3]_i_4_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-12.271 | TNS=-4762.150 |
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 18 pins.
+INFO: [Physopt 32-735] Processed net u_gpu/data_memory_controller/mem_read_address[3][5]_i_3_n_0_repN. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-12.271 | TNS=-4762.150 |
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 22 pins.
+INFO: [Physopt 32-735] Processed net u_gpu/data_memory_controller/mem_read_address[3][5]_i_8_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-12.256 | TNS=-4762.135 |
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 18 pins.
+INFO: [Physopt 32-735] Processed net u_gpu/data_memory_controller/mem_read_address[3][5]_i_3_n_0_repN. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-12.253 | TNS=-4762.121 |
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_write_address_reg_n_0_[3][4]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 18 pins.
+INFO: [Physopt 32-735] Processed net u_gpu/data_memory_controller/mem_write_address[3][4]_i_3_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-12.247 | TNS=-4761.913 |
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 18 pins.
+INFO: [Physopt 32-735] Processed net u_gpu/data_memory_controller/mem_read_address[3][2]_i_3_n_0_repN. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-12.246 | TNS=-4761.824 |
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_write_address[3][3]_i_4_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_write_address[3][3]_i_12_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 22 pins.
+INFO: [Physopt 32-735] Processed net u_gpu/data_memory_controller/mem_write_valid[3]_i_10_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-12.243 | TNS=-4760.074 |
+INFO: [Physopt 32-710] Processed net u_gpu/data_memory_controller/mem_write_valid[3]_i_7_n_0. Critical path length was reduced through logic transformation on cell u_gpu/data_memory_controller/mem_write_valid[3]_i_7_comp_1.
+INFO: [Physopt 32-735] Processed net u_gpu/data_memory_controller/mem_write_address[3][7]_i_10_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-12.242 | TNS=-4759.578 |
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_read_address[3][5]_i_3_n_0_repN. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_read_address[3][5]_i_11_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-81] Processed net u_gpu/data_memory_controller/mem_read_address[3][7]_i_25_n_0. Replicated 1 times.
+INFO: [Physopt 32-735] Processed net u_gpu/data_memory_controller/mem_read_address[3][7]_i_25_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-12.241 | TNS=-4759.600 |
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_read_address[3][4]_i_14_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-710] Processed net u_gpu/data_memory_controller/mem_read_address[3][4]_i_14_n_0. Critical path length was reduced through logic transformation on cell u_gpu/data_memory_controller/mem_read_address[3][4]_i_14_comp.
+INFO: [Physopt 32-735] Processed net u_gpu/data_memory_controller/mem_read_address[3][4]_i_20_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-12.233 | TNS=-4759.536 |
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_read_address[3][5]_i_5_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-710] Processed net u_gpu/data_memory_controller/mem_read_address[3][5]_i_5_n_0. Critical path length was reduced through logic transformation on cell u_gpu/data_memory_controller/mem_read_address[3][5]_i_5_comp.
+INFO: [Physopt 32-735] Processed net u_gpu/data_memory_controller/current_consumer[3][1]_i_2_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-12.231 | TNS=-4759.540 |
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_read_address[3][7]_i_21_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 21 pins.
+INFO: [Physopt 32-735] Processed net u_gpu/data_memory_controller/mem_read_address[3][7]_i_37_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-12.230 | TNS=-4759.525 |
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 21 pins.
+INFO: [Physopt 32-735] Processed net u_gpu/data_memory_controller/channel_serving_consumer[125]_i_5_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-12.219 | TNS=-4738.855 |
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_write_data_reg_n_0_[3][2]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 22 pins.
+INFO: [Physopt 32-735] Processed net u_gpu/data_memory_controller/mem_write_data[3][2]_i_3_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-12.216 | TNS=-4738.763 |
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_read_address[3][7]_i_37_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 18 pins.
+INFO: [Physopt 32-735] Processed net u_gpu/data_memory_controller/mem_read_address[3][7]_i_51_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-12.214 | TNS=-4738.556 |
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_write_address[3][7]_i_10_n_0_repN. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/channel_serving_consumer[125]_i_10_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-710] Processed net u_gpu/data_memory_controller/channel_serving_consumer[125]_i_10_n_0. Critical path length was reduced through logic transformation on cell u_gpu/data_memory_controller/channel_serving_consumer[125]_i_10_comp.
+INFO: [Physopt 32-735] Processed net u_gpu/data_memory_controller/channel_serving_consumer[121]_i_6_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-12.206 | TNS=-4738.197 |
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 14 pins.
+INFO: [Physopt 32-735] Processed net u_gpu/data_memory_controller/mem_read_address[3][3]_i_6_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-12.187 | TNS=-4738.164 |
+INFO: [Physopt 32-710] Processed net u_gpu/data_memory_controller/mem_write_address[3][7]_i_10_n_0_repN. Critical path length was reduced through logic transformation on cell u_gpu/data_memory_controller/mem_write_address[3][7]_i_10_comp_1.
+INFO: [Physopt 32-735] Processed net u_gpu/data_memory_controller/mem_write_address[3][7]_i_23_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-12.185 | TNS=-4737.411 |
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_write_address_reg_n_0_[2][3]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-710] Processed net u_gpu/data_memory_controller/mem_write_address[2][3]_i_1_n_0. Critical path length was reduced through logic transformation on cell u_gpu/data_memory_controller/mem_write_address[2][3]_i_1_comp.
+INFO: [Physopt 32-735] Processed net u_gpu/data_memory_controller/mem_write_address[2][3]_i_4_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-12.177 | TNS=-4737.191 |
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_read_address[3][4]_i_20_n_0_repN. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-710] Processed net u_gpu/data_memory_controller/mem_read_address[3][4]_i_20_n_0_repN. Critical path length was reduced through logic transformation on cell u_gpu/data_memory_controller/mem_read_address[3][4]_i_20_comp_2.
+INFO: [Physopt 32-735] Processed net u_gpu/data_memory_controller/mem_read_address[3][4]_i_19_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-12.172 | TNS=-4736.977 |
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_read_address[3][3]_i_4_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-134] Processed net u_gpu/data_memory_controller/mem_read_address[3][7]_i_25_n_0. Rewiring did not optimize the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 21 pins.
+INFO: [Physopt 32-735] Processed net u_gpu/data_memory_controller/mem_read_address[3][7]_i_25_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-12.169 | TNS=-4736.857 |
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_read_address[3][5]_i_4_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net u_gpu/data_memory_controller/mem_read_address[3][7]_i_25_n_0_repN.  Re-placed instance u_gpu/data_memory_controller/mem_read_address[3][7]_i_25_replica
+INFO: [Physopt 32-735] Processed net u_gpu/data_memory_controller/mem_read_address[3][7]_i_25_n_0_repN. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-12.158 | TNS=-4736.833 |
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_read_address[3][2]_i_3_n_0_repN. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 18 pins.
+INFO: [Physopt 32-735] Processed net u_gpu/data_memory_controller/mem_read_address[3][2]_i_6_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-12.153 | TNS=-4736.738 |
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_write_data_reg_n_0_[3][1]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 22 pins.
+INFO: [Physopt 32-735] Processed net u_gpu/data_memory_controller/mem_write_data[3][1]_i_3_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-12.145 | TNS=-4736.527 |
+INFO: [Physopt 32-710] Processed net u_gpu/data_memory_controller/mem_read_address[3][5]_i_11_n_0. Critical path length was reduced through logic transformation on cell u_gpu/data_memory_controller/mem_read_address[3][5]_i_11_comp.
+INFO: [Physopt 32-735] Processed net u_gpu/data_memory_controller/mem_read_address[3][6]_i_14_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-12.141 | TNS=-4736.587 |
+INFO: [Physopt 32-134] Processed net u_gpu/data_memory_controller/mem_write_valid[3]_i_6_n_0. Rewiring did not optimize the net.
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_write_valid[3]_i_6_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_write_valid[3]_i_14_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-134] Processed net u_gpu/data_memory_controller/channel_serving_consumer[118]_i_4_n_0. Rewiring did not optimize the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 18 pins.
+INFO: [Physopt 32-735] Processed net u_gpu/data_memory_controller/channel_serving_consumer[118]_i_4_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-12.118 | TNS=-4721.415 |
+INFO: [Physopt 32-81] Processed net u_gpu/data_memory_controller/channel_serving_consumer[125]_i_8_n_0. Replicated 1 times.
+INFO: [Physopt 32-735] Processed net u_gpu/data_memory_controller/channel_serving_consumer[125]_i_8_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-12.107 | TNS=-4720.216 |
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_read_address[3][1]_i_8_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 21 pins.
+INFO: [Physopt 32-735] Processed net u_gpu/data_memory_controller/mem_read_address[3][1]_i_14_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-12.107 | TNS=-4719.739 |
+INFO: [Physopt 32-710] Processed net u_gpu/data_memory_controller/mem_read_address[3][5]_i_11_n_0. Critical path length was reduced through logic transformation on cell u_gpu/data_memory_controller/mem_read_address[3][5]_i_11_comp_1.
+INFO: [Physopt 32-735] Processed net u_gpu/data_memory_controller/mem_read_address[3][6]_i_14_n_0_repN. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-12.094 | TNS=-4719.582 |
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 21 pins.
+INFO: [Physopt 32-735] Processed net u_gpu/data_memory_controller/mem_read_address[3][0]_i_8_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-12.063 | TNS=-4719.371 |
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 20 pins.
+INFO: [Physopt 32-735] Processed net u_gpu/data_memory_controller/mem_read_address[3][2]_i_8_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-12.059 | TNS=-4719.162 |
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_read_address[3][6]_i_23_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net u_gpu/data_memory_controller/mem_read_address[3][6]_i_30_n_0.  Re-placed instance u_gpu/data_memory_controller/mem_read_address[3][6]_i_30
+INFO: [Physopt 32-735] Processed net u_gpu/data_memory_controller/mem_read_address[3][6]_i_30_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-12.057 | TNS=-4719.077 |
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_write_address[3][3]_i_8_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_write_valid[3]_i_11_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-710] Processed net u_gpu/data_memory_controller/mem_write_valid[3]_i_11_n_0. Critical path length was reduced through logic transformation on cell u_gpu/data_memory_controller/mem_write_valid[3]_i_11_comp.
+INFO: [Physopt 32-735] Processed net u_gpu/data_memory_controller/channel_serving_consumer[117]_i_4_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-12.052 | TNS=-4719.070 |
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 18 pins.
+INFO: [Physopt 32-735] Processed net u_gpu/data_memory_controller/mem_read_address[3][3]_i_8_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-12.045 | TNS=-4718.760 |
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 18 pins.
+INFO: [Physopt 32-735] Processed net u_gpu/data_memory_controller/mem_write_address[3][4]_i_3_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-12.043 | TNS=-4718.569 |
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_write_valid[3]_i_10_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-710] Processed net u_gpu/data_memory_controller/mem_write_valid[3]_i_10_n_0. Critical path length was reduced through logic transformation on cell u_gpu/data_memory_controller/mem_write_valid[3]_i_10_comp.
+INFO: [Physopt 32-735] Processed net u_gpu/data_memory_controller/mem_write_valid[3]_i_16_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-12.043 | TNS=-4718.323 |
+INFO: [Physopt 32-710] Processed net u_gpu/data_memory_controller/mem_write_address[3][7]_i_10_n_0_repN. Critical path length was reduced through logic transformation on cell u_gpu/data_memory_controller/mem_write_address[3][7]_i_10_comp.
+INFO: [Physopt 32-735] Processed net u_gpu/data_memory_controller/channel_serving_consumer[123]_i_10_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-12.021 | TNS=-4717.427 |
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_write_data_reg_n_0_[3][7]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 22 pins.
+INFO: [Physopt 32-735] Processed net u_gpu/data_memory_controller/mem_write_data[3][7]_i_3_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-12.011 | TNS=-4717.197 |
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 21 pins.
+INFO: [Physopt 32-735] Processed net u_gpu/data_memory_controller/mem_write_address[3][7]_i_27_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-12.009 | TNS=-4716.581 |
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_read_address[3][7]_i_51_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 21 pins.
+INFO: [Physopt 32-735] Processed net u_gpu/data_memory_controller/mem_read_address[3][7]_i_67_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-12.001 | TNS=-4716.243 |
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_write_address[3][3]_i_16_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-710] Processed net u_gpu/data_memory_controller/mem_write_address[3][3]_i_16_n_0. Critical path length was reduced through logic transformation on cell u_gpu/data_memory_controller/mem_write_address[3][3]_i_16_comp.
+INFO: [Physopt 32-735] Processed net u_gpu/data_memory_controller/mem_write_valid[3]_i_16_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-11.988 | TNS=-4716.265 |
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_write_address_reg_n_0_[3][5]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 22 pins.
+INFO: [Physopt 32-735] Processed net u_gpu/data_memory_controller/mem_write_address[3][5]_i_4_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-11.987 | TNS=-4716.094 |
+INFO: [Physopt 32-710] Processed net u_gpu/data_memory_controller/mem_write_address[3][7]_i_10_n_0_repN. Critical path length was reduced through logic transformation on cell u_gpu/data_memory_controller/mem_write_address[3][7]_i_10_comp_2.
+INFO: [Physopt 32-735] Processed net u_gpu/data_memory_controller/channel_serving_consumer[125]_i_8_n_0_repN. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-11.975 | TNS=-4715.390 |
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 17 pins.
+INFO: [Physopt 32-735] Processed net u_gpu/data_memory_controller/mem_read_address[3][6]_i_30_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-11.969 | TNS=-4715.037 |
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/channel_serving_consumer[117]_i_4_n_0_repN. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-710] Processed net u_gpu/data_memory_controller/channel_serving_consumer[117]_i_4_n_0_repN. Critical path length was reduced through logic transformation on cell u_gpu/data_memory_controller/channel_serving_consumer[117]_i_4_comp_1.
+INFO: [Physopt 32-735] Processed net u_gpu/data_memory_controller/channel_serving_consumer[118]_i_8_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-11.966 | TNS=-4714.978 |
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_write_data_reg_n_0_[3][0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 23 pins.
+INFO: [Physopt 32-735] Processed net u_gpu/data_memory_controller/mem_write_data[3][0]_i_4_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-11.965 | TNS=-4714.752 |
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_write_address[2][3]_i_4_n_0_repN. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-710] Processed net u_gpu/data_memory_controller/mem_write_address[2][3]_i_4_n_0_repN. Critical path length was reduced through logic transformation on cell u_gpu/data_memory_controller/mem_write_address[2][3]_i_4_comp_2.
+INFO: [Physopt 32-735] Processed net u_gpu/data_memory_controller/mem_write_address[2][3]_i_8_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-11.962 | TNS=-4714.590 |
+INFO: [Physopt 32-663] Processed net u_gpu/data_memory_controller/mem_read_address[3][4]_i_20_n_0.  Re-placed instance u_gpu/data_memory_controller/mem_read_address[3][4]_i_20_comp
+INFO: [Physopt 32-735] Processed net u_gpu/data_memory_controller/mem_read_address[3][4]_i_20_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-11.950 | TNS=-4714.426 |
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_read_address[3][5]_i_8_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 19 pins.
+INFO: [Physopt 32-735] Processed net u_gpu/data_memory_controller/mem_read_address[3][5]_i_14_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-11.943 | TNS=-4714.379 |
+INFO: [Physopt 32-134] Processed net u_gpu/data_memory_controller/channel_serving_consumer[118]_i_4_n_0. Rewiring did not optimize the net.
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/channel_serving_consumer[118]_i_4_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-710] Processed net u_gpu/data_memory_controller/channel_serving_consumer[118]_i_4_n_0. Critical path length was reduced through logic transformation on cell u_gpu/data_memory_controller/channel_serving_consumer[118]_i_4_comp.
+INFO: [Physopt 32-735] Processed net u_gpu/data_memory_controller/channel_serving_consumer[113]_i_4_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-11.935 | TNS=-4706.770 |
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/channel_serving_consumer[123]_i_10_n_0_repN. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net u_gpu/data_memory_controller/channel_serving_consumer[123]_i_2_n_0.  Re-placed instance u_gpu/data_memory_controller/channel_serving_consumer[123]_i_2
+INFO: [Physopt 32-735] Processed net u_gpu/data_memory_controller/channel_serving_consumer[123]_i_2_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-11.912 | TNS=-4706.338 |
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 23 pins.
+INFO: [Physopt 32-735] Processed net u_gpu/data_memory_controller/mem_write_address[3][7]_i_25_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-11.908 | TNS=-4705.909 |
+INFO: [Physopt 32-710] Processed net u_gpu/data_memory_controller/channel_serving_consumer[123]_i_10_n_0_repN. Critical path length was reduced through logic transformation on cell u_gpu/data_memory_controller/channel_serving_consumer[123]_i_10_comp_1.
+INFO: [Physopt 32-735] Processed net u_gpu/data_memory_controller/channel_serving_consumer[123]_i_2_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-11.904 | TNS=-4705.279 |
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_write_address[3][7]_i_27_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-81] Processed net u_gpu/data_memory_controller/channel_serving_consumer[113]_i_4_n_0. Replicated 1 times.
+INFO: [Physopt 32-735] Processed net u_gpu/data_memory_controller/channel_serving_consumer[113]_i_4_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-11.903 | TNS=-4705.574 |
+INFO: [Common 17-14] Message 'Physopt 32-619' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 20 pins.
+INFO: [Physopt 32-735] Processed net u_gpu/data_memory_controller/mem_read_address[3][6]_i_14_n_0_repN_1. Optimization improves timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 18 pins.
+INFO: [Physopt 32-735] Processed net u_gpu/data_memory_controller/channel_serving_consumer[113]_i_4_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-663] Processed net u_gpu/data_memory_controller/mem_read_address_reg[2][7]_0[3].  Re-placed instance u_gpu/data_memory_controller/mem_read_address_reg[2][3]
+INFO: [Physopt 32-735] Processed net u_gpu/data_memory_controller/mem_read_address_reg[2][7]_0[3]. Optimization improves timing on the net.
+INFO: [Common 17-14] Message 'Physopt 32-735' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 12 pins.
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_read_address[3][0]_i_8_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 20 pins.
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_write_valid[3]_i_15_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 21 pins.
+INFO: [Physopt 32-663] Processed net u_gpu/data_memory_controller/channel_serving_consumer[125]_i_8_n_0_repN.  Re-placed instance u_gpu/data_memory_controller/channel_serving_consumer[125]_i_8_replica_comp
+INFO: [Physopt 32-663] Processed net u_gpu/data_memory_controller/mem_write_data[3][5]_i_3_n_0.  Re-placed instance u_gpu/data_memory_controller/mem_write_data[3][5]_i_3
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_write_valid[3]_i_16_n_0_repN_1. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net u_gpu/data_memory_controller/channel_serving_consumer[112]_i_2_n_0.  Re-placed instance u_gpu/data_memory_controller/channel_serving_consumer[112]_i_2
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_write_address_reg_n_0_[2][1]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 19 pins.
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/controller_state_reg_n_0_[3][0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 22 pins.
+INFO: [Physopt 32-663] Processed net u_gpu/data_memory_controller/mem_write_address[2][3]_i_4_n_0.  Re-placed instance u_gpu/data_memory_controller/mem_write_address[2][3]_i_4_comp
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 26 pins.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 20 pins.
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/channel_serving_consumer[125]_i_8_n_0_repN. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-710] Processed net u_gpu/data_memory_controller/channel_serving_consumer[125]_i_8_n_0_repN. Critical path length was reduced through logic transformation on cell u_gpu/data_memory_controller/channel_serving_consumer[125]_i_8_replica_comp_1.
+INFO: [Physopt 32-663] Processed net u_gpu/data_memory_controller/mem_read_address_reg[2][7]_0[1].  Re-placed instance u_gpu/data_memory_controller/mem_read_address_reg[2][1]
+INFO: [Physopt 32-663] Processed net u_gpu/data_memory_controller/mem_read_address_reg[2][7]_0[4].  Re-placed instance u_gpu/data_memory_controller/mem_read_address_reg[2][4]
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_read_address[3][5]_i_14_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-710] Processed net u_gpu/data_memory_controller/mem_read_address[3][5]_i_14_n_0. Critical path length was reduced through logic transformation on cell u_gpu/data_memory_controller/mem_read_address[3][5]_i_14_comp.
+INFO: [Physopt 32-663] Processed net u_gpu/data_memory_controller/mem_read_address_reg[2][7]_0[2].  Re-placed instance u_gpu/data_memory_controller/mem_read_address_reg[2][2]
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_read_address[3][7]_i_36_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-710] Processed net u_gpu/data_memory_controller/mem_read_address[3][7]_i_36_n_0. Critical path length was reduced through logic transformation on cell u_gpu/data_memory_controller/mem_read_address[3][7]_i_36_comp.
+INFO: [Physopt 32-663] Processed net u_gpu/data_memory_controller/mem_write_data[3][1]_i_3_n_0.  Re-placed instance u_gpu/data_memory_controller/mem_write_data[3][1]_i_3
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 22 pins.
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_read_address[3][2]_i_8_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 18 pins.
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/channel_serving_consumer[118]_i_10_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-710] Processed net u_gpu/data_memory_controller/channel_serving_consumer[118]_i_10_n_0. Critical path length was reduced through logic transformation on cell u_gpu/data_memory_controller/channel_serving_consumer[118]_i_10_comp.
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_read_address[3][3]_i_8_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 24 pins.
+INFO: [Physopt 32-710] Processed net u_gpu/data_memory_controller/mem_write_valid[3]_i_16_n_0_repN_1. Critical path length was reduced through logic transformation on cell u_gpu/data_memory_controller/mem_write_valid[3]_i_16_comp_2.
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_write_address_reg_n_0_[3][1]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 23 pins.
+INFO: [Physopt 32-710] Processed net u_gpu/data_memory_controller/channel_serving_consumer[117]_i_4_n_0_repN. Critical path length was reduced through logic transformation on cell u_gpu/data_memory_controller/channel_serving_consumer[117]_i_4_comp.
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_read_address[3][1]_i_13_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-710] Processed net u_gpu/data_memory_controller/mem_read_address[3][1]_i_13_n_0. Critical path length was reduced through logic transformation on cell u_gpu/data_memory_controller/mem_read_address[3][1]_i_13_comp.
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_read_address[3][0]_i_14_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 15 pins.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 20 pins.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 22 pins.
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_read_address[3][7]_i_67_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-710] Processed net u_gpu/data_memory_controller/mem_read_address[3][7]_i_67_n_0. Critical path length was reduced through logic transformation on cell u_gpu/data_memory_controller/mem_read_address[3][7]_i_67_comp.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 18 pins.
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_read_address[3][7]_i_38_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-710] Processed net u_gpu/data_memory_controller/mem_read_address[3][7]_i_38_n_0. Critical path length was reduced through logic transformation on cell u_gpu/data_memory_controller/mem_read_address[3][7]_i_38_comp.
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/channel_serving_consumer[123]_i_8_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/channel_serving_consumer[117]_i_9_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-710] Processed net u_gpu/data_memory_controller/channel_serving_consumer[117]_i_9_n_0. Critical path length was reduced through logic transformation on cell u_gpu/data_memory_controller/channel_serving_consumer[117]_i_9_comp.
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_write_data_reg_n_0_[2][7]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-710] Processed net u_gpu/data_memory_controller/mem_write_data[2][7]_i_1_n_0. Critical path length was reduced through logic transformation on cell u_gpu/data_memory_controller/mem_write_data[2][7]_i_1_comp.
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_write_data_reg_n_0_[2][6]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-710] Processed net u_gpu/data_memory_controller/mem_write_data[2][6]_i_1_n_0. Critical path length was reduced through logic transformation on cell u_gpu/data_memory_controller/mem_write_data[2][6]_i_1_comp.
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_read_address[3][1]_i_14_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 18 pins.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 18 pins.
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_read_address[3][7]_i_5_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_read_address[3][7]_i_16_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 21 pins.
+INFO: [Physopt 32-663] Processed net u_gpu/data_memory_controller/mem_write_address[3][3]_i_11_n_0.  Re-placed instance u_gpu/data_memory_controller/mem_write_address[3][3]_i_11
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_read_address[3][6]_i_30_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net u_gpu/data_memory_controller/mem_read_address[3][6]_i_36_n_0.  Re-placed instance u_gpu/data_memory_controller/mem_read_address[3][6]_i_36
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 18 pins.
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_read_address[3][6]_i_19_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-710] Processed net u_gpu/data_memory_controller/mem_read_address[3][6]_i_19_n_0. Critical path length was reduced through logic transformation on cell u_gpu/data_memory_controller/mem_read_address[3][6]_i_19_comp.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 22 pins.
+INFO: [Physopt 32-663] Processed net u_gpu/data_memory_controller/mem_read_address_reg[2][7]_0[5].  Re-placed instance u_gpu/data_memory_controller/mem_read_address_reg[2][5]
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_write_valid[3]_i_5_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-710] Processed net u_gpu/data_memory_controller/mem_write_valid[3]_i_5_n_0. Critical path length was reduced through logic transformation on cell u_gpu/data_memory_controller/mem_write_valid[3]_i_5_comp.
+INFO: [Physopt 32-663] Processed net u_gpu/data_memory_controller/mem_read_address_reg[2][7]_0[0].  Re-placed instance u_gpu/data_memory_controller/mem_read_address_reg[2][0]
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_write_address[3][5]_i_4_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 24 pins.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 23 pins.
+INFO: [Physopt 32-663] Processed net u_gpu/data_memory_controller/mem_write_address[2][7]_i_5_n_0.  Re-placed instance u_gpu/data_memory_controller/mem_write_address[2][7]_i_5
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_write_address[3][5]_i_9_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_write_address[3][5]_i_17_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-710] Processed net u_gpu/data_memory_controller/mem_write_address[3][5]_i_17_n_0. Critical path length was reduced through logic transformation on cell u_gpu/data_memory_controller/mem_write_address[3][5]_i_17_comp.
+INFO: [Physopt 32-663] Processed net u_gpu/data_memory_controller/mem_read_address_reg[2][7]_0[6].  Re-placed instance u_gpu/data_memory_controller/mem_read_address_reg[2][6]
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 23 pins.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 21 pins.
+INFO: [Physopt 32-710] Processed net u_gpu/data_memory_controller/channel_serving_consumer[118]_i_4_n_0. Critical path length was reduced through logic transformation on cell u_gpu/data_memory_controller/channel_serving_consumer[118]_i_4_comp_1.
+INFO: [Physopt 32-663] Processed net u_gpu/data_memory_controller/mem_read_address_reg[2][7]_0[7].  Re-placed instance u_gpu/data_memory_controller/mem_read_address_reg[2][7]
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_write_data[3][7]_i_3_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_write_data[3][7]_i_10_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net u_gpu/data_memory_controller/mem_write_data[3][7]_i_19_n_0.  Re-placed instance u_gpu/data_memory_controller/mem_write_data[3][7]_i_19
+INFO: [Physopt 32-710] Processed net u_gpu/data_memory_controller/mem_write_address[2][1]_i_1_n_0. Critical path length was reduced through logic transformation on cell u_gpu/data_memory_controller/mem_write_address[2][1]_i_1_comp.
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/channel_serving_consumer[113]_i_4_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 21 pins.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 24 pins.
+INFO: [Physopt 32-710] Processed net u_gpu/data_memory_controller/mem_write_data[3][7]_i_10_n_0. Critical path length was reduced through logic transformation on cell u_gpu/data_memory_controller/mem_write_data[3][7]_i_10_comp.
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_write_address[2][3]_i_10_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-710] Processed net u_gpu/data_memory_controller/mem_write_address[2][3]_i_10_n_0. Critical path length was reduced through logic transformation on cell u_gpu/data_memory_controller/mem_write_address[2][3]_i_10_comp.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 16 pins.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 22 pins.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 18 pins.
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_read_address[3][3]_i_14_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 15 pins.
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_write_address_reg_n_0_[3][6]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 23 pins.
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_read_address[3][2]_i_14_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 20 pins.
+INFO: [Physopt 32-663] Processed net u_gpu/data_memory_controller/current_consumer_reg[3][0]_rep__3_n_0.  Re-placed instance u_gpu/data_memory_controller/current_consumer_reg[3][0]_rep__3
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_write_address[3][3]_i_11_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-710] Processed net u_gpu/data_memory_controller/mem_write_address[3][3]_i_11_n_0. Critical path length was reduced through logic transformation on cell u_gpu/data_memory_controller/mem_write_address[3][3]_i_11_comp.
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_write_data_reg_n_0_[2][5]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-710] Processed net u_gpu/data_memory_controller/mem_write_data[2][5]_i_1_n_0. Critical path length was reduced through logic transformation on cell u_gpu/data_memory_controller/mem_write_data[2][5]_i_1_comp.
+INFO: [Physopt 32-81] Processed net u_gpu/data_memory_controller/mem_read_address[3][4]_i_28_n_0. Replicated 1 times.
+INFO: [Physopt 32-710] Processed net u_gpu/data_memory_controller/mem_read_address[3][0]_i_14_n_0. Critical path length was reduced through logic transformation on cell u_gpu/data_memory_controller/mem_read_address[3][0]_i_14_comp.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 20 pins.
+INFO: [Physopt 32-663] Processed net u_gpu/data_memory_controller/current_consumer_reg[3][0]_rep_n_0.  Re-placed instance u_gpu/data_memory_controller/current_consumer_reg[3][0]_rep
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_write_data[3][2]_i_3_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_write_data[3][2]_i_10_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-710] Processed net u_gpu/data_memory_controller/mem_write_data[3][2]_i_10_n_0. Critical path length was reduced through logic transformation on cell u_gpu/data_memory_controller/mem_write_data[3][2]_i_10_comp.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 18 pins.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 20 pins.
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_write_address[3][5]_i_11_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-134] Processed net u_gpu/data_memory_controller/mem_write_address[3][7]_i_39_n_0. Rewiring did not optimize the net.
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_write_address[3][7]_i_39_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-710] Processed net u_gpu/data_memory_controller/mem_write_address[3][7]_i_39_n_0. Critical path length was reduced through logic transformation on cell u_gpu/data_memory_controller/mem_write_address[3][7]_i_39_comp.
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_write_address[3][5]_i_10_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_write_address[3][5]_i_20_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_write_address[3][5]_i_27_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 21 pins.
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_read_address[3][1]_i_20_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 21 pins.
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_read_address_reg[2][7]_0[4]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_read_address[2][4]_i_4_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-710] Processed net u_gpu/data_memory_controller/mem_read_address[2][4]_i_4_n_0. Critical path length was reduced through logic transformation on cell u_gpu/data_memory_controller/mem_read_address[2][4]_i_4_comp.
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/channel_serving_consumer[108]_i_4_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/channel_serving_consumer[108]_i_10_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-710] Processed net u_gpu/data_memory_controller/channel_serving_consumer[108]_i_10_n_0. Critical path length was reduced through logic transformation on cell u_gpu/data_memory_controller/channel_serving_consumer[108]_i_10_comp.
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_read_address_reg[2][7]_0[0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-710] Processed net u_gpu/data_memory_controller/mem_read_address[2][7]_i_1_n_0. Critical path length was reduced through logic transformation on cell u_gpu/data_memory_controller/mem_read_address[2][7]_i_1_comp.
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_write_address[3][4]_i_3_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_write_address[3][4]_i_10_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_write_address[3][4]_i_16_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_write_address[3][4]_i_26_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_write_address[3][4]_i_33_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-710] Processed net u_gpu/data_memory_controller/mem_write_address[3][4]_i_33_n_0. Critical path length was reduced through logic transformation on cell u_gpu/data_memory_controller/mem_write_address[3][4]_i_33_comp.
+INFO: [Physopt 32-710] Processed net u_gpu/data_memory_controller/mem_write_address[3][7]_i_39_n_0. Critical path length was reduced through logic transformation on cell u_gpu/data_memory_controller/mem_write_address[3][7]_i_39_comp_1.
+INFO: [Physopt 32-710] Processed net u_gpu/data_memory_controller/mem_write_address[3][7]_i_39_n_0. Critical path length was reduced through logic transformation on cell u_gpu/data_memory_controller/mem_write_address[3][7]_i_39_comp.
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_read_address[3][6]_i_36_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 19 pins.
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_read_address[3][7]_i_83_n_0_repN. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-134] Processed net u_gpu/data_memory_controller/mem_read_address[3][7]_i_82_n_0. Rewiring did not optimize the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 12 pins.
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_read_address[3][7]_i_30_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 18 pins.
+INFO: [Physopt 32-134] Processed net u_gpu/data_memory_controller/mem_read_address[3][7]_i_82_n_0. Rewiring did not optimize the net.
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_read_address[3][7]_i_82_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_read_address[3][7]_i_72_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 19 pins.
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/channel_serving_consumer[102]_i_10_n_0_repN. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-81] Processed net u_gpu/data_memory_controller/channel_serving_consumer[97]_i_3_n_0. Replicated 1 times.
+INFO: [Physopt 32-710] Processed net u_gpu/data_memory_controller/channel_serving_consumer[125]_i_10_n_0. Critical path length was reduced through logic transformation on cell u_gpu/data_memory_controller/channel_serving_consumer[125]_i_10_comp_1.
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_read_address[2][4]_i_10_n_0_repN. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-710] Processed net u_gpu/data_memory_controller/mem_read_address[2][4]_i_10_n_0_repN. Critical path length was reduced through logic transformation on cell u_gpu/data_memory_controller/mem_read_address[2][4]_i_10_comp_2.
+INFO: [Physopt 32-710] Processed net u_gpu/data_memory_controller/mem_write_data[2][6]_i_1_n_0. Critical path length was reduced through logic transformation on cell u_gpu/data_memory_controller/mem_write_data[2][6]_i_1_comp_1.
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_read_address[3][4]_i_26_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-710] Processed net u_gpu/data_memory_controller/mem_read_address[3][4]_i_26_n_0. Critical path length was reduced through logic transformation on cell u_gpu/data_memory_controller/mem_read_address[3][4]_i_26_comp.
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/channel_serving_consumer[97]_i_3_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-710] Processed net u_gpu/data_memory_controller/channel_serving_consumer[97]_i_3_n_0. Critical path length was reduced through logic transformation on cell u_gpu/data_memory_controller/channel_serving_consumer[97]_i_3_comp.
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/channel_serving_consumer[96]_i_4_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-710] Processed net u_gpu/data_memory_controller/channel_serving_consumer[96]_i_4_n_0. Critical path length was reduced through logic transformation on cell u_gpu/data_memory_controller/channel_serving_consumer[96]_i_4_comp.
+INFO: [Physopt 32-663] Processed net u_gpu/data_memory_controller/mem_read_address_reg[2][7]_0[2].  Re-placed instance u_gpu/data_memory_controller/mem_read_address_reg[2][2]
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_write_address_reg_n_0_[3][3]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net g_mmcm.clk50_raw. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_write_address[3][3]_i_4_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_write_address[3][3]_i_12_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 23 pins.
+INFO: [Physopt 32-663] Processed net u_gpu/data_memory_controller/mem_write_data_reg_n_0_[3][2].  Re-placed instance u_gpu/data_memory_controller/mem_write_data_reg[3][2]
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_write_valid[3]_i_7_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net u_gpu/data_memory_controller/mem_write_address[3][7]_i_10_n_0_repN.  Re-placed instance u_gpu/data_memory_controller/mem_write_address[3][7]_i_10_comp_2
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_write_data_reg_n_0_[2][7]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_write_address[2][7]_i_5_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_write_address[2][7]_i_18_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 19 pins.
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_write_address_reg_n_0_[2][7]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 18 pins.
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_write_data_reg_n_0_[3][5]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 20 pins.
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_write_data[3][5]_i_3_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_write_data[3][5]_i_10_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 21 pins.
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_write_address_reg_n_0_[2][1]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 22 pins.
+INFO: [Common 17-14] Message 'Physopt 32-608' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Physopt 32-663] Processed net u_gpu/data_memory_controller/mem_read_address_reg[2][7]_0[6].  Re-placed instance u_gpu/data_memory_controller/mem_read_address_reg[2][6]
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_read_address_reg[3][7]_0[0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_read_address[3][0]_i_8_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net u_gpu/data_memory_controller/mem_read_address[3][0]_i_14_n_0.  Re-placed instance u_gpu/data_memory_controller/mem_read_address[3][0]_i_14_comp
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_read_address_reg[3][7]_0[4]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_read_address[3][4]_i_3_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_read_address[3][4]_i_8_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_read_address[3][4]_i_14_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_read_address[3][4]_i_20_n_0. Optimizations did not improve timing on the net.
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.258 . Memory (MB): peak = 4143.844 ; gain = 0.000
+Phase 3 Critical Path Optimization | Checksum: 1b0158bca
+
+Time (s): cpu = 00:05:19 ; elapsed = 00:03:38 . Memory (MB): peak = 4143.844 ; gain = 0.000
+
+Phase 4 Critical Path Optimization
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_write_data_reg_n_0_[2][7]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net g_mmcm.clk50_raw. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-710] Processed net u_gpu/data_memory_controller/mem_write_address[2][7]_i_1_n_0. Critical path length was reduced through logic transformation on cell u_gpu/data_memory_controller/mem_write_address[2][7]_i_1_comp.
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_write_address_reg_n_0_[3][4]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_write_address[3][4]_i_3_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_write_address[3][4]_i_10_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-710] Processed net u_gpu/data_memory_controller/mem_write_address[3][4]_i_10_n_0. Critical path length was reduced through logic transformation on cell u_gpu/data_memory_controller/mem_write_address[3][4]_i_10_comp.
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_write_data_reg_n_0_[3][0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_write_data[3][0]_i_4_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_write_data[3][0]_i_10_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_write_data[3][0]_i_20_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_write_data[3][0]_i_27_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_read_address_reg[3][7]_0[4]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_read_address[3][4]_i_3_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_read_address[3][4]_i_8_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_read_address[3][4]_i_14_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_read_address[3][4]_i_20_n_0_repN. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_read_address[3][4]_i_27_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-710] Processed net u_gpu/data_memory_controller/mem_read_address[3][4]_i_27_n_0. Critical path length was reduced through logic transformation on cell u_gpu/data_memory_controller/mem_read_address[3][4]_i_27_comp.
+INFO: [Physopt 32-663] Processed net u_gpu/data_memory_controller/mem_write_data_reg_n_0_[3][2].  Re-placed instance u_gpu/data_memory_controller/mem_write_data_reg[3][2]
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_write_address_reg_n_0_[3][3]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_write_valid[3]_i_5_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_write_valid[3]_i_13_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-710] Processed net u_gpu/data_memory_controller/mem_write_valid[3]_i_13_n_0. Critical path length was reduced through logic transformation on cell u_gpu/data_memory_controller/mem_write_valid[3]_i_13_comp_1.
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_write_address[3][3]_i_4_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_read_address_reg[2][7]_0[7]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_read_address[2][7]_i_5_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-710] Processed net u_gpu/data_memory_controller/mem_read_address[2][7]_i_5_n_0. Critical path length was reduced through logic transformation on cell u_gpu/data_memory_controller/mem_read_address[2][7]_i_5_comp.
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_read_address_reg[3][7]_0[2]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_read_address[3][2]_i_8_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_read_address[3][2]_i_14_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_read_address[3][2]_i_20_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_write_data_reg_n_0_[3][4]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_write_data[3][4]_i_3_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_write_data[3][4]_i_10_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net u_gpu/data_memory_controller/mem_write_data[3][4]_i_19_n_0.  Re-placed instance u_gpu/data_memory_controller/mem_write_data[3][4]_i_19
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_write_data_reg_n_0_[3][5]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_write_data[3][5]_i_3_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_write_data[3][5]_i_9_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_write_valid[3]_i_10_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_write_valid[3]_i_15_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/channel_serving_consumer[112]_i_4_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/channel_serving_consumer[108]_i_4_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/channel_serving_consumer[108]_i_10_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_write_data[3][4]_i_16_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_write_data[3][4]_i_25_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net u_gpu/data_memory_controller/mem_write_data[3][4]_i_32_n_0.  Re-placed instance u_gpu/data_memory_controller/mem_write_data[3][4]_i_32
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_write_data_reg_n_0_[2][3]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_write_data[2][3]_i_4_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-710] Processed net u_gpu/data_memory_controller/mem_write_data[2][3]_i_4_n_0. Critical path length was reduced through logic transformation on cell u_gpu/data_memory_controller/mem_write_data[2][3]_i_4_comp.
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/channel_serving_consumer[113]_i_8_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-710] Processed net u_gpu/data_memory_controller/channel_serving_consumer[113]_i_8_n_0. Critical path length was reduced through logic transformation on cell u_gpu/data_memory_controller/channel_serving_consumer[113]_i_8_comp.
+INFO: [Physopt 32-710] Processed net u_gpu/data_memory_controller/mem_write_valid[3]_i_5_n_0. Critical path length was reduced through logic transformation on cell u_gpu/data_memory_controller/mem_write_valid[3]_i_5_comp_1.
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_write_data_reg_n_0_[3][2]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net u_gpu/data_memory_controller/mem_write_valid[3]_i_11_n_0.  Re-placed instance u_gpu/data_memory_controller/mem_write_valid[3]_i_11_comp
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_read_address_reg[3][7]_0[1]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_read_address[3][1]_i_3_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_read_address[3][1]_i_8_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_read_address[3][1]_i_14_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_read_address[3][1]_i_20_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_read_address[3][1]_i_26_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net u_gpu/data_memory_controller/mem_write_data_reg_n_0_[3][3].  Re-placed instance u_gpu/data_memory_controller/mem_write_data_reg[3][3]
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/d_wvalid[2]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-710] Processed net u_gpu/data_memory_controller/mem_write_valid[2]_i_1_n_0. Critical path length was reduced through logic transformation on cell u_gpu/data_memory_controller/mem_write_valid[2]_i_1_comp.
+INFO: [Physopt 32-663] Processed net u_gpu/data_memory_controller/mem_read_address_reg[2][7]_0[6].  Re-placed instance u_gpu/data_memory_controller/mem_read_address_reg[2][6]
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_write_address_reg_n_0_[2][7]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-710] Processed net u_gpu/data_memory_controller/mem_write_address[2][7]_i_2_n_0. Critical path length was reduced through logic transformation on cell u_gpu/data_memory_controller/mem_write_address[2][7]_i_2_comp.
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_write_valid[3]_i_3_n_0_repN. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-134] Processed net u_gpu/data_memory_controller/mem_write_valid[3]_i_6_n_0. Rewiring did not optimize the net.
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_write_valid[3]_i_6_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_write_valid[3]_i_14_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-134] Processed net u_gpu/data_memory_controller/channel_serving_consumer[118]_i_4_n_0. Rewiring did not optimize the net.
+INFO: [Physopt 32-134] Processed net u_gpu/data_memory_controller/channel_serving_consumer[118]_i_4_n_0. Rewiring did not optimize the net.
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/channel_serving_consumer[118]_i_4_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-710] Processed net u_gpu/data_memory_controller/channel_serving_consumer[118]_i_4_n_0. Critical path length was reduced through logic transformation on cell u_gpu/data_memory_controller/channel_serving_consumer[118]_i_4_comp.
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_write_address_reg_n_0_[2][6]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-710] Processed net u_gpu/data_memory_controller/mem_write_address[2][6]_i_1_n_0. Critical path length was reduced through logic transformation on cell u_gpu/data_memory_controller/mem_write_address[2][6]_i_1_comp.
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_write_address_reg_n_0_[2][1]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_write_address[2][1]_i_4_n_0_repN. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-134] Processed net u_gpu/data_memory_controller/mem_write_address[2][1]_i_2_n_0. Rewiring did not optimize the net.
+INFO: [Physopt 32-81] Processed net u_gpu/data_memory_controller/mem_write_address[2][1]_i_2_n_0. Replicated 1 times.
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_read_address_reg[3][7]_0[7]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_read_address[3][7]_i_8_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_read_address[3][7]_i_21_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_read_address[3][7]_i_37_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_read_address[3][7]_i_51_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net u_gpu/data_memory_controller/mem_read_address_reg[2][7]_0[3].  Re-placed instance u_gpu/data_memory_controller/mem_read_address_reg[2][3]
+INFO: [Physopt 32-663] Processed net u_gpu/data_memory_controller/mem_read_address_reg[2][7]_0[5].  Re-placed instance u_gpu/data_memory_controller/mem_read_address_reg[2][5]
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_read_address_reg[2][7]_0[2]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_read_address[2][2]_i_4_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_read_address[2][2]_i_10_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_read_address[2][2]_i_16_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_read_address[2][2]_i_22_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_read_address[2][2]_i_28_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_read_address[2][2]_i_34_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_write_data_reg_n_0_[2][6]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_write_data[2][6]_i_10_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-710] Processed net u_gpu/data_memory_controller/mem_write_data[2][6]_i_10_n_0. Critical path length was reduced through logic transformation on cell u_gpu/data_memory_controller/mem_write_data[2][6]_i_10_comp.
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_read_address_reg[2][7]_0[6]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_read_address[2][6]_i_4_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_read_address[2][6]_i_10_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_read_address[2][6]_i_16_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_read_address[2][6]_i_22_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_read_address[2][6]_i_28_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_read_address[2][6]_i_34_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net u_gpu/data_memory_controller/mem_read_address[2][6]_i_40_n_0.  Re-placed instance u_gpu/data_memory_controller/mem_read_address[2][6]_i_40
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_read_address_reg[3][7]_0[3]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_read_address[3][3]_i_8_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_read_address[3][3]_i_14_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_read_address[3][3]_i_20_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/controller_state_reg_n_0_[2][0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net g_mmcm.clk50_raw. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/controller_state[2][0]_i_3_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/controller_state[2][0]_i_5_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/controller_state[2][0]_i_10_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/controller_state[2][0]_i_16_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/controller_state[2][0]_i_20_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_write_data_reg_n_0_[2][7]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_read_address_reg[3][7]_0[5]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net u_gpu/data_memory_controller/mem_read_address[3][5]_i_3_n_0_repN.  Re-placed instance u_gpu/data_memory_controller/mem_read_address[3][5]_i_3_comp_1
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_write_address_reg_n_0_[3][4]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_write_address[3][4]_i_3_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_write_address_reg_n_0_[3][3]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_write_data_reg_n_0_[2][6]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_write_data_reg_n_0_[3][5]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_write_data[3][5]_i_3_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_write_data_reg_n_0_[2][4]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_write_data_reg_n_0_[3][1]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_write_data[3][1]_i_3_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_write_data[3][1]_i_10_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_write_data[3][1]_i_16_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_write_data[3][1]_i_25_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_write_data[3][1]_i_32_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_write_data[3][1]_i_38_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_write_data[3][1]_i_44_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_write_data[3][1]_i_49_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_write_data[3][1]_i_52_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_write_data[3][1]_i_54_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_write_data[3][1]_i_55_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_read_address_reg[3][7]_0[7]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_read_address[3][7]_i_5_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_write_address_reg_n_0_[2][6]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_write_address[2][6]_i_4_n_0_repN. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net u_gpu/data_memory_controller/mem_write_address[2][6]_i_13_n_0.  Re-placed instance u_gpu/data_memory_controller/mem_write_address[2][6]_i_13
+INFO: [Physopt 32-663] Processed net u_gpu/data_memory_controller/mem_read_address_reg[2][7]_0[4].  Re-placed instance u_gpu/data_memory_controller/mem_read_address_reg[2][4]
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_write_address_reg_n_0_[3][5]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_read_address_reg[3][7]_0[4]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_read_address[3][4]_i_3_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_read_address[3][4]_i_8_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net u_gpu/data_memory_controller/mem_read_address[3][4]_i_14_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net u_gpu/data_memory_controller/mem_read_address[3][4]_i_26_n_0.  Re-placed instance u_gpu/data_memory_controller/mem_read_address[3][4]_i_26_comp
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.489 . Memory (MB): peak = 4148.496 ; gain = 0.000
+Phase 4 Critical Path Optimization | Checksum: 1781e973a
+
+Time (s): cpu = 00:07:15 ; elapsed = 00:05:05 . Memory (MB): peak = 4148.496 ; gain = 4.652
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.071 . Memory (MB): peak = 4148.496 ; gain = 0.000
+INFO: [Physopt 32-603] Post Physical Optimization Timing Summary | WNS=-11.092 | TNS=-4540.735 |
+
+Summary of Physical Synthesis Optimizations
+============================================
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+|  Optimization   |  WNS Gain (ns)  |  TNS Gain (ns)  |  Added Cells  |  Removed Cells  |  Optimized Cells/Nets  |  Dont Touch  |  Iterations  |  Elapsed   |
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+|  DSP Register   |          0.000  |          0.000  |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Critical Path  |          1.740  |        234.095  |            7  |              0  |                   257  |           0  |           2  |  00:04:57  |
+|  Total          |          1.740  |        234.095  |            7  |              0  |                   257  |           0  |           3  |  00:04:57  |
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.032 . Memory (MB): peak = 4148.496 ; gain = 0.000
+Ending Physical Synthesis Task | Checksum: 274629848
+
+Time (s): cpu = 00:07:17 ; elapsed = 00:05:06 . Memory (MB): peak = 4148.496 ; gain = 4.652
+INFO: [Common 17-83] Releasing license: Implementation
+726 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+phys_opt_design completed successfully
+phys_opt_design: Time (s): cpu = 00:07:47 ; elapsed = 00:05:23 . Memory (MB): peak = 4148.496 ; gain = 4.652
+# route_design
+Command: route_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a100t'
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+
+Starting Routing Task
+INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 2 CPUs
+
+Phase 1 Build RT Design
+Checksum: PlaceDB: 8d845a85 ConstDB: 0 ShapeSum: c73b01ba RouteDB: b1d25f96
+Post Restoration Checksum: NetGraph: fd048b39 | NumContArr: cb0df2c6 | Constraints: c2a8fa9d | Timing: c2a8fa9d
+Phase 1 Build RT Design | Checksum: 34d647339
+
+Time (s): cpu = 00:01:35 ; elapsed = 00:01:07 . Memory (MB): peak = 4183.422 ; gain = 34.926
+
+Phase 2 Router Initialization
+
+Phase 2.1 Fix Topology Constraints
+Phase 2.1 Fix Topology Constraints | Checksum: 34d647339
+
+Time (s): cpu = 00:01:37 ; elapsed = 00:01:09 . Memory (MB): peak = 4183.422 ; gain = 34.926
+
+Phase 2.2 Pre Route Cleanup
+Phase 2.2 Pre Route Cleanup | Checksum: 34d647339
+
+Time (s): cpu = 00:01:38 ; elapsed = 00:01:09 . Memory (MB): peak = 4183.422 ; gain = 34.926
+ Number of Nodes with overlaps = 0
+
+Phase 2.3 Update Timing
+Phase 2.3 Update Timing | Checksum: 23b199e46
+
+Time (s): cpu = 00:02:53 ; elapsed = 00:01:56 . Memory (MB): peak = 4295.547 ; gain = 147.051
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-10.770| TNS=-3930.629| WHS=-0.211 | THS=-210.302|
+
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 0 %
+  Global Horizontal Routing Utilization  = 0 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 85618
+    (Failed Nets is the sum of unrouted and partially routed nets)
+  Number of Unrouted Nets             = 85618
+  Number of Partially Routed Nets     = 0
+  Number of Node Overlaps             = 0
+
+Phase 2 Router Initialization | Checksum: 1a9568d32
+
+Time (s): cpu = 00:03:26 ; elapsed = 00:02:15 . Memory (MB): peak = 4295.547 ; gain = 147.051
+
+Phase 3 Global Routing
+Phase 3 Global Routing | Checksum: 1a9568d32
+
+Time (s): cpu = 00:03:26 ; elapsed = 00:02:15 . Memory (MB): peak = 4295.547 ; gain = 147.051
+
+Phase 4 Initial Routing
+
+Phase 4.1 Initial Net Routing Pass
+Phase 4.1 Initial Net Routing Pass | Checksum: 2d02c434f
+
+Time (s): cpu = 00:04:05 ; elapsed = 00:02:37 . Memory (MB): peak = 4310.180 ; gain = 161.684
+Phase 4 Initial Routing | Checksum: 2d02c434f
+
+Time (s): cpu = 00:04:05 ; elapsed = 00:02:38 . Memory (MB): peak = 4310.180 ; gain = 161.684
+INFO: [Route 35-580] Design has 24 pins with tight setup and hold constraints.
+
+The top 5 pins with tight setup and hold constraints:
+
++====================+===================+===========================================================+
+| Launch Setup Clock | Launch Hold Clock | Pin                                                       |
++====================+===================+===========================================================+
+| g_mmcm.clk50_raw   | g_mmcm.clk50_raw  | u_gpu/data_memory_controller/controller_state_reg[2][0]/D |
+| g_mmcm.clk50_raw   | g_mmcm.clk50_raw  | u_gpu/data_memory_controller/mem_write_valid_reg[2]/D     |
+| g_mmcm.clk50_raw   | g_mmcm.clk50_raw  | u_gpu/data_memory_controller/controller_state_reg[3][0]/D |
+| g_mmcm.clk50_raw   | g_mmcm.clk50_raw  | u_gpu/data_memory_controller/mem_write_valid_reg[3]/D     |
+| g_mmcm.clk50_raw   | g_mmcm.clk50_raw  | u_gpu/data_memory_controller/mem_write_data_reg[0][6]/D   |
++--------------------+-------------------+-----------------------------------------------------------+
+
+File with complete list of pins: tight_setup_hold_pins.txt
+
+
+Phase 5 Rip-up And Reroute
+
+Phase 5.1 Global Iteration 0
+ Number of Nodes with overlaps = 27901
+ Number of Nodes with overlaps = 7449
+ Number of Nodes with overlaps = 2850
+ Number of Nodes with overlaps = 905
+ Number of Nodes with overlaps = 271
+ Number of Nodes with overlaps = 107
+ Number of Nodes with overlaps = 26
+ Number of Nodes with overlaps = 22
+ Number of Nodes with overlaps = 11
+ Number of Nodes with overlaps = 6
+ Number of Nodes with overlaps = 3
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-13.850| TNS=-6504.470| WHS=N/A    | THS=N/A    |
+
+Phase 5.1 Global Iteration 0 | Checksum: 2aa3a92c0
+
+Time (s): cpu = 00:10:28 ; elapsed = 00:07:06 . Memory (MB): peak = 4347.871 ; gain = 199.375
+
+Phase 5.2 Global Iteration 1
+ Number of Nodes with overlaps = 12206
+ Number of Nodes with overlaps = 3173
+ Number of Nodes with overlaps = 719
+ Number of Nodes with overlaps = 251
+ Number of Nodes with overlaps = 83
+ Number of Nodes with overlaps = 22
+ Number of Nodes with overlaps = 7
+ Number of Nodes with overlaps = 8
+ Number of Nodes with overlaps = 5
+ Number of Nodes with overlaps = 1
+ Number of Nodes with overlaps = 1
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-13.751| TNS=-6432.567| WHS=N/A    | THS=N/A    |
+
+Phase 5.2 Global Iteration 1 | Checksum: 3345339bb
+
+Time (s): cpu = 00:14:13 ; elapsed = 00:09:34 . Memory (MB): peak = 4351.102 ; gain = 202.605
+
+Phase 5.3 Global Iteration 2
+ Number of Nodes with overlaps = 10240
+Phase 5.3 Global Iteration 2 | Checksum: 263d57bb1
+
+Time (s): cpu = 00:14:32 ; elapsed = 00:09:54 . Memory (MB): peak = 4351.102 ; gain = 202.605
+Phase 5 Rip-up And Reroute | Checksum: 263d57bb1
+
+Time (s): cpu = 00:14:33 ; elapsed = 00:09:54 . Memory (MB): peak = 4351.102 ; gain = 202.605
+
+Phase 6 Delay and Skew Optimization
+
+Phase 6.1 Delay CleanUp
+
+Phase 6.1.1 Update Timing
+Phase 6.1.1 Update Timing | Checksum: 289ab647d
+
+Time (s): cpu = 00:14:47 ; elapsed = 00:10:02 . Memory (MB): peak = 4351.102 ; gain = 202.605
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-13.723| TNS=-6406.373| WHS=N/A    | THS=N/A    |
+
+ Number of Nodes with overlaps = 0
+Phase 6.1 Delay CleanUp | Checksum: 26eda35b8
+
+Time (s): cpu = 00:14:49 ; elapsed = 00:10:03 . Memory (MB): peak = 4351.102 ; gain = 202.605
+
+Phase 6.2 Clock Skew Optimization
+Phase 6.2 Clock Skew Optimization | Checksum: 26eda35b8
+
+Time (s): cpu = 00:14:50 ; elapsed = 00:10:03 . Memory (MB): peak = 4351.102 ; gain = 202.605
+Phase 6 Delay and Skew Optimization | Checksum: 26eda35b8
+
+Time (s): cpu = 00:14:50 ; elapsed = 00:10:03 . Memory (MB): peak = 4351.102 ; gain = 202.605
+
+Phase 7 Post Hold Fix
+
+Phase 7.1 Hold Fix Iter
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-13.613| TNS=-6328.734| WHS=0.015  | THS=0.000  |
+
+Phase 7.1 Hold Fix Iter | Checksum: 29edbc176
+
+Time (s): cpu = 00:15:04 ; elapsed = 00:10:11 . Memory (MB): peak = 4351.102 ; gain = 202.605
+Phase 7 Post Hold Fix | Checksum: 29edbc176
+
+Time (s): cpu = 00:15:04 ; elapsed = 00:10:11 . Memory (MB): peak = 4351.102 ; gain = 202.605
+
+Phase 8 Route finalize
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 30.3241 %
+  Global Horizontal Routing Utilization  = 31.6299 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 0
+    (Failed Nets is the sum of unrouted and partially routed nets)
+  Number of Unrouted Nets             = 0
+  Number of Partially Routed Nets     = 0
+  Number of Node Overlaps             = 0
+
+
+--GLOBAL Congestion:
+Utilization threshold used for congestion level computation: 0.85
+Congestion Report
+North Dir 2x2 Area, Max Cong = 88.5135%, Congestion bounded by tiles (Lower Left Tile -> Upper Right Tile):
+   INT_L_X38Y138 -> INT_R_X39Y139
+   INT_L_X42Y132 -> INT_R_X43Y133
+South Dir 2x2 Area, Max Cong = 86.036%, Congestion bounded by tiles (Lower Left Tile -> Upper Right Tile):
+   INT_L_X46Y106 -> INT_R_X47Y107
+East Dir 1x1 Area, Max Cong = 100%, Congestion bounded by tiles (Lower Left Tile -> Upper Right Tile):
+   INT_L_X28Y134 -> INT_L_X28Y134
+   INT_L_X22Y127 -> INT_L_X22Y127
+   INT_R_X25Y100 -> INT_R_X25Y100
+   INT_R_X49Y98 -> INT_R_X49Y98
+   INT_L_X26Y93 -> INT_L_X26Y93
+West Dir 1x1 Area, Max Cong = 97.0588%, Congestion bounded by tiles (Lower Left Tile -> Upper Right Tile):
+   INT_L_X44Y132 -> INT_L_X44Y132
+   INT_R_X43Y127 -> INT_R_X43Y127
+   INT_L_X46Y127 -> INT_L_X46Y127
+   INT_L_X50Y126 -> INT_L_X50Y126
+   INT_L_X38Y125 -> INT_L_X38Y125
+
+------------------------------
+Reporting congestion hotspots
+------------------------------
+Direction: North
+----------------
+Congested clusters found at Level 0
+Effective congestion level: 1 Aspect Ratio: 0.75 Sparse Ratio: 1.5
+Direction: South
+----------------
+Congested clusters found at Level 0
+Effective congestion level: 2 Aspect Ratio: 0.666667 Sparse Ratio: 0.6875
+Direction: East
+----------------
+Congested clusters found at Level 0
+Effective congestion level: 1 Aspect Ratio: 1 Sparse Ratio: 0.75
+Direction: West
+----------------
+Congested clusters found at Level 0
+Effective congestion level: 1 Aspect Ratio: 0.333333 Sparse Ratio: 0.75
+
+Phase 8 Route finalize | Checksum: 29edbc176
+
+Time (s): cpu = 00:15:05 ; elapsed = 00:10:12 . Memory (MB): peak = 4351.102 ; gain = 202.605
+
+Phase 9 Verifying routed nets
+
+ Verification completed successfully
+Phase 9 Verifying routed nets | Checksum: 29edbc176
+
+Time (s): cpu = 00:15:06 ; elapsed = 00:10:12 . Memory (MB): peak = 4351.102 ; gain = 202.605
+
+Phase 10 Depositing Routes
+Phase 10 Depositing Routes | Checksum: 253e522dd
+
+Time (s): cpu = 00:15:22 ; elapsed = 00:10:26 . Memory (MB): peak = 4351.102 ; gain = 202.605
+
+Phase 11 Post Process Routing
+Phase 11 Post Process Routing | Checksum: 253e522dd
+
+Time (s): cpu = 00:15:23 ; elapsed = 00:10:27 . Memory (MB): peak = 4351.102 ; gain = 202.605
+
+Phase 12 Post Router Timing
+INFO: [Route 35-57] Estimated Timing Summary | WNS=-13.613| TNS=-6328.734| WHS=0.015  | THS=0.000  |
+
+WARNING: [Route 35-328] Router estimated timing not met.
+Resolution: For a complete and accurate timing signoff, report_timing_summary must be run after route_design. Alternatively, route_design can be run with the -timing_summary option to enable a complete timing signoff at the end of route_design.
+Phase 12 Post Router Timing | Checksum: 253e522dd
+
+Time (s): cpu = 00:15:24 ; elapsed = 00:10:27 . Memory (MB): peak = 4351.102 ; gain = 202.605
+Total Elapsed time in route_design: 627.196 secs
+
+Phase 13 Post-Route Event Processing
+Phase 13 Post-Route Event Processing | Checksum: 17d040316
+
+Time (s): cpu = 00:15:26 ; elapsed = 00:10:28 . Memory (MB): peak = 4351.102 ; gain = 202.605
+INFO: [Route 35-16] Router Completed Successfully
+Ending Routing Task | Checksum: 17d040316
+
+Time (s): cpu = 00:15:31 ; elapsed = 00:10:31 . Memory (MB): peak = 4351.102 ; gain = 202.605
+
+Routing Is Done.
+INFO: [Common 17-83] Releasing license: Implementation
+14 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+route_design completed successfully
+route_design: Time (s): cpu = 00:15:37 ; elapsed = 00:10:36 . Memory (MB): peak = 4351.102 ; gain = 202.605
+# report_utilization                -file $out/util.rpt
+# report_utilization -hierarchical -hierarchical_depth 3 -file $out/util_hier.rpt
+report_utilization: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 4351.102 ; gain = 0.000
+# report_timing_summary -max_paths 10 -file $out/timing.rpt
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+report_timing_summary: Time (s): cpu = 00:00:55 ; elapsed = 00:00:32 . Memory (MB): peak = 4351.102 ; gain = 0.000
+# report_timing -max_paths 1 -nworst 1 -file $out/critical_path.rpt
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+INFO: [Timing 38-78] ReportTimingParams: -max_paths 1 -nworst 1 -delay_type max -sort_by slack.
+# report_power                      -file $out/power.rpt
+Command: report_power -file C:/Users/srika/Documents/MTP-1/tinygpu_fpga/build/N32_P1_M4_T4_rr/power.rpt
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+WARNING: [Power 33-332] Found switching activity that implies high-fanout reset nets being asserted for excessive periods of time which may result in inaccurate power analysis.
+Resolution: To review and fix problems, please run Power Constraints Advisor in the GUI from Tools > Power Constraints Advisor or run report_power with the -advisory option to generate a text report.
+0 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+report_power completed successfully
+report_power: Time (s): cpu = 00:01:09 ; elapsed = 00:00:32 . Memory (MB): peak = 4498.559 ; gain = 147.457
+# write_bitstream -force $out/gpu_soc.bit
+Command: write_bitstream -force C:/Users/srika/Documents/MTP-1/tinygpu_fpga/build/N32_P1_M4_T4_rr/gpu_soc.bit
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a100t'
+Running DRC as a precondition to command write_bitstream
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2024.2/data/ip'.
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado 12-3199] DRC finished with 0 Errors
+INFO: [Vivado 12-3200] Please refer to the DRC report (report_drc) for more information.
+INFO: [Designutils 20-2272] Running write_bitstream with 2 threads.
+Loading data files...
+Loading site data...
+Loading route data...
+Processing options...
+Creating bitmap...
+Creating bitstream...
+Writing bitstream C:/Users/srika/Documents/MTP-1/tinygpu_fpga/build/N32_P1_M4_T4_rr/gpu_soc.bit...
+INFO: [Vivado 12-1842] Bitgen Completed Successfully.
+INFO: [Common 17-83] Releasing license: Implementation
+10 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+write_bitstream completed successfully
+write_bitstream: Time (s): cpu = 00:01:38 ; elapsed = 00:01:01 . Memory (MB): peak = 5056.797 ; gain = 558.238
+# puts "BUILD_DONE $tag"
+BUILD_DONE N32_P1_M4_T4_rr
+INFO: [Common 17-206] Exiting Vivado at Wed Oct 21 16:05:56 2026...

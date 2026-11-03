@@ -1,0 +1,17 @@
+0.7
+2020.2
+Nov  8 2024
+22:36:57
+C:/Users/srika/Documents/MTP-1/tiny_gpu/tiny_gpu.sim/sim_1/behav/xsim/glbl.v,1724786425,verilog,,,,glbl,,uvm,,,,,,
+C:/Users/srika/Documents/tiny-gpu/src/alu.sv,1788286453,systemVerilog,,C:/Users/srika/Documents/tiny-gpu/src/controller.sv,,alu,,uvm,,,,,,
+C:/Users/srika/Documents/tiny-gpu/src/controller.sv,1788861983,systemVerilog,,C:/Users/srika/Documents/tiny-gpu/src/core.sv,,controller,,uvm,,,,,,
+C:/Users/srika/Documents/tiny-gpu/src/core.sv,1788862081,systemVerilog,,C:/Users/srika/Documents/tiny-gpu/src/dcr.sv,,core,,uvm,,,,,,
+C:/Users/srika/Documents/tiny-gpu/src/dcr.sv,1788860837,systemVerilog,,C:/Users/srika/Documents/tiny-gpu/src/decoder.sv,,dcr,,uvm,,,,,,
+C:/Users/srika/Documents/tiny-gpu/src/decoder.sv,1788286453,systemVerilog,,C:/Users/srika/Documents/tiny-gpu/src/dispatch.sv,,decoder,,uvm,,,,,,
+C:/Users/srika/Documents/tiny-gpu/src/dispatch.sv,1788286453,systemVerilog,,C:/Users/srika/Documents/tiny-gpu/src/fetcher.sv,,dispatch,,uvm,,,,,,
+C:/Users/srika/Documents/tiny-gpu/src/fetcher.sv,1788860847,systemVerilog,,C:/Users/srika/Documents/tiny-gpu/src/lsu.sv,,fetcher,,uvm,,,,,,
+C:/Users/srika/Documents/tiny-gpu/src/gpu.sv,1788862146,systemVerilog,,,,gpu,,uvm,,,,,,
+C:/Users/srika/Documents/tiny-gpu/src/lsu.sv,1788286453,systemVerilog,,C:/Users/srika/Documents/tiny-gpu/src/pc.sv,,lsu,,uvm,,,,,,
+C:/Users/srika/Documents/tiny-gpu/src/pc.sv,1788286453,systemVerilog,,C:/Users/srika/Documents/tiny-gpu/src/registers.sv,,pc,,uvm,,,,,,
+C:/Users/srika/Documents/tiny-gpu/src/registers.sv,1788286453,systemVerilog,,C:/Users/srika/Documents/tiny-gpu/src/scheduler.sv,,registers,,uvm,,,,,,
+C:/Users/srika/Documents/tiny-gpu/src/scheduler.sv,1788860864,systemVerilog,,C:/Users/srika/Documents/tiny-gpu/src/gpu.sv,,scheduler,,uvm,,,,,,

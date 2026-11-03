@@ -1,0 +1,15 @@
+Vivado Simulator v2026.1
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2026 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/AMDDesignTools/2026.1/Vivado/bin/unwrapped/win64.o/xelab.exe --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot gpu_behav xil_defaultlib.gpu xil_defaultlib.glbl work.tb_gpu -log elaborate4.log 
+INFO: [XSIM 43-3493] Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+ERROR: [VRFC 10-2991] 'core_state' is not declared under prefix 'cores' [C:/Users/srika/Documents/MTP-1/tinygpu_simulation/tinygpu_simulation.sim/sim_1/behav/xsim/tb_gpu.sv:194]
+ERROR: [VRFC 10-2991] 'fetcher_state' is not declared under prefix 'cores' [C:/Users/srika/Documents/MTP-1/tinygpu_simulation/tinygpu_simulation.sim/sim_1/behav/xsim/tb_gpu.sv:195]
+ERROR: [VRFC 10-2991] 'current_pc' is not declared under prefix 'cores' [C:/Users/srika/Documents/MTP-1/tinygpu_simulation/tinygpu_simulation.sim/sim_1/behav/xsim/tb_gpu.sv:196]
+ERROR: [VRFC 10-2991] 'instruction' is not declared under prefix 'cores' [C:/Users/srika/Documents/MTP-1/tinygpu_simulation/tinygpu_simulation.sim/sim_1/behav/xsim/tb_gpu.sv:197]
+ERROR: [VRFC 10-2991] 'decoded_mem_read_enable' is not declared under prefix 'cores' [C:/Users/srika/Documents/MTP-1/tinygpu_simulation/tinygpu_simulation.sim/sim_1/behav/xsim/tb_gpu.sv:198]
+ERROR: [VRFC 10-2991] 'decoded_mem_write_enable' is not declared under prefix 'cores' [C:/Users/srika/Documents/MTP-1/tinygpu_simulation/tinygpu_simulation.sim/sim_1/behav/xsim/tb_gpu.sv:199]
+ERROR: [VRFC 10-2991] 'decoded_ret' is not declared under prefix 'cores' [C:/Users/srika/Documents/MTP-1/tinygpu_simulation/tinygpu_simulation.sim/sim_1/behav/xsim/tb_gpu.sv:200]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.

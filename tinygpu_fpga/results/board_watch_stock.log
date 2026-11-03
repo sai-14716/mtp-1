@@ -1,0 +1,4 @@
+N8_P1_M4_T4: vecadd=1473 err=0  matmul=8491 err=0  compute=14181 err=0
+-> C:\Users\srika\Documents\MTP-1\tinygpu_fpga\results\board_runs.csv
+N16_P1_M4_T4: vecadd=4294967295 err=25  matmul=4294967295 err=7  compute=4294967295 err=13
+-> C:\Users\srika\Documents\MTP-1\tinygpu_fpga\results\board_runs.csv

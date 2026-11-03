@@ -1,0 +1,439 @@
+#-----------------------------------------------------------
+# Vivado v2024.2 (64-bit)
+# SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024
+# IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+# SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+# Start of session at: Sat Oct 10 08:06:22 2026
+# Process ID         : 7940
+# Current directory  : C:/Users/srika/Documents/MTP-1/tiny_gpu/tiny_gpu.runs/synth_1
+# Command line       : vivado.exe -log gpu.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source gpu.tcl
+# Log file           : C:/Users/srika/Documents/MTP-1/tiny_gpu/tiny_gpu.runs/synth_1/gpu.vds
+# Journal file       : C:/Users/srika/Documents/MTP-1/tiny_gpu/tiny_gpu.runs/synth_1\vivado.jou
+# Running On         : SRINIVAS
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 26300
+# Processor Detail   : 13th Gen Intel(R) Core(TM) i5-1335U
+# CPU Frequency      : 2496 MHz
+# CPU Physical cores : 10
+# CPU Logical cores  : 12
+# Host memory        : 16803 MB
+# Swap memory        : 18253 MB
+# Total Virtual      : 35056 MB
+# Available Virtual  : 10289 MB
+#-----------------------------------------------------------
+source gpu.tcl -notrace
+create_project: Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 330.516 ; gain = 48.137
+Command: synth_design -top gpu -part xc7a200tfbg676-2
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a200t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a200t'
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 1392
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 812.777 ; gain = 478.301
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-10180] variable 'any_lsu_waiting' must explicitly be declared as automatic or static [C:/Users/srika/Documents/tiny-gpu/src/scheduler.sv:79]
+INFO: [Synth 8-6157] synthesizing module 'gpu' [C:/Users/srika/Documents/tiny-gpu/src/gpu.sv:10]
+INFO: [Synth 8-6157] synthesizing module 'core' [C:/Users/srika/Documents/tiny-gpu/src/core.sv:8]
+	Parameter DATA_MEM_ADDR_BITS bound to: 8 - type: integer 
+	Parameter DATA_MEM_DATA_BITS bound to: 8 - type: integer 
+	Parameter PROGRAM_MEM_ADDR_BITS bound to: 8 - type: integer 
+	Parameter PROGRAM_MEM_DATA_BITS bound to: 16 - type: integer 
+	Parameter THREADS_PER_BLOCK bound to: 4 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'alu' [C:/Users/srika/Documents/tiny-gpu/src/alu.sv:9]
+INFO: [Synth 8-6155] done synthesizing module 'alu' (0#1) [C:/Users/srika/Documents/tiny-gpu/src/alu.sv:9]
+INFO: [Synth 8-6157] synthesizing module 'lsu' [C:/Users/srika/Documents/tiny-gpu/src/lsu.sv:8]
+INFO: [Synth 8-6155] done synthesizing module 'lsu' (0#1) [C:/Users/srika/Documents/tiny-gpu/src/lsu.sv:8]
+INFO: [Synth 8-6157] synthesizing module 'registers' [C:/Users/srika/Documents/tiny-gpu/src/registers.sv:7]
+	Parameter THREADS_PER_BLOCK bound to: 4 - type: integer 
+	Parameter THREAD_ID bound to: 0 - type: integer 
+	Parameter DATA_BITS bound to: 8 - type: integer 
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/srika/Documents/tiny-gpu/src/registers.sv:84]
+INFO: [Synth 8-6155] done synthesizing module 'registers' (0#1) [C:/Users/srika/Documents/tiny-gpu/src/registers.sv:7]
+INFO: [Synth 8-6157] synthesizing module 'pc' [C:/Users/srika/Documents/tiny-gpu/src/pc.sv:10]
+	Parameter DATA_MEM_DATA_BITS bound to: 8 - type: integer 
+	Parameter PROGRAM_MEM_ADDR_BITS bound to: 8 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'pc' (0#1) [C:/Users/srika/Documents/tiny-gpu/src/pc.sv:10]
+INFO: [Synth 8-6157] synthesizing module 'registers__parameterized0' [C:/Users/srika/Documents/tiny-gpu/src/registers.sv:7]
+	Parameter THREADS_PER_BLOCK bound to: 4 - type: integer 
+	Parameter THREAD_ID bound to: 1 - type: integer 
+	Parameter DATA_BITS bound to: 8 - type: integer 
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/srika/Documents/tiny-gpu/src/registers.sv:84]
+INFO: [Synth 8-6155] done synthesizing module 'registers__parameterized0' (0#1) [C:/Users/srika/Documents/tiny-gpu/src/registers.sv:7]
+INFO: [Synth 8-6157] synthesizing module 'registers__parameterized1' [C:/Users/srika/Documents/tiny-gpu/src/registers.sv:7]
+	Parameter THREADS_PER_BLOCK bound to: 4 - type: integer 
+	Parameter THREAD_ID bound to: 2 - type: integer 
+	Parameter DATA_BITS bound to: 8 - type: integer 
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/srika/Documents/tiny-gpu/src/registers.sv:84]
+INFO: [Synth 8-6155] done synthesizing module 'registers__parameterized1' (0#1) [C:/Users/srika/Documents/tiny-gpu/src/registers.sv:7]
+INFO: [Synth 8-6157] synthesizing module 'registers__parameterized2' [C:/Users/srika/Documents/tiny-gpu/src/registers.sv:7]
+	Parameter THREADS_PER_BLOCK bound to: 4 - type: integer 
+	Parameter THREAD_ID bound to: 3 - type: integer 
+	Parameter DATA_BITS bound to: 8 - type: integer 
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/srika/Documents/tiny-gpu/src/registers.sv:84]
+INFO: [Synth 8-6155] done synthesizing module 'registers__parameterized2' (0#1) [C:/Users/srika/Documents/tiny-gpu/src/registers.sv:7]
+INFO: [Synth 8-6157] synthesizing module 'fetcher' [C:/Users/srika/Documents/tiny-gpu/src/fetcher.sv:7]
+	Parameter PROGRAM_MEM_ADDR_BITS bound to: 8 - type: integer 
+	Parameter PROGRAM_MEM_DATA_BITS bound to: 16 - type: integer 
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/srika/Documents/tiny-gpu/src/fetcher.sv:39]
+INFO: [Synth 8-6155] done synthesizing module 'fetcher' (0#1) [C:/Users/srika/Documents/tiny-gpu/src/fetcher.sv:7]
+INFO: [Synth 8-6157] synthesizing module 'decoder' [C:/Users/srika/Documents/tiny-gpu/src/decoder.sv:7]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/srika/Documents/tiny-gpu/src/decoder.sv:84]
+INFO: [Synth 8-6155] done synthesizing module 'decoder' (0#1) [C:/Users/srika/Documents/tiny-gpu/src/decoder.sv:7]
+INFO: [Synth 8-6157] synthesizing module 'scheduler' [C:/Users/srika/Documents/tiny-gpu/src/scheduler.sv:16]
+	Parameter THREADS_PER_BLOCK bound to: 4 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'scheduler' (0#1) [C:/Users/srika/Documents/tiny-gpu/src/scheduler.sv:16]
+INFO: [Synth 8-6155] done synthesizing module 'core' (0#1) [C:/Users/srika/Documents/tiny-gpu/src/core.sv:8]
+INFO: [Synth 8-6157] synthesizing module 'dcr' [C:/Users/srika/Documents/tiny-gpu/src/dcr.sv:7]
+INFO: [Synth 8-6155] done synthesizing module 'dcr' (0#1) [C:/Users/srika/Documents/tiny-gpu/src/dcr.sv:7]
+INFO: [Synth 8-6157] synthesizing module 'controller' [C:/Users/srika/Documents/tiny-gpu/src/controller.sv:11]
+	Parameter ADDR_BITS bound to: 8 - type: integer 
+	Parameter DATA_BITS bound to: 8 - type: integer 
+	Parameter NUM_CONSUMERS bound to: 8 - type: integer 
+	Parameter NUM_CHANNELS bound to: 4 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'controller' (0#1) [C:/Users/srika/Documents/tiny-gpu/src/controller.sv:11]
+INFO: [Synth 8-6157] synthesizing module 'controller__parameterized0' [C:/Users/srika/Documents/tiny-gpu/src/controller.sv:11]
+	Parameter ADDR_BITS bound to: 8 - type: integer 
+	Parameter DATA_BITS bound to: 16 - type: integer 
+	Parameter NUM_CONSUMERS bound to: 2 - type: integer 
+	Parameter NUM_CHANNELS bound to: 1 - type: integer 
+	Parameter WRITE_ENABLE bound to: 0 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'controller__parameterized0' (0#1) [C:/Users/srika/Documents/tiny-gpu/src/controller.sv:11]
+INFO: [Synth 8-6157] synthesizing module 'dispatch' [C:/Users/srika/Documents/tiny-gpu/src/dispatch.sv:8]
+	Parameter NUM_CORES bound to: 2 - type: integer 
+	Parameter THREADS_PER_BLOCK bound to: 4 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'dispatch' (0#1) [C:/Users/srika/Documents/tiny-gpu/src/dispatch.sv:8]
+INFO: [Synth 8-6155] done synthesizing module 'gpu' (0#1) [C:/Users/srika/Documents/tiny-gpu/src/gpu.sv:10]
+WARNING: [Synth 8-7129] Port decoded_mem_read_enable in module scheduler is either unconnected or has no load
+WARNING: [Synth 8-7129] Port decoded_mem_write_enable in module scheduler is either unconnected or has no load
+WARNING: [Synth 8-7129] Port next_pc[2][7] in module scheduler is either unconnected or has no load
+WARNING: [Synth 8-7129] Port next_pc[2][6] in module scheduler is either unconnected or has no load
+WARNING: [Synth 8-7129] Port next_pc[2][5] in module scheduler is either unconnected or has no load
+WARNING: [Synth 8-7129] Port next_pc[2][4] in module scheduler is either unconnected or has no load
+WARNING: [Synth 8-7129] Port next_pc[2][3] in module scheduler is either unconnected or has no load
+WARNING: [Synth 8-7129] Port next_pc[2][2] in module scheduler is either unconnected or has no load
+WARNING: [Synth 8-7129] Port next_pc[2][1] in module scheduler is either unconnected or has no load
+WARNING: [Synth 8-7129] Port next_pc[2][0] in module scheduler is either unconnected or has no load
+WARNING: [Synth 8-7129] Port next_pc[1][7] in module scheduler is either unconnected or has no load
+WARNING: [Synth 8-7129] Port next_pc[1][6] in module scheduler is either unconnected or has no load
+WARNING: [Synth 8-7129] Port next_pc[1][5] in module scheduler is either unconnected or has no load
+WARNING: [Synth 8-7129] Port next_pc[1][4] in module scheduler is either unconnected or has no load
+WARNING: [Synth 8-7129] Port next_pc[1][3] in module scheduler is either unconnected or has no load
+WARNING: [Synth 8-7129] Port next_pc[1][2] in module scheduler is either unconnected or has no load
+WARNING: [Synth 8-7129] Port next_pc[1][1] in module scheduler is either unconnected or has no load
+WARNING: [Synth 8-7129] Port next_pc[1][0] in module scheduler is either unconnected or has no load
+WARNING: [Synth 8-7129] Port next_pc[0][7] in module scheduler is either unconnected or has no load
+WARNING: [Synth 8-7129] Port next_pc[0][6] in module scheduler is either unconnected or has no load
+WARNING: [Synth 8-7129] Port next_pc[0][5] in module scheduler is either unconnected or has no load
+WARNING: [Synth 8-7129] Port next_pc[0][4] in module scheduler is either unconnected or has no load
+WARNING: [Synth 8-7129] Port next_pc[0][3] in module scheduler is either unconnected or has no load
+WARNING: [Synth 8-7129] Port next_pc[0][2] in module scheduler is either unconnected or has no load
+WARNING: [Synth 8-7129] Port next_pc[0][1] in module scheduler is either unconnected or has no load
+WARNING: [Synth 8-7129] Port next_pc[0][0] in module scheduler is either unconnected or has no load
+WARNING: [Synth 8-7129] Port alu_out[7] in module pc is either unconnected or has no load
+WARNING: [Synth 8-7129] Port alu_out[6] in module pc is either unconnected or has no load
+WARNING: [Synth 8-7129] Port alu_out[5] in module pc is either unconnected or has no load
+WARNING: [Synth 8-7129] Port alu_out[4] in module pc is either unconnected or has no load
+WARNING: [Synth 8-7129] Port alu_out[3] in module pc is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:21 ; elapsed = 00:00:24 . Memory (MB): peak = 1001.363 ; gain = 666.887
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:24 ; elapsed = 00:00:27 . Memory (MB): peak = 1001.363 ; gain = 666.887
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a200tfbg676-2
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a200tfbg676-2
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:24 ; elapsed = 00:00:27 . Memory (MB): peak = 1001.363 ; gain = 666.887
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'fetcher_state_reg' in module 'fetcher'
+INFO: [Synth 8-802] inferred FSM for state register 'core_state_reg' in module 'scheduler'
+INFO: [Synth 8-802] inferred FSM for state register 'controller_state_reg[0]' in module 'controller__parameterized0'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    IDLE |                              001 |                              000
+                FETCHING |                              010 |                              001
+                 FETCHED |                              100 |                              010
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'fetcher_state_reg' using encoding 'one-hot' in module 'fetcher'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    IDLE |                              000 |                              000
+                   FETCH |                              001 |                              001
+                  DECODE |                              010 |                              010
+                 REQUEST |                              011 |                              011
+                    WAIT |                              100 |                              100
+                 EXECUTE |                              101 |                              101
+                  UPDATE |                              110 |                              110
+                    DONE |                              111 |                              111
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'core_state_reg' using encoding 'sequential' in module 'scheduler'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    IDLE |                            00001 |                              000
+            READ_WAITING |                            00010 |                              010
+           READ_RELAYING |                            00100 |                              100
+           WRITE_WAITING |                            01000 |                              011
+          WRITE_RELAYING |                            10000 |                              101
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'controller_state_reg[0]' using encoding 'one-hot' in module 'controller__parameterized0'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:40 ; elapsed = 00:00:38 . Memory (MB): peak = 1015.762 ; gain = 681.285
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   32 Bit       Adders := 1     
+	   3 Input    9 Bit       Adders := 8     
+	   2 Input    9 Bit       Adders := 1     
+	   3 Input    8 Bit       Adders := 9     
+	   2 Input    8 Bit       Adders := 18    
++---Registers : 
+	               16 Bit    Registers := 5     
+	                8 Bit    Registers := 261   
+	                4 Bit    Registers := 8     
+	                3 Bit    Registers := 20    
+	                2 Bit    Registers := 17    
+	                1 Bit    Registers := 71    
++---Muxes : 
+	   2 Input   16 Bit        Muxes := 3     
+	   5 Input    8 Bit        Muxes := 8     
+	   4 Input    8 Bit        Muxes := 16    
+	   2 Input    8 Bit        Muxes := 341   
+	   6 Input    8 Bit        Muxes := 40    
+	  13 Input    5 Bit        Muxes := 1     
+	   6 Input    4 Bit        Muxes := 16    
+	   8 Input    3 Bit        Muxes := 2     
+	   2 Input    3 Bit        Muxes := 76    
+	   6 Input    3 Bit        Muxes := 4     
+	   2 Input    2 Bit        Muxes := 119   
+	   4 Input    2 Bit        Muxes := 16    
+	  12 Input    2 Bit        Muxes := 4     
+	   5 Input    2 Bit        Muxes := 4     
+	   2 Input    1 Bit        Muxes := 1108  
+	   4 Input    1 Bit        Muxes := 152   
+	   3 Input    1 Bit        Muxes := 8     
+	  12 Input    1 Bit        Muxes := 12    
+	   5 Input    1 Bit        Muxes := 12    
+	   8 Input    1 Bit        Muxes := 8     
+	   6 Input    1 Bit        Muxes := 44    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 740 (col length:100)
+BRAMs: 730 (col length: RAMB18 100 RAMB36 50)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-7129] Port decoded_mem_read_enable in module scheduler is either unconnected or has no load
+WARNING: [Synth 8-7129] Port decoded_mem_write_enable in module scheduler is either unconnected or has no load
+WARNING: [Synth 8-7129] Port next_pc[2][7] in module scheduler is either unconnected or has no load
+WARNING: [Synth 8-7129] Port next_pc[2][6] in module scheduler is either unconnected or has no load
+WARNING: [Synth 8-7129] Port next_pc[2][5] in module scheduler is either unconnected or has no load
+WARNING: [Synth 8-7129] Port next_pc[2][4] in module scheduler is either unconnected or has no load
+WARNING: [Synth 8-7129] Port next_pc[2][3] in module scheduler is either unconnected or has no load
+WARNING: [Synth 8-7129] Port next_pc[2][2] in module scheduler is either unconnected or has no load
+WARNING: [Synth 8-7129] Port next_pc[2][1] in module scheduler is either unconnected or has no load
+WARNING: [Synth 8-7129] Port next_pc[2][0] in module scheduler is either unconnected or has no load
+WARNING: [Synth 8-7129] Port next_pc[1][7] in module scheduler is either unconnected or has no load
+WARNING: [Synth 8-7129] Port next_pc[1][6] in module scheduler is either unconnected or has no load
+WARNING: [Synth 8-7129] Port next_pc[1][5] in module scheduler is either unconnected or has no load
+WARNING: [Synth 8-7129] Port next_pc[1][4] in module scheduler is either unconnected or has no load
+WARNING: [Synth 8-7129] Port next_pc[1][3] in module scheduler is either unconnected or has no load
+WARNING: [Synth 8-7129] Port next_pc[1][2] in module scheduler is either unconnected or has no load
+WARNING: [Synth 8-7129] Port next_pc[1][1] in module scheduler is either unconnected or has no load
+WARNING: [Synth 8-7129] Port next_pc[1][0] in module scheduler is either unconnected or has no load
+WARNING: [Synth 8-7129] Port next_pc[0][7] in module scheduler is either unconnected or has no load
+WARNING: [Synth 8-7129] Port next_pc[0][6] in module scheduler is either unconnected or has no load
+WARNING: [Synth 8-7129] Port next_pc[0][5] in module scheduler is either unconnected or has no load
+WARNING: [Synth 8-7129] Port next_pc[0][4] in module scheduler is either unconnected or has no load
+WARNING: [Synth 8-7129] Port next_pc[0][3] in module scheduler is either unconnected or has no load
+WARNING: [Synth 8-7129] Port next_pc[0][2] in module scheduler is either unconnected or has no load
+WARNING: [Synth 8-7129] Port next_pc[0][1] in module scheduler is either unconnected or has no load
+WARNING: [Synth 8-7129] Port next_pc[0][0] in module scheduler is either unconnected or has no load
+WARNING: [Synth 8-7129] Port alu_out[7] in module pc is either unconnected or has no load
+WARNING: [Synth 8-7129] Port alu_out[6] in module pc is either unconnected or has no load
+WARNING: [Synth 8-7129] Port alu_out[5] in module pc is either unconnected or has no load
+WARNING: [Synth 8-7129] Port alu_out[4] in module pc is either unconnected or has no load
+WARNING: [Synth 8-7129] Port alu_out[3] in module pc is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:28 ; elapsed = 00:01:29 . Memory (MB): peak = 1483.996 ; gain = 1149.520
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:01:30 ; elapsed = 00:01:31 . Memory (MB): peak = 1483.996 ; gain = 1149.520
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:01:33 ; elapsed = 00:01:34 . Memory (MB): peak = 1483.996 ; gain = 1149.520
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:01:40 ; elapsed = 00:01:41 . Memory (MB): peak = 1483.996 ; gain = 1149.520
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:40 ; elapsed = 00:01:41 . Memory (MB): peak = 1483.996 ; gain = 1149.520
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:40 ; elapsed = 00:01:42 . Memory (MB): peak = 1483.996 ; gain = 1149.520
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:40 ; elapsed = 00:01:42 . Memory (MB): peak = 1483.996 ; gain = 1149.520
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:40 ; elapsed = 00:01:42 . Memory (MB): peak = 1483.996 ; gain = 1149.520
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:40 ; elapsed = 00:01:42 . Memory (MB): peak = 1483.996 ; gain = 1149.520
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |   280|
+|3     |LUT1   |    16|
+|4     |LUT2   |   575|
+|5     |LUT3   |   537|
+|6     |LUT4   |   354|
+|7     |LUT5   |   580|
+|8     |LUT6   |  1410|
+|9     |MUXF7  |     8|
+|10    |FDRE   |  2126|
+|11    |FDSE   |     3|
+|12    |IBUF   |    69|
+|13    |OBUF   |   114|
++------+-------+------+
+
+Report Instance Areas: 
++------+-----------------------------------+-----------------------------+------+
+|      |Instance                           |Module                       |Cells |
++------+-----------------------------------+-----------------------------+------+
+|1     |top                                |                             |  6073|
+|2     |  \cores[0].core_instance          |core                         |  2042|
+|3     |    decoder_instance               |decoder_7                    |   134|
+|4     |    fetcher_instance               |fetcher_8                    |    34|
+|5     |    scheduler_instance             |scheduler_9                  |    48|
+|6     |    \threads[0].alu_instance       |alu_10                       |    32|
+|7     |    \threads[0].lsu_instance       |lsu_11                       |    46|
+|8     |    \threads[0].register_instance  |registers_12                 |   377|
+|9     |    \threads[1].alu_instance       |alu_13                       |    32|
+|10    |    \threads[1].lsu_instance       |lsu_14                       |    46|
+|11    |    \threads[1].register_instance  |registers__parameterized0_15 |   375|
+|12    |    \threads[2].alu_instance       |alu_16                       |    32|
+|13    |    \threads[2].lsu_instance       |lsu_17                       |    47|
+|14    |    \threads[2].register_instance  |registers__parameterized1_18 |   375|
+|15    |    \threads[3].alu_instance       |alu_19                       |    29|
+|16    |    \threads[3].lsu_instance       |lsu_20                       |    46|
+|17    |    \threads[3].pc_instance        |pc_21                        |    12|
+|18    |    \threads[3].register_instance  |registers__parameterized2_22 |   377|
+|19    |  \cores[1].core_instance          |core_0                       |  2052|
+|20    |    decoder_instance               |decoder                      |   134|
+|21    |    fetcher_instance               |fetcher                      |    43|
+|22    |    scheduler_instance             |scheduler                    |    49|
+|23    |    \threads[0].alu_instance       |alu                          |    32|
+|24    |    \threads[0].lsu_instance       |lsu                          |    46|
+|25    |    \threads[0].register_instance  |registers                    |   377|
+|26    |    \threads[1].alu_instance       |alu_1                        |    32|
+|27    |    \threads[1].lsu_instance       |lsu_2                        |    46|
+|28    |    \threads[1].register_instance  |registers__parameterized0    |   375|
+|29    |    \threads[2].alu_instance       |alu_3                        |    32|
+|30    |    \threads[2].lsu_instance       |lsu_4                        |    47|
+|31    |    \threads[2].register_instance  |registers__parameterized1    |   375|
+|32    |    \threads[3].alu_instance       |alu_5                        |    29|
+|33    |    \threads[3].lsu_instance       |lsu_6                        |    46|
+|34    |    \threads[3].pc_instance        |pc                           |    12|
+|35    |    \threads[3].register_instance  |registers__parameterized2    |   377|
+|36    |  data_memory_controller           |controller                   |  1253|
+|37    |  dcr_instance                     |dcr                          |    52|
+|38    |  dispatch_instance                |dispatch                     |   135|
+|39    |  program_memory_controller        |controller__parameterized0   |    67|
++------+-----------------------------------+-----------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:40 ; elapsed = 00:01:42 . Memory (MB): peak = 1483.996 ; gain = 1149.520
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 64 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:40 ; elapsed = 00:01:42 . Memory (MB): peak = 1483.996 ; gain = 1149.520
+Synthesis Optimization Complete : Time (s): cpu = 00:01:40 ; elapsed = 00:01:42 . Memory (MB): peak = 1483.996 ; gain = 1149.520
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.113 . Memory (MB): peak = 1483.996 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 288 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1531.625 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: a3d3f3d4
+INFO: [Common 17-83] Releasing license: Synthesis
+56 Infos, 64 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:46 ; elapsed = 00:01:50 . Memory (MB): peak = 1531.625 ; gain = 1201.109
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.019 . Memory (MB): peak = 1531.625 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/srika/Documents/MTP-1/tiny_gpu/tiny_gpu.runs/synth_1/gpu.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file gpu_utilization_synth.rpt -pb gpu_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sat Oct 10 08:08:33 2026...

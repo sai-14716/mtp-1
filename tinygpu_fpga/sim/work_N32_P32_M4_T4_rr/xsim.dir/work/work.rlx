@@ -1,0 +1,18 @@
+0.7
+2020.2
+Nov  8 2024
+22:36:57
+C:/Users/srika/Documents/MTP-1/tinygpu_fpga/rtl/alu.sv,1792568888,systemVerilog,,C:/Users/srika/Documents/MTP-1/tinygpu_fpga/rtl/controller.sv,,alu,,,,,,,,
+C:/Users/srika/Documents/MTP-1/tinygpu_fpga/rtl/controller.sv,1792568888,systemVerilog,,C:/Users/srika/Documents/MTP-1/tinygpu_fpga/rtl/core.sv,,controller,,,,,,,,
+C:/Users/srika/Documents/MTP-1/tinygpu_fpga/rtl/core.sv,1792568888,systemVerilog,,C:/Users/srika/Documents/MTP-1/tinygpu_fpga/rtl/dcr.sv,,core,,,,,,,,
+C:/Users/srika/Documents/MTP-1/tinygpu_fpga/rtl/dcr.sv,1792568888,systemVerilog,,C:/Users/srika/Documents/MTP-1/tinygpu_fpga/rtl/decoder.sv,,dcr,,,,,,,,
+C:/Users/srika/Documents/MTP-1/tinygpu_fpga/rtl/decoder.sv,1792568888,systemVerilog,,C:/Users/srika/Documents/MTP-1/tinygpu_fpga/rtl/dispatch_rr.sv,,decoder,,,,,,,,
+C:/Users/srika/Documents/MTP-1/tinygpu_fpga/rtl/dispatch_rr.sv,1792573367,systemVerilog,,C:/Users/srika/Documents/MTP-1/tinygpu_fpga/rtl/fetcher.sv,,dispatch,,,,,,,,
+C:/Users/srika/Documents/MTP-1/tinygpu_fpga/rtl/fetcher.sv,1792568889,systemVerilog,,C:/Users/srika/Documents/MTP-1/tinygpu_fpga/rtl/lsu.sv,,fetcher,,,,,,,,
+C:/Users/srika/Documents/MTP-1/tinygpu_fpga/rtl/gpu.sv,1792569282,systemVerilog,,C:/Users/srika/Documents/MTP-1/tinygpu_fpga/soc/gpu_soc_top.sv,,gpu,,,,,,,,
+C:/Users/srika/Documents/MTP-1/tinygpu_fpga/rtl/lsu.sv,1792568889,systemVerilog,,C:/Users/srika/Documents/MTP-1/tinygpu_fpga/rtl/pc.sv,,lsu,,,,,,,,
+C:/Users/srika/Documents/MTP-1/tinygpu_fpga/rtl/pc.sv,1792568889,systemVerilog,,C:/Users/srika/Documents/MTP-1/tinygpu_fpga/rtl/registers.sv,,pc,,,,,,,,
+C:/Users/srika/Documents/MTP-1/tinygpu_fpga/rtl/registers.sv,1792568889,systemVerilog,,C:/Users/srika/Documents/MTP-1/tinygpu_fpga/rtl/scheduler.sv,,registers,,,,,,,,
+C:/Users/srika/Documents/MTP-1/tinygpu_fpga/rtl/scheduler.sv,1792568908,systemVerilog,,C:/Users/srika/Documents/MTP-1/tinygpu_fpga/rtl/gpu.sv,,scheduler,,,,,,,,
+C:/Users/srika/Documents/MTP-1/tinygpu_fpga/sim/work_N32_P32_M4_T4_rr/tb_soc.sv,1792573394,systemVerilog,,,,tb_soc,,,,,,,,
+C:/Users/srika/Documents/MTP-1/tinygpu_fpga/soc/gpu_soc_top.sv,1792569072,systemVerilog,,C:/Users/srika/Documents/MTP-1/tinygpu_fpga/sim/work_N32_P32_M4_T4_rr/tb_soc.sv,,gpu_soc_top;uart_tx,,,,,,,,

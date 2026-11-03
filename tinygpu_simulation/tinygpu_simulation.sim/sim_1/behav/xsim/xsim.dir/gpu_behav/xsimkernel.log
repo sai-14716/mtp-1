@@ -1,0 +1,7 @@
+Running: xsim.dir/gpu_behav/xsimk.exe -simmode gui -wdb gpu_behav.wdb -simrunnum 0 -socket 51394
+Design successfully loaded
+Design Loading Memory Usage: 19308 KB (Peak: 19308 KB)
+Design Loading CPU Usage: 46 ms
+Simulation completed
+Simulation Memory Usage: 20264 KB (Peak: 20264 KB)
+Simulation CPU Usage: 2093 ms

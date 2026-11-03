@@ -1,0 +1,3 @@
+N16_P1_M4_T4_rr_f40: OK in 1259s
+N16_P16_M4_T4_rr_f40: OK in 2231s
+N16_P16_M16_T4_rr: STOPPED after >2 h in synthesis (RTL optimisation of the 16-channel x 64-requester arbiter); estimated ~80k LUTs (>100% of XC7A100T)

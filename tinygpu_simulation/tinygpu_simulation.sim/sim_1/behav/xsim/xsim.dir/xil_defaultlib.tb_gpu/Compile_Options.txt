@@ -1,0 +1,1 @@
+"xil_defaultlib.tb_gpu" -debug "typical" 

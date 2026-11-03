@@ -1,0 +1,173 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
+| Date         : Wed Oct 21 17:26:35 2026
+| Host         : SRINIVAS running 64-bit major release  (build 9200)
+| Command      : report_utilization -hierarchical -hierarchical_depth 3 -file C:/Users/srika/Documents/MTP-1/tinygpu_fpga/build/N8_P8_M8_T4_rr_f40/util_hier.rpt
+| Design       : gpu_soc_top
+| Device       : xc7a100tcsg324-1
+| Speed File   : -1
+| Design State : Routed
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Utilization Design Information
+
+Table of Contents
+-----------------
+1. Utilization by Hierarchy
+
+1. Utilization by Hierarchy
+---------------------------
+
++------------------------------------+-------------------------------+------------+------------+---------+------+------+--------+--------+------------+
+|              Instance              |             Module            | Total LUTs | Logic LUTs | LUTRAMs | SRLs |  FFs | RAMB36 | RAMB18 | DSP Blocks |
++------------------------------------+-------------------------------+------------+------------+---------+------+------+--------+--------+------------+
+| gpu_soc_top                        |                         (top) |      17654 |      17654 |       0 |    0 | 8501 |      0 |     18 |          0 |
+|   (gpu_soc_top)                    |                         (top) |        300 |        300 |       0 |    0 |  414 |      0 |     18 |          0 |
+|   u_gpu                            |                           gpu |      17329 |      17329 |       0 |    0 | 8058 |      0 |      0 |          0 |
+|     (u_gpu)                        |                           gpu |         59 |         59 |       0 |    0 | 1152 |      0 |      0 |          0 |
+|     cores[0].core_instance         |                          core |       1005 |       1005 |       0 |    0 |  736 |      0 |      0 |          0 |
+|       decoder_instance             |                   decoder_109 |        142 |        142 |       0 |    0 |   21 |      0 |      0 |          0 |
+|       fetcher_instance             |                   fetcher_110 |         12 |         12 |       0 |    0 |   28 |      0 |      0 |          0 |
+|       scheduler_instance           |                 scheduler_111 |         21 |         21 |       0 |    0 |   12 |      0 |      0 |          0 |
+|       threads[0].alu_instance      |                       alu_112 |          8 |          8 |       0 |    0 |    8 |      0 |      0 |          0 |
+|       threads[0].lsu_instance      |                       lsu_113 |          9 |          9 |       0 |    0 |   36 |      0 |      0 |          0 |
+|       threads[0].register_instance |                 registers_114 |        182 |        182 |       0 |    0 |  120 |      0 |      0 |          0 |
+|       threads[1].alu_instance      |                       alu_115 |          8 |          8 |       0 |    0 |    8 |      0 |      0 |          0 |
+|       threads[1].lsu_instance      |                       lsu_116 |         10 |         10 |       0 |    0 |   36 |      0 |      0 |          0 |
+|       threads[1].register_instance | registers__parameterized0_117 |        184 |        184 |       0 |    0 |  120 |      0 |      0 |          0 |
+|       threads[2].alu_instance      |                       alu_118 |          8 |          8 |       0 |    0 |    8 |      0 |      0 |          0 |
+|       threads[2].lsu_instance      |                       lsu_119 |         10 |         10 |       0 |    0 |   36 |      0 |      0 |          0 |
+|       threads[2].register_instance | registers__parameterized1_120 |        184 |        184 |       0 |    0 |  120 |      0 |      0 |          0 |
+|       threads[3].alu_instance      |                       alu_121 |         11 |         11 |       0 |    0 |    8 |      0 |      0 |          0 |
+|       threads[3].lsu_instance      |                       lsu_122 |          9 |          9 |       0 |    0 |   36 |      0 |      0 |          0 |
+|       threads[3].pc_instance       |                        pc_123 |          1 |          1 |       0 |    0 |   11 |      0 |      0 |          0 |
+|       threads[3].register_instance | registers__parameterized2_124 |        206 |        206 |       0 |    0 |  128 |      0 |      0 |          0 |
+|     cores[1].core_instance         |                        core_0 |       1005 |       1005 |       0 |    0 |  736 |      0 |      0 |          0 |
+|       decoder_instance             |                    decoder_93 |        142 |        142 |       0 |    0 |   21 |      0 |      0 |          0 |
+|       fetcher_instance             |                    fetcher_94 |         12 |         12 |       0 |    0 |   28 |      0 |      0 |          0 |
+|       scheduler_instance           |                  scheduler_95 |         21 |         21 |       0 |    0 |   12 |      0 |      0 |          0 |
+|       threads[0].alu_instance      |                        alu_96 |          8 |          8 |       0 |    0 |    8 |      0 |      0 |          0 |
+|       threads[0].lsu_instance      |                        lsu_97 |          9 |          9 |       0 |    0 |   36 |      0 |      0 |          0 |
+|       threads[0].register_instance |                  registers_98 |        182 |        182 |       0 |    0 |  120 |      0 |      0 |          0 |
+|       threads[1].alu_instance      |                        alu_99 |          8 |          8 |       0 |    0 |    8 |      0 |      0 |          0 |
+|       threads[1].lsu_instance      |                       lsu_100 |         10 |         10 |       0 |    0 |   36 |      0 |      0 |          0 |
+|       threads[1].register_instance | registers__parameterized0_101 |        184 |        184 |       0 |    0 |  120 |      0 |      0 |          0 |
+|       threads[2].alu_instance      |                       alu_102 |          8 |          8 |       0 |    0 |    8 |      0 |      0 |          0 |
+|       threads[2].lsu_instance      |                       lsu_103 |         10 |         10 |       0 |    0 |   36 |      0 |      0 |          0 |
+|       threads[2].register_instance | registers__parameterized1_104 |        184 |        184 |       0 |    0 |  120 |      0 |      0 |          0 |
+|       threads[3].alu_instance      |                       alu_105 |         11 |         11 |       0 |    0 |    8 |      0 |      0 |          0 |
+|       threads[3].lsu_instance      |                       lsu_106 |          9 |          9 |       0 |    0 |   36 |      0 |      0 |          0 |
+|       threads[3].pc_instance       |                        pc_107 |          1 |          1 |       0 |    0 |   11 |      0 |      0 |          0 |
+|       threads[3].register_instance | registers__parameterized2_108 |        206 |        206 |       0 |    0 |  128 |      0 |      0 |          0 |
+|     cores[2].core_instance         |                        core_1 |        956 |        956 |       0 |    0 |  736 |      0 |      0 |          0 |
+|       decoder_instance             |                    decoder_77 |        157 |        157 |       0 |    0 |   21 |      0 |      0 |          0 |
+|       fetcher_instance             |                    fetcher_78 |          4 |          4 |       0 |    0 |   28 |      0 |      0 |          0 |
+|       scheduler_instance           |                  scheduler_79 |         22 |         22 |       0 |    0 |   12 |      0 |      0 |          0 |
+|       threads[0].alu_instance      |                        alu_80 |          4 |          4 |       0 |    0 |    8 |      0 |      0 |          0 |
+|       threads[0].lsu_instance      |                        lsu_81 |          6 |          6 |       0 |    0 |   36 |      0 |      0 |          0 |
+|       threads[0].register_instance |                  registers_82 |        179 |        179 |       0 |    0 |  120 |      0 |      0 |          0 |
+|       threads[1].alu_instance      |                        alu_83 |          4 |          4 |       0 |    0 |    8 |      0 |      0 |          0 |
+|       threads[1].lsu_instance      |                        lsu_84 |          8 |          8 |       0 |    0 |   36 |      0 |      0 |          0 |
+|       threads[1].register_instance |  registers__parameterized0_85 |        179 |        179 |       0 |    0 |  120 |      0 |      0 |          0 |
+|       threads[2].alu_instance      |                        alu_86 |          5 |          5 |       0 |    0 |    8 |      0 |      0 |          0 |
+|       threads[2].lsu_instance      |                        lsu_87 |          7 |          7 |       0 |    0 |   36 |      0 |      0 |          0 |
+|       threads[2].register_instance |  registers__parameterized1_88 |        178 |        178 |       0 |    0 |  120 |      0 |      0 |          0 |
+|       threads[3].alu_instance      |                        alu_89 |          8 |          8 |       0 |    0 |    8 |      0 |      0 |          0 |
+|       threads[3].lsu_instance      |                        lsu_90 |          6 |          6 |       0 |    0 |   36 |      0 |      0 |          0 |
+|       threads[3].pc_instance       |                         pc_91 |          1 |          1 |       0 |    0 |   11 |      0 |      0 |          0 |
+|       threads[3].register_instance |  registers__parameterized2_92 |        198 |        198 |       0 |    0 |  128 |      0 |      0 |          0 |
+|     cores[3].core_instance         |                        core_2 |        998 |        998 |       0 |    0 |  736 |      0 |      0 |          0 |
+|       decoder_instance             |                    decoder_61 |        141 |        141 |       0 |    0 |   21 |      0 |      0 |          0 |
+|       fetcher_instance             |                    fetcher_62 |         13 |         13 |       0 |    0 |   28 |      0 |      0 |          0 |
+|       scheduler_instance           |                  scheduler_63 |         19 |         19 |       0 |    0 |   12 |      0 |      0 |          0 |
+|       threads[0].alu_instance      |                        alu_64 |          8 |          8 |       0 |    0 |    8 |      0 |      0 |          0 |
+|       threads[0].lsu_instance      |                        lsu_65 |          7 |          7 |       0 |    0 |   36 |      0 |      0 |          0 |
+|       threads[0].register_instance |                  registers_66 |        182 |        182 |       0 |    0 |  120 |      0 |      0 |          0 |
+|       threads[1].alu_instance      |                        alu_67 |          8 |          8 |       0 |    0 |    8 |      0 |      0 |          0 |
+|       threads[1].lsu_instance      |                        lsu_68 |          8 |          8 |       0 |    0 |   36 |      0 |      0 |          0 |
+|       threads[1].register_instance |  registers__parameterized0_69 |        184 |        184 |       0 |    0 |  120 |      0 |      0 |          0 |
+|       threads[2].alu_instance      |                        alu_70 |          8 |          8 |       0 |    0 |    8 |      0 |      0 |          0 |
+|       threads[2].lsu_instance      |                        lsu_71 |          8 |          8 |       0 |    0 |   36 |      0 |      0 |          0 |
+|       threads[2].register_instance |  registers__parameterized1_72 |        188 |        188 |       0 |    0 |  121 |      0 |      0 |          0 |
+|       threads[3].alu_instance      |                        alu_73 |          9 |          9 |       0 |    0 |    8 |      0 |      0 |          0 |
+|       threads[3].lsu_instance      |                        lsu_74 |          7 |          7 |       0 |    0 |   36 |      0 |      0 |          0 |
+|       threads[3].pc_instance       |                         pc_75 |          1 |          1 |       0 |    0 |   11 |      0 |      0 |          0 |
+|       threads[3].register_instance |  registers__parameterized2_76 |        208 |        208 |       0 |    0 |  127 |      0 |      0 |          0 |
+|     cores[4].core_instance         |                        core_3 |        992 |        992 |       0 |    0 |  736 |      0 |      0 |          0 |
+|       decoder_instance             |                    decoder_45 |        137 |        137 |       0 |    0 |   21 |      0 |      0 |          0 |
+|       fetcher_instance             |                    fetcher_46 |          6 |          6 |       0 |    0 |   28 |      0 |      0 |          0 |
+|       scheduler_instance           |                  scheduler_47 |         19 |         19 |       0 |    0 |   12 |      0 |      0 |          0 |
+|       threads[0].alu_instance      |                        alu_48 |          8 |          8 |       0 |    0 |    8 |      0 |      0 |          0 |
+|       threads[0].lsu_instance      |                        lsu_49 |          7 |          7 |       0 |    0 |   36 |      0 |      0 |          0 |
+|       threads[0].register_instance |                  registers_50 |        210 |        210 |       0 |    0 |  128 |      0 |      0 |          0 |
+|       threads[1].alu_instance      |                        alu_51 |          8 |          8 |       0 |    0 |    8 |      0 |      0 |          0 |
+|       threads[1].lsu_instance      |                        lsu_52 |          8 |          8 |       0 |    0 |   36 |      0 |      0 |          0 |
+|       threads[1].register_instance |  registers__parameterized0_53 |        184 |        184 |       0 |    0 |  120 |      0 |      0 |          0 |
+|       threads[2].alu_instance      |                        alu_54 |          8 |          8 |       0 |    0 |    8 |      0 |      0 |          0 |
+|       threads[2].lsu_instance      |                        lsu_55 |          8 |          8 |       0 |    0 |   36 |      0 |      0 |          0 |
+|       threads[2].register_instance |  registers__parameterized1_56 |        184 |        184 |       0 |    0 |  120 |      0 |      0 |          0 |
+|       threads[3].alu_instance      |                        alu_57 |         11 |         11 |       0 |    0 |    8 |      0 |      0 |          0 |
+|       threads[3].lsu_instance      |                        lsu_58 |          7 |          7 |       0 |    0 |   36 |      0 |      0 |          0 |
+|       threads[3].pc_instance       |                         pc_59 |          1 |          1 |       0 |    0 |   11 |      0 |      0 |          0 |
+|       threads[3].register_instance |  registers__parameterized2_60 |        186 |        186 |       0 |    0 |  120 |      0 |      0 |          0 |
+|     cores[5].core_instance         |                        core_4 |        993 |        993 |       0 |    0 |  736 |      0 |      0 |          0 |
+|       decoder_instance             |                    decoder_29 |        145 |        145 |       0 |    0 |   21 |      0 |      0 |          0 |
+|       fetcher_instance             |                    fetcher_30 |          7 |          7 |       0 |    0 |   28 |      0 |      0 |          0 |
+|       scheduler_instance           |                  scheduler_31 |         19 |         19 |       0 |    0 |   12 |      0 |      0 |          0 |
+|       threads[0].alu_instance      |                        alu_32 |          8 |          8 |       0 |    0 |    8 |      0 |      0 |          0 |
+|       threads[0].lsu_instance      |                        lsu_33 |          7 |          7 |       0 |    0 |   36 |      0 |      0 |          0 |
+|       threads[0].register_instance |                  registers_34 |        182 |        182 |       0 |    0 |  120 |      0 |      0 |          0 |
+|       threads[1].alu_instance      |                        alu_35 |          8 |          8 |       0 |    0 |    8 |      0 |      0 |          0 |
+|       threads[1].lsu_instance      |                        lsu_36 |          8 |          8 |       0 |    0 |   36 |      0 |      0 |          0 |
+|       threads[1].register_instance |  registers__parameterized0_37 |        184 |        184 |       0 |    0 |  120 |      0 |      0 |          0 |
+|       threads[2].alu_instance      |                        alu_38 |          8 |          8 |       0 |    0 |    8 |      0 |      0 |          0 |
+|       threads[2].lsu_instance      |                        lsu_39 |          8 |          8 |       0 |    0 |   36 |      0 |      0 |          0 |
+|       threads[2].register_instance |  registers__parameterized1_40 |        184 |        184 |       0 |    0 |  120 |      0 |      0 |          0 |
+|       threads[3].alu_instance      |                        alu_41 |         11 |         11 |       0 |    0 |    8 |      0 |      0 |          0 |
+|       threads[3].lsu_instance      |                        lsu_42 |          7 |          7 |       0 |    0 |   36 |      0 |      0 |          0 |
+|       threads[3].pc_instance       |                         pc_43 |          1 |          1 |       0 |    0 |   11 |      0 |      0 |          0 |
+|       threads[3].register_instance |  registers__parameterized2_44 |        206 |        206 |       0 |    0 |  128 |      0 |      0 |          0 |
+|     cores[6].core_instance         |                        core_5 |        992 |        992 |       0 |    0 |  736 |      0 |      0 |          0 |
+|       decoder_instance             |                    decoder_13 |        137 |        137 |       0 |    0 |   21 |      0 |      0 |          0 |
+|       fetcher_instance             |                    fetcher_14 |          5 |          5 |       0 |    0 |   28 |      0 |      0 |          0 |
+|       scheduler_instance           |                  scheduler_15 |         19 |         19 |       0 |    0 |   12 |      0 |      0 |          0 |
+|       threads[0].alu_instance      |                        alu_16 |          8 |          8 |       0 |    0 |    8 |      0 |      0 |          0 |
+|       threads[0].lsu_instance      |                        lsu_17 |          7 |          7 |       0 |    0 |   36 |      0 |      0 |          0 |
+|       threads[0].register_instance |                  registers_18 |        210 |        210 |       0 |    0 |  128 |      0 |      0 |          0 |
+|       threads[1].alu_instance      |                        alu_19 |          8 |          8 |       0 |    0 |    8 |      0 |      0 |          0 |
+|       threads[1].lsu_instance      |                        lsu_20 |          8 |          8 |       0 |    0 |   36 |      0 |      0 |          0 |
+|       threads[1].register_instance |  registers__parameterized0_21 |        184 |        184 |       0 |    0 |  120 |      0 |      0 |          0 |
+|       threads[2].alu_instance      |                        alu_22 |          8 |          8 |       0 |    0 |    8 |      0 |      0 |          0 |
+|       threads[2].lsu_instance      |                        lsu_23 |          8 |          8 |       0 |    0 |   36 |      0 |      0 |          0 |
+|       threads[2].register_instance |  registers__parameterized1_24 |        184 |        184 |       0 |    0 |  120 |      0 |      0 |          0 |
+|       threads[3].alu_instance      |                        alu_25 |         11 |         11 |       0 |    0 |    8 |      0 |      0 |          0 |
+|       threads[3].lsu_instance      |                        lsu_26 |          7 |          7 |       0 |    0 |   36 |      0 |      0 |          0 |
+|       threads[3].pc_instance       |                         pc_27 |          1 |          1 |       0 |    0 |   11 |      0 |      0 |          0 |
+|       threads[3].register_instance |  registers__parameterized2_28 |        187 |        187 |       0 |    0 |  120 |      0 |      0 |          0 |
+|     cores[7].core_instance         |                        core_6 |        990 |        990 |       0 |    0 |  736 |      0 |      0 |          0 |
+|       decoder_instance             |                       decoder |        145 |        145 |       0 |    0 |   21 |      0 |      0 |          0 |
+|       fetcher_instance             |                       fetcher |          4 |          4 |       0 |    0 |   28 |      0 |      0 |          0 |
+|       scheduler_instance           |                     scheduler |         19 |         19 |       0 |    0 |   12 |      0 |      0 |          0 |
+|       threads[0].alu_instance      |                           alu |          8 |          8 |       0 |    0 |    8 |      0 |      0 |          0 |
+|       threads[0].lsu_instance      |                           lsu |          7 |          7 |       0 |    0 |   36 |      0 |      0 |          0 |
+|       threads[0].register_instance |                     registers |        182 |        182 |       0 |    0 |  120 |      0 |      0 |          0 |
+|       threads[1].alu_instance      |                         alu_7 |          8 |          8 |       0 |    0 |    8 |      0 |      0 |          0 |
+|       threads[1].lsu_instance      |                         lsu_8 |          8 |          8 |       0 |    0 |   36 |      0 |      0 |          0 |
+|       threads[1].register_instance |     registers__parameterized0 |        184 |        184 |       0 |    0 |  120 |      0 |      0 |          0 |
+|       threads[2].alu_instance      |                         alu_9 |          8 |          8 |       0 |    0 |    8 |      0 |      0 |          0 |
+|       threads[2].lsu_instance      |                        lsu_10 |          8 |          8 |       0 |    0 |   36 |      0 |      0 |          0 |
+|       threads[2].register_instance |     registers__parameterized1 |        185 |        185 |       0 |    0 |  120 |      0 |      0 |          0 |
+|       threads[3].alu_instance      |                        alu_11 |          9 |          9 |       0 |    0 |    8 |      0 |      0 |          0 |
+|       threads[3].lsu_instance      |                        lsu_12 |          7 |          7 |       0 |    0 |   36 |      0 |      0 |          0 |
+|       threads[3].pc_instance       |                            pc |          1 |          1 |       0 |    0 |   11 |      0 |      0 |          0 |
+|       threads[3].register_instance |     registers__parameterized2 |        208 |        208 |       0 |    0 |  128 |      0 |      0 |          0 |
+|     data_memory_controller         |                    controller |       8088 |       8088 |       0 |    0 |  644 |      0 |      0 |          0 |
+|     dcr_instance                   |                           dcr |          2 |          2 |       0 |    0 |    2 |      0 |      0 |          0 |
+|     dispatch_instance              |                      dispatch |        128 |        128 |       0 |    0 |  108 |      0 |      0 |          0 |
+|     program_memory_controller      |    controller__parameterized0 |       1126 |       1126 |       0 |    0 |  264 |      0 |      0 |          0 |
+|   u_uart                           |                       uart_tx |         26 |         26 |       0 |    0 |   29 |      0 |      0 |          0 |
++------------------------------------+-------------------------------+------------+------------+---------+------+------+--------+--------+------------+
+* Note: The sum of lower-level cells may be larger than their parent cells total, due to cross-hierarchy LUT combining
+
+
